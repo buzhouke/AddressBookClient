@@ -1,0 +1,95 @@
+/*
+ * Copyright © Microsoft Corporation. All rights reserved.
+ *
+ * This is the only style file. Do NOT add any more css/scss files.
+ *
+ * This file sets and overrides the browsers/fluentui default styles.
+ * it affects to every component.
+ */
+html,
+body,
+#root {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 200px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/**
+ * To support larger font sizes in iOS, we need to set the font size in the root element.
+ * The default font size is 16px, and adaptive sizes should use rem units based on this value.
+ */
+@supports (-webkit-touch-callout: default) {
+    :root {
+        font: -apple-system-body;
+    }
+}
+
+/*
+* promote hidden priority (form UA Level to user Level)
+* to fix hidden attribute bug in some fluent ui components
+*/
+[hidden] {
+    display: none;
+}
+
+/* global iframe styles */
+iframe {
+    border-width: 0;
+}
+
+/* global scorllbar styles (teams behavior) */
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+/* mouse  scorllbar */
+@media (hover: hover) {
+    * {
+        /* for Firefox */
+        scrollbar-width: thin;
+        scrollbar-color: transparent transparent;
+    }
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        width: 6px;
+        height: 6px;
+        border-radius: 4px;
+    }
+    /* hover on content element */
+    :hover {
+        /* Firefox */
+        scrollbar-color: auto;
+    }
+    :hover::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    .is-darkTheme :hover::-webkit-scrollbar-thumb {
+        background-color: rgba(256, 256, 256, 0.5);
+    }
+    .is-contrastTheme :hover::-webkit-scrollbar-thumb {
+        background-color: #fff;
+    }
+
+    /* hover on scrollbar */
+    ::-webkit-scrollbar:hover {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+
+/*# sourceMappingURL=main~mobile.min.css.map*/
