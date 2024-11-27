@@ -35,12 +35,12 @@ __webpack_require__.r(__webpack_exports__);
 Object(_common_init__WEBPACK_IMPORTED_MODULE_5__[/* init */ "a"])(true);
 react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_views_containers_ErrorBoundary__WEBPACK_IMPORTED_MODULE_7__[/* ErrorBoundary */ "a"], null,
     react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_2__[/* TeamsHostProvider */ "c"], null)), document.getElementById('root'), () => {
-    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_6__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_6__[/* StepName */ "c"].AppBootReactRendered);
-    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].AppBoot, 'React rendered mobile');
+    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_6__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_6__[/* StepName */ "e"].AppBootReactRendered);
+    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].AppBoot, 'React rendered mobile');
 });
 
 
 /***/ })
 
-},[["PLhd","runtime~mobile","main~mobile.fui","main~mobile.microsoft","assets~main~mobile","package~main~mobile","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm.prosemirror-view","npm._fluentui~utilities","npm._tiptap~core","featureRelatedFiles~main~mobile","npm.react-query","npm.lodash-es","npm.prosemirror-model","npm._internationalized~date","npm.axios","npm.i18next","vendors~main~mobile","main~mobile"]]]);
+},[["PLhd","runtime~mobile","main~mobile.microsoft","main~mobile.fui","assets~main~mobile","package~main~mobile","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm._fluentui~utilities","featureRelatedFiles~main~mobile","npm.react-query","npm.lodash-es","npm._internationalized~date","npm.axios","npm.i18next","vendors~main~mobile","main~mobile"]]]);
 //# sourceMappingURL=mobile.js.map

@@ -111,7 +111,7 @@ function transformRequest(config) {
         else if (!config.headers[_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* HEADER_CLIENT_REQUEST_ID */ "e"]]) {
             config.headers[_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* HEADER_CLIENT_REQUEST_ID */ "e"]] = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* uuid */ "v"])();
         }
-        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceDebug(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Calling getAuthToken for ${_common_env__WEBPACK_IMPORTED_MODULE_5__[/* ADDRESSBOOK_APP_RESOURCE_URL */ "a"]}`);
+        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceDebug(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Calling getAuthToken for ${_common_env__WEBPACK_IMPORTED_MODULE_5__[/* ADDRESSBOOK_APP_RESOURCE_URL */ "a"]}`);
         config._getTeamsContextTime = performance.now();
         const context = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* getTeamsContext */ "h"])();
         config._getAuthTokenTime = performance.now();
@@ -154,22 +154,22 @@ function transformResponse(response) {
     const httpInfo = getHttpInfo(config, response.headers);
     if (!isValidateStatus(status)) {
         // log http exception
-        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceHttpException(httpInfo.apiName || '', ((_a = response.data) === null || _a === void 0 ? void 0 : _a.Message) || response.statusText, status);
+        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceHttpException(httpInfo.apiName || '', ((_a = response.data) === null || _a === void 0 ? void 0 : _a.Message) || response.statusText, status);
     }
     else {
-        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceDebug(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `success for ${response.config.url}`);
+        _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceDebug(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `success for ${response.config.url}`);
     }
     const httpRequest = Object.assign(Object.assign({}, httpInfo), { responseCode: status, responseText: response.statusText });
-    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logHttp(httpRequest);
+    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logHttp(httpRequest);
     return response.data;
 }
 function transformError(error) {
     var _a, _b, _c, _d;
     return __awaiter(this, void 0, void 0, function* () {
         if ((error === null || error === void 0 ? void 0 : error.code) === axios__WEBPACK_IMPORTED_MODULE_3__[/* AxiosError */ "a"].ERR_NETWORK) {
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].NetworkError, `NetworkError ${(_a = error === null || error === void 0 ? void 0 : error.config) === null || _a === void 0 ? void 0 : _a.url} ${error.message}`);
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].NetworkError, `NetworkError ${(_a = error === null || error === void 0 ? void 0 : error.config) === null || _a === void 0 ? void 0 : _a.url} ${error.message}`);
             if (error.config) {
-                _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logHttp(getHttpInfo(error.config));
+                _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logHttp(getHttpInfo(error.config));
             }
             throw new _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* RequestError */ "b"](error, _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* ClientErrorCodes */ "a"].network, getRequestId(error.config));
         }
@@ -182,34 +182,34 @@ function transformError(error) {
                     response.data = errorString;
                 }
                 catch (e) {
-                    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Invalid JSON response from Blob: ${response === null || response === void 0 ? void 0 : response.data}`);
+                    _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Invalid JSON response from Blob: ${response === null || response === void 0 ? void 0 : response.data}`);
                 }
             }
             transformResponse(response);
             throw new _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* RequestError */ "b"](response, undefined, getRequestId(error.config));
         }
         else if (axios__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].isCancel(error)) {
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Cancel ${(_b = error === null || error === void 0 ? void 0 : error.config) === null || _b === void 0 ? void 0 : _b.url}`);
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].APIRequest, `Cancel ${(_b = error === null || error === void 0 ? void 0 : error.config) === null || _b === void 0 ? void 0 : _b.url}`);
         }
         else if (error === null || error === void 0 ? void 0 : error.config) {
             // no response
             // usually network connection error
             const logCategory = getAxiosErrorLogCategory(error === null || error === void 0 ? void 0 : error.code);
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceError(logCategory, `NetworkError ${(_c = error === null || error === void 0 ? void 0 : error.config) === null || _c === void 0 ? void 0 : _c.url} ${error.message}`);
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logHttp(getHttpInfo(error.config));
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceError(logCategory, `NetworkError ${(_c = error === null || error === void 0 ? void 0 : error.config) === null || _c === void 0 ? void 0 : _c.url} ${error.message}`);
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logHttp(getHttpInfo(error.config));
             throw new _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* RequestError */ "b"](error, _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* ClientErrorCodes */ "a"].network, getRequestId(error.config));
         }
         else if (error instanceof Error) {
             const isTeamsSDKError = error instanceof _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* TeamsError */ "b"];
             // runtime error
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceException(isTeamsSDKError ? _logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].TeamsSDKError : _logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].RuntimeError, {
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceException(isTeamsSDKError ? _logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].TeamsSDKError : _logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].RuntimeError, {
                 error,
                 message: `${error.name} ${(_d = error === null || error === void 0 ? void 0 : error.config) === null || _d === void 0 ? void 0 : _d.url}`,
             });
             throw new _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* RequestError */ "b"](error, isTeamsSDKError ? _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* ClientErrorCodes */ "a"].teamsSDK : _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* ClientErrorCodes */ "a"].runtime);
         }
         else {
-            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].UnknownRequestError, `UnknownError ${error}`);
+            _logger__WEBPACK_IMPORTED_MODULE_6__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_6__[/* LogCategory */ "a"].UnknownRequestError, `UnknownError ${error}`);
         }
         throw new _RequestError__WEBPACK_IMPORTED_MODULE_8__[/* RequestError */ "b"](error);
     });
@@ -4007,13 +4007,13 @@ Object(react_query__WEBPACK_IMPORTED_MODULE_0__["setLogger"])(_common_env__WEBPA
     ? console
     : {
         log: args => {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
+            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
         },
         warn: args => {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceWarning(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
+            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].logTraceWarning(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
         },
         error: args => {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
+            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].ReactQuery, JSON.stringify(args));
         },
     });
 

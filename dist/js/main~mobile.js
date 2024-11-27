@@ -14,12 +14,11 @@
 /* harmony import */ var _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-metaos-host */ "0acT");
 /* harmony import */ var _package_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../package.json */ "kiQV");
 var _package_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! ../../package.json */ "kiQV", 1);
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../localization */ "HVbO");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../logger */ "pIRP");
-/* harmony import */ var _utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utilities */ "Ss4h");
-/* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Constants */ "fPKC");
-/* harmony import */ var _env__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./env */ "8MrD");
-/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./icons */ "dERd");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../logger */ "pIRP");
+/* harmony import */ var _utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../utilities */ "Ss4h");
+/* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./Constants */ "fPKC");
+/* harmony import */ var _env__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./env */ "8MrD");
+/* harmony import */ var _icons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./icons */ "dERd");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -37,11 +36,10 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-const tenantId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].TenantId);
-const subEntityId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].SubEntityId);
+const tenantId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].TenantId);
+const subEntityId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].SubEntityId);
 function initFluentUI() {
-    Object(_icons__WEBPACK_IMPORTED_MODULE_8__[/* initIcons */ "b"])();
+    Object(_icons__WEBPACK_IMPORTED_MODULE_7__[/* initIcons */ "b"])();
 }
 function removeNoScript() {
     const noscripts = document.querySelectorAll('noscript');
@@ -57,16 +55,16 @@ function initHost(scenario, isMobile) {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p;
     return __awaiter(this, void 0, void 0, function* () {
         // new version parameters
-        const parameterVersion = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].Version);
-        if (_env__WEBPACK_IMPORTED_MODULE_7__[/* isDevBrowser */ "m"]) {
+        const parameterVersion = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].Version);
+        if (_env__WEBPACK_IMPORTED_MODULE_6__[/* isDevBrowser */ "m"]) {
             Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* patchTeamsFallbackData */ "k"])({
-                getContext: _env__WEBPACK_IMPORTED_MODULE_7__[/* DevTeamsContext */ "c"],
-                getAuthToken: _env__WEBPACK_IMPORTED_MODULE_7__[/* DevTeamsIdToken */ "d"],
+                getContext: _env__WEBPACK_IMPORTED_MODULE_6__[/* DevTeamsContext */ "c"],
+                getAuthToken: _env__WEBPACK_IMPORTED_MODULE_6__[/* DevTeamsIdToken */ "d"],
             });
         }
-        scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootStarted);
+        scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootStarted);
         const context = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* getTeamsContext */ "h"])();
-        scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootHostContextInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success, {
+        scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootHostContextInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success, {
             dataBag: {
                 theme: context.app.theme,
                 parameterVersion,
@@ -74,7 +72,7 @@ function initHost(scenario, isMobile) {
             },
         });
         // set up common logger properties
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].setCommonProperty({
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].setCommonProperty({
             'AppInfo.SessionId': context.app.host.sessionId,
             'AppInfo.Locale': context.app.locale,
             'UserInfo.LicenseType': (_a = context.user) === null || _a === void 0 ? void 0 : _a.licenseType,
@@ -94,26 +92,30 @@ function initHost(scenario, isMobile) {
         });
         if (tenantId !== ((_m = (_l = context.user) === null || _l === void 0 ? void 0 : _l.tenant) === null || _m === void 0 ? void 0 : _m.id) && ((_p = (_o = context.user) === null || _o === void 0 ? void 0 : _o.tenant) === null || _p === void 0 ? void 0 : _p.id)) {
             // fallback to context.tid
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].setCompliantAriaClient(context.user.tenant.id).then(() => {
-                scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootLoggerInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
-                _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].activeLogger();
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].setCompliantAriaClient(context.user.tenant.id).then(() => {
+                scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootLoggerInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
+                _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].activeLogger();
             });
         }
         else {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].activeLogger();
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].activeLogger();
         }
         ensureAppClientType(isMobile, context.app.host.clientType);
+        // at this time, do not have i18n config
         // update locale
-        yield _localization__WEBPACK_IMPORTED_MODULE_3__[/* i18n */ "b"].changeLanguage(context.app.locale);
-        scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootLocaleInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success, {
-            dataBag: {
-                locale: `${_localization__WEBPACK_IMPORTED_MODULE_3__[/* i18n */ "b"].resolvedLanguage}(${context.app.locale})`,
-            },
-        });
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceDebug(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].AppBoot, `Rendering App Host with locale: ${_localization__WEBPACK_IMPORTED_MODULE_3__[/* i18n */ "b"].resolvedLanguage}(${context.app.locale}), dir: ${_localization__WEBPACK_IMPORTED_MODULE_3__[/* i18n */ "b"].dir()}`);
+        // await i18n.changeLanguage(context.app.locale);
+        // scenario.mark(StepName.AppBootLocaleInitialized, TelemetryScenarioStatus.Success, {
+        //     dataBag: {
+        //         locale: `${i18n.resolvedLanguage}(${context.app.locale})`,
+        //     },
+        // });
+        // logger.logTraceDebug(
+        //     LogCategory.AppBoot,
+        //     `Rendering App Host with locale: ${i18n.resolvedLanguage}(${context.app.locale}), dir: ${i18n.dir()}`
+        // );
         if (!subEntityId && !parameterVersion && context.page.subPageId) {
             // for old version, we need to dispatch deeplink from context
-            Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* dispatchDeepLink */ "d"])(context.page.subPageId, isMobile);
+            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "d"])(context.page.subPageId, isMobile);
         }
     });
 }
@@ -128,7 +130,7 @@ function ensureAppClientType(isMobile, hostClientType) {
         return;
     }
     if (!hostClientType) {
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceWarning(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].AppBoot, 'hostClientType is empty');
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceWarning(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, 'hostClientType is empty');
         return;
     }
     const mobileClientType = [
@@ -139,16 +141,16 @@ function ensureAppClientType(isMobile, hostClientType) {
     if (isMobile) {
         if (!mobileClientType.includes(hostClientType)) {
             // Desktop Client get mobile page
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].AppBoot, `${hostClientType} mismatches Mobile entry, UA: ${navigator.userAgent}`);
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].AppBoot);
-            window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_6__[/* DESKTOP_ENTRY */ "b"];
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, `${hostClientType} mismatches Mobile entry, UA: ${navigator.userAgent}`);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
+            window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_5__[/* DESKTOP_ENTRY */ "b"];
         }
     }
     else if (mobileClientType.includes(hostClientType)) {
         // Mobile Client get desktop page
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].AppBoot, `${hostClientType} mismatches Desktop entry, UA: ${navigator.userAgent}`);
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].AppBoot);
-        window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_6__[/* MOBILE_ENTRYPAGE */ "w"];
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, `${hostClientType} mismatches Desktop entry, UA: ${navigator.userAgent}`);
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
+        window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_5__[/* MOBILE_ENTRYPAGE */ "w"];
     }
 }
 function getEntryPoint(context) {
@@ -165,22 +167,22 @@ function getEntryPoint(context) {
 }
 function restoreLastHistoryPage() {
     return __awaiter(this, void 0, void 0, function* () {
-        const userId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].UserId);
+        const userId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].UserId);
         // Avoid restoring the history from a deeplink entry.
         if (!subEntityId && userId) {
-            Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* restoreLastHistory */ "f"])(userId);
+            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* restoreLastHistory */ "f"])(userId);
         }
     });
 }
 function registerBeforeUnloadEvent() {
     return __awaiter(this, void 0, void 0, function* () {
-        const userId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].UserId);
+        const userId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].UserId);
         Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* registerBeforeUnloadHandler */ "l"])(readyToUnload => {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppExit, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelType */ "f"].WorkReport, undefined, true);
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].flushLogs(readyToUnload);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppExit, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelType */ "f"].WorkReport, undefined, true);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].flushLogs(readyToUnload);
             // Avoid storing the history from a deeplink entry.
             if (!subEntityId && userId) {
-                Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* saveLastHistory */ "g"])(userId);
+                Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* saveLastHistory */ "g"])(userId);
             }
             return true;
         });
@@ -188,15 +190,15 @@ function registerBeforeUnloadEvent() {
 }
 function initLogger() {
     return __awaiter(this, void 0, void 0, function* () {
-        const userId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].UserId);
-        const ringId = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].RingId);
-        const locale = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].Locale);
-        const hostClientType = _env__WEBPACK_IMPORTED_MODULE_7__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].ClientType);
+        const userId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].UserId);
+        const ringId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].RingId);
+        const locale = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].Locale);
+        const hostClientType = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].ClientType);
         // set up logger properties
-        _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].setCommonProperty({
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].setCommonProperty({
             Source: 'Client',
-            'Bot.Id': _env__WEBPACK_IMPORTED_MODULE_7__[/* WORKREPORT_BOT_ID */ "j"],
-            'App.Id': _env__WEBPACK_IMPORTED_MODULE_7__[/* WORKREPORT_APP_AAD_ID */ "h"],
+            'Bot.Id': _env__WEBPACK_IMPORTED_MODULE_6__[/* WORKREPORT_BOT_ID */ "j"],
+            'App.Id': _env__WEBPACK_IMPORTED_MODULE_6__[/* WORKREPORT_APP_AAD_ID */ "h"],
             'App.Name': 'Updates',
             'AppInfo.ClientType': hostClientType,
             'AppInfo.Locale': locale,
@@ -206,8 +208,8 @@ function initLogger() {
             'UserInfo.TenantId': tenantId,
         });
         if (tenantId) {
-            yield _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].setCompliantAriaClient(tenantId);
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootLoggerInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
+            yield _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].setCompliantAriaClient(tenantId);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootLoggerInitialized, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
         }
     });
 }
@@ -215,9 +217,9 @@ function initDeepLink(isMobile) {
     if (subEntityId) {
         // remove subEntityId from url query, to fix the refreshing issue
         const url = new URL(window.location.href);
-        url.searchParams.delete(_env__WEBPACK_IMPORTED_MODULE_7__[/* URIParam */ "g"].SubEntityId);
+        url.searchParams.delete(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].SubEntityId);
         window.history.replaceState(null, '', url.toString());
-        Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* dispatchDeepLink */ "d"])(subEntityId, isMobile);
+        Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "d"])(subEntityId, isMobile);
     }
 }
 function init(isMobile) {
@@ -226,11 +228,11 @@ function init(isMobile) {
         try {
             restoreLastHistoryPage();
             // detect Guest user
-            const detectGuestPromise = Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* detectGuest */ "c"])();
+            const detectGuestPromise = Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* detectGuest */ "c"])();
             // init from url params
             const initloggerPromise = initLogger();
-            scenario = _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].createScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].AppBoot);
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiView(_addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelLaunchMethod */ "d"].AppNav, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelRegion */ "e"].Main, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelType */ "f"].WorkReport);
+            scenario = _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].createScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logUserBiView(_addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelLaunchMethod */ "d"].AppNav, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelRegion */ "e"].Main, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* PanelType */ "f"].WorkReport);
             initDeepLink(isMobile);
             // init Host with Teams Context
             const initHostPromise = initHost(scenario, isMobile);
@@ -238,26 +240,26 @@ function init(isMobile) {
             registerBeforeUnloadEvent();
             removeNoScript();
             yield Promise.all([initloggerPromise, initHostPromise, detectGuestPromise]);
-            scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootSuccess, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
+            scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootSuccess, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
             scenario.stop();
         }
         catch (error) {
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].activeLogger();
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].AppBoot, `${error}`);
-            scenario === null || scenario === void 0 ? void 0 : scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].AppBootFailedWithError, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Failure);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].activeLogger();
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, `${error}`);
+            scenario === null || scenario === void 0 ? void 0 : scenario.mark(_logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootFailedWithError, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Failure);
             scenario === null || scenario === void 0 ? void 0 : scenario.fail();
-            Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* notifyAppInitializationFailure */ "i"])({ reason: _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* app */ "d"].FailedReason.Other, message: _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].sessionId });
+            Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* notifyAppInitializationFailure */ "i"])({ reason: _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* app */ "d"].FailedReason.Other, message: _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].sessionId });
         }
         finally {
             // eslint-disable-next-line @typescript-eslint/no-empty-function
-            _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].flushLogs(() => { });
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].flushLogs(() => { });
         }
     });
 }
 function getThreadType(context) {
     var _a, _b, _c, _d;
     if ((_a = context.chat) === null || _a === void 0 ? void 0 : _a.id) {
-        if (Object(_utilities__WEBPACK_IMPORTED_MODULE_5__[/* isNewChat */ "e"])(context.chat.id, (_b = context.team) === null || _b === void 0 ? void 0 : _b.groupId, (_c = context.channel) === null || _c === void 0 ? void 0 : _c.id))
+        if (Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* isNewChat */ "e"])(context.chat.id, (_b = context.team) === null || _b === void 0 ? void 0 : _b.groupId, (_c = context.channel) === null || _c === void 0 ? void 0 : _c.id))
             return _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* ThreadType */ "h"].NewChat;
         if (context.chat.id === '48:notes')
             return _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* ThreadType */ "h"].SelfChat;
@@ -543,7 +545,7 @@ function countGroupsOfPeopleSelections(selections) {
 /*!***************************!*\
   !*** ./src/common/env.ts ***!
   \***************************/
-/*! exports provided: URIParam, isDev, isTest, isInt, ADDRESSBOOK_APP_RESOURCE_URL, ARIA_TOKEN, ENVIRONMENT, STYLE_NONCE, WORKREPORT_APP_AAD_ID, WORKREPORT_APP_TEAMS_ID, WORKREPORT_BOT_ID, WORKREPORT_FEEDBACK_APP_ID, WORKREPORT_FEEDBACK_OCPS_ENABLED, initQuery, DevTeamsContext, DevTeamsIdToken, isDevBrowser */
+/*! exports provided: URIParam, isDev, isTest, isInt, ADDRESSBOOK_APP_RESOURCE_URL, ARIA_TOKEN, ENVIRONMENT, STYLE_NONCE, WORKREPORT_APP_AAD_ID, WORKREPORT_APP_TEAMS_ID, WORKREPORT_BOT_ID, initQuery, DevTeamsContext, DevTeamsIdToken, isDevBrowser */
 /*! exports used: ADDRESSBOOK_APP_RESOURCE_URL, ARIA_TOKEN, DevTeamsContext, DevTeamsIdToken, ENVIRONMENT, STYLE_NONCE, URIParam, WORKREPORT_APP_AAD_ID, WORKREPORT_APP_TEAMS_ID, WORKREPORT_BOT_ID, initQuery, isDev, isDevBrowser, isInt, isTest */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -559,8 +561,6 @@ function countGroupsOfPeopleSelections(selections) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return AadAppId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return teamsAppId; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return botId; });
-/* unused harmony export WORKREPORT_FEEDBACK_APP_ID */
-/* unused harmony export WORKREPORT_FEEDBACK_OCPS_ENABLED */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return initQuery; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return DevTeamsContext; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return DevTeamsIdToken; });
@@ -626,24 +626,16 @@ const botId = "00000000-0000-0000-0000-000000000000";
 /**
  * Token for aria log
  */
-const ariaToken = undefined;
+const ariaToken = "9a40f5a4d1754c7db42aef1d8bed8003-ba2a02df-1fa3-4c6e-8b5a-dcd64f03f256-7677";
 /**
  * nonce for dynamic style
  */
-const styleNonce = "0jtk5fnd";
-/**
- * feedback OCPS Enabled
- */
-const feedbackOCPSEnabled = true;
-/**
- * feedback sdk app id
- */
-const feedbackAppId = "50203";
+const styleNonce = "0t9f7g07";
 
 /**
  * BASE URL for this page and auth
  */
-const resourceUrl = "https://addressbook.dg-app.com/92b01672-d7de-4a9e-9775-1289109e3222";
+const resourceUrl = "api://neat-ocean-7kdprps-8080.asse.devtunnels.ms/92b01672-d7de-4a9e-9775-1289109e3222";
 const initQuery = /* #__PURE__*/ new URLSearchParams(window.location.search);
 /**
  * teams context for dev/mock
@@ -952,56 +944,31 @@ function canRestore(path) {
 /*!*****************************!*\
   !*** ./src/logger/types.ts ***!
   \*****************************/
-/*! exports provided: ScenarioName, StepName, LogCategory, ModuleName */
-/*! exports used: LogCategory, ScenarioName, StepName */
+/*! exports provided: ScenarioName, ScenarioType, ModuleName, StepName, LogCategory */
+/*! exports used: LogCategory, ModuleName, ScenarioName, ScenarioType, StepName */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ScenarioName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return StepName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ScenarioName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ScenarioType; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return ModuleName; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return StepName; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LogCategory; });
-/* unused harmony export ModuleName */
+// For feature scenarios:
 var ScenarioName;
 (function (ScenarioName) {
     ScenarioName["AppBoot"] = "AppBoot";
-    ScenarioName["Notification"] = "Notification";
-    ScenarioName["WriteReport"] = "WriteReport";
-    ScenarioName["ReviewReport"] = "ReviewReport";
-    ScenarioName["ManageRequest"] = "ManageRequest";
-    ScenarioName["ViewHomePage"] = "ViewHomePage";
-    ScenarioName["CreateReportDefinition"] = "CreateReportDefinition";
-    ScenarioName["EditReportDefinition"] = "EditReportDefinition";
-    ScenarioName["SendReportDefinition"] = "SendReportDefinition";
-    ScenarioName["FileUpload"] = "FileUpload";
-    ScenarioName["ShareLink"] = "ShareLink";
-    ScenarioName["SharePointPicker"] = "SharePointPicker";
-    ScenarioName["EditOOBETemplate"] = "EditOOBETemplate";
-    ScenarioName["ViewCardList"] = "ViewCardList";
-    ScenarioName["GeneratedAndCopyLink"] = "GeneratedAndCopyLink";
-    ScenarioName["Onboard"] = "Onboard";
-    ScenarioName["DuplicateFormQuestion"] = "DuplicateFormQuestion";
-    ScenarioName["ReportReacted"] = "ReportReacted";
-    ScenarioName["Feedback"] = "Feedback";
-    ScenarioName["NPSFeedback"] = "NPSFeedback";
-    ScenarioName["ManualReminder"] = "ManualReminder";
-    ScenarioName["TaskModuleHomeSimple"] = "TaskModuleHomeSimple";
-    ScenarioName["DataExport"] = "DataExport";
-    ScenarioName["ReadingStatus"] = "ReadingStatus";
-    ScenarioName["Default"] = "Default";
-    ScenarioName["ListRBAC"] = "ListRBAC";
-    ScenarioName["AggregatedView"] = "AggregatedView";
-    ScenarioName["AggregatedViewTemplate"] = "AggregatedViewTemplate";
-    ScenarioName["AggregatedViewCardList"] = "AggregatedViewCardList";
-    ScenarioName["AggregatedViewTemplateCard"] = "AggregatedViewTemplateCard";
-    ScenarioName["SuccessStory"] = "SuccessStory";
-    ScenarioName["OwnedListsSection"] = "OwnedListsSection";
-    ScenarioName["CopyRequest"] = "CopyRequest";
-    ScenarioName["ImportLastReport"] = "ImportLastReport";
-    ScenarioName["ReportComment"] = "ReportComment";
-    ScenarioName["DeleteRequest"] = "DeleteRequest";
-    ScenarioName["GetHelp"] = "GetHelp";
-    ScenarioName["SystemNotification"] = "SystemNotification";
+    ScenarioName["PeopleCard"] = "PeopleCard";
 })(ScenarioName || (ScenarioName = {}));
+var ScenarioType;
+(function (ScenarioType) {
+    ScenarioType["OpenPeopleCard"] = "OpenPeopleCard";
+})(ScenarioType || (ScenarioType = {}));
+var ModuleName;
+(function (ModuleName) {
+    ModuleName["HomePage"] = "HomePage";
+    ModuleName["SearchResult"] = "SearchResult";
+})(ModuleName || (ModuleName = {}));
 var StepName;
 (function (StepName) {
     /**
@@ -1012,580 +979,21 @@ var StepName;
      * step indicating when the app exit
      */
     StepName["AppExit"] = "AppExit";
-    /**
-     * step indicating when the app initialization has failed
-     */
-    StepName["AppBootFailedWithError"] = "AppBootFailedWithError";
-    /**
-     * step indicating when the app initialization has failed with ErrorBoundary
-     */
-    StepName["AppBootFailedWithErrorBoundary"] = "AppBootFailedWithErrorBoundary";
-    /**
-     * step finished get APP context
-     */
     StepName["AppBootHostContextInitialized"] = "AppBootHostContextInitialized";
-    /**
-     * logger initialized
-     */
     StepName["AppBootLoggerInitialized"] = "AppBootLoggerInitialized";
-    /**
-     * User locale initialized
-     */
-    StepName["AppBootLocaleInitialized"] = "AppBootLocaleInitialized";
-    /**
-     * ECS initialized
-     */
-    StepName["AppBootEcsInitialized"] = "AppBootEcsInitialized";
-    /**
-     * Step react renderd the APP
-     */
-    StepName["AppBootReactRendered"] = "AppBootReactRendered";
-    /**
-     * Dispatch DeepLink
-     */
-    StepName["AppBootDispatchDeepLink"] = "AppBootDispatchDeepLink";
-    /**
-     * App Boot Success
-     */
     StepName["AppBootSuccess"] = "AppBootSuccess";
-    /**
-     * Teams Initialization Success
-     */
-    StepName["TeamsInitializationSuccess"] = "TeamsInitializationSuccess";
-    /**
-     * Step indicating when a user has pressed submit button
-     */
-    StepName["SubmitButtonPressed"] = "SubmitButtonPressed";
-    /**
-     * Step indicating when a user has selected a report slot
-     */
-    StepName["ReportSlotSelected"] = "ReportSlotSelected";
-    /**
-     * Step indicating when a user has pressed show more button
-     */
-    StepName["ReportSlotShowMore"] = "ReportSlotShowMore";
-    /**
-     * Step indicating when a user has open the request modal
-     */
-    StepName["RequestInfoModalOpen"] = "RequestInfoModalOpen";
-    /**
-     * Step indicating when a user has open the request modal and pressed the edit button
-     */
-    StepName["RequestInfoEditButtonPressed"] = "RequestInfoEditButtonPressed";
-    /**
-     * Step indicating when a user has dismiss the request modal
-     */
-    StepName["RequestInfoModalDismiss"] = "RequestInfoModalDismiss";
-    /**
-     * Step indicating when collecting answers
-     */
-    StepName["AnswersCollected"] = "AnswersCollected";
-    /**
-     * Step indicating when a user has pressed report reacted button
-     */
-    StepName["ReportReactedButtonPressed"] = "ReportReactedButtonPressed";
-    /**
-     * Step indicating when submit report success
-     */
-    StepName["SubmitReportSuccess"] = "SubmitReportSuccess";
-    /**
-     * Close button pressed
-     */
-    StepName["CloseButtonPressed"] = "CloseButtonPressed";
-    /**
-     * Back button pressed
-     */
-    StepName["BackButtonPressed"] = "BackButtonPressed";
-    /**
-     * Back to design request page button pressed
-     */
-    StepName["BackToDesignRequestButtonPressed"] = "BackToDesignRequestButtonPressed";
-    /**
-     * Preview adaptive card button pressed
-     */
-    StepName["PreviewACButtonPressed"] = "PreviewACButtonPressed";
-    /**
-     * Cancel button pressed
-     */
-    StepName["CancelButtonPressed"] = "CancelButtonPressed";
-    /**
-     * Breadcrumb button pressed
-     */
-    StepName["BreadcrumbButtonPressed"] = "BreadcrumbButtonPressed";
-    /**
-     * Show ToolTip
-     */
-    StepName["TooltipShow"] = "TooltipShow";
-    /**
-     * Toggle switch
-     */
-    StepName["ToggleSwitched"] = "ToggleSwitched";
-    /**
-     * People picker changed
-     */
-    StepName["PeoplePickerChanged"] = "PeoplePickerChanged";
-    /**
-     * Title edit
-     */
-    StepName["TitleEdit"] = "TitleEdit";
-    /**
-     * Report Clicked
-     */
-    StepName["ReportClicked"] = "ReportClicked";
-    /**
-     * View card list
-     */
-    StepName["ViewCardList"] = "ViewCardList";
-    /**
-     * View my update button is pressed
-     */
-    StepName["ViewMyUpdateButtonPressed"] = "ViewMyUpdateButtonPressed";
-    /**
-     * Submit my update button is pressed
-     */
-    StepName["SubmitMyUpdateButtonPressed"] = "SubmitMyUpdateButtonPressed";
-    /**
-     * Open personal app aggregated view page
-     */
-    StepName["OpenPAAggregatedViewPage"] = "OpenPAAggregatedViewPage";
-    /**
-     * Statistic panel clicked
-     */
-    StepName["StatisticPanelClicked"] = "StatisticPanelClicked";
-    /**
-     * View more detail button is pressed
-     */
-    StepName["ViewMoreDetailButtonPressed"] = "ViewMoreDetailButtonPressed";
-    /**
-     * Create Form
-     */
-    StepName["CreateForm"] = "CreateForm";
-    /**
-     * Forms Design Ready
-     */
-    StepName["FormsDesignReady"] = "FormsDesignReady";
-    /**
-     * Forms Design Load Failed
-     */
-    StepName["FormsDesignLoadFailed"] = "FormsDesignLoadFailed";
-    /**
-     * Manage Template list item pressed
-     */
-    StepName["ManageTemplateListItemPressed"] = "ManageTemplateListItemPressed";
-    /**
-     * more button pressed
-     */
-    StepName["MoreButtonPressed"] = "MoreButtonPressed";
-    /**
-     * Manage Template list edit button pressed
-     */
-    StepName["ManageTemplateListEditButtonPressed"] = "ManageTemplateListEditButtonPressed";
-    /**
-     * Learn more button pressed
-     */
-    StepName["SuccessStoryLearnMoreButtonPressed"] = "SuccessStoryLearnMoreButtonPressed";
-    /**
-     * Use template button pressed
-     */
-    StepName["UseTemplateButtonPressed"] = "UseTemplateButtonPressed";
-    /**
-     * Dismiss the welcome update section
-     */
-    StepName["DismissWelcomeUpdateSection"] = "DismissWelcomeUpdateSection";
-    /**
-     * Dismiss the welcome update section, user has clicked the dismiss button
-     */
-    StepName["WelcomeUpdateSectionDismissing"] = "WelcomeUpdateSectionDismissing";
-    /**
-     * Dismiss the with category welcome update section, user has clicked the dismiss button
-     */
-    StepName["WelcomeUpdateSectionWithCategoryDismissing"] = "WelcomeUpdateSectionWithCategoryDismissing";
-    /**
-     * Use template button pressed in preview page
-     */
-    StepName["PreviewPageUseTemplateButtonPressed"] = "PreviewPageUseTemplateButtonPressed";
-    /**
-     * Use template button pressed in success story page
-     */
-    StepName["SuccessStoryUseTemplatePressed"] = "SuccessStoryUseTemplatePressed";
-    /**
-     * Preview template button pressed in success story page
-     */
-    StepName["SuccessStoryPreviewTemplatePressed"] = "SuccessStoryPreviewTemplatePressed";
-    /**
-     * Preview template button pressed
-     */
-    StepName["PreviewTemplateButtonPressed"] = "PreviewTemplateButtonPressed";
-    /**
-     * Try for my team button pressed
-     */
-    StepName["TryForMyTeamButtonPressed"] = "TryForMyTeamButtonPressed";
-    /**
-     * Choose template
-     */
-    StepName["ChooseTemplate"] = "ChooseTemplate";
-    /**
-     * Preview template
-     */
-    StepName["PreviewTemplate"] = "PreviewTemplate";
-    /**
-     * See all templates button pressed
-     */
-    StepName["SeeAllTemplatesButtonPressed"] = "SeeAllTemplatesButtonPressed";
-    /**
-     * See all button pressed
-     */
-    StepName["SeeAllButtonPressed"] = "SeeAllButtonPressed";
-    /**
-     * Edit report definition button is pressed
-     */
-    StepName["EditReportDefinitionButtonPressed"] = "ManageTemplateListEditButtonPressed";
-    /**
-     * Manage Template list toggle status button pressed
-     */
-    StepName["ManageTemplateListToggleStatusButtonPressed"] = "ManageTemplateListToggleStatusButtonPressed";
-    /**
-     * Template status change confirm button pressed
-     */
-    StepName["TemplateStatusChangeConfirmButtonPressed"] = "TemplateStatusChangeConfirmButtonPressed";
-    /**
-     * Create Template button pressed
-     */
-    StepName["CreateTemplateButtonPressed"] = "CreateTemplateButtonPressed";
-    /**
-     * Recommond Template More button pressed
-     */
-    StepName["RecommendTemplateMoreButtonPressed"] = "RecommendTemplateMoreButtonPressed";
-    /**
-     * New request button button pressed
-     */
-    StepName["NewRequestButtonPressed"] = "NewRequestButtonPressed";
-    /**
-     * Template Card pressed
-     */
-    StepName["TemplateCardPressed"] = "TemplateCardPressed";
-    /**
-     * Pick Template
-     */
-    StepName["PickTemplate"] = "PickTemplate";
-    /**
-     * Occurrence Item pressed
-     */
-    StepName["OccurrenceItemPressed"] = "OccurrenceItemPressed";
-    /**
-     * FilterChanged
-     */
-    StepName["FilterChanged"] = "FilterChanged";
-    /**
-     * Occurrence See all button pressed
-     */
-    StepName["OccurrenceSeeAllButtonPressed"] = "OccurrenceSeeAllButtonPressed";
-    /**
-     * Scheduled type pivot button pressed
-     */
-    StepName["ScheduledTypePivotPressed"] = "ScheduledTypePivotPressed";
-    /**
-     * View in Collection Button pressed
-     */
-    StepName["ViewInCollectionButtonPressed"] = "ViewInCollectionButtonPressed";
-    /**
-     * Basic Setting Next Button pressed
-     */
-    StepName["BasicSettingNextButtonPressed"] = "BasicSettingNextButtonPressed";
-    /**
-     * Form Design Next Button pressed
-     */
-    StepName["FormDesignNextButtonPressed"] = "FormDesignNextButtonPressed";
-    /**
-     * Review Report Content
-     */
-    StepName["ReviewReportContent"] = "ReviewReportContent";
-    // step to initiate getting sharepoint info
-    StepName["GetSharepointInfoStart"] = "GetSharepointInfoStart";
-    // step when getting sharepoint info is completed
-    StepName["GetSharepointInfoEnd"] = "GetSharepointInfoEnd";
-    // step when getting sharepoint info fails
-    StepName["GetSharepointInfoFail"] = "GetSharepointInfoFail";
-    // step to initiate sharing file
-    StepName["CreateShareLinkStart"] = "CreateShareLinkStart";
-    // step when sharing file is completed
-    StepName["CreateShareLinkEnd"] = "CreateShareLinkEnd";
-    // step when sharing file fails
-    StepName["CreateShareLinkFail"] = "CreateShareLinkFail";
-    // step when ShareLink is canceled
-    StepName["ShareLinkCanceled"] = "ShareLinkCanceled";
-    // step when ShareLink is confimred
-    StepName["ShareLinkConfirmed"] = "ShareLinkConfirmed";
-    // step to initiate basic file upload
-    StepName["BasicFileUploadStart"] = "BasicFileUploadStart";
-    // step when basic file upload is completed
-    StepName["BasicFileUploadEnd"] = "BasicFileUploadEnd";
-    // step when approvals file upload fails
-    StepName["BasicFileUploadFail"] = "BasicFileUploadFail";
-    // step when file filter is completed
-    StepName["FileFilterEnd"] = "FileFilterEnd";
-    // step indicating open local file browser to select file for uploading.
-    StepName["FileUploadClicked"] = "FileUploadClicked";
-    // step indicating file selected for uploading.
-    StepName["FileUploadSelected"] = "FileUploadSelected";
-    // step indicating file chiclet is clicked.
-    StepName["FileChicletClicked"] = "FileChicletClicked";
-    // step to close SharePoint picker
-    StepName["SharePointPickerClose"] = "SharePointPickerClose";
-    // step to pick files in SharePoint picker
-    StepName["SharePointPickerPick"] = "SharePointPickerPick";
-    // step to authenticate in SharePoint picker
-    StepName["SharePointPickerAuthenticate"] = "SharePointPickerAuthenticate";
-    // step to pick local files in SharePoint picker
-    StepName["SharePointPickerPickLocalFiles"] = "SharePointPickerPickLocalFiles";
-    // step to dismiss SharePoint picker from backdrop click
-    StepName["SharePointPickerBackdropDismiss"] = "SharePointPickerBackdropDismiss";
-    // step to open SharePoint picker
-    StepName["SharePointPickerOpen"] = "SharePointPickerOpen";
-    // step to stop SharePoint picker scenario
-    StepName["SharePointPickerStopScenario"] = "SharePointPickerStopScenario";
-    // step when host is ready
-    StepName["SharePointPickerHostReady"] = "SharePointPickerHostReady";
-    // step indicating report definition title is clicked in review page
-    StepName["ReportDefitionTitleCliked"] = "ReportDefitionTitleCliked";
-    // step when user click the edit icon to open color icon picker and customize template icon
-    StepName["ColorIconPickerOpen"] = "ColorIconPickerOpen";
-    // step when user close color icon picker
-    StepName["ColorIconPickerClose"] = "ColorIconPickerClose";
-    // Outcome preview pivot item clicked
-    StepName["OutcomePreviewPivotClicked"] = "OutcomePreviewPivotClicked";
-    // Template form preview pivot item clicked
-    StepName["TemplateFormPreviewPivotClicked"] = "OutcomePreviewPivotClicked";
-    // step to select Team Tag
-    StepName["TeamTagSelected"] = "TeamTagSelected";
-    // step to click collection persona to expand to individual personas
-    StepName["EveryoneCollectionPersonaExpand"] = "EveryoneCollectionPersonaExpand";
-    // step to remove eveyone persona
-    StepName["EveryoneCollectionPersonaRemoved"] = "EveryoneCollectionPersonaRemoved";
-    // step to choose an OOBE teplate to write
-    StepName["ChooseOOBETemplate"] = "ChooseOOBETemplate";
-    // step to click see all OOBE teplates button
-    StepName["SeeAllOOBETemplatesButtonClick"] = "SeeAllOOBETemplatesButtonClick";
-    // step to click the edit OOBE template button
-    StepName["EditOOBETemplateButtonClick"] = "EditOOBETemplateButtonClick";
-    // step to save edited OOBE template
-    StepName["SaveEditedOOBETemplate"] = "SaveEditedOOBETemplate";
-    // step to click copy link button
-    StepName["CopyLinkButtonCliked"] = "CopyLinkButtonCliked";
-    // step to open copy link panel
-    StepName["OpenCopyLinkPanel"] = "OpenCopyLinkPanel";
-    // step to click link shared by chat/channel/outlook etc.
-    StepName["LinkCliked"] = "LinkCliked";
-    // step to click the 'Write an update' in Onboard Modal
-    StepName["OnboardWriteAnUpdateButtonClicked"] = "OnboardWriteAnUpdateButtonClicked";
-    // step to click the 'Request an update' in Onboard Modal
-    StepName["OnboardRequestAnUpdateButtonClicked"] = "OnboardRequestAnUpdateButtonClicked";
-    // step to click the 'Next' in Onboard Modal
-    StepName["OnboardNextButtonClicked"] = "OnboardNextButtonClicked";
-    // step to click the 'Back' in Onboard Modal
-    StepName["OnboardBackButtonClicked"] = "OnboardBackButtonClicked";
-    // step to click the 'Begin your journey' in Onboard Modal
-    StepName["OnboardEntryButtonClicked"] = "OnboardEntryButtonClicked";
-    // step to click the close button in Onboard Modal
-    StepName["OnboardCloseButtonClicked"] = "OnboardCloseButtonClicked";
-    // step to click the close button in update ReportDefinition then duplicate forms question
-    StepName["DuplicateFormQuestion"] = "DuplicateFormQuestion";
-    // step to click the 'Next' in Onboard AppUserGuidesBubble
-    StepName["AppUserGuidesBubbleNextButtonClicked"] = "AppUserGuidesBubbleNextButtonClicked";
-    // step to click the 'Next' in Onboard AppUserGuidesBubble
-    StepName["AppUserGuidesBubbleBackButtonClicked"] = "AppUserGuidesBubbleBackButtonClicked";
-    // step to close Onboard AppUserGuidesBubble
-    StepName["AppUserGuidesBubbleDismiss"] = "AppUserGuidesBubbleDismiss";
-    // step to click the confirm button in the last item of AppUserGuidesBubble
-    StepName["AppUserGuidesBubbleConfirm"] = "AppUserGuidesBubbleConfirm";
-    // step when file browser is loaded notification
-    StepName["FileBrowserPageLoadedNotification"] = "FileBrowserPageLoadedNotification";
-    // step when file browser navifation start notification
-    StepName["FileBrowserNavigationStartedNotification"] = "FileBrowserNavigationStartedNotification";
-    // step when file browser navifation end notification
+    StepName["AppBootFailedWithError"] = "AppBootFailedWithError";
+    StepName["AppBootFailedWithErrorBoundary"] = "AppBootFailedWithErrorBoundary";
+    StepName["AppBootDispatchDeepLink"] = "AppBootDispatchDeepLink";
     StepName["FileBrowserNavigationEndedNotification"] = "FileBrowserNavigationEndedNotification";
-    // step when Feedback clicked
-    StepName["FeedbackClicked"] = "FeedbackClicked";
-    // step when Feedback click success
-    StepName["FeedbackClickSuccess"] = "FeedbackClickSuccess";
-    // step when Feedback click error
-    StepName["FeedbackClickError"] = "FeedbackClickError";
-    // step when Feedback click when sdk is loading
-    StepName["FeedbackClickWhenLoading"] = "FeedbackClickWhenLoading";
-    // step when Feedback submit success
-    StepName["FeedbackSubmitSuccess"] = "FeedbackSubmitSuccess";
-    // step when Feedback submit fail
-    StepName["FeedbackSubmitError"] = "FeedbackSubmitError";
-    // step when FeedbackSDK load error
-    StepName["FeedbackSDKLoadError"] = "FeedbackSDKLoadError";
-    // step when FeedbackSDK init error
-    StepName["FeedbackSDKInitError"] = "FeedbackSDKInitError";
-    // step when FeedbackSDK init success
-    StepName["FeedbackSDKInitSuccess"] = "FeedbackSDKInitSuccess";
-    // step when a review open the manual reminder modal
-    StepName["ManualReminderModalOpened"] = "ManualReminderModalOpened";
-    // step when a review click the reminder button
-    StepName["ManualReminderButtonClicked"] = "ManualReminderButtonClicked";
-    // step when auto redirect to collect update page in task module
-    StepName["AutoRedirectToCollectUpdate"] = "AutoRedirectToCollectUpdate";
-    // step when the open personal app button is clicked
-    StepName["OpenPersonalAppButtonPressed"] = "OpenPersonalAppButtonPressed";
-    // step when press the collect update button
-    StepName["CollectUpdatesButtonPressed"] = "CollectUpdatesButtonPressed";
-    // step when using rich text field
-    StepName["RichTextField"] = "RichTextField";
-    // step when click the fre page next button.
-    StepName["FREPageNextButtonPressed"] = "FREPageNextButtonPressed";
-    // step when click preview page coach mark_1 close button.
-    StepName["PreviewPageCoachMark1CloseButtonPressed"] = "PreviewPageCoachMark1CloseButtonPressed";
-    // step when click preview page coach mark_2 close button.
-    StepName["PreviewPageCoachMark2CloseButtonPressed"] = "PreviewPageCoachMark2CloseButtonPressed";
-    // step when click preview page coach mark_3 close button.
-    StepName["PreviewPageCoachMark3CloseButtonPressed"] = "PreviewPageCoachMark3CloseButtonPressed";
-    // step when click preview page coach mark_4 close button.
-    StepName["PreviewPageCoachMark4CloseButtonPressed"] = "PreviewPageCoachMark4CloseButtonPressed";
-    // step when click preview page coach mark_4 got it button.
-    StepName["PreviewPageCoachMark4GotItButtonPressed"] = "PreviewPageCoachMark4GotItButtonPressed";
-    // step when click preview page edit button.
-    StepName["PreviewPageEditButtonPressed"] = "PreviewPageEditButtonPressed";
-    // step when click preview page next button.
-    StepName["PreviewPageNextButtonPressed"] = "PreviewPageNextButtonPressed";
-    // step when click preview page more button.
-    StepName["PreviewPageMoreButtonPressed"] = "PreviewPageMoreButtonPressed";
-    // step when click submit update button.
-    StepName["PreviewPageSubmitUpdateButtonPressed"] = "PreviewPageSubmitUpdateButtonPressed";
-    // step when click preview page go to App button.
-    StepName["PreviewPageGoToAppButtonPressed"] = "PreviewPageGoToAppButtonPressed";
-    // step when click preview page feedback button.
-    StepName["PreviewPageFeedbackButtonPressed"] = "PreviewPageFeedbackButtonPressed";
-    // step when click form page save button.
-    StepName["FormPageSaveButtonPressed"] = "FormPageSaveButtonPressed";
-    // step when click send to group button
-    StepName["RulesSettingsPageSendToGroupButtonPressed"] = "RulesSettingsPageSendToGroupButtonPressed";
-    // step to click see all template preview cards button
-    StepName["SeeAllTemplatePreviewCardsButtonClick"] = "SeeAllTemplatePreviewCardsButtonClick";
-    // step to choose an preview teplate to write
-    StepName["ChoosePreviewTemplate"] = "ChoosePreviewTemplate";
-    // step to click export button
-    StepName["ExportButtonPressed"] = "ExportButtonPressed";
-    // step to click download button
-    StepName["DownloadButtonPressed"] = "DownloadButtonPressed";
-    // step when hover the reading status
-    StepName["ReadingStatusHover"] = "ReadingStatusHover";
-    // step when edit report
-    StepName["EditReport"] = "EditReport";
-    // step when switch to report question view
-    StepName["SwitchToReportQuestionView"] = "SwitchToReportQuestionView";
-    // step when open definition tile setting modal
-    StepName["OpenDefinitionTileSettingModal"] = "OpenDefinitionTileSettingModal";
-    // step when open success story
-    StepName["OpenSuccessStoryModal"] = "OpenSuccessStoryModal";
-    // step when close success story
-    StepName["CloseSuccessStoryModal"] = "CloseSuccessStoryModal";
-    // tiles are loaded
-    StepName["TilesLoaded"] = "TilesLoaded";
-    // step when open use template in template store v2
-    StepName["OpenUseTemplateInTemplateStoreV2"] = "OpenUseTemplateInTemplateStoreV2";
-    // step when close use template in template store v2
-    StepName["CloseUseTemplateInTemplateStoreV2"] = "CloseUseTemplateInTemplateStoreV2";
-    // step when open preview template in template store v2
-    StepName["OpenPreviewTemplateInTemplateStoreV2"] = "OpenPreviewTemplateInTemplateStoreV2";
-    // step when close preview template in template store v2
-    StepName["ClosePreviewTemplateInTemplateStoreV2"] = "ClosePreviewTemplateInTemplateStoreV2";
-    // step when open template store v2
-    StepName["OpenTemplateStoreV2"] = "OpenTemplateStoreV2";
-    // step when close template store v2
-    StepName["CloseTemplateStoreV2"] = "OpenTemplateStoreV2";
-    // step when open use template in home page v2
-    StepName["OpenUseTemplateInHomePageV2"] = "OpenUseTemplateInHomePageV2";
-    // step when close use template in home page v2
-    StepName["CloseUseTemplateInHomePageV2"] = "CloseUseTemplateInHomePageV2";
-    // step when open start from blank button in template store v2
-    StepName["OpenStartFromBlankInTemplateStoreV2"] = "OpenStartFromBlankInTemplateStoreV2";
-    // step when open start from blank button in task module collect updates page
-    StepName["OpenStartFromBlankInTaskModuleCollectUpdatesPage"] = "OpenStartFromBlankInTaskModuleCollectUpdatesPage";
-    // step when close template preview modal
-    StepName["CloseTemplatePreviewModal"] = "CloseTemplatePreviewModal";
-    // Owned lists section pivot item clicked
-    StepName["OwnedListsSectionPivotClicked"] = "OwnedListsSectionPivotClicked";
-    // step to click create quick update button
-    StepName["CreateQuickUpdateButtonClicked"] = "CreateQuickUpdateButtonClicked";
-    // step to click item to submit update
-    StepName["ItemClicked"] = "ItemClicked";
-    // step when click aggregated view card
-    StepName["AggregatedViewCardClick"] = "AggregatedViewCardClick";
-    // step when get help button clicked
-    StepName["GetHelpClicked"] = "GetHelpClicked";
-    /**
-     * Manage Template list copy button pressed
-     */
-    StepName["ManageTemplateListCopyButtonPressed"] = "ManageTemplateListCopyButtonPressed";
-    /**
-     * Manage Template list delete button pressed
-     */
-    StepName["ManageTemplateListDeleteButtonPressed"] = "ManageTemplateListDeleteButtonPressed";
-    /**
-     * Delete request confirm button pressed
-     */
-    StepName["DeleteRequestConfirmButtonPressed"] = "DeleteRequestConfirmButtonPressed";
-    /**
-     * Delete request ended
-     */
-    StepName["DeleteRequestEnded"] = "DeleteRequestEnded";
-    /**
-     * Import button pressed
-     */
-    StepName["ImportButtonPressed"] = "ImportButtonPressed";
-    /**
-     * Report comment reply to button pressed
-     */
-    StepName["ReportCommentReplyToButtonPressed"] = "ReportCommentReplyToButtonPressed";
-    /**
-     * Report comment mention page opens.
-     */
-    StepName["ReportCommentMentionOpened"] = "ReportCommentMentionOpened";
-    /**
-     * Report comment mention not in scope.
-     */
-    StepName["ReportCommentMentionNotInScope"] = "ReportCommentMentionNotInScope";
-    /**
-     * Report comment submit button pressed
-     */
-    StepName["ReportCommentSubmitButtonPressed"] = "ReportCommentSubmitButtonPressed";
-    /**
-     * Report comment submitted successfully.
-     */
-    StepName["ReportCommentSubmittedSuccessfully"] = "ReportCommentSubmittedSuccessfully";
-    /**
-     * NPS Feedback Modal Opened
-     */
-    StepName["NPSFeedbackModalOpened"] = "NPSFeedbackModalOpened";
-    /**
-     * NPS Feedback Modal Closed, user click onDismiss button
-     */
-    StepName["NPSFeedbackModalDismissed"] = "NPSFeedbackModalDismissed";
-    /**
-     * NPS Feedback Modal Give Feedback button pressed
-     */
-    StepName["NPSFeedbackGiveFeedbackPressed"] = "NPSFeedbackGiveFeedbackPressed";
-    /**
-     * Try it now button pressed
-     */
-    StepName["TryItNowButtonPressed"] = "TryItNowButtonPressed";
-    /**
-     * Got it button pressed
-     */
-    StepName["GotItButtonPressed"] = "GotItButtonPressed";
-    // step when open categorized template store and select category
-    StepName["selectCategoryInCategorizedTemplateStore"] = "selectCategoryInCategorizedTemplateStore";
-    // step when close categorized template store
-    StepName["CloseCategorizedTemplateStore"] = "CloseCategorizedTemplateStore";
-    // step when show the system notification
-    StepName["ShowSystemNotification"] = "ShowSystemNotification";
-    // step when close the system notification
-    StepName["CloseSystemNotification"] = "CloseSystemNotification";
-    // step when expand the people selection
-    StepName["ExpandPeopleSelection"] = "ExpandPeopleSelection";
+    StepName["FileBrowserNavigationStartedNotification"] = "FileBrowserNavigationStartedNotification";
+    StepName["FileBrowserPageLoadedNotification"] = "FileBrowserPageLoadedNotification";
+    StepName["SharePointPickerPickLocalFiles"] = "SharePointPickerPickLocalFiles";
+    StepName["SharePointPickerAuthenticate"] = "SharePointPickerAuthenticate";
+    StepName["SharePointPickerClose"] = "SharePointPickerClose";
+    StepName["SharePointPickerPick"] = "SharePointPickerPick";
+    StepName["TeamsInitializationSuccess"] = "TeamsInitializationSuccess";
+    StepName["AppBootReactRendered"] = "AppBootReactRendered";
 })(StepName || (StepName = {}));
 // Log Category Sources for scenarios
 var LogCategory;
@@ -1620,24 +1028,6 @@ var LogCategory;
     LogCategory["ReportDraft"] = "ReportDraft";
     LogCategory["OCPSRequest"] = "OCPSRequest";
 })(LogCategory || (LogCategory = {}));
-var ModuleName;
-(function (ModuleName) {
-    ModuleName["Default"] = "Default";
-    ModuleName["CollectUpdatesPage"] = "CollectUpdatesPage";
-    ModuleName["ReviewReportPage"] = "ReviewReportPage";
-    ModuleName["RBACListPage"] = "RBACListPage";
-    ModuleName["SuccessStoryPage"] = "SuccessStoryPage";
-    ModuleName["PreviewTemplatePage"] = "PreviewTemplatePage";
-    ModuleName["CreateRequestPage"] = "CreateRequestPage";
-    ModuleName["EditRequestPage"] = "EditRequestPage";
-    ModuleName["SubmitUpdatePage"] = "SubmitUpdatePage";
-    ModuleName["HomePageV2"] = "HomePageV2";
-    ModuleName["WriteUpdateList"] = "WriteUpdateList";
-    ModuleName["WhatsNewModal"] = "WhatsNewModal";
-    ModuleName["TaskModuleReviewOccurrence"] = "TaskModuleReviewOccurrence";
-    ModuleName["SubmitUpdateV2Page"] = "SubmitUpdateV2Page";
-    ModuleName["ReportDefinitionInfoModal"] = "ReportDefinitionInfoModal";
-})(ModuleName || (ModuleName = {}));
 
 
 /***/ }),
@@ -1731,7 +1121,7 @@ const reminderVar = Object(react_reactive_var__WEBPACK_IMPORTED_MODULE_0__[/* ma
 /*!********************************!*\
   !*** ./src/utilities/index.ts ***!
   \********************************/
-/*! exports provided: friendlyDateFormatter, friendlyRelativeTimeFormatter, relativeMinuteTimeFormatter, weekDayFormatter, dayFormatter, dateTimeRangeFormatter, DeepLinkType, DeepLinkSourceType, dispatchDeepLink, generateDeepLink, generateDeepLinkToAppHomePage, LocalStorageFlag, hasLocalStorageFlag, addLocalStorageFlag, removeLocalStorageFlag, clearLocalStorageFlags, useLocalStorageFlag, saveLastHistory, restoreLastHistory, isFirstPage, mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections, summarizeQuestionFromEntry, summarizeAnswerFromEntry, summarizeEntry, stopSharepointScenario, addOnboardScenarioEntryTelemetry, addOnboardScenarioDismissTelemetry, addOnboardScenarioIntroductionStepTelemetry, addOnboardScenarioEntrySelectTelemetry, UserRole, detectGuest, tryParseAfdRefFromHeaders, handleSystemNotificationHeader, InputTaskType, submitInputTask, isNewChat */
+/*! exports provided: friendlyDateFormatter, friendlyRelativeTimeFormatter, relativeMinuteTimeFormatter, weekDayFormatter, dayFormatter, dateTimeRangeFormatter, DeepLinkType, DeepLinkSourceType, dispatchDeepLink, generateDeepLink, generateDeepLinkToAppHomePage, LocalStorageFlag, hasLocalStorageFlag, addLocalStorageFlag, removeLocalStorageFlag, clearLocalStorageFlags, useLocalStorageFlag, saveLastHistory, restoreLastHistory, isFirstPage, mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections, UserRole, detectGuest, tryParseAfdRefFromHeaders, handleSystemNotificationHeader, InputTaskType, submitInputTask, isNewChat */
 /*! exports used: countGroupsOfPeopleSelections, countUsersOfPeopleSelections, detectGuest, dispatchDeepLink, isNewChat, restoreLastHistory, saveLastHistory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -1752,12 +1142,11 @@ const reminderVar = Object(react_reactive_var__WEBPACK_IMPORTED_MODULE_0__[/* ma
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _models__WEBPACK_IMPORTED_MODULE_5__["b"]; });
 
-/* harmony import */ var _TelemetryUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TelemetryUtils */ "t1MT");
-/* harmony import */ var _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./UserRoleCheckUtils */ "bH3m");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_7__["a"]; });
+/* harmony import */ var _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UserRoleCheckUtils */ "bH3m");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_6__["a"]; });
 
-/* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./Utils */ "TktC");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _Utils__WEBPACK_IMPORTED_MODULE_8__["a"]; });
+/* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils */ "TktC");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _Utils__WEBPACK_IMPORTED_MODULE_7__["a"]; });
 
 
 
@@ -1766,7 +1155,7 @@ const reminderVar = Object(react_reactive_var__WEBPACK_IMPORTED_MODULE_0__[/* ma
 
 
 // export * from './StatisticsUtils';
-
+// export * from './TelemetryUtils';
 
 
 
@@ -1986,7 +1375,7 @@ i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].on('languageChanged', (l
 });
 i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].on('initialized', () => {
     Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* notifyAppInitializationSuccess */ "j"])().then(() => {
-        _logger__WEBPACK_IMPORTED_MODULE_7__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_7__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_7__[/* StepName */ "c"].TeamsInitializationSuccess, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
+        _logger__WEBPACK_IMPORTED_MODULE_7__[/* logger */ "f"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_7__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_7__[/* StepName */ "e"].TeamsInitializationSuccess, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success);
     });
 });
 /* harmony default export */ __webpack_exports__["a"] = (i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"]);
@@ -2165,7 +1554,7 @@ function detectGuest() {
             _routes_history__WEBPACK_IMPORTED_MODULE_5__[/* history */ "a"].push(errorPath, { replace: true });
         }
         catch (error) {
-            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].CheckUserRole, `error when trying to check userRole, ${error}`);
+            _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].CheckUserRole, `error when trying to check userRole, ${error}`);
         }
     });
 }
@@ -2581,7 +1970,7 @@ const NewFeatureKeys = ['InlinePicture', 'MentionInComments'];
 /*! exports used: version */
 /***/ (function(module) {
 
-module.exports = JSON.parse("{\"a\":\"3.2.0\"}");
+module.exports = JSON.parse("{\"a\":\"1.0.0\"}");
 
 /***/ }),
 
@@ -2619,15 +2008,15 @@ class ErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
     }
     componentDidCatch(error, errorInfo) {
         const message = `App failed to boot: ${error.message}, stack:${error.stack}, componentStack: ${errorInfo.componentStack}`;
-        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, message);
-        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "c"].AppBootFailedWithErrorBoundary);
-        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "b"].AppBoot);
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, message);
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_3__[/* StepName */ "e"].AppBootFailedWithErrorBoundary);
+        _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
         if (_common_env__WEBPACK_IMPORTED_MODULE_2__[/* isDev */ "l"]) {
             this.setState(state => (Object.assign(Object.assign({}, state), { error, errorInfo })));
         }
         else {
             // it only works before notify success to teams
-            Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* notifyAppInitializationFailure */ "i"])({ reason: _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* app */ "d"].FailedReason.Other, message: _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].sessionId });
+            Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* notifyAppInitializationFailure */ "i"])({ reason: _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* app */ "d"].FailedReason.Other, message: _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].sessionId });
         }
     }
     render() {
@@ -2656,12 +2045,12 @@ class ErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
 /*!*****************************!*\
   !*** ./src/logger/index.ts ***!
   \*****************************/
-/*! exports provided: logger, ScenarioName, StepName, LogCategory, ModuleName */
-/*! exports used: LogCategory, ScenarioName, StepName, logger */
+/*! exports provided: logger, ScenarioName, ScenarioType, ModuleName, StepName, LogCategory */
+/*! exports used: LogCategory, ModuleName, ScenarioName, ScenarioType, StepName, logger */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return logger; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return logger; });
 /* harmony import */ var _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-logger */ "yftM");
 /* harmony import */ var _common_env__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../common/env */ "8MrD");
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types */ "K2jR");
@@ -2670,6 +2059,10 @@ class ErrorBoundary extends react__WEBPACK_IMPORTED_MODULE_1___default.a.Compone
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _types__WEBPACK_IMPORTED_MODULE_2__["b"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _types__WEBPACK_IMPORTED_MODULE_2__["c"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _types__WEBPACK_IMPORTED_MODULE_2__["d"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _types__WEBPACK_IMPORTED_MODULE_2__["e"]; });
 
 
 
@@ -2698,108 +2091,6 @@ const logger = /* #__PURE__ */ new _addressbook_components_logger__WEBPACK_IMPOR
 
 "use strict";
 // extracted by mini-css-extract-plugin
-
-
-/***/ }),
-
-/***/ "t1MT":
-/*!*****************************************!*\
-  !*** ./src/utilities/TelemetryUtils.ts ***!
-  \*****************************************/
-/*! exports provided: summarizeQuestionFromEntry, summarizeAnswerFromEntry, summarizeEntry, stopSharepointScenario, addOnboardScenarioEntryTelemetry, addOnboardScenarioDismissTelemetry, addOnboardScenarioIntroductionStepTelemetry, addOnboardScenarioEntrySelectTelemetry */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export summarizeQuestionFromEntry */
-/* unused harmony export summarizeAnswerFromEntry */
-/* unused harmony export summarizeEntry */
-/* unused harmony export stopSharepointScenario */
-/* unused harmony export addOnboardScenarioEntryTelemetry */
-/* unused harmony export addOnboardScenarioDismissTelemetry */
-/* unused harmony export addOnboardScenarioIntroductionStepTelemetry */
-/* unused harmony export addOnboardScenarioEntrySelectTelemetry */
-/* harmony import */ var _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-forms */ "I474");
-/* harmony import */ var _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-logger */ "yftM");
-/* harmony import */ var _addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @addressbook/utilities-core */ "1hmm");
-/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash-es */ "F0dH");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../logger */ "pIRP");
-
-
-
-
-
-function getHtmlLogging(html) {
-    var _a, _b;
-    const dom = new DOMParser().parseFromString(html, 'text/html');
-    const elements = Array.from(dom.body.getElementsByTagName('*'));
-    return {
-        textContentLength: (_b = (_a = dom.body.textContent) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0,
-        tagCounts: Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(elements.map(element => element.tagName.toLowerCase())),
-        styleCounts: Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(elements.flatMap(element => Array.from(element.style))),
-        typeCounts: Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(elements.map(element => element.dataset.type).filter(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_2__[/* isDefined */ "l"])),
-        fileMimeCounts: Object(lodash_es__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(elements.map(element => element.dataset.fileMime).filter(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_2__[/* isDefined */ "l"])),
-    };
-}
-function summarizeQuestionFromEntry({ question }) {
-    var _a, _b, _c, _d, _e, _f, _g, _h;
-    return Object.assign(Object.assign({ questionType: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"][question.type], questionTitleLength: (_b = (_a = question.title) === null || _a === void 0 ? void 0 : _a.length) !== null && _b !== void 0 ? _b : 0, questionSubtitleLength: (_d = (_c = question.subtitle) === null || _c === void 0 ? void 0 : _c.length) !== null && _d !== void 0 ? _d : 0, questionRequired: Boolean(question.required), questionTooltipLength: (_f = (_e = question.tooltip) === null || _e === void 0 ? void 0 : _e.length) !== null && _f !== void 0 ? _f : 0, questionPlaceholderLength: (_h = (_g = question.placeholder) === null || _g === void 0 ? void 0 : _g.length) !== null && _h !== void 0 ? _h : 0 }, (question.type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"].Text && Object.assign({ questionMultiline: Boolean(question.multiline), questionNumber: Boolean(question.number) }, (question.restriction && { questionRestrictionType: question.restriction.type })))), (question.type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"].Choice && {
-        questionChoiceLengths: question.choices.map(choice => choice.length),
-        questionAppearance: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* ChoiceAppearance */ "c"][question.appearance],
-        questionShuffle: Boolean(question.shuffle),
-        questionAllowOther: Boolean(question.allowOther),
-    }));
-}
-function summarizeAnswerFromEntry({ question, answer }) {
-    const answerContent = answer.content;
-    const answerContentFilled = Boolean(answerContent);
-    return Object.assign(Object.assign(Object.assign({ answerContentFilled }, (question.type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"].Text &&
-        answerContentFilled && {
-        answerContentStringLength: answerContent.length,
-    })), (question.type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"].RichText &&
-        answerContentFilled && {
-        answerContentHtmlLength: answerContent.length,
-        answerContentHtmlLogging: getHtmlLogging(answerContent),
-    })), (question.type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "g"].Choice &&
-        answerContentFilled && {
-        answerContentChosenLength: answerContent.chosen.length,
-        answerContentHasOther: Boolean(answerContent.other),
-    }));
-}
-function summarizeEntry(entry) {
-    return Object.assign(Object.assign({}, summarizeQuestionFromEntry(entry)), summarizeAnswerFromEntry(entry));
-}
-const stopSharepointScenario = (status, message, hostReady) => {
-    // Stop scenario when picker is closed or dismissed through backdrop click
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logTraceInfo(_logger__WEBPACK_IMPORTED_MODULE_4__[/* LogCategory */ "a"].SharePointPicker, `Stop SharePointPicker scenario, hostReady: ${hostReady}`);
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].SharePointPicker, _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].SharePointPickerStopScenario, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_1__[/* TelemetryScenarioStatus */ "g"].Incomplete, {
-        dataBag: {
-            status,
-            message,
-        },
-    });
-    const finalStatus = hostReady ? status : _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_1__[/* TelemetryScenarioStatus */ "g"].Failure;
-    const finalMessage = hostReady ? message : 'Host was not ready';
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].stopScenario(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].SharePointPicker, {
-        dataBag: {
-            previousStatus: status,
-            previousMessage: message,
-            status: finalStatus,
-            message: finalMessage,
-        },
-    });
-};
-const addOnboardScenarioEntryTelemetry = (moduleName = 'OnboardingModal') => {
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].Onboard, _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardEntryButtonClicked, moduleName);
-};
-const addOnboardScenarioDismissTelemetry = (moduleName = 'OnboardingModal') => {
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].Onboard, _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardCloseButtonClicked, moduleName);
-};
-const addOnboardScenarioIntroductionStepTelemetry = (isNext, index, moduleName = 'OnboardingModal') => {
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].Onboard, isNext ? _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardNextButtonClicked : _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardBackButtonClicked, moduleName, { introductionPage: index });
-};
-const addOnboardScenarioEntrySelectTelemetry = (isWrite, moduleName = 'OnboardingModal') => {
-    _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_4__[/* ScenarioName */ "b"].Onboard, isWrite ? _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardWriteAnUpdateButtonClicked : _logger__WEBPACK_IMPORTED_MODULE_4__[/* StepName */ "c"].OnboardRequestAnUpdateButtonClicked, moduleName);
-};
 
 
 /***/ }),
@@ -2903,19 +2194,19 @@ function dispatchDeepLink(subEntityId, isMobile) {
             reportId: subEntity === null || subEntity === void 0 ? void 0 : subEntity.reportId,
         };
         const deepLinkSource = (_a = subEntity === null || subEntity === void 0 ? void 0 : subEntity.source) !== null && _a !== void 0 ? _a : DeepLinkSourceType.ActivityFeed;
-        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "d"].setCommonProperty({ 'Panel.DeepLinkSourceType': deepLinkSource, 'Panel.DeepLinkType': subEntity === null || subEntity === void 0 ? void 0 : subEntity.type });
-        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "d"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_2__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_2__[/* StepName */ "c"].AppBootDispatchDeepLink, deepLinkSource, dataBag);
-        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "d"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_2__[/* ScenarioName */ "b"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_2__[/* StepName */ "c"].AppBootDispatchDeepLink, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success, {
+        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "f"].setCommonProperty({ 'Panel.DeepLinkSourceType': deepLinkSource, 'Panel.DeepLinkType': subEntity === null || subEntity === void 0 ? void 0 : subEntity.type });
+        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "f"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_2__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_2__[/* StepName */ "e"].AppBootDispatchDeepLink, deepLinkSource, dataBag);
+        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "f"].markScenario(_logger__WEBPACK_IMPORTED_MODULE_2__[/* ScenarioName */ "c"].AppBoot, _logger__WEBPACK_IMPORTED_MODULE_2__[/* StepName */ "e"].AppBootDispatchDeepLink, _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* TelemetryScenarioStatus */ "g"].Success, {
             dataBag,
         });
         switch (subEntity === null || subEntity === void 0 ? void 0 : subEntity.type.toLowerCase()) {
             default:
-                _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_2__[/* LogCategory */ "a"].DeepLink, subEntityId);
+                _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_2__[/* LogCategory */ "a"].DeepLink, subEntityId);
                 break;
         }
     }
     catch (err) {
-        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "d"].logTraceException(_logger__WEBPACK_IMPORTED_MODULE_2__[/* LogCategory */ "a"].DeepLink, { error: err });
+        _logger__WEBPACK_IMPORTED_MODULE_2__[/* logger */ "f"].logTraceException(_logger__WEBPACK_IMPORTED_MODULE_2__[/* LogCategory */ "a"].DeepLink, { error: err });
     }
 }
 /**
@@ -2969,7 +2260,7 @@ function generateDeepLinkToAppHomePage() {
 // eslint-disable-next-line @typescript-eslint/ban-types
 const ErrorBoundaryContent = ({ children }) => {
     const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__[/* useTranslation */ "a"])(undefined, { useSuspense: false });
-    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "b"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorTitle, { defaultValue: '' }), message: `Session Id: ${_logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"] === null || _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"] === void 0 ? void 0 : _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].sessionId}`, height: '100vh', actionText: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorAction, { defaultValue: 'Refresh' }), onAction: () => _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "d"].flushLogs(() => {
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "b"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorTitle, { defaultValue: '' }), message: `Session Id: ${_logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === null || _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === void 0 ? void 0 : _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].sessionId}`, height: '100vh', actionText: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorAction, { defaultValue: 'Refresh' }), onAction: () => _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].flushLogs(() => {
             // remove page state back to home page
             const location = window.location;
             // taskModule Pages
@@ -3212,12 +2503,12 @@ function logResponse(response, context) {
         responseText: response.statusText,
         correlationId: (_a = response.headers.get(REQUEST_ID)) !== null && _a !== void 0 ? _a : '',
     };
-    _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].logHttp(info);
+    _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logHttp(info);
 }
 function logError(error, context) {
     if (!(error instanceof Error))
         return;
-    _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "d"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].NetworkError, `NetworkError ${maskUrl(context.url, maskUrlOptionsForUrl)} ${error.message}`);
+    _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].NetworkError, `NetworkError ${maskUrl(context.url, maskUrlOptionsForUrl)} ${error.message}`);
 }
 /**
  * Masks a URL by replacing parts of it with placeholders.
