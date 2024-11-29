@@ -49,273 +49,6 @@ var GroupSpacer = function (props) {
 
 /***/ }),
 
-/***/ "/n8u":
-/*!*************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/Calendar.js ***!
-  \*************************************************************************************************************************************/
-/*! exports provided: Calendar */
-/*! exports used: Calendar */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Calendar; });
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/utilities */ "MBBx");
-/* harmony import */ var _Calendar_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Calendar.base */ "Oj4v");
-/* harmony import */ var _Calendar_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Calendar.styles */ "YrGg");
-
-
-
-var Calendar = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_Calendar_base__WEBPACK_IMPORTED_MODULE_1__[/* CalendarBase */ "a"], _Calendar_styles__WEBPACK_IMPORTED_MODULE_2__[/* styles */ "a"], undefined, {
-    scope: 'Calendar',
-});
-//# sourceMappingURL=Calendar.js.map
-
-/***/ }),
-
-/***/ "/pM6":
-/*!****************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Toggle/Toggle.styles.js ***!
-  \****************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-
-
-var DEFAULT_PILL_WIDTH = 40;
-var DEFAULT_PILL_HEIGHT = 20;
-var DEFAULT_THUMB_SIZE = 12;
-var getStyles = function (props) {
-    var _a, _b, _c, _d, _e, _f, _g;
-    var theme = props.theme, className = props.className, disabled = props.disabled, checked = props.checked, inlineLabel = props.inlineLabel, onOffMissing = props.onOffMissing;
-    var semanticColors = theme.semanticColors, palette = theme.palette;
-    // Tokens
-    var pillUncheckedBackground = semanticColors.bodyBackground;
-    var pillCheckedBackground = semanticColors.inputBackgroundChecked;
-    var pillCheckedHoveredBackground = semanticColors.inputBackgroundCheckedHovered;
-    var thumbUncheckedHoveredBackground = palette.neutralDark;
-    var pillCheckedDisabledBackground = semanticColors.disabledBodySubtext;
-    var thumbBackground = semanticColors.smallInputBorder;
-    var thumbCheckedBackground = semanticColors.inputForegroundChecked;
-    var thumbDisabledBackground = semanticColors.disabledBodySubtext;
-    var thumbCheckedDisabledBackground = semanticColors.disabledBackground;
-    var pillBorderColor = semanticColors.smallInputBorder;
-    var pillBorderHoveredColor = semanticColors.inputBorderHovered;
-    var pillBorderDisabledColor = semanticColors.disabledBodySubtext;
-    var textDisabledColor = semanticColors.disabledText;
-    return {
-        root: [
-            'ms-Toggle',
-            checked && 'is-checked',
-            !disabled && 'is-enabled',
-            disabled && 'is-disabled',
-            theme.fonts.medium,
-            {
-                marginBottom: '8px',
-            },
-            inlineLabel && {
-                display: 'flex',
-                alignItems: 'center',
-            },
-            className,
-        ],
-        label: [
-            'ms-Toggle-label',
-            { display: 'inline-block' },
-            disabled && {
-                color: textDisabledColor,
-                selectors: (_a = {},
-                    _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                        color: 'GrayText',
-                    },
-                    _a),
-            },
-            inlineLabel &&
-                !onOffMissing && {
-                marginRight: 16,
-            },
-            onOffMissing &&
-                inlineLabel && {
-                order: 1,
-                marginLeft: 16,
-            },
-            inlineLabel && { wordBreak: 'break-word' },
-        ],
-        container: [
-            'ms-Toggle-innerContainer',
-            {
-                display: 'flex',
-                position: 'relative',
-            },
-        ],
-        pill: [
-            'ms-Toggle-background',
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -3 }),
-            {
-                fontSize: '20px',
-                boxSizing: 'border-box',
-                width: DEFAULT_PILL_WIDTH,
-                height: DEFAULT_PILL_HEIGHT,
-                borderRadius: DEFAULT_PILL_HEIGHT / 2,
-                transition: 'all 0.1s ease',
-                border: "1px solid ".concat(pillBorderColor),
-                background: pillUncheckedBackground,
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                padding: '0 3px',
-                overflow: 'visible',
-            },
-            !disabled && [
-                !checked && {
-                    selectors: {
-                        ':hover': [
-                            {
-                                borderColor: pillBorderHoveredColor,
-                            },
-                        ],
-                        ':hover .ms-Toggle-thumb': [
-                            {
-                                backgroundColor: thumbUncheckedHoveredBackground,
-                                selectors: (_b = {},
-                                    _b[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                        borderColor: 'Highlight',
-                                    },
-                                    _b),
-                            },
-                        ],
-                    },
-                },
-                checked && [
-                    {
-                        background: pillCheckedBackground,
-                        borderColor: 'transparent',
-                        justifyContent: 'flex-end',
-                    },
-                    {
-                        selectors: (_c = {
-                                ':hover': [
-                                    {
-                                        backgroundColor: pillCheckedHoveredBackground,
-                                        borderColor: 'transparent',
-                                        selectors: (_d = {},
-                                            _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                                backgroundColor: 'Highlight',
-                                            },
-                                            _d),
-                                    },
-                                ]
-                            },
-                            _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                            _c),
-                    },
-                ],
-            ],
-            disabled && [
-                {
-                    cursor: 'default',
-                },
-                !checked && [
-                    {
-                        borderColor: pillBorderDisabledColor,
-                    },
-                ],
-                checked && [
-                    {
-                        backgroundColor: pillCheckedDisabledBackground,
-                        borderColor: 'transparent',
-                        justifyContent: 'flex-end',
-                    },
-                ],
-            ],
-            !disabled && {
-                selectors: {
-                    '&:hover': {
-                        selectors: (_e = {},
-                            _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                borderColor: 'Highlight',
-                            },
-                            _e),
-                    },
-                },
-            },
-        ],
-        thumb: [
-            'ms-Toggle-thumb',
-            {
-                display: 'block',
-                width: DEFAULT_THUMB_SIZE,
-                height: DEFAULT_THUMB_SIZE,
-                borderRadius: '50%',
-                transition: 'all 0.1s ease',
-                backgroundColor: thumbBackground,
-                /* Border is added to handle high contrast mode for Firefox */
-                borderColor: 'transparent',
-                borderWidth: DEFAULT_THUMB_SIZE / 2,
-                borderStyle: 'solid',
-                boxSizing: 'border-box',
-            },
-            !disabled &&
-                checked && [
-                {
-                    backgroundColor: thumbCheckedBackground,
-                    selectors: (_f = {},
-                        _f[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                            backgroundColor: 'Window',
-                            borderColor: 'Window',
-                        },
-                        _f),
-                },
-            ],
-            disabled && [
-                !checked && [
-                    {
-                        backgroundColor: thumbDisabledBackground,
-                    },
-                ],
-                checked && [
-                    {
-                        backgroundColor: thumbCheckedDisabledBackground,
-                    },
-                ],
-            ],
-        ],
-        text: [
-            'ms-Toggle-stateText',
-            {
-                selectors: {
-                    // Workaround: make rules more specific than Label rules.
-                    '&&': {
-                        padding: '0',
-                        margin: '0 8px',
-                        userSelect: 'none',
-                        fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
-                    },
-                },
-            },
-            disabled && {
-                selectors: {
-                    '&&': {
-                        color: textDisabledColor,
-                        selectors: (_g = {},
-                            _g[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                color: 'GrayText',
-                            },
-                            _g),
-                    },
-                },
-            },
-        ],
-    };
-};
-//# sourceMappingURL=Toggle.styles.js.map
-
-/***/ }),
-
 /***/ "0wJO":
 /*!************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DetailsList/DetailsList.base.js ***!
@@ -1361,27 +1094,6 @@ function useGroupedDetailsListIndexMap(groups) {
 
 /***/ }),
 
-/***/ "1+It":
-/*!*******************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup.js ***!
-  \*******************************************************************************************************************************************/
-/*! exports provided: ChoiceGroup */
-/*! exports used: ChoiceGroup */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoiceGroup; });
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Utilities */ "MBBx");
-/* harmony import */ var _ChoiceGroup_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChoiceGroup.base */ "Ecx6");
-/* harmony import */ var _ChoiceGroup_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChoiceGroup.styles */ "DFOT");
-
-
-
-var ChoiceGroup = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_ChoiceGroup_base__WEBPACK_IMPORTED_MODULE_1__[/* ChoiceGroupBase */ "a"], _ChoiceGroup_styles__WEBPACK_IMPORTED_MODULE_2__[/* getStyles */ "a"], undefined, { scope: 'ChoiceGroup' });
-//# sourceMappingURL=ChoiceGroup.js.map
-
-/***/ }),
-
 /***/ "132e":
 /*!****************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/utilities/ThemeProvider/renderThemeProvider.js ***!
@@ -1505,638 +1217,6 @@ var useThemeProviderState = function (draftState) {
     }
 };
 //# sourceMappingURL=useThemeProviderState.js.map
-
-/***/ }),
-
-/***/ "1XIA":
-/*!*************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarMonth/CalendarMonth.base.js ***!
-  \*************************************************************************************************************************************************************/
-/*! exports provided: CalendarMonthBase */
-/*! exports used: CalendarMonthBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarMonthBase; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../FocusZone */ "YJ2P");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "Ht0i");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Icon */ "YGsJ");
-/* harmony import */ var _CalendarMonth_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CalendarMonth.styles */ "Ol2D");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/utilities */ "BLix");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fluentui/utilities */ "pSSv");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fluentui/utilities */ "Ge+E");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fluentui/utilities */ "6ztV");
-/* harmony import */ var _CalendarYear_CalendarYear__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../CalendarYear/CalendarYear */ "N3XZ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fluentui/react-hooks */ "kWOt");
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../defaults */ "y50k");
-
-
-
-
-
-
-
-
-
-var MONTHS_PER_ROW = 4;
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* classNamesFunction */ "a"])();
-var DEFAULT_PROPS = {
-    styles: _CalendarMonth_styles__WEBPACK_IMPORTED_MODULE_5__[/* getStyles */ "a"],
-    strings: undefined,
-    navigationIcons: _defaults__WEBPACK_IMPORTED_MODULE_14__[/* defaultCalendarNavigationIcons */ "a"],
-    dateTimeFormatter: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DEFAULT_DATE_FORMATTING */ "b"],
-    yearPickerHidden: false,
-};
-function useAnimateBackwards(_a) {
-    var navigatedDate = _a.navigatedDate;
-    var currentYear = navigatedDate.getFullYear();
-    var previousYear = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_13__[/* usePrevious */ "a"])(currentYear);
-    if (previousYear === undefined || previousYear === currentYear) {
-        return undefined;
-    }
-    else {
-        return previousYear > currentYear;
-    }
-}
-function useFocusLogic(_a) {
-    var componentRef = _a.componentRef;
-    var navigatedMonthRef = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
-    var calendarYearRef = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](null);
-    var focusOnUpdate = react__WEBPACK_IMPORTED_MODULE_0__["useRef"](false);
-    var focus = react__WEBPACK_IMPORTED_MODULE_0__["useCallback"](function () {
-        if (calendarYearRef.current) {
-            calendarYearRef.current.focus();
-        }
-        else if (navigatedMonthRef.current) {
-            navigatedMonthRef.current.focus();
-        }
-    }, []);
-    react__WEBPACK_IMPORTED_MODULE_0__["useImperativeHandle"](componentRef, function () { return ({ focus: focus }); }, [focus]);
-    react__WEBPACK_IMPORTED_MODULE_0__["useEffect"](function () {
-        if (focusOnUpdate.current) {
-            focus();
-            focusOnUpdate.current = false;
-        }
-    });
-    var focusOnNextUpdate = function () {
-        focusOnUpdate.current = true;
-    };
-    return [navigatedMonthRef, calendarYearRef, focusOnNextUpdate];
-}
-var CalendarMonthBase = function (propsWithoutDefaults) {
-    var _a, _b;
-    var props = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* getPropsWithDefaults */ "a"])(DEFAULT_PROPS, propsWithoutDefaults);
-    var _c = useFocusLogic(props), navigatedMonthRef = _c[0], calendarYearRef = _c[1], focusOnNextUpdate = _c[2];
-    var _d = react__WEBPACK_IMPORTED_MODULE_0__["useState"](false), isYearPickerVisible = _d[0], setIsYearPickerVisible = _d[1];
-    var animateBackwards = useAnimateBackwards(props);
-    var navigatedDate = props.navigatedDate, selectedDate = props.selectedDate, strings = props.strings, _e = props.today, today = _e === void 0 ? new Date() : _e, navigationIcons = props.navigationIcons, dateTimeFormatter = props.dateTimeFormatter, minDate = props.minDate, maxDate = props.maxDate, theme = props.theme, styles = props.styles, className = props.className, allFocusable = props.allFocusable, highlightCurrentMonth = props.highlightCurrentMonth, highlightSelectedMonth = props.highlightSelectedMonth, animationDirection = props.animationDirection, yearPickerHidden = props.yearPickerHidden, onNavigateDate = props.onNavigateDate;
-    var selectMonthCallback = function (newMonth) {
-        return function () { return onSelectMonth(newMonth); };
-    };
-    var onSelectNextYear = function () {
-        onNavigateDate(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* addYears */ "d"])(navigatedDate, 1), false);
-    };
-    var onSelectPrevYear = function () {
-        onNavigateDate(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* addYears */ "d"])(navigatedDate, -1), false);
-    };
-    var onSelectMonth = function (newMonth) {
-        var _a;
-        // If header is clickable the calendars are overlayed, switch back to day picker when month is clicked
-        (_a = props.onHeaderSelect) === null || _a === void 0 ? void 0 : _a.call(props);
-        onNavigateDate(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* setMonth */ "o"])(navigatedDate, newMonth), true);
-    };
-    var onHeaderSelect = function () {
-        var _a;
-        if (!yearPickerHidden) {
-            focusOnNextUpdate();
-            setIsYearPickerVisible(true);
-        }
-        else {
-            (_a = props.onHeaderSelect) === null || _a === void 0 ? void 0 : _a.call(props);
-        }
-    };
-    var onSelectYear = function (selectedYear) {
-        focusOnNextUpdate();
-        var navYear = navigatedDate.getFullYear();
-        if (navYear !== selectedYear) {
-            var newNavigationDate = new Date(navigatedDate.getTime());
-            newNavigationDate.setFullYear(selectedYear);
-            // for min and max dates, adjust the new navigation date - perhaps this should be
-            // checked on the master navigation date handler (i.e. in Calendar)
-            if (maxDate && newNavigationDate > maxDate) {
-                newNavigationDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* setMonth */ "o"])(newNavigationDate, maxDate.getMonth());
-            }
-            else if (minDate && newNavigationDate < minDate) {
-                newNavigationDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* setMonth */ "o"])(newNavigationDate, minDate.getMonth());
-            }
-            onNavigateDate(newNavigationDate, true);
-        }
-        setIsYearPickerVisible(false);
-    };
-    var onYearPickerHeaderSelect = function (focus) {
-        focusOnNextUpdate();
-        setIsYearPickerVisible(false);
-    };
-    // navigationIcons has a default value in defaultProps, but typescript doesn't recognize this
-    var leftNavigationIcon = navigationIcons.leftNavigation;
-    var rightNavigationIcon = navigationIcons.rightNavigation;
-    var dateFormatter = dateTimeFormatter;
-    // determine if previous/next years are in bounds
-    var isPrevYearInBounds = minDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* compareDatePart */ "e"])(minDate, Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getYearStart */ "m"])(navigatedDate)) < 0 : true;
-    var isNextYearInBounds = maxDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* compareDatePart */ "e"])(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getYearEnd */ "l"])(navigatedDate), maxDate) < 0 : true;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        hasHeaderClickCallback: !!props.onHeaderSelect || !yearPickerHidden,
-        highlightCurrent: highlightCurrentMonth,
-        highlightSelected: highlightSelectedMonth,
-        animateBackwards: animateBackwards,
-        animationDirection: animationDirection,
-    });
-    if (isYearPickerVisible) {
-        var _f = getYearStrings(props), onRenderYear = _f[0], yearStrings = _f[1];
-        // use navigated date for the year picker
-        return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_CalendarYear_CalendarYear__WEBPACK_IMPORTED_MODULE_12__[/* CalendarYear */ "a"], { key: 'calendarYear', minYear: minDate ? minDate.getFullYear() : undefined, maxYear: maxDate ? maxDate.getFullYear() : undefined, 
-            // eslint-disable-next-line react/jsx-no-bind
-            onSelectYear: onSelectYear, navigationIcons: navigationIcons, 
-            // eslint-disable-next-line react/jsx-no-bind
-            onHeaderSelect: onYearPickerHeaderSelect, selectedYear: selectedDate ? selectedDate.getFullYear() : navigatedDate ? navigatedDate.getFullYear() : undefined, navigatedYear: navigatedDate.getFullYear(), onRenderYear: onRenderYear, strings: yearStrings, componentRef: calendarYearRef, styles: styles, highlightCurrentYear: highlightCurrentMonth, highlightSelectedYear: highlightSelectedMonth, animationDirection: animationDirection }));
-    }
-    var rowIndexes = [];
-    for (var i = 0; i < strings.shortMonths.length / MONTHS_PER_ROW; i++) {
-        rowIndexes.push(i);
-    }
-    var yearString = dateFormatter.formatYear(navigatedDate);
-    var headerAriaLabel = strings.monthPickerHeaderAriaLabel
-        ? Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_8__[/* format */ "a"])(strings.monthPickerHeaderAriaLabel, yearString)
-        : yearString;
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classNames.root },
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classNames.headerContainer },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: classNames.currentItemButton, onClick: onHeaderSelect, onKeyDown: onButtonKeyDown(onHeaderSelect), "aria-label": headerAriaLabel, "data-is-focusable": !!props.onHeaderSelect || !yearPickerHidden, tabIndex: !!props.onHeaderSelect || !yearPickerHidden ? 0 : -1, type: "button" },
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { "aria-live": "polite", "aria-atomic": "true" }, yearString)),
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classNames.navigationButtonsContainer },
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__[/* css */ "a"])(classNames.navigationButton, (_a = {},
-                        _a[classNames.disabled] = !isPrevYearInBounds,
-                        _a)), "aria-disabled": !isPrevYearInBounds, tabIndex: isPrevYearInBounds ? undefined : allFocusable ? 0 : -1, onClick: isPrevYearInBounds ? onSelectPrevYear : undefined, onKeyDown: isPrevYearInBounds ? onButtonKeyDown(onSelectPrevYear) : undefined, title: strings.prevYearAriaLabel
-                        ? strings.prevYearAriaLabel + ' ' + dateFormatter.formatYear(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* addYears */ "d"])(navigatedDate, -1))
-                        : undefined, type: "button" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_4__[/* Icon */ "a"], { iconName: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__[/* getRTL */ "a"])() ? rightNavigationIcon : leftNavigationIcon })),
-                react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__[/* css */ "a"])(classNames.navigationButton, (_b = {},
-                        _b[classNames.disabled] = !isNextYearInBounds,
-                        _b)), "aria-disabled": !isNextYearInBounds, tabIndex: isNextYearInBounds ? undefined : allFocusable ? 0 : -1, onClick: isNextYearInBounds ? onSelectNextYear : undefined, onKeyDown: isNextYearInBounds ? onButtonKeyDown(onSelectNextYear) : undefined, title: strings.nextYearAriaLabel
-                        ? strings.nextYearAriaLabel + ' ' + dateFormatter.formatYear(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* addYears */ "d"])(navigatedDate, 1))
-                        : undefined, type: "button" },
-                    react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_4__[/* Icon */ "a"], { iconName: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__[/* getRTL */ "a"])() ? leftNavigationIcon : rightNavigationIcon })))),
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_1__[/* FocusZone */ "a"], null,
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { className: classNames.gridContainer, role: "grid", "aria-label": yearString }, rowIndexes.map(function (rowNum) {
-                var monthsForRow = strings.shortMonths.slice(rowNum * MONTHS_PER_ROW, (rowNum + 1) * MONTHS_PER_ROW);
-                return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { key: 'monthRow_' + rowNum + navigatedDate.getFullYear(), role: "row", className: classNames.buttonRow }, monthsForRow.map(function (month, index) {
-                    var _a;
-                    var monthIndex = rowNum * MONTHS_PER_ROW + index;
-                    var indexedMonth = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* setMonth */ "o"])(navigatedDate, monthIndex);
-                    var isNavigatedMonth = navigatedDate.getMonth() === monthIndex;
-                    var isSelectedMonth = selectedDate.getMonth() === monthIndex;
-                    var isSelectedYear = selectedDate.getFullYear() === navigatedDate.getFullYear();
-                    var isInBounds = (minDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* compareDatePart */ "e"])(minDate, Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getMonthEnd */ "i"])(indexedMonth)) < 1 : true) &&
-                        (maxDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* compareDatePart */ "e"])(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getMonthStart */ "j"])(indexedMonth), maxDate) < 1 : true);
-                    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { ref: isNavigatedMonth ? navigatedMonthRef : undefined, role: 'gridcell', className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__[/* css */ "a"])(classNames.itemButton, (_a = {},
-                            _a[classNames.current] = highlightCurrentMonth && isCurrentMonth(monthIndex, navigatedDate.getFullYear(), today),
-                            _a[classNames.selected] = highlightSelectedMonth && isSelectedMonth && isSelectedYear,
-                            _a[classNames.disabled] = !isInBounds,
-                            _a)), disabled: !allFocusable && !isInBounds, key: monthIndex, onClick: isInBounds ? selectMonthCallback(monthIndex) : undefined, onKeyDown: isInBounds ? onButtonKeyDown(selectMonthCallback(monthIndex)) : undefined, "aria-label": dateFormatter.formatMonth(indexedMonth, strings), "aria-selected": isNavigatedMonth, "data-is-focusable": isInBounds ? true : undefined, type: "button" }, month));
-                })));
-            })))));
-};
-CalendarMonthBase.displayName = 'CalendarMonthBase';
-function getYearStrings(_a) {
-    var strings = _a.strings, navigatedDate = _a.navigatedDate, dateTimeFormatter = _a.dateTimeFormatter;
-    var yearToString = function (year) {
-        if (dateTimeFormatter) {
-            // create a date based on the current nav date
-            var yearFormattingDate = new Date(navigatedDate.getTime());
-            yearFormattingDate.setFullYear(year);
-            return dateTimeFormatter.formatYear(yearFormattingDate);
-        }
-        return String(year);
-    };
-    var yearRangeToString = function (yearRange) {
-        return "".concat(yearToString(yearRange.fromYear), " - ").concat(yearToString(yearRange.toYear));
-    };
-    var yearRangeToNextDecadeLabel = function (yearRange) {
-        return strings.nextYearRangeAriaLabel ? "".concat(strings.nextYearRangeAriaLabel, " ").concat(yearRangeToString(yearRange)) : '';
-    };
-    var yearRangeToPrevDecadeLabel = function (yearRange) {
-        return strings.prevYearRangeAriaLabel ? "".concat(strings.prevYearRangeAriaLabel, " ").concat(yearRangeToString(yearRange)) : '';
-    };
-    return [
-        yearToString,
-        {
-            rangeAriaLabel: yearRangeToString,
-            prevRangeAriaLabel: yearRangeToPrevDecadeLabel,
-            nextRangeAriaLabel: yearRangeToNextDecadeLabel,
-            headerAriaLabelFormatString: strings.yearPickerHeaderAriaLabel,
-        },
-    ];
-}
-function isCurrentMonth(month, year, today) {
-    return today.getFullYear() === year && today.getMonth() === month;
-}
-function onButtonKeyDown(callback) {
-    return function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        switch (ev.which) {
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].enter:
-                callback();
-                break;
-        }
-    };
-}
-//# sourceMappingURL=CalendarMonth.base.js.map
-
-/***/ }),
-
-/***/ "1zXl":
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ResizeGroup/ResizeGroup.base.js ***!
-  \************************************************************************************************************************************************/
-/*! exports provided: getMeasurementCache, getNextResizeGroupStateProvider, MeasuredContext, ResizeGroupBase */
-/*! exports used: ResizeGroupBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export getMeasurementCache */
-/* unused harmony export getNextResizeGroupStateProvider */
-/* unused harmony export MeasuredContext */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResizeGroupBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "e6CW");
-/* harmony import */ var _ResizeGroup_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ResizeGroup.types */ "q5rQ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/react-hooks */ "mFKB");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/react-hooks */ "Eo9X");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/react-hooks */ "nTLZ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/react-hooks */ "Te7Q");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fluentui/react-hooks */ "owwJ");
-/* harmony import */ var _WindowProvider__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../WindowProvider */ "7R02");
-
-
-
-
-
-
-var RESIZE_DELAY = 16;
-/**
- * Returns a simple object is able to store measurements with a given key.
- */
-var getMeasurementCache = function () {
-    var measurementsCache = {};
-    return {
-        /**
-         * Checks if the provided data has a cacheKey. If it has a cacheKey and there is a
-         * corresponding entry in the measurementsCache, then it will return that value.
-         * Returns undefined otherwise.
-         */
-        getCachedMeasurement: function (data) {
-            if (data && data.cacheKey && measurementsCache.hasOwnProperty(data.cacheKey)) {
-                return measurementsCache[data.cacheKey];
-            }
-            return undefined;
-        },
-        /**
-         * Should be called whenever there is a new measurement associated with a given data object.
-         * If the data has a cacheKey, store that measurement in the measurementsCache.
-         */
-        addMeasurementToCache: function (data, measurement) {
-            if (data.cacheKey) {
-                measurementsCache[data.cacheKey] = measurement;
-            }
-        },
-    };
-};
-/**
- * Returns a function that is able to compute the next state for the ResizeGroup given the current
- * state and any measurement updates.
- */
-var getNextResizeGroupStateProvider = function (measurementCache) {
-    if (measurementCache === void 0) { measurementCache = getMeasurementCache(); }
-    var _measurementCache = measurementCache;
-    var _containerDimension;
-    /**
-     * Gets the width/height of the data rendered in a hidden div.
-     * @param measuredData - The data corresponding to the measurement we wish to take.
-     * @param getElementToMeasureDimension - A function that returns the measurement of the rendered data.
-     * Only called when the measurement is not in the cache.
-     */
-    function _getMeasuredDimension(measuredData, getElementToMeasureDimension) {
-        var cachedDimension = _measurementCache.getCachedMeasurement(measuredData);
-        if (cachedDimension !== undefined) {
-            return cachedDimension;
-        }
-        var measuredDimension = getElementToMeasureDimension();
-        _measurementCache.addMeasurementToCache(measuredData, measuredDimension);
-        return measuredDimension;
-    }
-    /**
-     * Will get the next IResizeGroupState based on the current data while trying to shrink contents
-     * to fit in the container.
-     * @param data - The initial data point to start measuring.
-     * @param onReduceData - Function that transforms the data into something that should render with less width/height.
-     * @param getElementToMeasureDimension - A function that returns the measurement of the rendered data.
-     * Only called when the measurement is not in the cache.
-     */
-    function _shrinkContentsUntilTheyFit(data, onReduceData, getElementToMeasureDimension) {
-        var dataToMeasure = data;
-        var measuredDimension = _getMeasuredDimension(data, getElementToMeasureDimension);
-        while (measuredDimension > _containerDimension) {
-            var nextMeasuredData = onReduceData(dataToMeasure);
-            // We don't want to get stuck in an infinite render loop when there are no more
-            // scaling steps, so implementations of onReduceData should return undefined when
-            // there are no more scaling states to apply.
-            if (nextMeasuredData === undefined) {
-                return {
-                    renderedData: dataToMeasure,
-                    resizeDirection: undefined,
-                    dataToMeasure: undefined,
-                };
-            }
-            measuredDimension = _measurementCache.getCachedMeasurement(nextMeasuredData);
-            // If the measurement isn't in the cache, we need to re-render with some data in a hidden div
-            if (measuredDimension === undefined) {
-                return {
-                    dataToMeasure: nextMeasuredData,
-                    resizeDirection: 'shrink',
-                };
-            }
-            dataToMeasure = nextMeasuredData;
-        }
-        return {
-            renderedData: dataToMeasure,
-            resizeDirection: undefined,
-            dataToMeasure: undefined,
-        };
-    }
-    /**
-     * This function should be called when the state changes in a manner that might allow for more content to fit
-     * on the screen, such as the window width/height growing.
-     * @param data - The initial data point to start measuring.
-     * @param onGrowData - Function that transforms the data into something that may take up more space when rendering.
-     * @param getElementToMeasureDimension - A function that returns the measurement of the rendered data.
-     * Only called when the measurement is not in the cache.
-     */
-    function _growDataUntilItDoesNotFit(data, onGrowData, getElementToMeasureDimension, onReduceData) {
-        var dataToMeasure = data;
-        var measuredDimension = _getMeasuredDimension(data, getElementToMeasureDimension);
-        while (measuredDimension < _containerDimension) {
-            var nextMeasuredData = onGrowData(dataToMeasure);
-            // We don't want to get stuck in an infinite render loop when there are no more
-            // scaling steps, so implementations of onGrowData should return undefined when
-            // there are no more scaling states to apply.
-            if (nextMeasuredData === undefined) {
-                return {
-                    renderedData: dataToMeasure,
-                    resizeDirection: undefined,
-                    dataToMeasure: undefined,
-                };
-            }
-            measuredDimension = _measurementCache.getCachedMeasurement(nextMeasuredData);
-            // If the measurement isn't in the cache, we need to re-render with some data in a hidden div
-            if (measuredDimension === undefined) {
-                return {
-                    dataToMeasure: nextMeasuredData,
-                };
-            }
-            dataToMeasure = nextMeasuredData;
-        }
-        // Once the loop is done, we should now shrink until the contents fit.
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ resizeDirection: 'shrink' }, _shrinkContentsUntilTheyFit(dataToMeasure, onReduceData, getElementToMeasureDimension));
-    }
-    /**
-     * Handles an update to the container width/height.
-     * Should only be called when we knew the previous container width/height.
-     * @param newDimension - The new width/height of the container.
-     * @param fullDimensionData - The initial data passed in as a prop to resizeGroup.
-     * @param renderedData - The data that was rendered prior to the container size changing.
-     * @param onGrowData - Set to true if the Resize group has an onGrowData function.
-     */
-    function _updateContainerDimension(newDimension, fullDimensionData, renderedData, onGrowData) {
-        var nextState;
-        if (newDimension > _containerDimension) {
-            if (onGrowData) {
-                nextState = {
-                    resizeDirection: 'grow',
-                    dataToMeasure: onGrowData(renderedData),
-                };
-            }
-            else {
-                nextState = {
-                    resizeDirection: 'shrink',
-                    dataToMeasure: fullDimensionData,
-                };
-            }
-        }
-        else {
-            nextState = {
-                resizeDirection: 'shrink',
-                dataToMeasure: renderedData,
-            };
-        }
-        _containerDimension = newDimension;
-        return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, nextState), { measureContainer: false });
-    }
-    function getNextState(props, currentState, getElementToMeasureDimension, newContainerDimension) {
-        // If there is no new container width/height or data to measure, there is no need for a new state update
-        if (newContainerDimension === undefined && currentState.dataToMeasure === undefined) {
-            return undefined;
-        }
-        if (newContainerDimension) {
-            // If we know the last container size and we rendered data at that width/height, we can do an optimized render
-            if (_containerDimension && currentState.renderedData && !currentState.dataToMeasure) {
-                return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, currentState), _updateContainerDimension(newContainerDimension, props.data, currentState.renderedData, props.onGrowData));
-            }
-            // If we are just setting the container width/height for the first time, we can't do any optimizations
-            _containerDimension = newContainerDimension;
-        }
-        var nextState = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, currentState), { measureContainer: false });
-        if (currentState.dataToMeasure) {
-            if (currentState.resizeDirection === 'grow' && props.onGrowData) {
-                nextState = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, nextState), _growDataUntilItDoesNotFit(currentState.dataToMeasure, props.onGrowData, getElementToMeasureDimension, props.onReduceData));
-            }
-            else {
-                nextState = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, nextState), _shrinkContentsUntilTheyFit(currentState.dataToMeasure, props.onReduceData, getElementToMeasureDimension));
-            }
-        }
-        return nextState;
-    }
-    /** Function that determines if we need to render content for measurement based on the measurement cache contents. */
-    function shouldRenderDataForMeasurement(dataToMeasure) {
-        if (!dataToMeasure || _measurementCache.getCachedMeasurement(dataToMeasure) !== undefined) {
-            return false;
-        }
-        return true;
-    }
-    function getInitialResizeGroupState(data) {
-        return {
-            dataToMeasure: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, data),
-            resizeDirection: 'grow',
-            measureContainer: true,
-        };
-    }
-    return {
-        getNextState: getNextState,
-        shouldRenderDataForMeasurement: shouldRenderDataForMeasurement,
-        getInitialResizeGroupState: getInitialResizeGroupState,
-    };
-};
-// Provides a context property that (if true) tells any child components that
-// they are only being used for measurement purposes and will not be visible.
-var MeasuredContext = react__WEBPACK_IMPORTED_MODULE_1__["createContext"]({ isMeasured: false });
-// Styles for the hidden div used for measurement
-var hiddenDivStyles = { position: 'fixed', visibility: 'hidden' };
-var hiddenParentStyles = { position: 'relative' };
-var COMPONENT_NAME = 'ResizeGroup';
-/**
- * Use useReducer instead of userState because React is not batching the state updates
- * when state is set in callbacks of setTimeout or requestAnimationFrame.
- * See issue: https://github.com/facebook/react/issues/14259
- */
-function resizeDataReducer(state, action) {
-    var _a;
-    switch (action.type) {
-        case 'resizeData':
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, action.value);
-        case 'dataToMeasure':
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, state), { dataToMeasure: action.value, resizeDirection: 'grow', measureContainer: true });
-        default:
-            return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, state), (_a = {}, _a[action.type] = action.value, _a));
-    }
-}
-function useResizeState(props, nextResizeGroupStateProvider, rootRef) {
-    var initialStateData = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useConst */ "a"])(function () { return nextResizeGroupStateProvider.getInitialResizeGroupState(props.data); });
-    var _a = react__WEBPACK_IMPORTED_MODULE_1__["useReducer"](resizeDataReducer, initialStateData), resizeData = _a[0], dispatchResizeDataAction = _a[1];
-    // Reset state when new data is provided
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        dispatchResizeDataAction({
-            type: 'dataToMeasure',
-            value: props.data,
-        });
-    }, [props.data]);
-    // Because it's possible that we may force more than one re-render per animation frame, we
-    // want to make sure that the RAF request is using the most recent data.
-    var stateRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](initialStateData);
-    stateRef.current = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, resizeData);
-    var updateResizeState = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (nextState) {
-        if (nextState) {
-            dispatchResizeDataAction({
-                type: 'resizeData',
-                value: nextState,
-            });
-        }
-    }, []);
-    var remeasure = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function () {
-        if (rootRef.current) {
-            dispatchResizeDataAction({
-                type: 'measureContainer',
-                value: true,
-            });
-        }
-    }, [rootRef]);
-    return [stateRef, updateResizeState, remeasure];
-}
-function useResizingBehavior(props, rootRef) {
-    var nextResizeGroupStateProvider = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useConst */ "a"])(getNextResizeGroupStateProvider);
-    // A div that can be used for the initial measurement so that we can avoid mounting a second instance
-    // of the component being measured for the initial render.
-    var initialHiddenDiv = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    // A hidden div that is used for mounting a new instance of the component for measurement in a hidden
-    // div without unmounting the currently visible content.
-    var updateHiddenDiv = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    // Tracks if any content has been rendered to the user. This enables us to do some performance optimizations
-    // for the initial render.
-    var hasRenderedContent = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](false);
-    var async = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_5__[/* useAsync */ "a"])();
-    var _a = useResizeState(props, nextResizeGroupStateProvider, rootRef), stateRef = _a[0], updateResizeState = _a[1], remeasure = _a[2];
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        var _a;
-        if (stateRef.current.renderedData) {
-            hasRenderedContent.current = true;
-            (_a = props.dataDidRender) === null || _a === void 0 ? void 0 : _a.call(props, stateRef.current.renderedData);
-        }
-    });
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        async.requestAnimationFrame(function () {
-            var containerDimension = undefined;
-            if (stateRef.current.measureContainer && rootRef.current) {
-                var boundingRect = rootRef.current.getBoundingClientRect();
-                containerDimension =
-                    props.direction === _ResizeGroup_types__WEBPACK_IMPORTED_MODULE_3__[/* ResizeGroupDirection */ "a"].vertical ? boundingRect.height : boundingRect.width;
-            }
-            var nextState = nextResizeGroupStateProvider.getNextState(props, stateRef.current, function () {
-                var refToMeasure = !hasRenderedContent.current ? initialHiddenDiv : updateHiddenDiv;
-                if (!refToMeasure.current) {
-                    return 0;
-                }
-                var measuredBoundingRect = refToMeasure.current.getBoundingClientRect();
-                return props.direction === _ResizeGroup_types__WEBPACK_IMPORTED_MODULE_3__[/* ResizeGroupDirection */ "a"].vertical
-                    ? measuredBoundingRect.height
-                    : measuredBoundingRect.width;
-            }, containerDimension);
-            updateResizeState(nextState);
-        }, rootRef.current);
-    });
-    var win = Object(_WindowProvider__WEBPACK_IMPORTED_MODULE_9__[/* useWindow */ "c"])();
-    Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_6__[/* useOnEvent */ "a"])(win, 'resize', async.debounce(remeasure, RESIZE_DELAY, { leading: true }));
-    var dataNeedsMeasuring = nextResizeGroupStateProvider.shouldRenderDataForMeasurement(stateRef.current.dataToMeasure);
-    var isInitialMeasure = !hasRenderedContent.current && dataNeedsMeasuring;
-    return [
-        stateRef.current.dataToMeasure,
-        stateRef.current.renderedData,
-        remeasure,
-        initialHiddenDiv,
-        updateHiddenDiv,
-        dataNeedsMeasuring,
-        isInitialMeasure,
-    ];
-}
-function useDebugWarnings(props) {
-    if (true) {
-        // eslint-disable-next-line react-hooks/rules-of-hooks -- build-time conditional
-        Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_7__[/* useWarnings */ "a"])({
-            name: COMPONENT_NAME,
-            props: props,
-            deprecations: { styles: 'className' },
-        });
-    }
-}
-var measuredContextValue = { isMeasured: true };
-var ResizeGroupBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (props, forwardedRef) {
-    var rootRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    // The root div which is the container inside of which we are trying to fit content.
-    var mergedRootRef = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_8__[/* useMergedRefs */ "a"])(rootRef, forwardedRef);
-    var _a = useResizingBehavior(props, rootRef), dataToMeasure = _a[0], renderedData = _a[1], remeasure = _a[2], initialHiddenDiv = _a[3], updateHiddenDiv = _a[4], dataNeedsMeasuring = _a[5], isInitialMeasure = _a[6];
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({ remeasure: remeasure }); }, [remeasure]);
-    useDebugWarnings(props);
-    var className = props.className, onRenderData = props.onRenderData;
-    var divProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* getNativeProps */ "h"])(props, _Utilities__WEBPACK_IMPORTED_MODULE_2__[/* divProperties */ "f"], ['data']);
-    // We only ever render the final content to the user. All measurements are done in a hidden div.
-    // For the initial render, we want this to be as fast as possible, so we need to make sure that we only mount one
-    // version of the component for measurement and the final render. For renders that update what is on screen, we
-    // want to make sure that there are no jarring effects such as the screen flashing as we apply scaling steps for
-    // measurement. In the update case, we mount a second version of the component just for measurement purposes and
-    // leave the rendered content untouched until we know the next state to show to the user.
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, divProps, { className: className, ref: mergedRootRef }),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { style: hiddenParentStyles },
-            dataNeedsMeasuring && !isInitialMeasure && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { style: hiddenDivStyles, ref: updateHiddenDiv },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](MeasuredContext.Provider, { value: measuredContextValue }, onRenderData(dataToMeasure)))),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { ref: initialHiddenDiv, style: isInitialMeasure ? hiddenDivStyles : undefined, "data-automation-id": "visibleContent" }, isInitialMeasure ? onRenderData(dataToMeasure) : renderedData && onRenderData(renderedData)))));
-});
-ResizeGroupBase.displayName = 'ResizeGroupBase';
-//# sourceMappingURL=ResizeGroup.base.js.map
 
 /***/ }),
 
@@ -2916,7 +1996,7 @@ var List = /** @class */ (function (_super) {
             var key = pageSpecification.key;
             itemsPerPage = pageSpecification.itemCount;
             var pageBottom = pageTop + pageHeight - 1;
-            var isPageRendered = Object(_Utilities__WEBPACK_IMPORTED_MODULE_10__[/* findIndex */ "d"])(state.pages, function (page) { return !!page.items && page.startIndex === itemIndex; }) > -1;
+            var isPageRendered = Object(_Utilities__WEBPACK_IMPORTED_MODULE_10__[/* findIndex */ "c"])(state.pages, function (page) { return !!page.items && page.startIndex === itemIndex; }) > -1;
             var isPageInAllowedRange = !allowedRect || (pageBottom >= allowedRect.top && pageTop <= allowedRect.bottom);
             var isPageInRequiredRange = !this_1._requiredRect || (pageBottom >= this_1._requiredRect.top && pageTop <= this_1._requiredRect.bottom);
             var isPageVisible = (!isFirstRender && (isPageInRequiredRange || (isPageInAllowedRange && isPageRendered))) || !shouldVirtualize;
@@ -3135,372 +2215,6 @@ function _mergeRect(targetRect, newRect) {
 
 /***/ }),
 
-/***/ "4C4D":
-/*!************************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.base.js ***!
-  \************************************************************************************************************************************************************************/
-/*! exports provided: ChoiceGroupOptionBase */
-/*! exports used: ChoiceGroupOptionBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoiceGroupOptionBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Image__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Image */ "CmtH");
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Icon */ "YGsJ");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Utilities */ "Eh56");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Utilities */ "BLix");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Utilities */ "e6CW");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../Utilities */ "5tSL");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Utilities */ "WjVC");
-
-
-
-
-
-var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* classNamesFunction */ "a"])();
-var LARGE_IMAGE_SIZE = 71;
-var DEFAULT_PROPS = {
-    // This ensures default imageSize value doesn't mutate. Mutation can cause style re-calcuation.
-    imageSize: { width: 32, height: 32 },
-};
-var ChoiceGroupOptionBase = function (propsWithoutDefaults) {
-    // Mix the `key` prop back in since custom render functions may be expecting it
-    // (React uses `key` internally rather than passing it through to the component)
-    var props = Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* getPropsWithDefaults */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, DEFAULT_PROPS), { key: propsWithoutDefaults.itemKey }), propsWithoutDefaults);
-    var ariaLabel = props.ariaLabel, focused = props.focused, required = props.required, theme = props.theme, iconProps = props.iconProps, imageSrc = props.imageSrc, imageSize = props.imageSize, disabled = props.disabled, checked = props.checked, id = props.id, styles = props.styles, name = props.name, rest = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __rest */ "e"])(props, ["ariaLabel", "focused", "required", "theme", "iconProps", "imageSrc", "imageSize", "disabled", "checked", "id", "styles", "name"]);
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        hasIcon: !!iconProps,
-        hasImage: !!imageSrc,
-        checked: checked,
-        disabled: disabled,
-        imageIsLarge: !!imageSrc && (imageSize.width > LARGE_IMAGE_SIZE || imageSize.height > LARGE_IMAGE_SIZE),
-        imageSize: imageSize,
-        focused: focused,
-    });
-    var _a = Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(rest, _Utilities__WEBPACK_IMPORTED_MODULE_6__[/* inputProperties */ "l"]), className = _a.className, nativeProps = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __rest */ "e"])(_a, ["className"]);
-    var defaultOnRenderLabel = function () {
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", { id: props.labelId, className: "ms-ChoiceFieldLabel" }, props.text));
-    };
-    var defaultOnRenderField = function () {
-        var _a = props.imageAlt, imageAlt = _a === void 0 ? '' : _a, selectedImageSrc = props.selectedImageSrc;
-        var onRenderLabel = props.onRenderLabel
-            ? Object(_Utilities__WEBPACK_IMPORTED_MODULE_7__[/* composeRenderFunction */ "a"])(props.onRenderLabel, defaultOnRenderLabel)
-            : defaultOnRenderLabel;
-        var label = onRenderLabel(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props), { key: props.itemKey }));
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("label", { htmlFor: id, className: classNames.field },
-            imageSrc && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.innerField },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.imageWrapper },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Image__WEBPACK_IMPORTED_MODULE_2__[/* Image */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ src: imageSrc, alt: imageAlt }, imageSize))),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.selectedImageWrapper },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Image__WEBPACK_IMPORTED_MODULE_2__[/* Image */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ src: selectedImageSrc, alt: imageAlt }, imageSize))))),
-            iconProps && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.innerField },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.iconWrapper },
-                    react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_3__[/* Icon */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, iconProps))))),
-            imageSrc || iconProps ? react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.labelWrapper }, label) : label));
-    };
-    var _b = props.onRenderField, onRenderField = _b === void 0 ? defaultOnRenderField : _b;
-    var onChange = function (evt) {
-        var _a;
-        (_a = props.onChange) === null || _a === void 0 ? void 0 : _a.call(props, evt, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props), { key: props.itemKey }));
-    };
-    var onBlur = function (evt) {
-        var _a;
-        (_a = props.onBlur) === null || _a === void 0 ? void 0 : _a.call(props, evt);
-    };
-    var onFocus = function (evt) {
-        var _a;
-        (_a = props.onFocus) === null || _a === void 0 ? void 0 : _a.call(props, evt, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props), { key: props.itemKey }));
-    };
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.root },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.choiceFieldWrapper },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("input", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ "aria-label": ariaLabel, id: id, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_8__[/* css */ "a"])(classNames.input, className), type: "radio", name: name, disabled: disabled, checked: checked, required: required }, nativeProps, { onChange: onChange, onFocus: onFocus, onBlur: onBlur })),
-            onRenderField(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props), { key: props.itemKey }), defaultOnRenderField))));
-};
-ChoiceGroupOptionBase.displayName = 'ChoiceGroupOption';
-//# sourceMappingURL=ChoiceGroupOption.base.js.map
-
-/***/ }),
-
-/***/ "4IM+":
-/*!***********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarYear/CalendarYear.base.js ***!
-  \***********************************************************************************************************************************************************/
-/*! exports provided: CalendarYearBase */
-/*! exports used: CalendarYearBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarYearBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "Eh56");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Utilities */ "6ztV");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Utilities */ "WjVC");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../Utilities */ "Ge+E");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Utilities */ "pSSv");
-/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../FocusZone */ "YJ2P");
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../Icon */ "YGsJ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/react-hooks */ "kWOt");
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../defaults */ "y50k");
-
-
-
-
-
-
-
-var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNamesFunction */ "a"])();
-var CELL_COUNT = 12;
-var CELLS_PER_ROW = 4;
-var DefaultCalendarYearStrings = {
-    prevRangeAriaLabel: undefined,
-    nextRangeAriaLabel: undefined,
-};
-var CalendarYearGridCell = function (props) {
-    var _a;
-    var _b;
-    var styles = props.styles, theme = props.theme, className = props.className, highlightCurrentYear = props.highlightCurrentYear, highlightSelectedYear = props.highlightSelectedYear, year = props.year, selected = props.selected, disabled = props.disabled, componentRef = props.componentRef, onSelectYear = props.onSelectYear, onRenderYear = props.onRenderYear;
-    var buttonRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](componentRef, function () { return ({
-        focus: function () {
-            var _a, _b;
-            (_b = (_a = buttonRef.current) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-        },
-    }); }, []);
-    var onClick = function () {
-        onSelectYear === null || onSelectYear === void 0 ? void 0 : onSelectYear(year);
-    };
-    var onKeyDown = function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        if (ev.which === _Utilities__WEBPACK_IMPORTED_MODULE_3__[/* KeyCodes */ "a"].enter) {
-            onSelectYear === null || onSelectYear === void 0 ? void 0 : onSelectYear(year);
-        }
-    };
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        highlightCurrent: highlightCurrentYear,
-        highlightSelected: highlightSelectedYear,
-    });
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* css */ "a"])(classNames.itemButton, (_a = {},
-            _a[classNames.selected] = selected,
-            _a[classNames.disabled] = disabled,
-            _a)), type: "button", role: "gridcell", onClick: !disabled ? onClick : undefined, onKeyDown: !disabled ? onKeyDown : undefined, disabled: disabled, "aria-selected": selected, ref: buttonRef }, (_b = onRenderYear === null || onRenderYear === void 0 ? void 0 : onRenderYear(year)) !== null && _b !== void 0 ? _b : year));
-};
-CalendarYearGridCell.displayName = 'CalendarYearGridCell';
-var CalendarYearGrid = function (props) {
-    var styles = props.styles, theme = props.theme, className = props.className, fromYear = props.fromYear, toYear = props.toYear, animationDirection = props.animationDirection, animateBackwards = props.animateBackwards, minYear = props.minYear, maxYear = props.maxYear, onSelectYear = props.onSelectYear, selectedYear = props.selectedYear, componentRef = props.componentRef;
-    var selectedCellRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var currentCellRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](componentRef, function () { return ({
-        focus: function () {
-            var _a, _b;
-            (_b = (_a = (selectedCellRef.current || currentCellRef.current)) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-        },
-    }); }, []);
-    var renderCell = function (yearToRender) {
-        var selected = yearToRender === selectedYear;
-        var disabled = (minYear !== undefined && yearToRender < minYear) || (maxYear !== undefined && yearToRender > maxYear);
-        var current = yearToRender === new Date().getFullYear();
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearGridCell, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { key: yearToRender, year: yearToRender, selected: selected, current: current, disabled: disabled, onSelectYear: onSelectYear, componentRef: selected ? selectedCellRef : current ? currentCellRef : undefined, theme: theme })));
-    };
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        animateBackwards: animateBackwards,
-        animationDirection: animationDirection,
-    });
-    var onRenderYear = function (value) {
-        var _a, _b;
-        return (_b = (_a = props.onRenderYear) === null || _a === void 0 ? void 0 : _a.call(props, value)) !== null && _b !== void 0 ? _b : value;
-    };
-    var gridAriaLabel = "".concat(onRenderYear(fromYear), " - ").concat(onRenderYear(toYear));
-    var year = fromYear;
-    var cells = [];
-    for (var i = 0; i < (toYear - fromYear + 1) / CELLS_PER_ROW; i++) {
-        cells.push([]);
-        for (var j = 0; j < CELLS_PER_ROW; j++) {
-            cells[i].push(renderCell(year));
-            year++;
-        }
-    }
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_7__[/* FocusZone */ "a"], null,
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.gridContainer, role: "grid", "aria-label": gridAriaLabel }, cells.map(function (cellRow, index) {
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"].apply(react__WEBPACK_IMPORTED_MODULE_1__, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])(["div", { key: 'yearPickerRow_' + index + '_' + fromYear, role: "row", className: classNames.buttonRow }], cellRow, false)));
-        }))));
-};
-CalendarYearGrid.displayName = 'CalendarYearGrid';
-var CalendarYearNavDirection;
-(function (CalendarYearNavDirection) {
-    CalendarYearNavDirection[CalendarYearNavDirection["Previous"] = 0] = "Previous";
-    CalendarYearNavDirection[CalendarYearNavDirection["Next"] = 1] = "Next";
-})(CalendarYearNavDirection || (CalendarYearNavDirection = {}));
-var CalendarYearNavArrow = function (props) {
-    var _a;
-    var styles = props.styles, theme = props.theme, className = props.className, _b = props.navigationIcons, navigationIcons = _b === void 0 ? _defaults__WEBPACK_IMPORTED_MODULE_10__[/* defaultCalendarNavigationIcons */ "a"] : _b, _c = props.strings, strings = _c === void 0 ? DefaultCalendarYearStrings : _c, direction = props.direction, onSelectPrev = props.onSelectPrev, onSelectNext = props.onSelectNext, fromYear = props.fromYear, toYear = props.toYear, maxYear = props.maxYear, minYear = props.minYear;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-    });
-    var ariaLabel = direction === CalendarYearNavDirection.Previous ? strings.prevRangeAriaLabel : strings.nextRangeAriaLabel;
-    var newRangeOffset = direction === CalendarYearNavDirection.Previous ? -CELL_COUNT : CELL_COUNT;
-    var newRange = { fromYear: fromYear + newRangeOffset, toYear: toYear + newRangeOffset };
-    var ariaLabelString = ariaLabel ? (typeof ariaLabel === 'string' ? ariaLabel : ariaLabel(newRange)) : undefined;
-    var disabled = direction === CalendarYearNavDirection.Previous
-        ? minYear !== undefined && fromYear < minYear
-        : maxYear !== undefined && props.fromYear + CELL_COUNT > maxYear;
-    var onNavigate = function () {
-        direction === CalendarYearNavDirection.Previous ? onSelectPrev === null || onSelectPrev === void 0 ? void 0 : onSelectPrev() : onSelectNext === null || onSelectNext === void 0 ? void 0 : onSelectNext();
-    };
-    var onKeyDown = function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        if (ev.which === _Utilities__WEBPACK_IMPORTED_MODULE_3__[/* KeyCodes */ "a"].enter) {
-            onNavigate();
-        }
-    };
-    // can be condensed, but leaving verbose for clarity due to regressions
-    var isLeftNavigation = Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* getRTL */ "a"])()
-        ? direction === CalendarYearNavDirection.Next
-        : direction === CalendarYearNavDirection.Previous;
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* css */ "a"])(classNames.navigationButton, (_a = {},
-            _a[classNames.disabled] = disabled,
-            _a)), onClick: !disabled ? onNavigate : undefined, onKeyDown: !disabled ? onKeyDown : undefined, type: "button", title: ariaLabelString, disabled: disabled },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_8__[/* Icon */ "a"], { iconName: isLeftNavigation ? navigationIcons.leftNavigation : navigationIcons.rightNavigation })));
-};
-CalendarYearNavArrow.displayName = 'CalendarYearNavArrow';
-var CalendarYearNav = function (props) {
-    var styles = props.styles, theme = props.theme, className = props.className;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-    });
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.navigationButtonsContainer },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearNavArrow, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { direction: CalendarYearNavDirection.Previous })),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearNavArrow, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { direction: CalendarYearNavDirection.Next }))));
-};
-CalendarYearNav.displayName = 'CalendarYearNav';
-var CalendarYearTitle = function (props) {
-    var styles = props.styles, theme = props.theme, className = props.className, fromYear = props.fromYear, toYear = props.toYear, _a = props.strings, strings = _a === void 0 ? DefaultCalendarYearStrings : _a, animateBackwards = props.animateBackwards, animationDirection = props.animationDirection;
-    var onHeaderSelect = function () {
-        var _a;
-        (_a = props.onHeaderSelect) === null || _a === void 0 ? void 0 : _a.call(props, true);
-    };
-    var onHeaderKeyDown = function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        if (ev.which === _Utilities__WEBPACK_IMPORTED_MODULE_3__[/* KeyCodes */ "a"].enter || ev.which === _Utilities__WEBPACK_IMPORTED_MODULE_3__[/* KeyCodes */ "a"].space) {
-            onHeaderSelect();
-        }
-    };
-    var onRenderYear = function (year) {
-        var _a, _b;
-        return (_b = (_a = props.onRenderYear) === null || _a === void 0 ? void 0 : _a.call(props, year)) !== null && _b !== void 0 ? _b : year;
-    };
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        hasHeaderClickCallback: !!props.onHeaderSelect,
-        animateBackwards: animateBackwards,
-        animationDirection: animationDirection,
-    });
-    if (props.onHeaderSelect) {
-        var rangeAriaLabel = strings.rangeAriaLabel;
-        var headerAriaLabelFormatString = strings.headerAriaLabelFormatString;
-        var currentDateRange = rangeAriaLabel
-            ? typeof rangeAriaLabel === 'string'
-                ? rangeAriaLabel
-                : rangeAriaLabel(props)
-            : undefined;
-        var ariaLabel = headerAriaLabelFormatString
-            ? Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* format */ "a"])(headerAriaLabelFormatString, currentDateRange)
-            : currentDateRange;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: classNames.currentItemButton, onClick: onHeaderSelect, onKeyDown: onHeaderKeyDown, "aria-label": ariaLabel, role: "button", type: "button" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", { "aria-live": "assertive", "aria-atomic": "true" },
-                onRenderYear(fromYear),
-                " - ",
-                onRenderYear(toYear))));
-    }
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.current },
-        onRenderYear(fromYear),
-        " - ",
-        onRenderYear(toYear)));
-};
-CalendarYearTitle.displayName = 'CalendarYearTitle';
-var CalendarYearHeader = function (props) {
-    var _a;
-    var styles = props.styles, theme = props.theme, className = props.className, animateBackwards = props.animateBackwards, animationDirection = props.animationDirection, onRenderTitle = props.onRenderTitle;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        hasHeaderClickCallback: !!props.onHeaderSelect,
-        animateBackwards: animateBackwards,
-        animationDirection: animationDirection,
-    });
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.headerContainer }, (_a = onRenderTitle === null || onRenderTitle === void 0 ? void 0 : onRenderTitle(props)) !== null && _a !== void 0 ? _a : react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearTitle, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props)),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearNav, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props))));
-};
-CalendarYearHeader.displayName = 'CalendarYearHeader';
-function useAnimateBackwards(_a) {
-    var selectedYear = _a.selectedYear, navigatedYear = _a.navigatedYear;
-    var rangeYear = selectedYear || navigatedYear || new Date().getFullYear();
-    var fromYear = Math.floor(rangeYear / 10) * 10;
-    var previousFromYear = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__[/* usePrevious */ "a"])(fromYear);
-    if (!previousFromYear || previousFromYear === fromYear) {
-        return undefined;
-    }
-    else if (previousFromYear > fromYear) {
-        return true;
-    }
-    else {
-        return false;
-    }
-}
-function useYearRangeState(_a) {
-    var selectedYear = _a.selectedYear, navigatedYear = _a.navigatedYear;
-    var rangeYear = react__WEBPACK_IMPORTED_MODULE_1__["useMemo"](function () {
-        return selectedYear || navigatedYear || Math.floor(new Date().getFullYear() / 10) * 10;
-    }, [navigatedYear, selectedYear]);
-    var _b = react__WEBPACK_IMPORTED_MODULE_1__["useState"](rangeYear), fromYear = _b[0], setFromYear = _b[1];
-    var onNavNext = function () {
-        setFromYear(function (year) { return year + CELL_COUNT; });
-    };
-    var onNavPrevious = function () {
-        setFromYear(function (year) { return year - CELL_COUNT; });
-    };
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        setFromYear(rangeYear);
-    }, [rangeYear]);
-    var toYear = fromYear + CELL_COUNT - 1;
-    return [fromYear, toYear, onNavNext, onNavPrevious];
-}
-var CalendarYearBase = function (props) {
-    var animateBackwards = useAnimateBackwards(props);
-    var _a = useYearRangeState(props), fromYear = _a[0], toYear = _a[1], onNavNext = _a[2], onNavPrevious = _a[3];
-    var gridRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        focus: function () {
-            var _a, _b;
-            (_b = (_a = gridRef.current) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-        },
-    }); });
-    var styles = props.styles, theme = props.theme, className = props.className;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-    });
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.root },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearHeader, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { fromYear: fromYear, toYear: toYear, onSelectPrev: onNavPrevious, onSelectNext: onNavNext, animateBackwards: animateBackwards })),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarYearGrid, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { fromYear: fromYear, toYear: toYear, animateBackwards: animateBackwards, componentRef: gridRef }))));
-};
-CalendarYearBase.displayName = 'CalendarYearBase';
-//# sourceMappingURL=CalendarYear.base.js.map
-
-/***/ }),
-
 /***/ "4VJO":
 /*!************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DetailsList/DetailsRowFields.js ***!
@@ -3654,7 +2368,7 @@ var getDetailsListStyles = function (props) {
     var _a, _b;
     var theme = props.theme, className = props.className, isHorizontalConstrained = props.isHorizontalConstrained, compact = props.compact, isFixed = props.isFixed;
     var semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -3912,27 +2626,6 @@ Dropdown.displayName = 'Dropdown';
 
 /***/ }),
 
-/***/ "BJfc":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.js ***!
-  \*******************************************************************************************************************************************************************/
-/*! exports provided: ChoiceGroupOption */
-/*! exports used: ChoiceGroupOption */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoiceGroupOption; });
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../Utilities */ "MBBx");
-/* harmony import */ var _ChoiceGroupOption_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChoiceGroupOption.base */ "4C4D");
-/* harmony import */ var _ChoiceGroupOption_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChoiceGroupOption.styles */ "qQgw");
-
-
-
-var ChoiceGroupOption = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_ChoiceGroupOption_base__WEBPACK_IMPORTED_MODULE_1__[/* ChoiceGroupOptionBase */ "a"], _ChoiceGroupOption_styles__WEBPACK_IMPORTED_MODULE_2__[/* getStyles */ "a"], undefined, { scope: 'ChoiceGroupOption' });
-//# sourceMappingURL=ChoiceGroupOption.js.map
-
-/***/ }),
-
 /***/ "BWz0":
 /*!*******************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Check/Check.js ***!
@@ -3953,328 +2646,6 @@ var Check = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_C
     scope: 'Check',
 }, true);
 //# sourceMappingURL=Check.js.map
-
-/***/ }),
-
-/***/ "CljN":
-/*!**********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarDayGrid.styles.js ***!
-  \**********************************************************************************************************************************************************/
-/*! exports provided: styles */
-/*! exports used: styles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return styles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-/* harmony import */ var _Calendar_Calendar_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../Calendar/Calendar.types */ "x6Lq");
-
-
-
-
-var GlobalClassNames = {
-    hoverStyle: 'ms-CalendarDay-hoverStyle',
-    pressedStyle: 'ms-CalendarDay-pressedStyle',
-    dayIsTodayStyle: 'ms-CalendarDay-dayIsToday',
-    daySelectedStyle: 'ms-CalendarDay-daySelected',
-};
-var transitionRowDisappearance = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "E"])({
-    '100%': {
-        width: 0,
-        height: 0,
-        overflow: 'hidden',
-    },
-    '99.9%': {
-        width: '100%',
-        height: 28,
-        overflow: 'visible',
-    },
-    '0%': {
-        width: '100%',
-        height: 28,
-        overflow: 'visible',
-    },
-});
-var styles = function (props) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k;
-    var theme = props.theme, dateRangeType = props.dateRangeType, showWeekNumbers = props.showWeekNumbers, lightenDaysOutsideNavigatedMonth = props.lightenDaysOutsideNavigatedMonth, animateBackwards = props.animateBackwards, animationDirection = props.animationDirection;
-    var palette = theme.palette;
-    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
-    var rowAnimationStyle = {};
-    if (animateBackwards !== undefined) {
-        if (animationDirection === _Calendar_Calendar_types__WEBPACK_IMPORTED_MODULE_3__[/* AnimationDirection */ "a"].Horizontal) {
-            rowAnimationStyle = animateBackwards ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideRightIn20 : _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideLeftIn20;
-        }
-        else {
-            rowAnimationStyle = animateBackwards ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideDownIn20 : _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideUpIn20;
-        }
-    }
-    var firstTransitionRowAnimationStyle = {};
-    var lastTransitionRowAnimationStyle = {};
-    if (animateBackwards !== undefined) {
-        if (animationDirection !== _Calendar_Calendar_types__WEBPACK_IMPORTED_MODULE_3__[/* AnimationDirection */ "a"].Horizontal) {
-            firstTransitionRowAnimationStyle = animateBackwards ? { animationName: '' } : _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideUpOut20;
-            lastTransitionRowAnimationStyle = animateBackwards ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideDownOut20 : { animationName: '' };
-        }
-    }
-    var disabledStyle = {
-        selectors: {
-            '&, &:disabled, & button': {
-                color: palette.neutralTertiaryAlt,
-                pointerEvents: 'none',
-            },
-        },
-    };
-    return {
-        wrapper: {
-            paddingBottom: 10,
-        },
-        table: [
-            {
-                textAlign: 'center',
-                borderCollapse: 'collapse',
-                borderSpacing: '0',
-                tableLayout: 'fixed',
-                fontSize: 'inherit',
-                marginTop: 4,
-                width: 196,
-                position: 'relative',
-                paddingBottom: 10,
-            },
-            showWeekNumbers && {
-                width: 226,
-            },
-        ],
-        dayCell: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -3 }),
-            {
-                margin: 0,
-                padding: 0,
-                width: 28,
-                height: 28,
-                lineHeight: 28,
-                fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-                fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
-                color: palette.neutralPrimary,
-                cursor: 'pointer',
-                position: 'relative',
-                selectors: (_a = {},
-                    _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'WindowText', backgroundColor: 'transparent', zIndex: 0 }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                    _a['&.' + classNames.hoverStyle] = {
-                        backgroundColor: palette.neutralLighter,
-                        selectors: (_b = {},
-                            _b[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                zIndex: 3,
-                                backgroundColor: 'Window',
-                                outline: '1px solid Highlight',
-                            },
-                            _b),
-                    },
-                    _a['&.' + classNames.pressedStyle] = {
-                        backgroundColor: palette.neutralLight,
-                        selectors: (_c = {},
-                            _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                borderColor: 'Highlight',
-                                color: 'Highlight',
-                                backgroundColor: 'Window',
-                            },
-                            _c),
-                    },
-                    _a['&.' + classNames.pressedStyle + '.' + classNames.hoverStyle] = {
-                        selectors: (_d = {},
-                            _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                backgroundColor: 'Window',
-                                outline: '1px solid Highlight',
-                            },
-                            _d),
-                    },
-                    _a),
-            },
-        ],
-        daySelected: [
-            dateRangeType !== _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DateRangeType */ "b"].Month && {
-                backgroundColor: palette.neutralLight + '!important',
-                selectors: (_e = {
-                        '&::before': {
-                            content: '""',
-                            position: 'absolute',
-                            top: 0,
-                            bottom: 0,
-                            left: 0,
-                            right: 0,
-                        }
-                    },
-                    _e['&:hover, &.' + classNames.hoverStyle + ', &.' + classNames.pressedStyle] = (_f = {
-                            backgroundColor: palette.neutralLight + '!important'
-                        },
-                        _f[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                            color: 'HighlightText!important',
-                            background: 'Highlight!important',
-                        },
-                        _f),
-                    _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight!important', color: 'HighlightText!important', borderColor: 'Highlight!important' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                    _e),
-            },
-        ],
-        weekRow: rowAnimationStyle,
-        weekDayLabelCell: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].fadeIn200,
-        weekNumberCell: {
-            margin: 0,
-            padding: 0,
-            borderRight: '1px solid',
-            borderColor: palette.neutralLight,
-            backgroundColor: palette.neutralLighterAlt,
-            color: palette.neutralSecondary,
-            boxSizing: 'border-box',
-            width: 28,
-            height: 28,
-            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
-            fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-        },
-        dayOutsideBounds: disabledStyle,
-        dayOutsideNavigatedMonth: lightenDaysOutsideNavigatedMonth && {
-            color: palette.neutralSecondary,
-            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
-        },
-        dayButton: {
-            width: 24,
-            height: 24,
-            lineHeight: 24,
-            fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-            fontWeight: 'inherit',
-            borderRadius: 2,
-            border: 'none',
-            padding: 0,
-            color: 'inherit',
-            backgroundColor: 'transparent',
-            cursor: 'pointer',
-            overflow: 'visible',
-            selectors: {
-                span: {
-                    height: 'inherit',
-                    lineHeight: 'inherit',
-                },
-            },
-        },
-        dayIsToday: {
-            backgroundColor: palette.themePrimary + '!important',
-            borderRadius: '100%',
-            color: palette.white + '!important',
-            fontWeight: (_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold + '!important'),
-            selectors: (_g = {},
-                _g[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'WindowText!important', color: 'Window!important', borderColor: 'WindowText!important' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                _g),
-        },
-        firstTransitionWeek: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ position: 'absolute', opacity: 0, width: 0, height: 0, overflow: 'hidden' }, firstTransitionRowAnimationStyle), { animationName: firstTransitionRowAnimationStyle.animationName + ',' + transitionRowDisappearance }),
-        lastTransitionWeek: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ position: 'absolute', opacity: 0, width: 0, height: 0, overflow: 'hidden', marginTop: -28 }, lastTransitionRowAnimationStyle), { animationName: lastTransitionRowAnimationStyle.animationName + ',' + transitionRowDisappearance }),
-        dayMarker: {
-            width: 4,
-            height: 4,
-            backgroundColor: palette.neutralSecondary,
-            borderRadius: '100%',
-            bottom: 1,
-            left: 0,
-            right: 0,
-            position: 'absolute',
-            margin: 'auto',
-            selectors: (_h = {},
-                _h['.' + classNames.dayIsTodayStyle + ' &'] = {
-                    backgroundColor: palette.white,
-                    selectors: (_j = {},
-                        _j[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                            backgroundColor: 'Window',
-                        },
-                        _j),
-                },
-                _h['.' + classNames.daySelectedStyle + ' &'] = {
-                    selectors: (_k = {},
-                        _k[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                            backgroundColor: 'HighlightText',
-                        },
-                        _k),
-                },
-                _h[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'WindowText' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                _h),
-        },
-        topRightCornerDate: {
-            borderTopRightRadius: '2px',
-        },
-        topLeftCornerDate: {
-            borderTopLeftRadius: '2px',
-        },
-        bottomRightCornerDate: {
-            borderBottomRightRadius: '2px',
-        },
-        bottomLeftCornerDate: {
-            borderBottomLeftRadius: '2px',
-        },
-        datesAbove: {
-            '&::before': {
-                borderTop: "1px solid ".concat(palette.neutralSecondary),
-            },
-        },
-        datesBelow: {
-            '&::before': {
-                borderBottom: "1px solid ".concat(palette.neutralSecondary),
-            },
-        },
-        datesLeft: {
-            '&::before': {
-                borderLeft: "1px solid ".concat(palette.neutralSecondary),
-            },
-        },
-        datesRight: {
-            '&::before': {
-                borderRight: "1px solid ".concat(palette.neutralSecondary),
-            },
-        },
-    };
-};
-//# sourceMappingURL=CalendarDayGrid.styles.js.map
-
-/***/ }),
-
-/***/ "DFOT":
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup.styles.js ***!
-  \**************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Styling */ "ogYq");
-
-var GlobalClassNames = {
-    root: 'ms-ChoiceFieldGroup',
-    flexContainer: 'ms-ChoiceFieldGroup-flexContainer',
-};
-var getStyles = function (props) {
-    var className = props.className, optionsContainIconOrImage = props.optionsContainIconOrImage, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
-    return {
-        root: [
-            className,
-            classNames.root,
-            theme.fonts.medium,
-            {
-                display: 'block',
-            },
-        ],
-        flexContainer: [
-            classNames.flexContainer,
-            optionsContainIconOrImage && {
-                display: 'flex',
-                flexDirection: 'row',
-                flexWrap: 'wrap',
-            },
-        ],
-    };
-};
-//# sourceMappingURL=ChoiceGroup.styles.js.map
 
 /***/ }),
 
@@ -4978,168 +3349,6 @@ LinkBase.displayName = 'LinkBase';
 
 /***/ }),
 
-/***/ "Ecx6":
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroup.base.js ***!
-  \************************************************************************************************************************************************/
-/*! exports provided: ChoiceGroupBase */
-/*! exports used: ChoiceGroupBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChoiceGroupBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Label__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Label */ "Rel8");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Utilities */ "Eh56");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utilities */ "S+0K");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utilities */ "zRON");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utilities */ "e6CW");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Utilities */ "obGf");
-/* harmony import */ var _ChoiceGroupOption_index__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ChoiceGroupOption/index */ "BJfc");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fluentui/react-hooks */ "Txh6");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fluentui/react-hooks */ "owwJ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fluentui/react-hooks */ "Te7Q");
-/* harmony import */ var _utilities_dom__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../utilities/dom */ "YFIV");
-
-
-
-
-
-
-
-var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* classNamesFunction */ "a"])();
-var getOptionId = function (option, id) {
-    return "".concat(id, "-").concat(option.key);
-};
-var findOption = function (options, key) {
-    return key === undefined ? undefined : Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* find */ "c"])(options, function (value) { return value.key === key; });
-};
-var focusSelectedOption = function (options, keyChecked, id, focusProviders, doc) {
-    var optionToFocus = findOption(options, keyChecked) || options.filter(function (option) { return !option.disabled; })[0];
-    var elementToFocus = optionToFocus && (doc === null || doc === void 0 ? void 0 : doc.getElementById(getOptionId(optionToFocus, id)));
-    if (elementToFocus) {
-        elementToFocus.focus();
-        Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* setFocusVisibility */ "b"])(true, elementToFocus, focusProviders);
-    }
-};
-var focusFromFocusTrapZone = function (evt) {
-    return evt.relatedTarget instanceof HTMLElement && evt.relatedTarget.dataset.isFocusTrapZoneBumper === 'true';
-};
-var useComponentRef = function (options, keyChecked, id, componentRef, focusProviders) {
-    var doc = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_13__[/* useDocumentEx */ "c"])();
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](componentRef, function () { return ({
-        get checkedOption() {
-            return findOption(options, keyChecked);
-        },
-        focus: function () {
-            focusSelectedOption(options, keyChecked, id, focusProviders, doc);
-        },
-    }); }, [options, keyChecked, id, focusProviders, doc]);
-};
-var COMPONENT_NAME = 'ChoiceGroup';
-var ChoiceGroupBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (props, forwardedRef) {
-    var className = props.className, theme = props.theme, styles = props.styles, _a = props.options, options = _a === void 0 ? [] : _a, label = props.label, required = props.required, disabled = props.disabled, name = props.name, defaultSelectedKey = props.defaultSelectedKey, componentRef = props.componentRef, onChange = props.onChange;
-    var id = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__[/* useId */ "a"])('ChoiceGroup');
-    var labelId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__[/* useId */ "a"])('ChoiceGroupLabel');
-    var divProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(props, _Utilities__WEBPACK_IMPORTED_MODULE_6__[/* divProperties */ "f"], [
-        'onChange',
-        'className',
-        'required',
-    ]);
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        optionsContainIconOrImage: options.some(function (option) { return !!(option.iconProps || option.imageSrc); }),
-    });
-    var ariaLabelledBy = props.ariaLabelledBy || (label ? labelId : props['aria-labelledby']);
-    var _b = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_10__[/* useControllableValue */ "a"])(props.selectedKey, defaultSelectedKey), keyChecked = _b[0], setKeyChecked = _b[1];
-    var _c = react__WEBPACK_IMPORTED_MODULE_1__["useState"](), keyFocused = _c[0], setKeyFocused = _c[1];
-    var rootRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var mergedRootRefs = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_11__[/* useMergedRefs */ "a"])(rootRef, forwardedRef);
-    var focusContext = react__WEBPACK_IMPORTED_MODULE_1__["useContext"](_Utilities__WEBPACK_IMPORTED_MODULE_7__[/* FocusRectsContext */ "b"]);
-    useDebugWarnings(props);
-    useComponentRef(options, keyChecked, id, componentRef, focusContext === null || focusContext === void 0 ? void 0 : focusContext.registeredProviders);
-    Object(_Utilities__WEBPACK_IMPORTED_MODULE_7__[/* useFocusRects */ "c"])(rootRef);
-    var onFocus = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (ev, option) {
-        var _a;
-        if (option) {
-            setKeyFocused(option.itemKey);
-            (_a = option.onFocus) === null || _a === void 0 ? void 0 : _a.call(option, ev);
-        }
-    }, []);
-    var onBlur = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (ev, option) {
-        var _a;
-        setKeyFocused(undefined);
-        (_a = option === null || option === void 0 ? void 0 : option.onBlur) === null || _a === void 0 ? void 0 : _a.call(option, ev);
-    }, []);
-    var onOptionChange = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (evt, option) {
-        var _a;
-        if (!option) {
-            return;
-        }
-        setKeyChecked(option.itemKey);
-        (_a = option.onChange) === null || _a === void 0 ? void 0 : _a.call(option, evt);
-        onChange === null || onChange === void 0 ? void 0 : onChange(evt, findOption(options, option.itemKey));
-    }, [onChange, options, setKeyChecked]);
-    var onRadioFocus = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (evt) {
-        // Handles scenarios like this bug: https://github.com/microsoft/fluentui/issues/20173
-        if (focusFromFocusTrapZone(evt)) {
-            focusSelectedOption(options, keyChecked, id, focusContext === null || focusContext === void 0 ? void 0 : focusContext.registeredProviders);
-        }
-    }, [options, keyChecked, id, focusContext]);
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ className: classNames.root }, divProps, { ref: mergedRootRefs }),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ role: "radiogroup" }, (ariaLabelledBy && { 'aria-labelledby': ariaLabelledBy }), { onFocus: onRadioFocus }),
-            label && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Label__WEBPACK_IMPORTED_MODULE_2__[/* Label */ "a"], { className: classNames.label, required: required, id: labelId, disabled: disabled }, label)),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.flexContainer }, options.map(function (option) {
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_ChoiceGroupOption_index__WEBPACK_IMPORTED_MODULE_8__[/* ChoiceGroupOption */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ itemKey: option.key }, option, { key: option.key, onBlur: onBlur, onFocus: onFocus, onChange: onOptionChange, focused: option.key === keyFocused, checked: option.key === keyChecked, disabled: option.disabled || disabled, id: getOptionId(option, id), labelId: option.labelId || "".concat(labelId, "-").concat(option.key), name: name || id, required: required })));
-            })))));
-});
-ChoiceGroupBase.displayName = COMPONENT_NAME;
-function useDebugWarnings(props) {
-    if (true) {
-        // eslint-disable-next-line react-hooks/rules-of-hooks -- build-time conditional
-        Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_12__[/* useWarnings */ "a"])({
-            name: COMPONENT_NAME,
-            props: props,
-            mutuallyExclusive: {
-                selectedKey: 'defaultSelectedKey',
-            },
-        });
-    }
-}
-//# sourceMappingURL=ChoiceGroup.base.js.map
-
-/***/ }),
-
-/***/ "FHLn":
-/*!*************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarYear/CalendarYear.styles.js ***!
-  \*************************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var _CalendarPicker_CalendarPicker_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../CalendarPicker/CalendarPicker.styles */ "ctm1");
-
-var getStyles = function (props) {
-    /*  Return styles from the base class.
-     *  If this component has extra styles not in the base, apply them here i.e.:
-     *  const myStyle: IStyle = {
-     *    display: "block"
-     *  };
-     *  return {...getPickerStyles(props), myStyle};
-     */
-    return Object(_CalendarPicker_CalendarPicker_styles__WEBPACK_IMPORTED_MODULE_0__[/* getStyles */ "a"])(props);
-};
-//# sourceMappingURL=CalendarYear.styles.js.map
-
-/***/ }),
-
 /***/ "GCcg":
 /*!**************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/GroupedList/GroupedList.styles.js ***!
@@ -5166,7 +3375,7 @@ var getStyles = function (props) {
     var _a, _b;
     var theme = props.theme, className = props.className, compact = props.compact;
     var palette = theme.palette;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -5293,115 +3502,6 @@ var GetGroupCount = function (groups) {
     return total;
 };
 //# sourceMappingURL=GroupedListUtility.js.map
-
-/***/ }),
-
-/***/ "IoLC":
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DatePicker/DatePicker.styles.js ***!
-  \************************************************************************************************************************************************/
-/*! exports provided: styles */
-/*! exports used: styles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return styles; });
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-
-var GlobalClassNames = {
-    root: 'ms-DatePicker',
-    callout: 'ms-DatePicker-callout',
-    withLabel: 'ms-DatePicker-event--with-label',
-    withoutLabel: 'ms-DatePicker-event--without-label',
-    disabled: 'msDatePickerDisabled ',
-};
-var TEXTFIELD_HEIGHT = 32;
-var styles = function (props) {
-    var _a;
-    var className = props.className, theme = props.theme, disabled = props.disabled, underlined = props.underlined, label = props.label, isDatePickerShown = props.isDatePickerShown;
-    var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
-    var DatePickerIcon = {
-        color: palette.neutralSecondary,
-        fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* FontSizes */ "e"].icon,
-        lineHeight: '18px',
-        pointerEvents: 'none',
-        position: 'absolute',
-        right: '4px',
-        padding: '5px',
-    };
-    return {
-        root: [classNames.root, theme.fonts.large, isDatePickerShown && 'is-open', _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* normalize */ "I"], className],
-        textField: [
-            {
-                position: 'relative',
-                selectors: {
-                    '& input[readonly]': {
-                        cursor: 'pointer',
-                    },
-                    input: {
-                        selectors: {
-                            '::-ms-clear': {
-                                display: 'none',
-                            },
-                        },
-                    },
-                },
-            },
-            disabled && {
-                selectors: {
-                    '& input[readonly]': {
-                        cursor: 'default',
-                    },
-                },
-            },
-        ],
-        callout: [classNames.callout],
-        icon: [
-            DatePickerIcon,
-            label ? classNames.withLabel : classNames.withoutLabel,
-            { paddingTop: '7px' },
-            !disabled && [
-                classNames.disabled,
-                {
-                    pointerEvents: 'initial',
-                    cursor: 'pointer',
-                },
-            ],
-            disabled && {
-                color: semanticColors.disabledText,
-                cursor: 'default',
-            },
-        ],
-        statusMessage: [
-            fonts.small,
-            {
-                color: semanticColors.errorText,
-                marginTop: 5,
-            },
-        ],
-        readOnlyTextField: [
-            {
-                cursor: 'pointer',
-                height: TEXTFIELD_HEIGHT,
-                lineHeight: TEXTFIELD_HEIGHT - 2,
-                overflow: 'hidden',
-                textOverflow: 'ellipsis',
-            },
-            underlined && {
-                lineHeight: TEXTFIELD_HEIGHT + 2,
-            },
-        ],
-        readOnlyPlaceholder: (_a = {
-                color: semanticColors.inputPlaceholderText
-            },
-            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
-                color: 'GrayText',
-            },
-            _a),
-    };
-};
-//# sourceMappingURL=DatePicker.styles.js.map
 
 /***/ }),
 
@@ -5967,52 +4067,6 @@ var GroupedListBase = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "LZLq":
-/*!*****************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DatePicker/DatePicker.js ***!
-  \*****************************************************************************************************************************************/
-/*! exports provided: DatePicker */
-/*! exports used: DatePicker */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatePicker; });
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/utilities */ "MBBx");
-/* harmony import */ var _DatePicker_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./DatePicker.base */ "k2oj");
-/* harmony import */ var _DatePicker_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DatePicker.styles */ "IoLC");
-
-
-
-var DatePicker = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_DatePicker_base__WEBPACK_IMPORTED_MODULE_1__[/* DatePickerBase */ "a"], _DatePicker_styles__WEBPACK_IMPORTED_MODULE_2__[/* styles */ "a"], undefined, {
-    scope: 'DatePicker',
-});
-//# sourceMappingURL=DatePicker.js.map
-
-/***/ }),
-
-/***/ "LpHR":
-/*!****************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarDay/CalendarDay.js ***!
-  \****************************************************************************************************************************************************/
-/*! exports provided: CalendarDay */
-/*! exports used: CalendarDay */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDay; });
-/* harmony import */ var _CalendarDay_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CalendarDay.base */ "WcVn");
-/* harmony import */ var _CalendarDay_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CalendarDay.styles */ "T8UD");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "MBBx");
-
-
-
-var CalendarDay = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* styled */ "a"])(_CalendarDay_base__WEBPACK_IMPORTED_MODULE_0__[/* CalendarDayBase */ "a"], _CalendarDay_styles__WEBPACK_IMPORTED_MODULE_1__[/* styles */ "a"], undefined, {
-    scope: 'CalendarDay',
-});
-//# sourceMappingURL=CalendarDay.js.map
-
-/***/ }),
-
 /***/ "MMvX":
 /*!**************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DetailsList/DetailsColumn.base.js ***!
@@ -6313,27 +4367,6 @@ var DetailsColumnBase = /** @class */ (function (_super) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 //# sourceMappingURL=DetailsColumn.base.js.map
-
-/***/ }),
-
-/***/ "N3XZ":
-/*!******************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarYear/CalendarYear.js ***!
-  \******************************************************************************************************************************************************/
-/*! exports provided: CalendarYear */
-/*! exports used: CalendarYear */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarYear; });
-/* harmony import */ var _CalendarYear_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CalendarYear.styles */ "FHLn");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Utilities */ "MBBx");
-/* harmony import */ var _CalendarYear_base__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CalendarYear.base */ "4IM+");
-
-
-
-var CalendarYear = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* styled */ "a"])(_CalendarYear_base__WEBPACK_IMPORTED_MODULE_2__[/* CalendarYearBase */ "a"], _CalendarYear_styles__WEBPACK_IMPORTED_MODULE_0__[/* getStyles */ "a"], undefined, { scope: 'CalendarYear' });
-//# sourceMappingURL=CalendarYear.js.map
 
 /***/ }),
 
@@ -7019,321 +5052,6 @@ function _stopPropagation(ev) {
 
 /***/ }),
 
-/***/ "Oj4v":
-/*!******************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/Calendar.base.js ***!
-  \******************************************************************************************************************************************/
-/*! exports provided: CalendarBase */
-/*! exports used: CalendarBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "Ht0i");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _CalendarDay_CalendarDay__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CalendarDay/CalendarDay */ "LpHR");
-/* harmony import */ var _CalendarMonth_CalendarMonth__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CalendarMonth/CalendarMonth */ "dJ83");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fluentui/utilities */ "lE+F");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/utilities */ "BLix");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fluentui/utilities */ "6ztV");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @fluentui/utilities */ "pSSv");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @fluentui/utilities */ "obGf");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @fluentui/utilities */ "NZSY");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @fluentui/react-hooks */ "Txh6");
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./defaults */ "y50k");
-
-
-
-
-
-
-
-
-var MIN_SIZE_FORCE_OVERLAY = 440;
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* classNamesFunction */ "a"])();
-var defaultWorkWeekDays = [
-    _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Monday,
-    _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Tuesday,
-    _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Wednesday,
-    _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Thursday,
-    _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Friday,
-];
-var DEFAULT_PROPS = {
-    isMonthPickerVisible: true,
-    isDayPickerVisible: true,
-    showMonthPickerAsOverlay: false,
-    today: new Date(),
-    firstDayOfWeek: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DayOfWeek */ "c"].Sunday,
-    dateRangeType: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* DateRangeType */ "b"].Day,
-    showGoToToday: true,
-    strings: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* DEFAULT_CALENDAR_STRINGS */ "a"],
-    highlightCurrentMonth: false,
-    highlightSelectedMonth: false,
-    navigationIcons: _defaults__WEBPACK_IMPORTED_MODULE_16__[/* defaultCalendarNavigationIcons */ "a"],
-    showWeekNumbers: false,
-    firstWeekOfYear: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_2__[/* FirstWeekOfYear */ "d"].FirstDay,
-    dateTimeFormatter: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* DEFAULT_DATE_FORMATTING */ "b"],
-    showSixWeeksByDefault: false,
-    workWeekDays: defaultWorkWeekDays,
-    showCloseButton: false,
-    allFocusable: false,
-};
-function useDateState(props) {
-    var value = props.value, todayProp = props.today, onSelectDate = props.onSelectDate;
-    var today = react__WEBPACK_IMPORTED_MODULE_1__["useMemo"](function () {
-        if (todayProp === undefined) {
-            return new Date();
-        }
-        return todayProp;
-    }, [todayProp]);
-    /** The currently selected date in the calendar */
-    var _a = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_15__[/* useControllableValue */ "a"])(value, today), _b = _a[0], selectedDate = _b === void 0 ? today : _b, setSelectedDate = _a[1];
-    /** The currently focused date in the day picker, but not necessarily selected */
-    var _c = react__WEBPACK_IMPORTED_MODULE_1__["useState"](value), _d = _c[0], navigatedDay = _d === void 0 ? today : _d, setNavigatedDay = _c[1];
-    /** The currently focused date in the month picker, but not necessarily selected */
-    var _e = react__WEBPACK_IMPORTED_MODULE_1__["useState"](value), _f = _e[0], navigatedMonth = _f === void 0 ? today : _f, setNavigatedMonth = _e[1];
-    /** If using a controlled value, when that value changes, navigate to that date */
-    var _g = react__WEBPACK_IMPORTED_MODULE_1__["useState"](value), _h = _g[0], lastSelectedDate = _h === void 0 ? today : _h, setLastSelectedDate = _g[1];
-    if (value && lastSelectedDate.valueOf() !== value.valueOf()) {
-        setNavigatedDay(value);
-        setNavigatedMonth(value);
-        setLastSelectedDate(value);
-    }
-    var navigateMonth = function (date) {
-        setNavigatedMonth(date);
-    };
-    var navigateDay = function (date) {
-        setNavigatedMonth(date);
-        setNavigatedDay(date);
-    };
-    var onDateSelected = function (date, selectedDateRangeArray) {
-        setNavigatedMonth(date);
-        setNavigatedDay(date);
-        setSelectedDate(date);
-        onSelectDate === null || onSelectDate === void 0 ? void 0 : onSelectDate(date, selectedDateRangeArray);
-    };
-    return [selectedDate, navigatedDay, navigatedMonth, onDateSelected, navigateDay, navigateMonth];
-}
-function useVisibilityState(props) {
-    /** State used to show/hide month picker */
-    var _a = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_15__[/* useControllableValue */ "a"])(getShowMonthPickerAsOverlay(props) ? undefined : props.isMonthPickerVisible, false), _b = _a[0], isMonthPickerVisible = _b === void 0 ? true : _b, setIsMonthPickerVisible = _a[1];
-    /** State used to show/hide day picker */
-    var _c = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_15__[/* useControllableValue */ "a"])(getShowMonthPickerAsOverlay(props) ? undefined : props.isDayPickerVisible, true), _d = _c[0], isDayPickerVisible = _d === void 0 ? true : _d, setIsDayPickerVisible = _c[1];
-    var toggleDayMonthPickerVisibility = function () {
-        setIsMonthPickerVisible(!isMonthPickerVisible);
-        setIsDayPickerVisible(!isDayPickerVisible);
-    };
-    return [isMonthPickerVisible, isDayPickerVisible, toggleDayMonthPickerVisibility];
-}
-function useFocusLogic(_a, isDayPickerVisible, isMonthPickerVisible) {
-    var componentRef = _a.componentRef;
-    var dayPicker = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var monthPicker = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var focusOnUpdate = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](false);
-    var focus = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function () {
-        if (isDayPickerVisible && dayPicker.current) {
-            Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_8__[/* focusAsync */ "b"])(dayPicker.current);
-        }
-        else if (isMonthPickerVisible && monthPicker.current) {
-            Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_8__[/* focusAsync */ "b"])(monthPicker.current);
-        }
-    }, [isDayPickerVisible, isMonthPickerVisible]);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](componentRef, function () { return ({ focus: focus }); }, [focus]);
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        if (focusOnUpdate.current) {
-            focus();
-            focusOnUpdate.current = false;
-        }
-    });
-    var focusOnNextUpdate = function () {
-        focusOnUpdate.current = true;
-    };
-    return [dayPicker, monthPicker, focusOnNextUpdate];
-}
-var CalendarBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (propsWithoutDefaults, forwardedRef) {
-    var props = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_9__[/* getPropsWithDefaults */ "a"])(DEFAULT_PROPS, propsWithoutDefaults);
-    var _a = useDateState(props), selectedDate = _a[0], navigatedDay = _a[1], navigatedMonth = _a[2], onDateSelected = _a[3], navigateDay = _a[4], navigateMonth = _a[5];
-    var _b = useVisibilityState(props), isMonthPickerVisible = _b[0], isDayPickerVisible = _b[1], toggleDayMonthPickerVisibility = _b[2];
-    var _c = useFocusLogic(props, isDayPickerVisible, isMonthPickerVisible), dayPicker = _c[0], monthPicker = _c[1], focusOnNextUpdate = _c[2];
-    var renderGoToTodayButton = function () {
-        var goTodayEnabled = showGoToToday;
-        if (goTodayEnabled && today) {
-            goTodayEnabled =
-                navigatedDay.getFullYear() !== today.getFullYear() ||
-                    navigatedDay.getMonth() !== today.getMonth() ||
-                    navigatedMonth.getFullYear() !== today.getFullYear() ||
-                    navigatedMonth.getMonth() !== today.getMonth();
-        }
-        return (showGoToToday && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__[/* css */ "a"])('js-goToday', classes.goTodayButton), onClick: onGotoToday, onKeyDown: onButtonKeyDown(onGotoToday), type: "button", disabled: !goTodayEnabled }, strings.goToToday)));
-    };
-    var onNavigateDayDate = function (date, focusOnNavigatedDay) {
-        navigateDay(date);
-        if (focusOnNavigatedDay) {
-            focusOnNextUpdate();
-        }
-    };
-    var onNavigateMonthDate = function (date, focusOnNavigatedDay) {
-        if (focusOnNavigatedDay) {
-            focusOnNextUpdate();
-        }
-        if (!focusOnNavigatedDay) {
-            navigateMonth(date);
-            return;
-        }
-        if (monthPickerOnly) {
-            onDateSelected(date);
-        }
-        navigateDay(date);
-    };
-    var onHeaderSelect = getShowMonthPickerAsOverlay(props)
-        ? function () {
-            toggleDayMonthPickerVisibility();
-            focusOnNextUpdate();
-        }
-        : undefined;
-    var onGotoToday = function () {
-        navigateDay(today);
-        focusOnNextUpdate();
-    };
-    var onButtonKeyDown = function (callback) {
-        return function (ev) {
-            // eslint-disable-next-line deprecation/deprecation
-            switch (ev.which) {
-                case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].enter:
-                case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].space:
-                    callback();
-                    break;
-            }
-        };
-    };
-    var onDatePickerPopupKeyDown = function (ev) {
-        var _a;
-        // eslint-disable-next-line deprecation/deprecation
-        switch (ev.which) {
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].enter:
-                ev.preventDefault();
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].backspace:
-                ev.preventDefault();
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].escape:
-                (_a = props.onDismiss) === null || _a === void 0 ? void 0 : _a.call(props);
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].pageUp:
-                if (ev.ctrlKey) {
-                    // go to next year
-                    navigateDay(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addYears */ "d"])(navigatedDay, 1));
-                }
-                else {
-                    // go to next month
-                    navigateDay(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addMonths */ "b"])(navigatedDay, 1));
-                }
-                ev.preventDefault();
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_11__[/* KeyCodes */ "a"].pageDown:
-                if (ev.ctrlKey) {
-                    // go to previous year
-                    navigateDay(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addYears */ "d"])(navigatedDay, -1));
-                }
-                else {
-                    // go to previous month
-                    navigateDay(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addMonths */ "b"])(navigatedDay, -1));
-                }
-                ev.preventDefault();
-                break;
-            default:
-                break;
-        }
-    };
-    var rootClass = 'ms-DatePicker';
-    var firstDayOfWeek = props.firstDayOfWeek, dateRangeType = props.dateRangeType, strings = props.strings, showGoToToday = props.showGoToToday, highlightCurrentMonth = props.highlightCurrentMonth, highlightSelectedMonth = props.highlightSelectedMonth, navigationIcons = props.navigationIcons, minDate = props.minDate, maxDate = props.maxDate, restrictedDates = props.restrictedDates, id = props.id, className = props.className, showCloseButton = props.showCloseButton, allFocusable = props.allFocusable, styles = props.styles, showWeekNumbers = props.showWeekNumbers, theme = props.theme, calendarDayProps = props.calendarDayProps, calendarMonthProps = props.calendarMonthProps, dateTimeFormatter = props.dateTimeFormatter, _d = props.today, today = _d === void 0 ? new Date() : _d;
-    var showMonthPickerAsOverlay = getShowMonthPickerAsOverlay(props);
-    var monthPickerOnly = !showMonthPickerAsOverlay && !isDayPickerVisible;
-    var overlaidWithButton = showMonthPickerAsOverlay && showGoToToday;
-    var classes = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        isMonthPickerVisible: isMonthPickerVisible,
-        isDayPickerVisible: isDayPickerVisible,
-        monthPickerOnly: monthPickerOnly,
-        showMonthPickerAsOverlay: showMonthPickerAsOverlay,
-        overlaidWithButton: overlaidWithButton,
-        overlayedWithButton: overlaidWithButton,
-        showGoToToday: showGoToToday,
-        showWeekNumbers: showWeekNumbers,
-    });
-    var todayDateString = '';
-    var selectedDateString = '';
-    if (dateTimeFormatter && strings.todayDateFormatString) {
-        todayDateString = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_12__[/* format */ "a"])(strings.todayDateFormatString, dateTimeFormatter.formatMonthDayYear(today, strings));
-    }
-    if (dateTimeFormatter && strings.selectedDateFormatString) {
-        var dateStringFormatter = monthPickerOnly
-            ? dateTimeFormatter.formatMonthYear
-            : dateTimeFormatter.formatMonthDayYear;
-        selectedDateString = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_12__[/* format */ "a"])(strings.selectedDateFormatString, dateStringFormatter(selectedDate, strings));
-    }
-    var selectionAndTodayString = selectedDateString + ', ' + todayDateString;
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { id: id, ref: forwardedRef, role: "group", "aria-label": selectionAndTodayString, className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_10__[/* css */ "a"])(rootClass, classes.root, className, 'ms-slideDownIn10'), onKeyDown: onDatePickerPopupKeyDown },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classes.liveRegion, "aria-live": "polite", "aria-atomic": "true" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", null, selectedDateString)),
-        isDayPickerVisible && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarDay_CalendarDay__WEBPACK_IMPORTED_MODULE_5__[/* CalendarDay */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ selectedDate: selectedDate, navigatedDate: navigatedDay, today: props.today, onSelectDate: onDateSelected, 
-            // eslint-disable-next-line react/jsx-no-bind
-            onNavigateDate: onNavigateDayDate, onDismiss: props.onDismiss, firstDayOfWeek: firstDayOfWeek, dateRangeType: dateRangeType, strings: strings, 
-            // eslint-disable-next-line react/jsx-no-bind
-            onHeaderSelect: onHeaderSelect, navigationIcons: navigationIcons, showWeekNumbers: props.showWeekNumbers, firstWeekOfYear: props.firstWeekOfYear, dateTimeFormatter: props.dateTimeFormatter, showSixWeeksByDefault: props.showSixWeeksByDefault, minDate: minDate, maxDate: maxDate, restrictedDates: restrictedDates, workWeekDays: props.workWeekDays, componentRef: dayPicker, showCloseButton: showCloseButton, allFocusable: allFocusable }, calendarDayProps))),
-        isDayPickerVisible && isMonthPickerVisible && react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classes.divider }),
-        isMonthPickerVisible ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classes.monthPickerWrapper },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarMonth_CalendarMonth__WEBPACK_IMPORTED_MODULE_6__[/* CalendarMonth */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ navigatedDate: navigatedMonth, selectedDate: navigatedDay, strings: strings, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onNavigateDate: onNavigateMonthDate, today: props.today, highlightCurrentMonth: highlightCurrentMonth, highlightSelectedMonth: highlightSelectedMonth, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onHeaderSelect: onHeaderSelect, navigationIcons: navigationIcons, dateTimeFormatter: props.dateTimeFormatter, minDate: minDate, maxDate: maxDate, componentRef: monthPicker }, calendarMonthProps)),
-            renderGoToTodayButton())) : (renderGoToTodayButton()),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_fluentui_utilities__WEBPACK_IMPORTED_MODULE_13__[/* FocusRects */ "a"], null)));
-});
-CalendarBase.displayName = 'CalendarBase';
-function getShowMonthPickerAsOverlay(_a) {
-    var showMonthPickerAsOverlay = _a.showMonthPickerAsOverlay, isDayPickerVisible = _a.isDayPickerVisible;
-    var win = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_14__[/* getWindow */ "a"])();
-    return showMonthPickerAsOverlay || (isDayPickerVisible && win && win.innerWidth <= MIN_SIZE_FORCE_OVERLAY);
-}
-//# sourceMappingURL=Calendar.base.js.map
-
-/***/ }),
-
-/***/ "Ol2D":
-/*!***************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarMonth/CalendarMonth.styles.js ***!
-  \***************************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var _CalendarPicker_CalendarPicker_styles__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../CalendarPicker/CalendarPicker.styles */ "ctm1");
-
-var getStyles = function (props) {
-    /*  Return styles from the base class.
-     *  If this component has extra styles not in the base, apply them here i.e.:
-     *  const myStyle: IStyle = {
-     *    display: "block"
-     *  };     *
-     *  return {...getPickerStyles(props), myStyle};
-     */
-    return Object(_CalendarPicker_CalendarPicker_styles__WEBPACK_IMPORTED_MODULE_0__[/* getStyles */ "a"])(props);
-};
-//# sourceMappingURL=CalendarMonth.styles.js.map
-
-/***/ }),
-
 /***/ "Pn0s":
 /*!*********************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DetailsList/DetailsHeader.js ***!
@@ -7355,45 +5073,6 @@ var DetailsHeader = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ 
 
 /***/ }),
 
-/***/ "RFJQ":
-/*!**********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarMonthHeaderRow.js ***!
-  \**********************************************************************************************************************************************************/
-/*! exports provided: CalendarMonthHeaderRow */
-/*! exports used: CalendarMonthHeaderRow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarMonthHeaderRow; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/utilities */ "S+0K");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-
-
-
-var CalendarMonthHeaderRow = function (props) {
-    var showWeekNumbers = props.showWeekNumbers, strings = props.strings, firstDayOfWeek = props.firstDayOfWeek, allFocusable = props.allFocusable, weeksToShow = props.weeksToShow, weeks = props.weeks, classNames = props.classNames;
-    var dayLabels = strings.shortDays.slice();
-    var firstOfMonthIndex = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* findIndex */ "d"])(weeks[1], function (day) { return day.originalDate.getDate() === 1; });
-    if (weeksToShow === 1 && firstOfMonthIndex >= 0) {
-        // if we only show one week, replace the header with short month name
-        var firstOfMonthIndexOffset = (firstOfMonthIndex + firstDayOfWeek) % _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* DAYS_IN_WEEK */ "a"];
-        dayLabels[firstOfMonthIndexOffset] = strings.shortMonths[weeks[1][firstOfMonthIndex].originalDate.getMonth()];
-    }
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("tr", null,
-        showWeekNumbers && react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("th", { className: classNames.dayCell }),
-        dayLabels.map(function (val, index) {
-            var i = (index + firstDayOfWeek) % _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* DAYS_IN_WEEK */ "a"];
-            var label = strings.days[i];
-            return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("th", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* css */ "a"])(classNames.dayCell, classNames.weekDayLabelCell), scope: "col", key: dayLabels[i] + ' ' + index, title: label, "aria-label": label, "data-is-focusable": allFocusable ? true : undefined }, dayLabels[i]));
-        })));
-};
-//# sourceMappingURL=CalendarMonthHeaderRow.js.map
-
-/***/ }),
-
 /***/ "Rqbw":
 /*!**************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/GroupedList/GroupFooter.styles.js ***!
@@ -7411,7 +5090,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var theme = props.theme, className = props.className;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             theme.fonts.medium,
@@ -7484,7 +5163,7 @@ var getDetailsRowStyles = function (props) {
     var palette = theme.palette, fonts = theme.fonts;
     var neutralPrimary = palette.neutralPrimary, white = palette.white, neutralSecondary = palette.neutralSecondary, neutralLighter = palette.neutralLighter, neutralLight = palette.neutralLight, neutralDark = palette.neutralDark, neutralQuaternaryAlt = palette.neutralQuaternaryAlt;
     var _r = theme.semanticColors, focusBorder = _r.focusBorder, focusedLinkColor = _r.linkHovered;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(DetailsRowGlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(DetailsRowGlobalClassNames, theme);
     var colors = {
         // Default
         defaultHeaderText: neutralPrimary,
@@ -7516,7 +5195,7 @@ var getDetailsRowStyles = function (props) {
     };
     // Selected row styles
     var selectedStyles = [
-        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, {
+        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, {
             inset: -1,
             borderColor: focusBorder,
             outlineColor: white,
@@ -7544,7 +5223,7 @@ var getDetailsRowStyles = function (props) {
                 _a[".".concat(classNames.cell, " > .").concat(_components_Link_Link_styles__WEBPACK_IMPORTED_MODULE_3__[/* GlobalClassNames */ "a"].root)] = {
                     color: focusedLinkColor,
                     selectors: (_b = {},
-                        _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             color: 'HighlightText',
                         },
                         _b),
@@ -7555,7 +5234,7 @@ var getDetailsRowStyles = function (props) {
                     color: colors.selectedHoverMetaText,
                     selectors: (_c = {},
                         // Selected State hover meta cell
-                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             background: 'Highlight',
                             selectors: (_d = {},
                                 _d[".".concat(classNames.cell)] = {
@@ -7571,7 +5250,7 @@ var getDetailsRowStyles = function (props) {
                         _c[".".concat(classNames.isRowHeader)] = {
                             color: colors.selectedHoverHeaderText,
                             selectors: (_e = {},
-                                _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                                _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                     color: 'HighlightText',
                                 },
                                 _e),
@@ -7586,7 +5265,7 @@ var getDetailsRowStyles = function (props) {
                         _f[".".concat(classNames.cell)] = {
                             color: colors.focusMetaText,
                             selectors: (_g = {},
-                                _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                                _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                     color: 'HighlightText',
                                     selectors: {
                                         '> a': {
@@ -7600,18 +5279,18 @@ var getDetailsRowStyles = function (props) {
                         _f[".".concat(classNames.isRowHeader)] = {
                             color: colors.focusHeaderText,
                             selectors: (_h = {},
-                                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                     color: 'HighlightText',
                                 },
                                 _h),
                         },
                         // Ensure high-contrast mode overrides default focus background
-                        _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             background: 'Highlight',
                         },
                         _f),
                 },
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { selectors: {
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { selectors: {
                         a: {
                             color: 'HighlightText',
                         },
@@ -7641,7 +5320,7 @@ var getDetailsRowStyles = function (props) {
         paddingLeft: "".concat(cellStyleProps.cellLeftPadding, "px"),
     };
     var defaultCellStyles = [
-        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
+        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: -1 }),
         classNames.cell,
         {
             display: 'inline-block',
@@ -7660,12 +5339,12 @@ var getDetailsRowStyles = function (props) {
                         maxWidth: '100%',
                     }
                 },
-                _j[IsFocusableSelector] = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1, borderColor: neutralSecondary, outlineColor: white }),
+                _j[IsFocusableSelector] = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: -1, borderColor: neutralSecondary, outlineColor: white }),
                 _j),
         },
         isSelected && {
             selectors: (_k = {},
-                _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _k),
         },
         compact && cellCompactStyles,
@@ -7678,7 +5357,7 @@ var getDetailsRowStyles = function (props) {
             droppingClassName,
             theme.fonts.small,
             isCheckVisible && classNames.isCheckVisible,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { borderColor: focusBorder, outlineColor: white }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { borderColor: focusBorder, outlineColor: white }),
             {
                 borderBottom: "1px solid ".concat(neutralLighter),
                 background: colors.defaultBackground,
@@ -7775,9 +5454,9 @@ var getDetailsRowStyles = function (props) {
             },
             isSelected && {
                 color: colors.selectedHeaderText,
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold,
                 selectors: (_p = {},
-                    _p[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _p[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'HighlightText',
                     },
                     _p),
@@ -7941,108 +5620,6 @@ var adjustPropsForRootType = function (RootType, props) {
 
 /***/ }),
 
-/***/ "T8UD":
-/*!***********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarDay/CalendarDay.styles.js ***!
-  \***********************************************************************************************************************************************************/
-/*! exports provided: styles */
-/*! exports used: styles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return styles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-
-
-var styles = function (props) {
-    var _a;
-    var className = props.className, theme = props.theme, headerIsClickable = props.headerIsClickable, showWeekNumbers = props.showWeekNumbers;
-    var palette = theme.palette;
-    var disabledStyle = {
-        selectors: (_a = {
-                '&, &:disabled, & button': {
-                    color: palette.neutralTertiaryAlt,
-                    pointerEvents: 'none',
-                }
-            },
-            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                color: 'GrayText',
-                forcedColorAdjust: 'none',
-            },
-            _a),
-    };
-    return {
-        root: [
-            _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
-            {
-                width: 196,
-                padding: 12,
-                boxSizing: 'content-box',
-            },
-            showWeekNumbers && {
-                width: 226,
-            },
-            className,
-        ],
-        header: {
-            position: 'relative',
-            display: 'inline-flex',
-            height: 28,
-            lineHeight: 44,
-            width: '100%',
-        },
-        monthAndYear: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: 1 }),
-            Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].fadeIn200), { alignItems: 'center', fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].medium, fontFamily: 'inherit', color: palette.neutralPrimary, display: 'inline-block', flexGrow: 1, fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold, padding: '0 4px 0 10px', border: 'none', backgroundColor: 'transparent', borderRadius: 2, lineHeight: 28, overflow: 'hidden', whiteSpace: 'nowrap', textAlign: 'left', textOverflow: 'ellipsis' }),
-            headerIsClickable && {
-                selectors: {
-                    '&:hover': {
-                        cursor: 'pointer',
-                        background: palette.neutralLight,
-                        color: palette.black,
-                    },
-                },
-            },
-        ],
-        monthComponents: {
-            display: 'inline-flex',
-            alignSelf: 'flex-end',
-        },
-        headerIconButton: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
-            {
-                width: 28,
-                height: 28,
-                display: 'block',
-                textAlign: 'center',
-                lineHeight: 28,
-                fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-                fontFamily: 'inherit',
-                color: palette.neutralPrimary,
-                borderRadius: 2,
-                position: 'relative',
-                backgroundColor: 'transparent',
-                border: 'none',
-                padding: 0,
-                overflow: 'visible',
-                selectors: {
-                    '&:hover': {
-                        color: palette.neutralDark,
-                        backgroundColor: palette.neutralLight,
-                        cursor: 'pointer',
-                        outline: '1px solid transparent',
-                    },
-                },
-            },
-        ],
-        disabledStyle: disabledStyle,
-    };
-};
-//# sourceMappingURL=CalendarDay.styles.js.map
-
-/***/ }),
-
 /***/ "TXzs":
 /*!**********************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Nav/Nav.styles.js ***!
@@ -8082,7 +5659,7 @@ var getStyles = function (props) {
     var _a;
     var className = props.className, theme = props.theme, isOnTop = props.isOnTop, isExpanded = props.isExpanded, isGroup = props.isGroup, isLink = props.isLink, isSelected = props.isSelected, isDisabled = props.isDisabled, isButtonEntry = props.isButtonEntry, _b = props.navHeight, navHeight = _b === void 0 ? 44 : _b, position = props.position, _c = props.leftPadding, leftPadding = _c === void 0 ? 20 : _c, _d = props.leftPaddingExpanded, leftPaddingExpanded = _d === void 0 ? 28 : _d, _e = props.rightPadding, rightPadding = _e === void 0 ? 20 : _e;
     var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -8126,7 +5703,7 @@ var getStyles = function (props) {
         ],
         link: [
             classNames.link,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "u"])(theme),
             {
                 display: 'block',
                 position: 'relative',
@@ -8142,7 +5719,7 @@ var getStyles = function (props) {
                 paddingRight: rightPadding,
                 color: semanticColors.bodyText,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         border: 0,
                         selectors: {
                             ':focus': {
@@ -8161,7 +5738,7 @@ var getStyles = function (props) {
             },
             isSelected && {
                 color: semanticColors.bodyTextChecked,
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
                 backgroundColor: semanticColors.bodyBackgroundChecked,
                 selectors: {
                     '&:after': {
@@ -8185,7 +5762,7 @@ var getStyles = function (props) {
         ],
         chevronButton: [
             classNames.chevronButton,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "u"])(theme),
             fonts.small,
             {
                 display: 'block',
@@ -8219,7 +5796,7 @@ var getStyles = function (props) {
                 position: 'absolute',
                 top: '1px',
                 left: "".concat(position, "px"),
-                zIndex: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "r"].Nav,
+                zIndex: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "q"].Nav,
                 padding: 0,
                 margin: 0,
             },
@@ -8308,44 +5885,6 @@ CheckBase.displayName = 'CheckBase';
 
 /***/ }),
 
-/***/ "UCtQ":
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarGridRow.js ***!
-  \***************************************************************************************************************************************************/
-/*! exports provided: CalendarGridRow */
-/*! exports used: CalendarGridRow */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarGridRow; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "pSSv");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _CalendarGridDayCell__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CalendarGridDayCell */ "WTIm");
-
-
-
-
-
-var CalendarGridRow = function (props) {
-    var classNames = props.classNames, week = props.week, weeks = props.weeks, weekIndex = props.weekIndex, rowClassName = props.rowClassName, ariaRole = props.ariaRole, showWeekNumbers = props.showWeekNumbers, firstDayOfWeek = props.firstDayOfWeek, firstWeekOfYear = props.firstWeekOfYear, navigatedDate = props.navigatedDate, strings = props.strings;
-    var weekNumbers = showWeekNumbers
-        ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getWeekNumbersInMonth */ "k"])(weeks.length, firstDayOfWeek, firstWeekOfYear, navigatedDate)
-        : null;
-    var titleString = weekNumbers
-        ? strings.weekNumberFormatString && Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* format */ "a"])(strings.weekNumberFormatString, weekNumbers[weekIndex])
-        : '';
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("tr", { role: ariaRole, className: rowClassName, key: weekIndex + '_' + week[0].key },
-        showWeekNumbers && weekNumbers && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("th", { className: classNames.weekNumberCell, key: weekIndex, title: titleString, "aria-label": titleString, scope: "row" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", null, weekNumbers[weekIndex]))),
-        week.map(function (day, dayIndex) { return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarGridDayCell__WEBPACK_IMPORTED_MODULE_4__[/* CalendarGridDayCell */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { key: day.key, day: day, dayIndex: dayIndex }))); })));
-};
-//# sourceMappingURL=CalendarGridRow.js.map
-
-/***/ }),
-
 /***/ "UY/6":
 /*!********************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/utilities/ThemeProvider/useThemeProviderClasses.js ***!
@@ -8423,311 +5962,6 @@ function useThemeProviderClasses(state) {
 
 /***/ }),
 
-/***/ "WIPo":
-/*!*****************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CommandBar/CommandBar.js ***!
-  \*****************************************************************************************************************************************/
-/*! exports provided: CommandBar */
-/*! exports used: CommandBar */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommandBar; });
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Utilities */ "MBBx");
-/* harmony import */ var _CommandBar_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CommandBar.base */ "YZVg");
-/* harmony import */ var _CommandBar_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CommandBar.styles */ "hgwL");
-
-
-
-// Create a CommandBar variant which uses these default styles and this styled subcomponent.
-var CommandBar = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_CommandBar_base__WEBPACK_IMPORTED_MODULE_1__[/* CommandBarBase */ "a"], _CommandBar_styles__WEBPACK_IMPORTED_MODULE_2__[/* getStyles */ "b"], undefined, {
-    scope: 'CommandBar',
-});
-//# sourceMappingURL=CommandBar.js.map
-
-/***/ }),
-
-/***/ "WTIm":
-/*!*******************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarGridDayCell.js ***!
-  \*******************************************************************************************************************************************************/
-/*! exports provided: CalendarGridDayCell */
-/*! exports used: CalendarGridDayCell */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarGridDayCell; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/utilities */ "6ztV");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "Ge+E");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "8JiJ");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-
-
-
-var CalendarGridDayCell = function (props) {
-    var _a;
-    var navigatedDate = props.navigatedDate, dateTimeFormatter = props.dateTimeFormatter, allFocusable = props.allFocusable, strings = props.strings, activeDescendantId = props.activeDescendantId, navigatedDayRef = props.navigatedDayRef, calculateRoundedStyles = props.calculateRoundedStyles, weeks = props.weeks, classNames = props.classNames, day = props.day, dayIndex = props.dayIndex, weekIndex = props.weekIndex, weekCorners = props.weekCorners, ariaHidden = props.ariaHidden, customDayCellRef = props.customDayCellRef, dateRangeType = props.dateRangeType, daysToSelectInDayView = props.daysToSelectInDayView, onSelectDate = props.onSelectDate, restrictedDates = props.restrictedDates, minDate = props.minDate, maxDate = props.maxDate, onNavigateDate = props.onNavigateDate, getDayInfosInRangeOfDay = props.getDayInfosInRangeOfDay, getRefsFromDayInfos = props.getRefsFromDayInfos;
-    var cornerStyle = (_a = weekCorners === null || weekCorners === void 0 ? void 0 : weekCorners[weekIndex + '_' + dayIndex]) !== null && _a !== void 0 ? _a : '';
-    var isNavigatedDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* compareDates */ "f"])(navigatedDate, day.originalDate);
-    var navigateMonthEdge = function (ev, date) {
-        var targetDate = undefined;
-        var direction = 1; // by default search forward
-        // eslint-disable-next-line deprecation/deprecation
-        if (ev.which === _fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* KeyCodes */ "a"].up) {
-            targetDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addWeeks */ "c"])(date, -1);
-            direction = -1;
-            // eslint-disable-next-line deprecation/deprecation
-        }
-        else if (ev.which === _fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* KeyCodes */ "a"].down) {
-            targetDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addWeeks */ "c"])(date, 1);
-            // eslint-disable-next-line deprecation/deprecation
-        }
-        else if (ev.which === Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* getRTLSafeKeyCode */ "b"])(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* KeyCodes */ "a"].left)) {
-            targetDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addDays */ "a"])(date, -1);
-            direction = -1;
-            // eslint-disable-next-line deprecation/deprecation
-        }
-        else if (ev.which === Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* getRTLSafeKeyCode */ "b"])(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* KeyCodes */ "a"].right)) {
-            targetDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* addDays */ "a"])(date, 1);
-        }
-        if (!targetDate) {
-            // if we couldn't find a target date at all, do nothing
-            return;
-        }
-        var findAvailableDateOptions = {
-            initialDate: date,
-            targetDate: targetDate,
-            direction: direction,
-            restrictedDates: restrictedDates,
-            minDate: minDate,
-            maxDate: maxDate,
-        };
-        // target date is restricted, search in whatever direction until finding the next possible date,
-        // stopping at boundaries
-        var nextDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_5__[/* findAvailableDate */ "a"])(findAvailableDateOptions);
-        if (!nextDate) {
-            // if no dates available in initial direction, try going backwards
-            findAvailableDateOptions.direction = -direction;
-            nextDate = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_5__[/* findAvailableDate */ "a"])(findAvailableDateOptions);
-        }
-        // if the nextDate is still inside the same focusZone area, let the focusZone handle setting the focus so we
-        // don't jump the view unnecessarily
-        var isInCurrentView = weeks &&
-            nextDate &&
-            weeks.slice(1, weeks.length - 1).some(function (week) {
-                return week.some(function (dayToCompare) {
-                    return Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_4__[/* compareDates */ "f"])(dayToCompare.originalDate, nextDate);
-                });
-            });
-        if (isInCurrentView) {
-            return;
-        }
-        // else, fire navigation on the date to change the view to show it
-        if (nextDate) {
-            onNavigateDate(nextDate, true);
-            ev.preventDefault();
-        }
-    };
-    var onMouseOverDay = function (ev) {
-        var dayInfos = getDayInfosInRangeOfDay(day);
-        var dayRefs = getRefsFromDayInfos(dayInfos);
-        dayRefs.forEach(function (dayRef, index) {
-            var _a;
-            if (dayRef) {
-                dayRef.classList.add('ms-CalendarDay-hoverStyle');
-                if (!dayInfos[index].isSelected &&
-                    dateRangeType === _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* DateRangeType */ "b"].Day &&
-                    daysToSelectInDayView &&
-                    daysToSelectInDayView > 1) {
-                    // remove the static classes first to overwrite them
-                    dayRef.classList.remove(classNames.bottomLeftCornerDate, classNames.bottomRightCornerDate, classNames.topLeftCornerDate, classNames.topRightCornerDate);
-                    var classNamesToAdd = calculateRoundedStyles(classNames, false, false, index > 0, index < dayRefs.length - 1).trim();
-                    if (classNamesToAdd) {
-                        (_a = dayRef.classList).add.apply(_a, classNamesToAdd.split(' '));
-                    }
-                }
-            }
-        });
-    };
-    var onMouseDownDay = function (ev) {
-        var dayInfos = getDayInfosInRangeOfDay(day);
-        var dayRefs = getRefsFromDayInfos(dayInfos);
-        dayRefs.forEach(function (dayRef) {
-            if (dayRef) {
-                dayRef.classList.add('ms-CalendarDay-pressedStyle');
-            }
-        });
-    };
-    var onMouseUpDay = function (ev) {
-        var dayInfos = getDayInfosInRangeOfDay(day);
-        var dayRefs = getRefsFromDayInfos(dayInfos);
-        dayRefs.forEach(function (dayRef) {
-            if (dayRef) {
-                dayRef.classList.remove('ms-CalendarDay-pressedStyle');
-            }
-        });
-    };
-    var onMouseOutDay = function (ev) {
-        var dayInfos = getDayInfosInRangeOfDay(day);
-        var dayRefs = getRefsFromDayInfos(dayInfos);
-        dayRefs.forEach(function (dayRef, index) {
-            var _a;
-            if (dayRef) {
-                dayRef.classList.remove('ms-CalendarDay-hoverStyle');
-                dayRef.classList.remove('ms-CalendarDay-pressedStyle');
-                if (!dayInfos[index].isSelected &&
-                    dateRangeType === _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* DateRangeType */ "b"].Day &&
-                    daysToSelectInDayView &&
-                    daysToSelectInDayView > 1) {
-                    var classNamesToAdd = calculateRoundedStyles(classNames, false, false, index > 0, index < dayRefs.length - 1).trim();
-                    if (classNamesToAdd) {
-                        (_a = dayRef.classList).remove.apply(_a, classNamesToAdd.split(' '));
-                    }
-                }
-            }
-        });
-    };
-    var onDayKeyDown = function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        if (ev.which === _fluentui_utilities__WEBPACK_IMPORTED_MODULE_1__[/* KeyCodes */ "a"].enter) {
-            onSelectDate === null || onSelectDate === void 0 ? void 0 : onSelectDate(day.originalDate);
-        }
-        else {
-            navigateMonthEdge(ev, day.originalDate);
-        }
-    };
-    var ariaLabel = day.originalDate.getDate() +
-        ', ' +
-        strings.months[day.originalDate.getMonth()] +
-        ', ' +
-        day.originalDate.getFullYear();
-    if (day.isMarked) {
-        ariaLabel = ariaLabel + ', ' + strings.dayMarkedAriaLabel;
-    }
-    return (react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("td", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])(classNames.dayCell, weekCorners && cornerStyle, day.isSelected && classNames.daySelected, day.isSelected && 'ms-CalendarDay-daySelected', !day.isInBounds && classNames.dayOutsideBounds, !day.isInMonth && classNames.dayOutsideNavigatedMonth), ref: function (element) {
-            customDayCellRef === null || customDayCellRef === void 0 ? void 0 : customDayCellRef(element, day.originalDate, classNames);
-            day.setRef(element);
-            isNavigatedDate && (navigatedDayRef.current = element);
-        }, "aria-hidden": ariaHidden, "aria-disabled": !ariaHidden && !day.isInBounds, onClick: day.isInBounds && !ariaHidden ? day.onSelected : undefined, onMouseOver: !ariaHidden ? onMouseOverDay : undefined, onMouseDown: !ariaHidden ? onMouseDownDay : undefined, onMouseUp: !ariaHidden ? onMouseUpDay : undefined, onMouseOut: !ariaHidden ? onMouseOutDay : undefined, onKeyDown: !ariaHidden ? onDayKeyDown : undefined, role: "gridcell", tabIndex: isNavigatedDate ? 0 : undefined, "aria-current": day.isToday ? 'date' : undefined, "aria-selected": day.isInBounds ? day.isSelected : undefined, "data-is-focusable": !ariaHidden && (allFocusable || (day.isInBounds ? true : undefined)) },
-        react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("button", { key: day.key + 'button', "aria-hidden": ariaHidden, className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])(classNames.dayButton, day.isToday && classNames.dayIsToday, day.isToday && 'ms-CalendarDay-dayIsToday'), "aria-label": ariaLabel, id: isNavigatedDate ? activeDescendantId : undefined, disabled: !ariaHidden && !day.isInBounds, type: "button", tabIndex: -1, "data-is-focusable": "false" },
-            react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("span", { "aria-hidden": "true" }, dateTimeFormatter.formatDay(day.originalDate)),
-            day.isMarked && react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("div", { "aria-hidden": "true", className: classNames.dayMarker }))));
-};
-//# sourceMappingURL=CalendarGridDayCell.js.map
-
-/***/ }),
-
-/***/ "WcVn":
-/*!*********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarDay/CalendarDay.base.js ***!
-  \*********************************************************************************************************************************************************/
-/*! exports provided: CalendarDayBase */
-/*! exports used: CalendarDayBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDayBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/utilities */ "pSSv");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/utilities */ "6ztV");
-/* harmony import */ var _Icon__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../Icon */ "YGsJ");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _CalendarDayGrid_CalendarDayGrid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../CalendarDayGrid/CalendarDayGrid */ "mGi9");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
-
-
-
-
-
-
-
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNamesFunction */ "a"])();
-var CalendarDayBase = function (props) {
-    var dayGrid = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        focus: function () {
-            var _a, _b;
-            (_b = (_a = dayGrid.current) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-        },
-    }); }, []);
-    var strings = props.strings, navigatedDate = props.navigatedDate, dateTimeFormatter = props.dateTimeFormatter, styles = props.styles, theme = props.theme, className = props.className, onHeaderSelect = props.onHeaderSelect, showSixWeeksByDefault = props.showSixWeeksByDefault, minDate = props.minDate, maxDate = props.maxDate, restrictedDates = props.restrictedDates, onNavigateDate = props.onNavigateDate, showWeekNumbers = props.showWeekNumbers, dateRangeType = props.dateRangeType, animationDirection = props.animationDirection;
-    var monthAndYearId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_9__[/* useId */ "a"])();
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        headerIsClickable: !!onHeaderSelect,
-        showWeekNumbers: showWeekNumbers,
-        animationDirection: animationDirection,
-    });
-    var monthAndYear = dateTimeFormatter.formatMonthYear(navigatedDate, strings);
-    var HeaderButtonComponentType = onHeaderSelect ? 'button' : 'div';
-    var headerAriaLabel = strings.yearPickerHeaderAriaLabel
-        ? Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* format */ "a"])(strings.yearPickerHeaderAriaLabel, monthAndYear)
-        : monthAndYear;
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.root },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.header },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](HeaderButtonComponentType, { "aria-label": onHeaderSelect ? headerAriaLabel : undefined, className: classNames.monthAndYear, onClick: onHeaderSelect, "data-is-focusable": !!onHeaderSelect, tabIndex: onHeaderSelect ? 0 : -1, onKeyDown: onButtonKeyDown(onHeaderSelect), type: "button" },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", { id: monthAndYearId, "aria-live": "polite", "aria-atomic": "true" }, monthAndYear)),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarDayNavigationButtons, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { classNames: classNames }))),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarDayGrid_CalendarDayGrid__WEBPACK_IMPORTED_MODULE_8__[/* CalendarDayGrid */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { styles: styles, componentRef: dayGrid, strings: strings, navigatedDate: navigatedDate, weeksToShow: showSixWeeksByDefault ? 6 : undefined, dateTimeFormatter: dateTimeFormatter, minDate: minDate, maxDate: maxDate, restrictedDates: restrictedDates, onNavigateDate: onNavigateDate, labelledBy: monthAndYearId, dateRangeType: dateRangeType }))));
-};
-CalendarDayBase.displayName = 'CalendarDayBase';
-var CalendarDayNavigationButtons = function (props) {
-    var _a, _b;
-    var minDate = props.minDate, maxDate = props.maxDate, navigatedDate = props.navigatedDate, allFocusable = props.allFocusable, strings = props.strings, navigationIcons = props.navigationIcons, showCloseButton = props.showCloseButton, classNames = props.classNames, onNavigateDate = props.onNavigateDate, onDismiss = props.onDismiss;
-    var onSelectNextMonth = function () {
-        onNavigateDate(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* addMonths */ "b"])(navigatedDate, 1), false);
-    };
-    var onSelectPrevMonth = function () {
-        onNavigateDate(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* addMonths */ "b"])(navigatedDate, -1), false);
-    };
-    var leftNavigationIcon = navigationIcons.leftNavigation;
-    var rightNavigationIcon = navigationIcons.rightNavigation;
-    var closeNavigationIcon = navigationIcons.closeIcon;
-    // determine if previous/next months are in bounds
-    var prevMonthInBounds = minDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* compareDatePart */ "e"])(minDate, Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* getMonthStart */ "j"])(navigatedDate)) < 0 : true;
-    var nextMonthInBounds = maxDate ? Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* compareDatePart */ "e"])(Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* getMonthEnd */ "i"])(navigatedDate), maxDate) < 0 : true;
-    // use aria-disabled instead of disabled so focus is not lost
-    // when a prev/next button becomes disabled after being clicked
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.monthComponents },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__[/* css */ "a"])(classNames.headerIconButton, (_a = {},
-                _a[classNames.disabledStyle] = !prevMonthInBounds,
-                _a)), tabIndex: prevMonthInBounds ? undefined : allFocusable ? 0 : -1, "aria-disabled": !prevMonthInBounds, onClick: prevMonthInBounds ? onSelectPrevMonth : undefined, onKeyDown: prevMonthInBounds ? onButtonKeyDown(onSelectPrevMonth) : undefined, title: strings.prevMonthAriaLabel
-                ? strings.prevMonthAriaLabel + ' ' + strings.months[Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* addMonths */ "b"])(navigatedDate, -1).getMonth()]
-                : undefined, type: "button" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_6__[/* Icon */ "a"], { iconName: leftNavigationIcon })),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__[/* css */ "a"])(classNames.headerIconButton, (_b = {},
-                _b[classNames.disabledStyle] = !nextMonthInBounds,
-                _b)), tabIndex: nextMonthInBounds ? undefined : allFocusable ? 0 : -1, "aria-disabled": !nextMonthInBounds, onClick: nextMonthInBounds ? onSelectNextMonth : undefined, onKeyDown: nextMonthInBounds ? onButtonKeyDown(onSelectNextMonth) : undefined, title: strings.nextMonthAriaLabel
-                ? strings.nextMonthAriaLabel + ' ' + strings.months[Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* addMonths */ "b"])(navigatedDate, 1).getMonth()]
-                : undefined, type: "button" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_6__[/* Icon */ "a"], { iconName: rightNavigationIcon })),
-        showCloseButton && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__[/* css */ "a"])(classNames.headerIconButton), onClick: onDismiss, onKeyDown: onButtonKeyDown(onDismiss), title: strings.closeButtonAriaLabel, type: "button" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Icon__WEBPACK_IMPORTED_MODULE_6__[/* Icon */ "a"], { iconName: closeNavigationIcon })))));
-};
-CalendarDayNavigationButtons.displayName = 'CalendarDayNavigationButtons';
-var onButtonKeyDown = function (callback) {
-    return function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        switch (ev.which) {
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__[/* KeyCodes */ "a"].enter:
-                callback === null || callback === void 0 ? void 0 : callback();
-                break;
-        }
-    };
-};
-//# sourceMappingURL=CalendarDay.base.js.map
-
-/***/ }),
-
 /***/ "WyBG":
 /*!********************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Dropdown/Dropdown.styles.js ***!
@@ -8767,10 +6001,10 @@ var GlobalClassNames = {
 var DROPDOWN_HEIGHT = 32;
 var DROPDOWN_ITEM_HEIGHT = 36;
 var highContrastAdjustMixin = (_a = {},
-    _a["".concat(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"], ", ").concat(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelectorWhite */ "h"].replace('@media ', ''))] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "x"])()),
+    _a["".concat(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"], ", ").concat(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelectorWhite */ "g"].replace('@media ', ''))] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "w"])()),
     _a);
 var highContrastItemAndTitleStateMixin = {
-    selectors: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])((_b = {}, _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = (_c = {
+    selectors: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])((_b = {}, _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = (_c = {
             backgroundColor: 'Highlight',
             borderColor: 'Highlight',
             color: 'HighlightText'
@@ -8779,26 +6013,26 @@ var highContrastItemAndTitleStateMixin = {
             borderColor: 'HighlightText',
         },
         _c), _b['.ms-Checkbox-checkbox'] = (_d = {},
-        _d[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+        _d[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
             borderColor: 'HighlightText',
         },
         _d), _b), highContrastAdjustMixin),
 };
 var highContrastBorderState = {
     selectors: (_e = {},
-        _e[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+        _e[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
             borderColor: 'Highlight',
         },
         _e),
 };
-var MinimumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getScreenSelector */ "B"])(0, _Styling__WEBPACK_IMPORTED_MODULE_3__[/* ScreenWidthMinMedium */ "m"]);
+var MinimumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getScreenSelector */ "A"])(0, _Styling__WEBPACK_IMPORTED_MODULE_3__[/* ScreenWidthMinMedium */ "l"]);
 var getStyles = function (props) {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
     var theme = props.theme, hasError = props.hasError, hasLabel = props.hasLabel, className = props.className, isOpen = props.isOpen, disabled = props.disabled, required = props.required, isRenderingPlaceholder = props.isRenderingPlaceholder, panelClassName = props.panelClassName, calloutClassName = props.calloutClassName, calloutRenderEdge = props.calloutRenderEdge;
     if (!theme) {
         throw new Error('theme is undefined or null in base Dropdown getStyles function.');
     }
-    var globalClassnames = Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var globalClassnames = Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var palette = theme.palette, semanticColors = theme.semanticColors, effects = theme.effects, fonts = theme.fonts;
     var rootHoverFocusActiveSelectorNeutralDarkMixin = {
         color: semanticColors.menuItemTextHovered,
@@ -8835,8 +6069,8 @@ var getStyles = function (props) {
     ];
     var dropdownHeaderStyle = [
         globalClassnames.dropdownItemHeader,
-        Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, fonts.medium), { fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_3__[/* FontWeights */ "f"].semibold, color: semanticColors.menuHeader, background: 'none', backgroundColor: 'transparent', border: 'none', height: DROPDOWN_ITEM_HEIGHT, lineHeight: DROPDOWN_ITEM_HEIGHT, cursor: 'default', padding: '0 8px', userSelect: 'none', textAlign: 'left', selectors: (_a = {},
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "x"])()),
+        Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, fonts.medium), { fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_3__[/* FontWeights */ "e"].semibold, color: semanticColors.menuHeader, background: 'none', backgroundColor: 'transparent', border: 'none', height: DROPDOWN_ITEM_HEIGHT, lineHeight: DROPDOWN_ITEM_HEIGHT, cursor: 'default', padding: '0 8px', userSelect: 'none', textAlign: 'left', selectors: (_a = {},
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _a) }),
     ];
     var selectedItemBackgroundColor = semanticColors.menuItemBackgroundPressed;
@@ -8872,11 +6106,11 @@ var getStyles = function (props) {
                         bottom: 0,
                         right: 0
                     },
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
                         inset: '2px',
                     },
                     _b),
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
                     border: 'none',
                 },
                 _a),
@@ -8895,7 +6129,7 @@ var getStyles = function (props) {
             color: semanticColors.disabledText,
             cursor: 'default',
             selectors: (_b = {},
-                _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+                _b[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                     border: 'none',
                 },
@@ -8913,7 +6147,7 @@ var getStyles = function (props) {
         label: globalClassnames.label,
         dropdown: [
             globalClassnames.dropdown,
-            _Styling__WEBPACK_IMPORTED_MODULE_3__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_3__[/* normalize */ "H"],
             fonts.medium,
             {
                 color: semanticColors.menuItemText,
@@ -8929,7 +6163,7 @@ var getStyles = function (props) {
                     ],
                     _c['&:focus .' + globalClassnames.title] = [
                         !disabled && rootHoverFocusActiveSelectorNeutralDarkMixin,
-                        { selectors: (_d = {}, _d[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = { color: 'Highlight' }, _d) },
+                        { selectors: (_d = {}, _d[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = { color: 'Highlight' }, _d) },
                     ],
                     _c['&:focus:after'] = [
                         {
@@ -8945,7 +6179,7 @@ var getStyles = function (props) {
                             border: !disabled ? "2px solid ".concat(palette.themePrimary) : 'none',
                             borderRadius: '2px',
                             selectors: (_e = {},
-                                _e[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+                                _e[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
                                     color: 'Highlight',
                                 },
                                 _e),
@@ -8959,7 +6193,7 @@ var getStyles = function (props) {
                     _c['&:hover .' + globalClassnames.caretDown] = !disabled && rootHoverFocusActiveSelectorNeutralPrimaryMixin,
                     _c['&:focus .' + globalClassnames.caretDown] = [
                         !disabled && rootHoverFocusActiveSelectorNeutralPrimaryMixin,
-                        { selectors: (_f = {}, _f[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = { color: 'Highlight' }, _f) },
+                        { selectors: (_f = {}, _f[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = { color: 'Highlight' }, _f) },
                     ],
                     _c['&:active .' + globalClassnames.caretDown] = !disabled && rootHoverFocusActiveSelectorNeutralPrimaryMixin,
                     _c['&:hover .' + globalClassnames.titleIsPlaceHolder] = !disabled && rootHoverFocusActiveSelectorNeutralPrimaryMixin,
@@ -8983,7 +6217,7 @@ var getStyles = function (props) {
                             right: -10,
                         }
                     },
-                    _g[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = {
+                    _g[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = {
                         selectors: {
                             ':after': {
                                 right: -14, // moving the * 4 pixel to right to alleviate border clipping in HC mode.
@@ -8995,7 +6229,7 @@ var getStyles = function (props) {
         ],
         title: [
             globalClassnames.title,
-            _Styling__WEBPACK_IMPORTED_MODULE_3__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_3__[/* normalize */ "H"],
             {
                 backgroundColor: semanticColors.inputBackground,
                 borderWidth: 1,
@@ -9020,7 +6254,7 @@ var getStyles = function (props) {
                 color: semanticColors.disabledText,
                 cursor: 'default',
                 selectors: (_h = {},
-                    _h[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ border: '1px solid GrayText', color: 'GrayText', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _h[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ border: '1px solid GrayText', color: 'GrayText', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _h),
             },
         ],
@@ -9044,7 +6278,7 @@ var getStyles = function (props) {
             disabled && {
                 color: semanticColors.disabledText,
                 selectors: (_j = {},
-                    _j[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _j[_Styling__WEBPACK_IMPORTED_MODULE_3__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_3__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _j),
             },
         ],
@@ -9227,342 +6461,6 @@ var DropdownSizePosCache = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "Y9i4":
-/*!*******************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/OverflowSet/OverflowSet.js ***!
-  \*******************************************************************************************************************************************/
-/*! exports provided: OverflowSet */
-/*! exports used: OverflowSet */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OverflowSet; });
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Utilities */ "MBBx");
-/* harmony import */ var _OverflowSet_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./OverflowSet.base */ "dUAn");
-/* harmony import */ var _OverflowSet_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./OverflowSet.styles */ "ksR5");
-
-
-
-var OverflowSet = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_OverflowSet_base__WEBPACK_IMPORTED_MODULE_1__[/* OverflowSetBase */ "a"], _OverflowSet_styles__WEBPACK_IMPORTED_MODULE_2__[/* getStyles */ "a"], undefined, {
-    scope: 'OverflowSet',
-});
-//# sourceMappingURL=OverflowSet.js.map
-
-/***/ }),
-
-/***/ "YZVg":
-/*!**********************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CommandBar/CommandBar.base.js ***!
-  \**********************************************************************************************************************************************/
-/*! exports provided: CommandBarBase */
-/*! exports used: CommandBarBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommandBarBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "Eh56");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Utilities */ "WjVC");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utilities */ "3eXo");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utilities */ "T+Fs");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utilities */ "bf8k");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../Utilities */ "e6CW");
-/* harmony import */ var _OverflowSet__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../OverflowSet */ "Y9i4");
-/* harmony import */ var _ResizeGroup__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../ResizeGroup */ "ZjBD");
-/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../FocusZone */ "YJ2P");
-/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../FocusZone */ "9xX0");
-/* harmony import */ var _Button__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../Button */ "nVNi");
-/* harmony import */ var _Tooltip__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../Tooltip */ "lm3o");
-/* harmony import */ var _CommandBar_styles__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./CommandBar.styles */ "hgwL");
-
-
-
-
-
-
-
-
-
-var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNamesFunction */ "a"])();
-var CommandBarBase = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __extends */ "c"])(CommandBarBase, _super);
-    function CommandBarBase(props) {
-        var _this = _super.call(this, props) || this;
-        _this._overflowSet = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
-        _this._resizeGroup = react__WEBPACK_IMPORTED_MODULE_1__["createRef"]();
-        _this._onRenderData = function (data) {
-            var _a;
-            var ariaLabel = (_a = _this.props, _a.ariaLabel), primaryGroupAriaLabel = _a.primaryGroupAriaLabel, farItemsGroupAriaLabel = _a.farItemsGroupAriaLabel;
-            var hasSecondSet = data.farItems && data.farItems.length > 0;
-            return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_10__[/* FocusZone */ "a"], { className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])(_this._classNames.root), direction: _FocusZone__WEBPACK_IMPORTED_MODULE_11__[/* FocusZoneDirection */ "a"].horizontal, role: 'menubar', "aria-label": ariaLabel },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_OverflowSet__WEBPACK_IMPORTED_MODULE_8__[/* OverflowSet */ "a"], { role: hasSecondSet ? 'group' : 'none', "aria-label": hasSecondSet ? primaryGroupAriaLabel : undefined, componentRef: _this._overflowSet, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])(_this._classNames.primarySet), items: data.primaryItems, overflowItems: data.overflowItems.length ? data.overflowItems : undefined, onRenderItem: _this._onRenderItem, onRenderOverflowButton: _this._onRenderOverflowButton }),
-                hasSecondSet && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_OverflowSet__WEBPACK_IMPORTED_MODULE_8__[/* OverflowSet */ "a"], { role: "group", "aria-label": farItemsGroupAriaLabel, className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])(_this._classNames.secondarySet), items: data.farItems, onRenderItem: _this._onRenderItem, onRenderOverflowButton: _Utilities__WEBPACK_IMPORTED_MODULE_4__[/* nullRender */ "a"] }))));
-        };
-        _this._onRenderItem = function (item) {
-            if (item.onRender) {
-                // These are the top level items, there is no relevant menu dismissing function to
-                // provide for the IContextualMenuItem onRender function. Pass in a no op function instead.
-                return item.onRender(item, function () { return undefined; });
-            }
-            // eslint-disable-next-line deprecation/deprecation
-            var itemText = item.text || item.name;
-            var commandButtonProps = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ allowDisabledFocus: true, role: 'menuitem' }, item), { styles: Object(_CommandBar_styles__WEBPACK_IMPORTED_MODULE_14__[/* getCommandButtonStyles */ "a"])(item.buttonStyles), className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])('ms-CommandBarItem-link', item.className), text: !item.iconOnly ? itemText : undefined, menuProps: item.subMenuProps, onClick: _this._onButtonClick(item) });
-            if (item.iconOnly && (itemText !== undefined || item.tooltipHostProps)) {
-                return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Tooltip__WEBPACK_IMPORTED_MODULE_13__[/* TooltipHost */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ role: "none", content: itemText, setAriaDescribedBy: false }, item.tooltipHostProps), _this._commandButton(item, commandButtonProps)));
-            }
-            return _this._commandButton(item, commandButtonProps);
-        };
-        _this._commandButton = function (item, props) {
-            var ButtonAs = _this.props.buttonAs;
-            var CommandBarButtonAs = item.commandBarButtonAs;
-            var DefaultButtonAs = _Button__WEBPACK_IMPORTED_MODULE_12__[/* CommandBarButton */ "a"];
-            // The prop types between these three possible implementations overlap enough that a force-cast is safe.
-            var Type = DefaultButtonAs;
-            if (CommandBarButtonAs) {
-                Type = Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* composeComponentAs */ "a"])(CommandBarButtonAs, Type);
-            }
-            if (ButtonAs) {
-                Type = Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* composeComponentAs */ "a"])(ButtonAs, Type);
-            }
-            // Always pass the default implementation to the override so it may be composed.
-            return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](Type, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props));
-        };
-        _this._onRenderOverflowButton = function (overflowItems) {
-            var _a;
-            var overflowButtonProps = (_a = _this.props.overflowButtonProps, _a === void 0 ? {} : _a);
-            var combinedOverflowItems = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], (overflowButtonProps.menuProps ? overflowButtonProps.menuProps.items : []), true), overflowItems, true);
-            var overflowProps = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ role: 'menuitem' }, overflowButtonProps), { styles: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ menuIcon: { fontSize: '17px' } }, overflowButtonProps.styles), className: Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* css */ "a"])('ms-CommandBar-overflowButton', overflowButtonProps.className), menuProps: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, overflowButtonProps.menuProps), { items: combinedOverflowItems }), menuIconProps: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ iconName: 'More' }, overflowButtonProps.menuIconProps) });
-            var OverflowButtonType = _this.props.overflowButtonAs
-                ? Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* composeComponentAs */ "a"])(_this.props.overflowButtonAs, _Button__WEBPACK_IMPORTED_MODULE_12__[/* CommandBarButton */ "a"])
-                : _Button__WEBPACK_IMPORTED_MODULE_12__[/* CommandBarButton */ "a"];
-            return react__WEBPACK_IMPORTED_MODULE_1__["createElement"](OverflowButtonType, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, overflowProps));
-        };
-        _this._onReduceData = function (data) {
-            var _a;
-            var shiftOnReduce = (_a = _this.props, _a.shiftOnReduce), onDataReduced = _a.onDataReduced;
-            var primaryItems = data.primaryItems, overflowItems = data.overflowItems, cacheKey = data.cacheKey;
-            var farItems = data.farItems;
-            // Use first item if shiftOnReduce, otherwise use last item
-            var movedItem = primaryItems[shiftOnReduce ? 0 : primaryItems.length - 1];
-            if (movedItem !== undefined) {
-                movedItem.renderedInOverflow = true;
-                overflowItems = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([movedItem], overflowItems, true);
-                primaryItems = shiftOnReduce ? primaryItems.slice(1) : primaryItems.slice(0, -1);
-                var newData = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, data), { primaryItems: primaryItems, overflowItems: overflowItems });
-                cacheKey = _this._computeCacheKey({ primaryItems: primaryItems, overflow: overflowItems.length > 0, farItems: farItems });
-                if (onDataReduced) {
-                    onDataReduced(movedItem);
-                }
-                newData.cacheKey = cacheKey;
-                return newData;
-            }
-            return undefined;
-        };
-        _this._onGrowData = function (data) {
-            var _a;
-            var shiftOnReduce = (_a = _this.props, _a.shiftOnReduce), onDataGrown = _a.onDataGrown;
-            var minimumOverflowItems = data.minimumOverflowItems;
-            var primaryItems = data.primaryItems, overflowItems = data.overflowItems, cacheKey = data.cacheKey;
-            var farItems = data.farItems;
-            var movedItem = overflowItems[0];
-            // Make sure that moved item exists and is not one of the original overflow items
-            if (movedItem !== undefined && overflowItems.length > minimumOverflowItems) {
-                movedItem.renderedInOverflow = false;
-                overflowItems = overflowItems.slice(1);
-                // if shiftOnReduce, movedItem goes first, otherwise, last.
-                primaryItems = shiftOnReduce ? Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([movedItem], primaryItems, true) : Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], primaryItems, true), [movedItem], false);
-                var newData = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, data), { primaryItems: primaryItems, overflowItems: overflowItems });
-                cacheKey = _this._computeCacheKey({ primaryItems: primaryItems, overflow: overflowItems.length > 0, farItems: farItems });
-                if (onDataGrown) {
-                    onDataGrown(movedItem);
-                }
-                newData.cacheKey = cacheKey;
-                return newData;
-            }
-            return undefined;
-        };
-        Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* initializeComponentRef */ "a"])(_this);
-        return _this;
-    }
-    CommandBarBase.prototype.render = function () {
-        var _a, _b, _c, _d;
-        var items = (_a = this.props, _a.items), overflowItems = _a.overflowItems, farItems = _a.farItems, styles = _a.styles, theme = _a.theme, dataDidRender = _a.dataDidRender, onReduceData = (_b = _a.onReduceData, _b === void 0 ? this._onReduceData : _b), onGrowData = (_c = _a.onGrowData, _c === void 0 ? this._onGrowData : _c), ResizeGroupAs = (_d = _a.resizeGroupAs, _d === void 0 ? _ResizeGroup__WEBPACK_IMPORTED_MODULE_9__[/* ResizeGroup */ "a"] : _d);
-        var commandBarData = {
-            primaryItems: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], items, true),
-            overflowItems: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], overflowItems, true),
-            minimumOverflowItems: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], overflowItems, true).length,
-            farItems: farItems,
-            cacheKey: this._computeCacheKey({
-                primaryItems: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([], items, true),
-                overflow: overflowItems && overflowItems.length > 0,
-                farItems: farItems,
-            }),
-        };
-        this._classNames = getClassNames(styles, { theme: theme });
-        // ResizeGroup will render these attributes to the root <div>.
-        // TODO We may need to elevate classNames from <FocusZone> into <ResizeGroup> ?
-        var nativeProps = Object(_Utilities__WEBPACK_IMPORTED_MODULE_7__[/* getNativeProps */ "h"])(this.props, _Utilities__WEBPACK_IMPORTED_MODULE_7__[/* divProperties */ "f"]);
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](ResizeGroupAs, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, nativeProps, { componentRef: this._resizeGroup, data: commandBarData, onReduceData: onReduceData, onGrowData: onGrowData, onRenderData: this._onRenderData, dataDidRender: dataDidRender })));
-    };
-    CommandBarBase.prototype.focus = function () {
-        var overflowSet = this._overflowSet.current;
-        overflowSet && overflowSet.focus();
-    };
-    CommandBarBase.prototype.remeasure = function () {
-        this._resizeGroup.current && this._resizeGroup.current.remeasure();
-    };
-    CommandBarBase.prototype._onButtonClick = function (item) {
-        return function (ev) {
-            // inactive is deprecated. remove check in 7.0
-            // eslint-disable-next-line deprecation/deprecation
-            if (item.inactive) {
-                return;
-            }
-            if (item.onClick) {
-                item.onClick(ev, item);
-            }
-        };
-    };
-    CommandBarBase.prototype._computeCacheKey = function (data) {
-        var primaryItems = data.primaryItems, overflow = data.overflow, farItems = data.farItems;
-        var returnKey = function (acc, current) {
-            var _a = current.cacheKey, cacheKey = _a === void 0 ? current.key : _a;
-            return acc + cacheKey;
-        };
-        var primaryKey = primaryItems && primaryItems.reduce(returnKey, '');
-        var overflowKey = overflow ? 'overflow' : '';
-        var farKey = farItems && farItems.reduce(returnKey, '');
-        return [primaryKey, overflowKey, farKey].join('');
-    };
-    CommandBarBase.defaultProps = {
-        items: [],
-        overflowItems: [],
-    };
-    return CommandBarBase;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
-//# sourceMappingURL=CommandBar.base.js.map
-
-/***/ }),
-
-/***/ "YrGg":
-/*!********************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/Calendar.styles.js ***!
-  \********************************************************************************************************************************************/
-/*! exports provided: styles */
-/*! exports used: styles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return styles; });
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-
-var styles = function (props) {
-    var _a;
-    var className = props.className, theme = props.theme, isDayPickerVisible = props.isDayPickerVisible, isMonthPickerVisible = props.isMonthPickerVisible, showWeekNumbers = props.showWeekNumbers;
-    var palette = theme.palette;
-    var totalWidth = isDayPickerVisible && isMonthPickerVisible ? 440 : 220;
-    if (showWeekNumbers && isDayPickerVisible) {
-        totalWidth += 30;
-    }
-    return {
-        root: [
-            _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* normalize */ "I"],
-            {
-                display: 'flex',
-                width: totalWidth,
-            },
-            !isMonthPickerVisible && {
-                flexDirection: 'column',
-            },
-            className,
-        ],
-        divider: {
-            top: 0,
-            borderRight: '1px solid',
-            borderColor: palette.neutralLight,
-        },
-        monthPickerWrapper: [
-            {
-                display: 'flex',
-                flexDirection: 'column',
-            },
-        ],
-        goTodayButton: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
-            {
-                bottom: 0,
-                color: palette.neutralPrimary,
-                height: 30,
-                lineHeight: 30,
-                backgroundColor: 'transparent',
-                border: 'none',
-                boxSizing: 'content-box',
-                padding: '0 4px',
-                alignSelf: 'flex-end',
-                marginRight: 16,
-                marginTop: 3,
-                fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* FontSizes */ "e"].small,
-                fontFamily: 'inherit',
-                overflow: 'visible',
-                selectors: {
-                    '& div': {
-                        fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* FontSizes */ "e"].small,
-                    },
-                    '&:hover': {
-                        color: palette.themePrimary,
-                        backgroundColor: 'transparent',
-                        cursor: 'pointer',
-                        selectors: (_a = {},
-                            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
-                                outline: '1px solid Buttontext',
-                                borderRadius: '2px',
-                            },
-                            _a),
-                    },
-                    '&:active': {
-                        color: palette.themeDark,
-                    },
-                    '&:disabled': {
-                        color: palette.neutralTertiaryAlt,
-                        pointerEvents: 'none',
-                    },
-                },
-            },
-        ],
-        liveRegion: {
-            border: 0,
-            height: '1px',
-            margin: '-1px',
-            overflow: 'hidden',
-            padding: 0,
-            width: '1px',
-            position: 'absolute',
-        },
-    };
-};
-//# sourceMappingURL=Calendar.styles.js.map
-
-/***/ }),
-
-/***/ "ZjBD":
-/*!*******************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ResizeGroup/ResizeGroup.js ***!
-  \*******************************************************************************************************************************************/
-/*! exports provided: ResizeGroup */
-/*! exports used: ResizeGroup */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResizeGroup; });
-/* harmony import */ var _ResizeGroup_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ResizeGroup.base */ "1zXl");
-
-var ResizeGroup = _ResizeGroup_base__WEBPACK_IMPORTED_MODULE_0__[/* ResizeGroupBase */ "a"];
-//# sourceMappingURL=ResizeGroup.js.map
-
-/***/ }),
-
 /***/ "atvm":
 /*!***********************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DetailsList/DetailsRowCheck.js ***!
@@ -9631,298 +6529,6 @@ function _fastDefaultCheckboxRender(checkboxProps) {
 }
 var DetailsRowCheck = Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* styled */ "a"])(DetailsRowCheckBase, _DetailsRowCheck_styles__WEBPACK_IMPORTED_MODULE_8__[/* getDetailsRowCheckStyles */ "b"], undefined, { scope: 'DetailsRowCheck' }, true);
 //# sourceMappingURL=DetailsRowCheck.js.map
-
-/***/ }),
-
-/***/ "ctm1":
-/*!*****************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarPicker/CalendarPicker.styles.js ***!
-  \*****************************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/style-utilities */ "ogYq");
-/* harmony import */ var _Calendar_types__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Calendar.types */ "x6Lq");
-
-
-
-var getStyles = function (props) {
-    var _a, _b, _c, _d, _e, _f, _g;
-    var className = props.className, theme = props.theme, hasHeaderClickCallback = props.hasHeaderClickCallback, highlightCurrent = props.highlightCurrent, highlightSelected = props.highlightSelected, animateBackwards = props.animateBackwards, animationDirection = props.animationDirection;
-    var palette = theme.palette;
-    var animationStyle = {};
-    if (animateBackwards !== undefined) {
-        if (animationDirection === _Calendar_types__WEBPACK_IMPORTED_MODULE_2__[/* AnimationDirection */ "a"].Horizontal) {
-            animationStyle = animateBackwards ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideRightIn20 : _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideLeftIn20;
-        }
-        else {
-            animationStyle = animateBackwards ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideDownIn20 : _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].slideUpIn20;
-        }
-    }
-    var headerAnimationStyle = animateBackwards !== undefined ? _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* AnimationStyles */ "b"].fadeIn200 : {};
-    return {
-        root: [
-            _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
-            {
-                width: 196,
-                padding: 12,
-                boxSizing: 'content-box',
-                overflow: 'hidden',
-            },
-            className,
-        ],
-        headerContainer: {
-            display: 'flex',
-        },
-        currentItemButton: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
-            Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, headerAnimationStyle), { fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].medium, fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold, fontFamily: 'inherit', textAlign: 'left', color: 'inherit', backgroundColor: 'transparent', flexGrow: 1, padding: '0 4px 0 10px', border: 'none', overflow: 'visible' }),
-            hasHeaderClickCallback && {
-                selectors: {
-                    '&:hover, &:active': {
-                        cursor: !hasHeaderClickCallback ? 'default' : 'pointer',
-                        color: palette.neutralDark,
-                        outline: '1px solid transparent',
-                        backgroundColor: palette.neutralLight,
-                    },
-                },
-            },
-        ],
-        navigationButtonsContainer: {
-            display: 'flex',
-            alignItems: 'center',
-        },
-        navigationButton: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
-            {
-                fontFamily: 'inherit',
-                width: 28,
-                minWidth: 28,
-                height: 28,
-                minHeight: 28,
-                display: 'block',
-                textAlign: 'center',
-                lineHeight: 28,
-                fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-                color: palette.neutralPrimary,
-                borderRadius: 2,
-                position: 'relative',
-                backgroundColor: 'transparent',
-                border: 'none',
-                padding: 0,
-                overflow: 'visible',
-                selectors: {
-                    '&:hover': {
-                        color: palette.neutralDark,
-                        cursor: 'pointer',
-                        outline: '1px solid transparent',
-                        backgroundColor: palette.neutralLight,
-                    },
-                },
-            },
-        ],
-        gridContainer: {
-            marginTop: 4,
-        },
-        buttonRow: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, animationStyle), { marginBottom: 16, selectors: {
-                '&:nth-child(n + 3)': {
-                    marginBottom: 0,
-                },
-            } }),
-        itemButton: [
-            Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -1 }),
-            {
-                width: 40,
-                height: 40,
-                minWidth: 40,
-                minHeight: 40,
-                lineHeight: 40,
-                fontSize: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontSizes */ "e"].small,
-                fontFamily: 'inherit',
-                padding: 0,
-                margin: '0 12px 0 0',
-                color: palette.neutralPrimary,
-                backgroundColor: 'transparent',
-                border: 'none',
-                borderRadius: 2,
-                overflow: 'visible',
-                selectors: {
-                    '&:nth-child(4n + 4)': {
-                        marginRight: 0,
-                    },
-                    '&:nth-child(n + 9)': {
-                        marginBottom: 0,
-                    },
-                    '& div': {
-                        fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
-                    },
-                    '&:hover': {
-                        color: palette.neutralDark,
-                        backgroundColor: palette.neutralLight,
-                        cursor: 'pointer',
-                        outline: '1px solid transparent',
-                        selectors: (_a = {},
-                            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Window', color: 'WindowText', outline: '1px solid Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                            _a),
-                    },
-                    '&:active': {
-                        backgroundColor: palette.themeLight,
-                        selectors: (_b = {},
-                            _b[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Window', color: 'Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                            _b),
-                    },
-                },
-            },
-        ],
-        current: highlightCurrent
-            ? {
-                color: palette.white,
-                backgroundColor: palette.themePrimary,
-                selectors: (_c = {
-                        '& div': {
-                            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
-                        },
-                        '&:hover': {
-                            backgroundColor: palette.themePrimary,
-                            selectors: (_d = {},
-                                _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'WindowText', color: 'Window' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                                _d),
-                        }
-                    },
-                    _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'WindowText', color: 'Window' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                    _c),
-            }
-            : {},
-        selected: highlightSelected
-            ? {
-                color: palette.neutralPrimary,
-                backgroundColor: palette.themeLight,
-                fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
-                selectors: (_e = {
-                        '& div': {
-                            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
-                        },
-                        '&:hover, &:active': {
-                            backgroundColor: palette.themeLight,
-                            selectors: (_f = {},
-                                _f[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', background: 'Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                                _f),
-                        }
-                    },
-                    _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'Window' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                    _e),
-            }
-            : {},
-        disabled: {
-            selectors: (_g = {
-                    '&, &:disabled, & button': {
-                        color: palette.neutralTertiaryAlt,
-                        pointerEvents: 'none',
-                    }
-                },
-                _g[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                    color: 'GrayText',
-                    forcedColorAdjust: 'none',
-                },
-                _g),
-        },
-    };
-};
-//# sourceMappingURL=CalendarPicker.styles.js.map
-
-/***/ }),
-
-/***/ "dJ83":
-/*!********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/CalendarMonth/CalendarMonth.js ***!
-  \********************************************************************************************************************************************************/
-/*! exports provided: CalendarMonth */
-/*! exports used: CalendarMonth */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarMonth; });
-/* harmony import */ var _CalendarMonth_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CalendarMonth.base */ "1XIA");
-/* harmony import */ var _CalendarMonth_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CalendarMonth.styles */ "Ol2D");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "MBBx");
-
-
-
-var CalendarMonth = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* styled */ "a"])(_CalendarMonth_base__WEBPACK_IMPORTED_MODULE_0__[/* CalendarMonthBase */ "a"], _CalendarMonth_styles__WEBPACK_IMPORTED_MODULE_1__[/* getStyles */ "a"], undefined, { scope: 'CalendarMonth' });
-//# sourceMappingURL=CalendarMonth.js.map
-
-/***/ }),
-
-/***/ "dUAn":
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/OverflowSet/OverflowSet.base.js ***!
-  \************************************************************************************************************************************************/
-/*! exports provided: OverflowSetBase */
-/*! exports used: OverflowSetBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OverflowSetBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/react-hooks */ "owwJ");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../Utilities */ "Eh56");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../Utilities */ "lE+F");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../Utilities */ "H5Ur");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../Utilities */ "e6CW");
-/* harmony import */ var _OverflowButton__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./OverflowButton */ "iXaG");
-/* harmony import */ var _utilities_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../utilities/dom */ "YFIV");
-
-
-
-
-
-
-var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* classNamesFunction */ "a"])();
-var COMPONENT_NAME = 'OverflowSet';
-var useComponentRef = function (props, divContainer) {
-    var doc = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_8__[/* useDocumentEx */ "c"])();
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        focus: function (_forceIntoFirstElement, bypassHiddenElements) {
-            var focusSucceeded = false;
-            if (divContainer.current) {
-                focusSucceeded = Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* focusFirstChild */ "c"])(divContainer.current, bypassHiddenElements);
-            }
-            return focusSucceeded;
-        },
-        focusElement: function (childElement) {
-            var focusSucceeded = false;
-            if (!childElement) {
-                return false;
-            }
-            if (divContainer.current && Object(_Utilities__WEBPACK_IMPORTED_MODULE_5__[/* elementContains */ "a"])(divContainer.current, childElement)) {
-                childElement.focus();
-                focusSucceeded = (doc === null || doc === void 0 ? void 0 : doc.activeElement) === childElement;
-            }
-            return focusSucceeded;
-        },
-    }); }, [divContainer, doc]);
-};
-var OverflowSetBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (props, forwardedRef) {
-    var divContainer = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var mergedRef = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_2__[/* useMergedRefs */ "a"])(divContainer, forwardedRef);
-    useComponentRef(props, divContainer);
-    var items = props.items, overflowItems = props.overflowItems, className = props.className, styles = props.styles, vertical = props.vertical, role = props.role, _a = props.overflowSide, overflowSide = _a === void 0 ? 'end' : _a, onRenderItem = props.onRenderItem;
-    var classNames = getClassNames(styles, { className: className, vertical: vertical });
-    var showOverflow = !!overflowItems && overflowItems.length > 0;
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(props, _Utilities__WEBPACK_IMPORTED_MODULE_6__[/* divProperties */ "f"]), { role: role || 'group', "aria-orientation": role === 'menubar' ? (vertical === true ? 'vertical' : 'horizontal') : undefined, className: classNames.root, ref: mergedRef }),
-        overflowSide === 'start' && showOverflow && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_OverflowButton__WEBPACK_IMPORTED_MODULE_7__[/* OverflowButton */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { className: classNames.overflowButton })),
-        items &&
-            items.map(function (item, i) { return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: classNames.item, key: item.key, role: "none" }, onRenderItem(item))); }),
-        overflowSide === 'end' && showOverflow && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_OverflowButton__WEBPACK_IMPORTED_MODULE_7__[/* OverflowButton */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { className: classNames.overflowButton }))));
-});
-OverflowSetBase.displayName = COMPONENT_NAME;
-//# sourceMappingURL=OverflowSet.base.js.map
 
 /***/ }),
 
@@ -10032,69 +6638,6 @@ var CheckboxVisibility;
 
 /***/ }),
 
-/***/ "hgwL":
-/*!************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CommandBar/CommandBar.styles.js ***!
-  \************************************************************************************************************************************************/
-/*! exports provided: getStyles, getCommandButtonStyles */
-/*! exports used: getCommandButtonStyles, getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getStyles; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getCommandButtonStyles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Utilities */ "02QY");
-
-
-var COMMAND_BAR_HEIGHT = 44;
-var getStyles = function (props) {
-    var className = props.className, theme = props.theme;
-    var semanticColors = theme.semanticColors;
-    return {
-        root: [
-            theme.fonts.medium,
-            'ms-CommandBar',
-            {
-                display: 'flex',
-                backgroundColor: semanticColors.bodyBackground,
-                padding: '0 14px 0 24px',
-                height: COMMAND_BAR_HEIGHT,
-            },
-            className,
-        ],
-        primarySet: [
-            'ms-CommandBar-primaryCommand',
-            {
-                flexGrow: '1',
-                display: 'flex',
-                alignItems: 'stretch',
-            },
-        ],
-        secondarySet: [
-            'ms-CommandBar-secondaryCommand',
-            {
-                flexShrink: '0',
-                display: 'flex',
-                alignItems: 'stretch',
-            },
-        ],
-    };
-};
-var getCommandButtonStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunction */ "b"])(function (customStyles) {
-    var rootStyles = {
-        height: '100%',
-    };
-    var labelStyles = {
-        whiteSpace: 'nowrap',
-    };
-    var _a = customStyles || {}, root = _a.root, label = _a.label, restCustomStyles = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __rest */ "e"])(_a, ["root", "label"]);
-    return Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, restCustomStyles), { root: root ? [rootStyles, root] : rootStyles, label: label ? [labelStyles, label] : labelStyles });
-});
-//# sourceMappingURL=CommandBar.styles.js.map
-
-/***/ }),
-
 /***/ "iELR":
 /*!**************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/GroupedList/GroupHeader.styles.js ***!
@@ -10144,9 +6687,9 @@ var getStyles = function (props) {
     var cellLeftPadding = _DetailsList_DetailsRow_styles__WEBPACK_IMPORTED_MODULE_3__[/* DEFAULT_CELL_STYLE_PROPS */ "a"].cellLeftPadding;
     var finalRowHeight = compact ? COMPACT_GROUP_HEADER_HEIGHT : DEFAULT_GROUP_HEADER_HEIGHT;
     var semanticColors = theme.semanticColors, palette = theme.palette, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var checkExpandResetStyles = [
-        Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme),
+        Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "u"])(theme),
         {
             cursor: 'default',
             background: 'none',
@@ -10158,7 +6701,7 @@ var getStyles = function (props) {
     return {
         root: [
             classNames.root,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "u"])(theme),
             theme.fonts.medium,
             {
                 // keep the border for height but color it so it's invisible.
@@ -10290,7 +6833,7 @@ var getStyles = function (props) {
             {
                 paddingLeft: cellLeftPadding,
                 fontSize: compact ? fonts.medium.fontSize : fonts.mediumPlus.fontSize,
-                fontWeight: isCollapsed ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular : _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+                fontWeight: isCollapsed ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular : _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
                 cursor: 'pointer',
                 outline: 0,
                 whiteSpace: 'nowrap',
@@ -10303,7 +6846,7 @@ var getStyles = function (props) {
             {
                 position: 'absolute',
                 left: -26,
-                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* IconFontSizes */ "i"].large,
+                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* IconFontSizes */ "h"].large,
                 color: palette.neutralSecondary,
                 transition: "transform ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* AnimationVariables */ "c"].durationValue2, " ").concat(beziers.easeInBack, ", ") +
                     "opacity ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* AnimationVariables */ "c"].durationValue4, " ").concat(beziers.easeOutSine),
@@ -10320,126 +6863,6 @@ var getStyles = function (props) {
     };
 };
 //# sourceMappingURL=GroupHeader.styles.js.map
-
-/***/ }),
-
-/***/ "iXaG":
-/*!**********************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/OverflowSet/OverflowButton.js ***!
-  \**********************************************************************************************************************************************/
-/*! exports provided: OverflowButton */
-/*! exports used: OverflowButton */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OverflowButton; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _utilities_keytips_KeytipManager__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../utilities/keytips/KeytipManager */ "Di9b");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/react-hooks */ "kWOt");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/react-hooks */ "mFKB");
-
-
-
-
-var registerPersistedKeytips = function (keytipsToRegister, keytipManager, registeredPersistedKeytips) {
-    for (var _i = 0, keytipsToRegister_1 = keytipsToRegister; _i < keytipsToRegister_1.length; _i++) {
-        var keytip = keytipsToRegister_1[_i];
-        var uniqueID = keytipManager.register(keytip, true);
-        // Update map
-        registeredPersistedKeytips[uniqueID] = keytip;
-    }
-};
-var unregisterPersistedKeytips = function (keytipManager, registeredPersistedKeytips) {
-    for (var _i = 0, _a = Object.keys(registeredPersistedKeytips); _i < _a.length; _i++) {
-        var uniqueID = _a[_i];
-        keytipManager.unregister(registeredPersistedKeytips[uniqueID], uniqueID, true);
-        delete registeredPersistedKeytips[uniqueID];
-    }
-};
-var useKeytipRegistrations = function (registeredPersistedKeytips, keytipsToRegister, keytipManager) {
-    var prevPersistedKeytips = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__[/* usePrevious */ "a"])(registeredPersistedKeytips);
-    // Update
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        if (prevPersistedKeytips) {
-            // Unregister old keytips
-            unregisterPersistedKeytips(keytipManager, prevPersistedKeytips);
-            // Register new keytips
-            registerPersistedKeytips(keytipsToRegister, keytipManager, registeredPersistedKeytips);
-        }
-    });
-    // Mount/Unmount
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        // Register on mount
-        registerPersistedKeytips(keytipsToRegister, keytipManager, registeredPersistedKeytips);
-        return function () {
-            // Unregister on unmount
-            unregisterPersistedKeytips(keytipManager, registeredPersistedKeytips);
-        };
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-};
-var OverflowButton = function (props) {
-    var keytipManager = _utilities_keytips_KeytipManager__WEBPACK_IMPORTED_MODULE_2__[/* KeytipManager */ "a"].getInstance();
-    var className = props.className, overflowItems = props.overflowItems, keytipSequences = props.keytipSequences, itemSubMenuProvider = props.itemSubMenuProvider, onRenderOverflowButton = props.onRenderOverflowButton;
-    var persistedKeytips = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useConst */ "a"])({});
-    // Gets the subMenu for an overflow item
-    var getSubMenuForItem = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (item) {
-        // Checks if itemSubMenuProvider has been defined, if not defaults to subMenuProps
-        if (itemSubMenuProvider) {
-            return itemSubMenuProvider(item);
-        }
-        if (item.subMenuProps) {
-            return item.subMenuProps.items;
-        }
-        return undefined;
-    }, [itemSubMenuProvider]);
-    var _a = react__WEBPACK_IMPORTED_MODULE_1__["useMemo"](function () {
-        var newKeytipsToRegister = [];
-        var newOverflowItems = [];
-        if (keytipSequences) {
-            overflowItems === null || overflowItems === void 0 ? void 0 : overflowItems.forEach(function (overflowItem) {
-                var _a;
-                var keytip = overflowItem.keytipProps;
-                if (keytip) {
-                    // Create persisted keytip
-                    var persistedKeytip = {
-                        content: keytip.content,
-                        keySequences: keytip.keySequences,
-                        disabled: keytip.disabled || !!(overflowItem.disabled || overflowItem.isDisabled),
-                        hasDynamicChildren: keytip.hasDynamicChildren,
-                        hasMenu: keytip.hasMenu,
-                    };
-                    if (keytip.hasDynamicChildren || getSubMenuForItem(overflowItem)) {
-                        // If the keytip has a submenu or children nodes, change onExecute to persistedKeytipExecute
-                        persistedKeytip.onExecute = keytipManager.menuExecute.bind(keytipManager, keytipSequences, (_a = overflowItem === null || overflowItem === void 0 ? void 0 : overflowItem.keytipProps) === null || _a === void 0 ? void 0 : _a.keySequences);
-                        persistedKeytip.hasOverflowSubMenu = true;
-                    }
-                    else {
-                        // If the keytip doesn't have a submenu, just execute the original function
-                        persistedKeytip.onExecute = keytip.onExecute;
-                    }
-                    newKeytipsToRegister.push(persistedKeytip);
-                    // Add the overflow sequence to this item
-                    var newOverflowItem = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, overflowItem), { keytipProps: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, keytip), { overflowSetSequence: keytipSequences }) });
-                    newOverflowItems === null || newOverflowItems === void 0 ? void 0 : newOverflowItems.push(newOverflowItem);
-                }
-                else {
-                    // Nothing to change, add overflowItem to list
-                    newOverflowItems === null || newOverflowItems === void 0 ? void 0 : newOverflowItems.push(overflowItem);
-                }
-            });
-        }
-        else {
-            newOverflowItems = overflowItems;
-        }
-        return { modifiedOverflowItems: newOverflowItems, keytipsToRegister: newKeytipsToRegister };
-    }, [overflowItems, getSubMenuForItem, keytipManager, keytipSequences]), modifiedOverflowItems = _a.modifiedOverflowItems, keytipsToRegister = _a.keytipsToRegister;
-    useKeytipRegistrations(persistedKeytips, keytipsToRegister, keytipManager);
-    return react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: className }, onRenderOverflowButton(modifiedOverflowItems));
-};
-//# sourceMappingURL=OverflowButton.js.map
 
 /***/ }),
 
@@ -10461,659 +6884,6 @@ var SelectableOptionMenuItemType;
     SelectableOptionMenuItemType[SelectableOptionMenuItemType["SelectAll"] = 3] = "SelectAll";
 })(SelectableOptionMenuItemType || (SelectableOptionMenuItemType = {}));
 //# sourceMappingURL=SelectableOption.types.js.map
-
-/***/ }),
-
-/***/ "k2oj":
-/*!**********************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DatePicker/DatePicker.base.js ***!
-  \**********************************************************************************************************************************************/
-/*! exports provided: DatePickerBase */
-/*! exports used: DatePickerBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return DatePickerBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/utilities */ "pSSv");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/utilities */ "BLix");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/utilities */ "6ztV");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/utilities */ "e6CW");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/utilities */ "WjVC");
-/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../Calendar */ "/n8u");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _Callout__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../Callout */ "dXTB");
-/* harmony import */ var _Callout__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../Callout */ "kvDL");
-/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../Styling */ "ogYq");
-/* harmony import */ var _TextField__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../TextField */ "XgkO");
-/* harmony import */ var _FocusTrapZone__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../FocusTrapZone */ "lLjQ");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @fluentui/react-hooks */ "Eo9X");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! @fluentui/react-hooks */ "Txh6");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
-/* harmony import */ var _defaults__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./defaults */ "kDgz");
-
-
-
-
-
-
-
-
-
-
-
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNamesFunction */ "a"])();
-var DEFAULT_PROPS = {
-    allowTextInput: false,
-    formatDate: function (date) { return (date ? date.toDateString() : ''); },
-    parseDateFromString: function (dateStr) {
-        //if dateStr is DATE ONLY ISO 8601 -> add time so Date.parse() won't convert it to UTC
-        //See here: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/parse#date_time_string_format
-        if (dateStr.match(/^\d{4}(-\d{2}){2}$/)) {
-            dateStr += 'T12:00';
-        }
-        var date = Date.parse(dateStr);
-        return date ? new Date(date) : null;
-    },
-    firstDayOfWeek: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_9__[/* DayOfWeek */ "c"].Sunday,
-    initialPickerDate: new Date(),
-    isRequired: false,
-    isMonthPickerVisible: true,
-    showMonthPickerAsOverlay: false,
-    strings: _defaults__WEBPACK_IMPORTED_MODULE_19__[/* defaultDatePickerStrings */ "a"],
-    highlightCurrentMonth: false,
-    highlightSelectedMonth: false,
-    borderless: false,
-    pickerAriaLabel: 'Calendar',
-    showWeekNumbers: false,
-    firstWeekOfYear: _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_9__[/* FirstWeekOfYear */ "d"].FirstDay,
-    showGoToToday: true,
-    showCloseButton: false,
-    underlined: false,
-    allFocusable: false,
-};
-function useFocusLogic() {
-    var textFieldRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var preventFocusOpeningPicker = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](false);
-    var focus = function () {
-        var _a, _b;
-        (_b = (_a = textFieldRef.current) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-    };
-    var preventNextFocusOpeningPicker = function () {
-        preventFocusOpeningPicker.current = true;
-    };
-    return [textFieldRef, focus, preventFocusOpeningPicker, preventNextFocusOpeningPicker];
-}
-function useCalendarVisibility(_a, focus) {
-    var allowTextInput = _a.allowTextInput, onAfterMenuDismiss = _a.onAfterMenuDismiss;
-    var _b = react__WEBPACK_IMPORTED_MODULE_1__["useState"](false), isCalendarShown = _b[0], setIsCalendarShown = _b[1];
-    var isMounted = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](false);
-    var async = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_16__[/* useAsync */ "a"])();
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        if (isMounted.current && !isCalendarShown) {
-            // In browsers like IE, textfield gets unfocused when datepicker is collapsed
-            if (allowTextInput) {
-                async.requestAnimationFrame(focus);
-            }
-            // If DatePicker's menu (Calendar) is closed, run onAfterMenuDismiss
-            onAfterMenuDismiss === null || onAfterMenuDismiss === void 0 ? void 0 : onAfterMenuDismiss();
-        }
-        isMounted.current = true;
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [isCalendarShown]);
-    return [isCalendarShown, setIsCalendarShown];
-}
-function useSelectedDate(_a) {
-    var formatDate = _a.formatDate, value = _a.value, onSelectDate = _a.onSelectDate;
-    var _b = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_17__[/* useControllableValue */ "a"])(value, undefined, function (ev, newValue) {
-        return onSelectDate === null || onSelectDate === void 0 ? void 0 : onSelectDate(newValue);
-    }), selectedDate = _b[0], setSelectedDateState = _b[1];
-    var _c = react__WEBPACK_IMPORTED_MODULE_1__["useState"](function () { return (value && formatDate ? formatDate(value) : ''); }), formattedDate = _c[0], setFormattedDate = _c[1];
-    var setSelectedDate = function (newDate) {
-        setSelectedDateState(newDate);
-        setFormattedDate(newDate && formatDate ? formatDate(newDate) : '');
-    };
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        setFormattedDate(value && formatDate ? formatDate(value) : '');
-    }, [formatDate, value]);
-    return [selectedDate, formattedDate, setSelectedDate, setFormattedDate];
-}
-function useErrorMessage(_a, selectedDate, setSelectedDate, inputValue, isCalendarShown) {
-    var _b;
-    var isRequired = _a.isRequired, allowTextInput = _a.allowTextInput, strings = _a.strings, parseDateFromString = _a.parseDateFromString, onSelectDate = _a.onSelectDate, formatDate = _a.formatDate, minDate = _a.minDate, maxDate = _a.maxDate, textField = _a.textField;
-    var _c = react__WEBPACK_IMPORTED_MODULE_1__["useState"](), errorMessage = _c[0], setErrorMessage = _c[1];
-    var _d = react__WEBPACK_IMPORTED_MODULE_1__["useState"](), statusMessage = _d[0], setStatusMessage = _d[1];
-    var isFirstLoadRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](true);
-    var validateOnLoad = (_b = textField === null || textField === void 0 ? void 0 : textField.validateOnLoad) !== null && _b !== void 0 ? _b : true;
-    var validateTextInput = function (date) {
-        if (date === void 0) { date = null; }
-        if (allowTextInput) {
-            if (inputValue || date) {
-                // Don't parse if the selected date has the same formatted string as what we're about to parse.
-                // The formatted string might be ambiguous (ex: "1/2/3" or "New Year Eve") and the parser might
-                // not be able to come up with the exact same date.
-                if (selectedDate && !errorMessage && formatDate && formatDate(date !== null && date !== void 0 ? date : selectedDate) === inputValue) {
-                    return;
-                }
-                date = date || parseDateFromString(inputValue);
-                // Check if date is null, or date is Invalid Date
-                if (!date || isNaN(date.getTime())) {
-                    // Reset invalid input field, if formatting is available
-                    setSelectedDate(selectedDate);
-                    // default the newer isResetStatusMessage string to invalidInputErrorMessage for legacy support
-                    var selectedText = formatDate ? formatDate(selectedDate) : '';
-                    var statusText = strings.isResetStatusMessage
-                        ? Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* format */ "a"])(strings.isResetStatusMessage, inputValue, selectedText)
-                        : strings.invalidInputErrorMessage || '';
-                    setStatusMessage(statusText);
-                }
-                else {
-                    // Check against optional date boundaries
-                    if (isDateOutOfBounds(date, minDate, maxDate)) {
-                        setErrorMessage(strings.isOutOfBoundsErrorMessage || ' ');
-                    }
-                    else {
-                        setSelectedDate(date);
-                        setErrorMessage(undefined);
-                        setStatusMessage(undefined);
-                    }
-                }
-            }
-            else {
-                // Only show error for empty inputValue if it is a required field
-                setErrorMessage(isRequired ? strings.isRequiredErrorMessage || ' ' : undefined);
-                // If no input date string or input date string is invalid
-                // date variable will be null, callback should expect null value for this case
-                onSelectDate === null || onSelectDate === void 0 ? void 0 : onSelectDate(date);
-            }
-        }
-        else if (isRequired && !inputValue) {
-            // Check when DatePicker is a required field but has NO input value
-            setErrorMessage(strings.isRequiredErrorMessage || ' ');
-        }
-        else {
-            // Cleanup the error message and status message
-            setErrorMessage(undefined);
-            setStatusMessage(undefined);
-        }
-    };
-    react__WEBPACK_IMPORTED_MODULE_1__["useEffect"](function () {
-        if (isFirstLoadRef.current) {
-            isFirstLoadRef.current = false;
-            if (!validateOnLoad) {
-                return;
-            }
-        }
-        if (isRequired && !selectedDate) {
-            setErrorMessage(strings.isRequiredErrorMessage || ' ');
-        }
-        else if (selectedDate && isDateOutOfBounds(selectedDate, minDate, maxDate)) {
-            setErrorMessage(strings.isOutOfBoundsErrorMessage || ' ');
-        }
-        else {
-            setErrorMessage(undefined);
-        }
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [
-        // We don't want to compare the date itself, since two instances of date at the same time are not equal
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        minDate && Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__[/* getDatePartHashValue */ "g"])(minDate),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        maxDate && Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__[/* getDatePartHashValue */ "g"])(maxDate),
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        selectedDate && Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__[/* getDatePartHashValue */ "g"])(selectedDate),
-        isRequired,
-        validateOnLoad,
-    ]);
-    return [
-        isCalendarShown ? undefined : errorMessage,
-        validateTextInput,
-        setErrorMessage,
-        isCalendarShown ? undefined : statusMessage,
-        setStatusMessage,
-    ];
-}
-var DatePickerBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (propsWithoutDefaults, forwardedRef) {
-    var _a, _b;
-    var props = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_4__[/* getPropsWithDefaults */ "a"])(DEFAULT_PROPS, propsWithoutDefaults);
-    var firstDayOfWeek = props.firstDayOfWeek, strings = props.strings, label = props.label, theme = props.theme, className = props.className, styles = props.styles, initialPickerDate = props.initialPickerDate, isRequired = props.isRequired, disabled = props.disabled, ariaLabel = props.ariaLabel, pickerAriaLabel = props.pickerAriaLabel, placeholder = props.placeholder, allowTextInput = props.allowTextInput, borderless = props.borderless, minDate = props.minDate, maxDate = props.maxDate, showCloseButton = props.showCloseButton, calendarProps = props.calendarProps, calloutProps = props.calloutProps, textFieldProps = props.textField, underlined = props.underlined, allFocusable = props.allFocusable, _c = props.calendarAs, CalendarType = _c === void 0 ? _Calendar__WEBPACK_IMPORTED_MODULE_8__[/* Calendar */ "a"] : _c, tabIndex = props.tabIndex, _d = props.disableAutoFocus, disableAutoFocus = _d === void 0 ? true : _d;
-    var id = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_18__[/* useId */ "a"])('DatePicker', props.id);
-    var calloutId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_18__[/* useId */ "a"])('DatePicker-Callout');
-    var calendar = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var datePickerDiv = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var _e = useFocusLogic(), textFieldRef = _e[0], focus = _e[1], preventFocusOpeningPicker = _e[2], preventNextFocusOpeningPicker = _e[3];
-    var _f = useCalendarVisibility(props, focus), isCalendarShown = _f[0], setIsCalendarShown = _f[1];
-    var _g = useSelectedDate(props), selectedDate = _g[0], formattedDate = _g[1], setSelectedDate = _g[2], setFormattedDate = _g[3];
-    var _h = useErrorMessage(props, selectedDate, setSelectedDate, formattedDate, isCalendarShown), errorMessage = _h[0], validateTextInput = _h[1], setErrorMessage = _h[2], statusMessage = _h[3], setStatusMessage = _h[4];
-    var showDatePickerPopup = react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function () {
-        if (!isCalendarShown) {
-            preventNextFocusOpeningPicker();
-            setIsCalendarShown(true);
-        }
-    }, [isCalendarShown, preventNextFocusOpeningPicker, setIsCalendarShown]);
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        focus: focus,
-        reset: function () {
-            setIsCalendarShown(false);
-            setSelectedDate(undefined);
-            setErrorMessage(undefined);
-            setStatusMessage(undefined);
-        },
-        showDatePickerPopup: showDatePickerPopup,
-    }); }, [focus, setErrorMessage, setIsCalendarShown, setSelectedDate, setStatusMessage, showDatePickerPopup]);
-    var onTextFieldFocus = function () {
-        if (disableAutoFocus) {
-            return;
-        }
-        if (!allowTextInput) {
-            if (!preventFocusOpeningPicker.current) {
-                showDatePickerPopup();
-            }
-            preventFocusOpeningPicker.current = false;
-        }
-    };
-    var onSelectDate = function (date) {
-        if (props.calendarProps && props.calendarProps.onSelectDate) {
-            props.calendarProps.onSelectDate(date);
-        }
-        calendarDismissed(date);
-    };
-    var onCalloutPositioned = function () {
-        var shouldFocus = true;
-        // If the user has specified that the callout shouldn't use initial focus, then respect
-        // that and don't attempt to set focus. That will default to true within the callout
-        // so we need to check if it's undefined here.
-        if (props.calloutProps && props.calloutProps.setInitialFocus !== undefined) {
-            shouldFocus = props.calloutProps.setInitialFocus;
-        }
-        if (calendar.current && shouldFocus) {
-            calendar.current.focus();
-        }
-    };
-    var onTextFieldBlur = function (ev) {
-        validateTextInput();
-    };
-    var onTextFieldChanged = function (ev, newValue) {
-        var _a;
-        var textField = props.textField;
-        if (allowTextInput) {
-            if (isCalendarShown) {
-                dismissDatePickerPopup();
-            }
-            setFormattedDate(newValue);
-        }
-        (_a = textField === null || textField === void 0 ? void 0 : textField.onChange) === null || _a === void 0 ? void 0 : _a.call(textField, ev, newValue);
-    };
-    var onTextFieldKeyDown = function (ev) {
-        // eslint-disable-next-line deprecation/deprecation
-        switch (ev.which) {
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__[/* KeyCodes */ "a"].enter:
-                ev.preventDefault();
-                ev.stopPropagation();
-                if (!isCalendarShown) {
-                    validateTextInput();
-                    showDatePickerPopup();
-                }
-                else {
-                    // When DatePicker allows input date string directly,
-                    // it is expected to hit another enter to close the popup
-                    if (props.allowTextInput) {
-                        dismissDatePickerPopup();
-                    }
-                }
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__[/* KeyCodes */ "a"].escape:
-                handleEscKey(ev);
-                break;
-            case _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__[/* KeyCodes */ "a"].down:
-                if (ev.altKey && !isCalendarShown) {
-                    showDatePickerPopup();
-                }
-                break;
-            default:
-                break;
-        }
-    };
-    var onTextFieldClick = function (ev) {
-        // default openOnClick to !props.disableAutoFocus for legacy support of disableAutoFocus behavior
-        var openOnClick = props.openOnClick || !props.disableAutoFocus;
-        if (openOnClick && !isCalendarShown && !props.disabled) {
-            showDatePickerPopup();
-            return;
-        }
-        if (props.allowTextInput) {
-            dismissDatePickerPopup();
-        }
-    };
-    var onIconClick = function (ev) {
-        ev.stopPropagation();
-        if (!isCalendarShown && !props.disabled) {
-            showDatePickerPopup();
-        }
-        else if (props.allowTextInput) {
-            dismissDatePickerPopup();
-        }
-    };
-    var dismissDatePickerPopup = function (newlySelectedDate) {
-        if (isCalendarShown) {
-            setIsCalendarShown(false);
-            validateTextInput(newlySelectedDate);
-            if (!allowTextInput && newlySelectedDate) {
-                setSelectedDate(newlySelectedDate);
-            }
-        }
-    };
-    var renderTextfieldDescription = function (inputProps, defaultRender) {
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](react__WEBPACK_IMPORTED_MODULE_1__["Fragment"], null,
-            inputProps.description || inputProps.onRenderDescription ? defaultRender(inputProps) : null,
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { "aria-live": "assertive", className: classNames.statusMessage }, statusMessage)));
-    };
-    var renderReadOnlyInput = function (inputProps) {
-        var divProps = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(inputProps, _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* divProperties */ "f"]);
-        // Need to merge styles so the provided styles win over the default ones. This is due to the classnames having the
-        // same specificity.
-        var readOnlyTextFieldClassName = Object(_Styling__WEBPACK_IMPORTED_MODULE_13__[/* mergeStyles */ "G"])(divProps.className, classNames.readOnlyTextField);
-        // Talkback on Android treats readonly inputs as disabled, so swipe gestures to open the Calendar
-        // don't register. Workaround is rendering a div with role="combobox" (passed in via TextField props).
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, divProps, { className: readOnlyTextFieldClassName, tabIndex: tabIndex || 0 }), formattedDate || (
-        // Putting the placeholder in a separate span fixes specificity issues for the text color
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", { className: classNames.readOnlyPlaceholder }, placeholder))));
-    };
-    /**
-     * Callback for closing the calendar callout
-     */
-    var calendarDismissed = function (newlySelectedDate) {
-        preventNextFocusOpeningPicker();
-        dismissDatePickerPopup(newlySelectedDate);
-        // don't need to focus the text box, if necessary the focusTrapZone will do it
-    };
-    var calloutDismissed = function (ev) {
-        calendarDismissed();
-    };
-    var handleEscKey = function (ev) {
-        if (isCalendarShown) {
-            ev.stopPropagation();
-            calendarDismissed();
-        }
-    };
-    var onCalendarDismissed = function (ev) {
-        calendarDismissed();
-    };
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        disabled: disabled,
-        underlined: underlined,
-        label: !!label,
-        isDatePickerShown: isCalendarShown,
-    });
-    var nativeProps = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(props, _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* divProperties */ "f"], ['value']);
-    var iconProps = textFieldProps && textFieldProps.iconProps;
-    var textFieldId = textFieldProps && textFieldProps.id && textFieldProps.id !== id ? textFieldProps.id : id + '-label';
-    var readOnly = !allowTextInput && !disabled;
-    var dataIsFocusable = (_b = (_a = textFieldProps === null || textFieldProps === void 0 ? void 0 : textFieldProps['data-is-focusable']) !== null && _a !== void 0 ? _a : props['data-is-focusable']) !== null && _b !== void 0 ? _b : true;
-    // Props to create a semantic but non-focusable button when the datepicker has a text input
-    // Used for voice control and touch screen reader accessibility
-    var iconA11yProps = allowTextInput
-        ? {
-            role: 'button',
-            'aria-expanded': isCalendarShown,
-            'aria-label': ariaLabel !== null && ariaLabel !== void 0 ? ariaLabel : label,
-            'aria-labelledby': textFieldProps && textFieldProps['aria-labelledby'],
-        }
-        : {};
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, nativeProps, { className: classNames.root, ref: forwardedRef }),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { ref: datePickerDiv, "aria-owns": isCalendarShown ? calloutId : undefined, className: classNames.wrapper },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_TextField__WEBPACK_IMPORTED_MODULE_14__[/* TextField */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ role: "combobox", label: label, "aria-expanded": isCalendarShown, ariaLabel: ariaLabel, "aria-haspopup": "dialog", "aria-controls": isCalendarShown ? calloutId : undefined, required: isRequired, disabled: disabled, errorMessage: errorMessage, placeholder: placeholder, borderless: borderless, value: formattedDate, componentRef: textFieldRef, underlined: underlined, tabIndex: tabIndex, readOnly: !allowTextInput }, textFieldProps, { "data-is-focusable": dataIsFocusable, id: textFieldId, className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* css */ "a"])(classNames.textField, textFieldProps && textFieldProps.className), iconProps: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ iconName: 'Calendar' }, iconA11yProps), iconProps), { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* css */ "a"])(classNames.icon, iconProps && iconProps.className), onClick: onIconClick }), 
-                // eslint-disable-next-line react/jsx-no-bind
-                onRenderDescription: renderTextfieldDescription, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onKeyDown: onTextFieldKeyDown, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onFocus: onTextFieldFocus, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onBlur: onTextFieldBlur, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onClick: onTextFieldClick, 
-                // eslint-disable-next-line react/jsx-no-bind
-                onChange: onTextFieldChanged, onRenderInput: readOnly ? renderReadOnlyInput : undefined }))),
-        isCalendarShown && (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Callout__WEBPACK_IMPORTED_MODULE_11__[/* Callout */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ id: calloutId, role: "dialog", ariaLabel: pickerAriaLabel, isBeakVisible: false, gapSpace: 0, doNotLayer: false, target: datePickerDiv.current, directionalHint: _Callout__WEBPACK_IMPORTED_MODULE_12__[/* DirectionalHint */ "a"].bottomLeftEdge }, calloutProps, { className: Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* css */ "a"])(classNames.callout, calloutProps && calloutProps.className), 
-            // eslint-disable-next-line react/jsx-no-bind
-            onDismiss: calloutDismissed, 
-            // eslint-disable-next-line react/jsx-no-bind
-            onPositioned: onCalloutPositioned }),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusTrapZone__WEBPACK_IMPORTED_MODULE_15__[/* FocusTrapZone */ "a"], { isClickableOutsideFocusTrap: true, disableFirstFocus: disableAutoFocus },
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](CalendarType, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, calendarProps, { 
-                    // eslint-disable-next-line react/jsx-no-bind
-                    onSelectDate: onSelectDate, 
-                    // eslint-disable-next-line react/jsx-no-bind
-                    onDismiss: onCalendarDismissed, isMonthPickerVisible: props.isMonthPickerVisible, showMonthPickerAsOverlay: props.showMonthPickerAsOverlay, today: props.today, value: selectedDate || initialPickerDate, firstDayOfWeek: firstDayOfWeek, strings: strings, highlightCurrentMonth: props.highlightCurrentMonth, highlightSelectedMonth: props.highlightSelectedMonth, showWeekNumbers: props.showWeekNumbers, firstWeekOfYear: props.firstWeekOfYear, showGoToToday: props.showGoToToday, dateTimeFormatter: props.dateTimeFormatter, minDate: minDate, maxDate: maxDate, componentRef: calendar, showCloseButton: showCloseButton, allFocusable: allFocusable })))))));
-});
-DatePickerBase.displayName = 'DatePickerBase';
-function isDateOutOfBounds(date, minDate, maxDate) {
-    return (!!minDate && Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__[/* compareDatePart */ "e"])(minDate, date) > 0) || (!!maxDate && Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_10__[/* compareDatePart */ "e"])(maxDate, date) < 0);
-}
-//# sourceMappingURL=DatePicker.base.js.map
-
-/***/ }),
-
-/***/ "kDgz":
-/*!***************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/DatePicker/defaults.js ***!
-  \***************************************************************************************************************************************/
-/*! exports provided: defaultDatePickerStrings */
-/*! exports used: defaultDatePickerStrings */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return defaultDatePickerStrings; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _Calendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Calendar */ "y50k");
-
-
-var defaultDatePickerStrings = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, _Calendar__WEBPACK_IMPORTED_MODULE_1__[/* defaultCalendarStrings */ "b"]), { prevMonthAriaLabel: 'Go to previous month', nextMonthAriaLabel: 'Go to next month', prevYearAriaLabel: 'Go to previous year', nextYearAriaLabel: 'Go to next year', closeButtonAriaLabel: 'Close date picker', isRequiredErrorMessage: 'Field is required', invalidInputErrorMessage: 'Invalid date format', isResetStatusMessage: 'Invalid entry "{0}", date reset to "{1}"' });
-//# sourceMappingURL=defaults.js.map
-
-/***/ }),
-
-/***/ "ksR5":
-/*!**************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/OverflowSet/OverflowSet.styles.js ***!
-  \**************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-var overflowItemStyle = {
-    flexShrink: 0,
-    display: 'inherit',
-};
-var getStyles = function (props) {
-    var className = props.className, vertical = props.vertical;
-    return {
-        root: [
-            'ms-OverflowSet',
-            {
-                position: 'relative',
-                display: 'flex',
-                flexWrap: 'nowrap',
-            },
-            vertical && { flexDirection: 'column' },
-            className,
-        ],
-        item: ['ms-OverflowSet-item', overflowItemStyle],
-        overflowButton: ['ms-OverflowSet-overflowButton', overflowItemStyle],
-    };
-};
-//# sourceMappingURL=OverflowSet.styles.js.map
-
-/***/ }),
-
-/***/ "lo2o":
-/*!**************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Toggle/Toggle.base.js ***!
-  \**************************************************************************************************************************************/
-/*! exports provided: ToggleBase */
-/*! exports used: ToggleBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ToggleBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/react-hooks */ "Txh6");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @fluentui/react-hooks */ "Te7Q");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/utilities */ "e6CW");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/utilities */ "obGf");
-/* harmony import */ var _Label_Label__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../Label/Label */ "Rel8");
-
-
-
-
-
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_5__[/* classNamesFunction */ "a"])();
-var COMPONENT_NAME = 'Toggle';
-var ToggleBase = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (props, forwardedRef) {
-    var _a = props.as, RootType = _a === void 0 ? 'div' : _a, ariaLabel = props.ariaLabel, controlledChecked = props.checked, className = props.className, _b = props.defaultChecked, defaultChecked = _b === void 0 ? false : _b, disabled = props.disabled, inlineLabel = props.inlineLabel, label = props.label, 
-    // eslint-disable-next-line deprecation/deprecation
-    offAriaLabel = props.offAriaLabel, offText = props.offText, 
-    // eslint-disable-next-line deprecation/deprecation
-    onAriaLabel = props.onAriaLabel, onChange = props.onChange, 
-    // eslint-disable-next-line deprecation/deprecation
-    onChanged = props.onChanged, onToggleClick = props.onClick, onText = props.onText, role = props.role, styles = props.styles, theme = props.theme;
-    var _c = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_2__[/* useControllableValue */ "a"])(controlledChecked, defaultChecked, react__WEBPACK_IMPORTED_MODULE_1__["useCallback"](function (ev, isChecked) {
-        onChange === null || onChange === void 0 ? void 0 : onChange(ev, isChecked);
-        onChanged === null || onChanged === void 0 ? void 0 : onChanged(isChecked);
-    }, [onChange, onChanged])), checked = _c[0], setChecked = _c[1];
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        disabled: disabled,
-        checked: checked,
-        inlineLabel: inlineLabel,
-        onOffMissing: !onText && !offText,
-    });
-    var badAriaLabel = checked ? onAriaLabel : offAriaLabel;
-    var id = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__[/* useId */ "a"])(COMPONENT_NAME, props.id);
-    var labelId = "".concat(id, "-label");
-    var stateTextId = "".concat(id, "-stateText");
-    var stateText = checked ? onText : offText;
-    var toggleNativeProps = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getNativeProps */ "h"])(props, _fluentui_utilities__WEBPACK_IMPORTED_MODULE_6__[/* inputProperties */ "l"], [
-        'defaultChecked',
-    ]);
-    // The following properties take priority for what Narrator should read:
-    // 1. ariaLabel
-    // 2. onAriaLabel (if checked) or offAriaLabel (if not checked)
-    // 3. label, if existent
-    var labelledById = undefined;
-    if (!ariaLabel && !badAriaLabel) {
-        if (label) {
-            labelledById = labelId;
-        }
-        if (stateText && !labelledById) {
-            labelledById = stateTextId;
-        }
-    }
-    var toggleButton = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_7__[/* useFocusRects */ "c"])(toggleButton);
-    useComponentRef(props, checked, toggleButton);
-    if (true) {
-        // eslint-disable-next-line react-hooks/rules-of-hooks -- build-time conditional
-        Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useWarnings */ "a"])({
-            name: COMPONENT_NAME,
-            props: props,
-            deprecations: {
-                offAriaLabel: undefined,
-                onAriaLabel: 'ariaLabel',
-                onChanged: 'onChange',
-            },
-            mutuallyExclusive: { checked: 'defaultChecked' },
-        });
-    }
-    var onClick = function (ev) {
-        if (!disabled) {
-            setChecked(!checked, ev);
-            if (onToggleClick) {
-                onToggleClick(ev);
-            }
-        }
-    };
-    var slotProps = {
-        root: {
-            className: classNames.root,
-            hidden: toggleNativeProps.hidden,
-        },
-        label: {
-            children: label,
-            className: classNames.label,
-            htmlFor: id,
-            id: labelId,
-        },
-        container: {
-            className: classNames.container,
-        },
-        pill: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, toggleNativeProps), { 'aria-disabled': disabled, 'aria-checked': checked, 'aria-label': ariaLabel ? ariaLabel : badAriaLabel, 'aria-labelledby': labelledById, className: classNames.pill, 'data-is-focusable': true, 'data-ktp-target': true, disabled: disabled, id: id, onClick: onClick, ref: toggleButton, role: role ? role : 'switch', type: 'button' }),
-        thumb: {
-            className: classNames.thumb,
-        },
-        stateText: {
-            children: stateText,
-            className: classNames.text,
-            htmlFor: id,
-            id: stateTextId,
-        },
-    };
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](RootType, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ ref: forwardedRef }, slotProps.root),
-        label && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Label_Label__WEBPACK_IMPORTED_MODULE_8__[/* Label */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, slotProps.label)),
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, slotProps.container),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("button", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, slotProps.pill),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("span", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, slotProps.thumb))),
-            ((checked && onText) || offText) && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Label_Label__WEBPACK_IMPORTED_MODULE_8__[/* Label */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, slotProps.stateText)))));
-});
-ToggleBase.displayName = COMPONENT_NAME + 'Base';
-var useComponentRef = function (props, isChecked, toggleButtonRef) {
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        get checked() {
-            return !!isChecked;
-        },
-        focus: function () {
-            if (toggleButtonRef.current) {
-                toggleButtonRef.current.focus();
-            }
-        },
-    }); }, [isChecked, toggleButtonRef]);
-};
-//# sourceMappingURL=Toggle.base.js.map
-
-/***/ }),
-
-/***/ "mGi9":
-/*!***************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarDayGrid.js ***!
-  \***************************************************************************************************************************************************/
-/*! exports provided: CalendarDayGrid */
-/*! exports used: CalendarDayGrid */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDayGrid; });
-/* harmony import */ var _CalendarDayGrid_base__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CalendarDayGrid.base */ "uxow");
-/* harmony import */ var _CalendarDayGrid_styles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CalendarDayGrid.styles */ "CljN");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../Utilities */ "MBBx");
-
-
-
-var CalendarDayGrid = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* styled */ "a"])(_CalendarDayGrid_base__WEBPACK_IMPORTED_MODULE_0__[/* CalendarDayGridBase */ "a"], _CalendarDayGrid_styles__WEBPACK_IMPORTED_MODULE_1__[/* styles */ "a"], undefined, { scope: 'CalendarDayGrid' });
-//# sourceMappingURL=CalendarDayGrid.js.map
 
 /***/ }),
 
@@ -11144,7 +6914,7 @@ var GlobalClassNames = {
 var CHECK_CELL_WIDTH = 48;
 var getDetailsRowCheckStyles = function (props) {
     var theme = props.theme, className = props.className, isHeader = props.isHeader, selected = props.selected, anySelected = props.anySelected, canSelect = props.canSelect, compact = props.compact, isVisible = props.isVisible;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var rowHeight = _DetailsRow_styles__WEBPACK_IMPORTED_MODULE_1__[/* DEFAULT_ROW_HEIGHTS */ "b"].rowHeight, compactRowHeight = _DetailsRow_styles__WEBPACK_IMPORTED_MODULE_1__[/* DEFAULT_ROW_HEIGHTS */ "b"].compactRowHeight;
     var height = isHeader ? _DetailsHeader_styles__WEBPACK_IMPORTED_MODULE_2__[/* HEADER_HEIGHT */ "a"] : compact ? compactRowHeight : rowHeight;
     var isCheckVisible = isVisible || selected || anySelected;
@@ -11153,7 +6923,7 @@ var getDetailsRowCheckStyles = function (props) {
         check: [
             !canSelect && classNames.isDisabled,
             isHeader && classNames.isHeader,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getFocusStyle */ "u"])(theme),
             theme.fonts.small,
             _components_Check_Check_styles__WEBPACK_IMPORTED_MODULE_3__[/* CheckGlobalClassNames */ "a"].checkHost,
             {
@@ -11177,50 +6947,6 @@ var getDetailsRowCheckStyles = function (props) {
     };
 };
 //# sourceMappingURL=DetailsRowCheck.styles.js.map
-
-/***/ }),
-
-/***/ "nVNi":
-/*!************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Button/CommandBarButton/CommandBarButton.js ***!
-  \************************************************************************************************************************************************************/
-/*! exports provided: CommandBarButton */
-/*! exports used: CommandBarButton */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommandBarButton; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _BaseButton__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../BaseButton */ "1rtd");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../Utilities */ "3eXo");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../Utilities */ "GAaB");
-/* harmony import */ var _CommandBarButton_styles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CommandBarButton.styles */ "wiWh");
-
-
-
-
-
-/**
- * {@docCategory Button}
- */
-var CommandBarButton = /** @class */ (function (_super) {
-    Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __extends */ "c"])(CommandBarButton, _super);
-    function CommandBarButton() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    CommandBarButton.prototype.render = function () {
-        var _a;
-        var styles = (_a = this.props, _a.styles), theme = _a.theme;
-        return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_BaseButton__WEBPACK_IMPORTED_MODULE_2__[/* BaseButton */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, this.props, { variantClassName: "ms-Button--commandBar", styles: Object(_CommandBarButton_styles__WEBPACK_IMPORTED_MODULE_5__[/* getStyles */ "a"])(theme, styles), onRenderDescription: _Utilities__WEBPACK_IMPORTED_MODULE_3__[/* nullRender */ "a"] })));
-    };
-    CommandBarButton = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __decorate */ "b"])([
-        Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* customizable */ "a"])('CommandBarButton', ['theme', 'styles'], true)
-    ], CommandBarButton);
-    return CommandBarButton;
-}(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
-//# sourceMappingURL=CommandBarButton.js.map
 
 /***/ }),
 
@@ -11297,10 +7023,10 @@ var HEADER_HEIGHT = 42;
 var getCellStyles = function (props) {
     var theme = props.theme, _a = props.cellStyleProps, cellStyleProps = _a === void 0 ? _DetailsRow_styles__WEBPACK_IMPORTED_MODULE_4__[/* DEFAULT_CELL_STYLE_PROPS */ "a"] : _a;
     var semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return [
         classNames.cell,
-        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme),
+        Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme),
         {
             color: semanticColors.bodyText,
             position: 'relative',
@@ -11321,7 +7047,7 @@ var getDetailsHeaderStyles = function (props) {
     var _a, _b, _c, _d;
     var theme = props.theme, className = props.className, isAllSelected = props.isAllSelected, isResizingColumn = props.isResizingColumn, isSizing = props.isSizing, isAllCollapsed = props.isAllCollapsed, _e = props.cellStyleProps, cellStyleProps = _e === void 0 ? _DetailsRow_styles__WEBPACK_IMPORTED_MODULE_4__[/* DEFAULT_CELL_STYLE_PROPS */ "a"] : _e;
     var semanticColors = theme.semanticColors, palette = theme.palette, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var colors = {
         iconForegroundColor: semanticColors.bodySubtext,
         headerForegroundColor: semanticColors.bodyText,
@@ -11433,7 +7159,7 @@ var getDetailsHeaderStyles = function (props) {
         },
         cellSizer: [
             classNames.cellSizer,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* focusClear */ "u"])(),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* focusClear */ "t"])(),
             {
                 display: 'inline-block',
                 position: 'relative',
@@ -11503,10 +7229,10 @@ var getDetailsHeaderStyles = function (props) {
             cursor: 'ew-resize',
             background: 'rgba(255, 255, 255, 0)',
             selectors: (_d = {},
-                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'transparent' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'transparent' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _d),
         },
-        accessibleLabel: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "D"],
+        accessibleLabel: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "C"],
         dropHintCircleStyle: [
             classNames.dropHintCircleStyle,
             {
@@ -11582,28 +7308,6 @@ var SelectAllVisibility;
     SelectAllVisibility[SelectAllVisibility["visible"] = 2] = "visible";
 })(SelectAllVisibility || (SelectAllVisibility = {}));
 //# sourceMappingURL=DetailsHeader.types.js.map
-
-/***/ }),
-
-/***/ "q5rQ":
-/*!*************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ResizeGroup/ResizeGroup.types.js ***!
-  \*************************************************************************************************************************************************/
-/*! exports provided: ResizeGroupDirection */
-/*! exports used: ResizeGroupDirection */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ResizeGroupDirection; });
-/**
- * {@docCategory ResizeGroup}
- */
-var ResizeGroupDirection;
-(function (ResizeGroupDirection) {
-    ResizeGroupDirection[ResizeGroupDirection["horizontal"] = 0] = "horizontal";
-    ResizeGroupDirection[ResizeGroupDirection["vertical"] = 1] = "vertical";
-})(ResizeGroupDirection || (ResizeGroupDirection = {}));
-//# sourceMappingURL=ResizeGroup.types.js.map
 
 /***/ }),
 
@@ -11725,427 +7429,6 @@ var ShimmeredDetailsListBase = /** @class */ (function (_super) {
 }(react__WEBPACK_IMPORTED_MODULE_1__["Component"]));
 
 //# sourceMappingURL=ShimmeredDetailsList.base.js.map
-
-/***/ }),
-
-/***/ "qQgw":
-/*!**************************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/ChoiceGroup/ChoiceGroupOption/ChoiceGroupOption.styles.js ***!
-  \**************************************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Styling */ "ogYq");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "zRON");
-
-
-
-var GlobalClassNames = {
-    root: 'ms-ChoiceField',
-    choiceFieldWrapper: 'ms-ChoiceField-wrapper',
-    input: 'ms-ChoiceField-input',
-    field: 'ms-ChoiceField-field',
-    innerField: 'ms-ChoiceField-innerField',
-    imageWrapper: 'ms-ChoiceField-imageWrapper',
-    iconWrapper: 'ms-ChoiceField-iconWrapper',
-    labelWrapper: 'ms-ChoiceField-labelWrapper',
-    checked: 'is-checked',
-};
-var labelWrapperLineHeight = 15;
-var labelWrapperHeight = labelWrapperLineHeight * 2 + 2; // adding 2px height to ensure text doesn't get cutoff
-var iconSize = 32;
-var choiceFieldSize = 20;
-var choiceFieldTransitionDuration = '200ms';
-var choiceFieldTransitionTiming = 'cubic-bezier(.4, 0, .23, 1)';
-var radioButtonSpacing = 3;
-var radioButtonInnerSize = 5;
-function getChoiceGroupFocusStyle(focusBorderColor, hasIconOrImage) {
-    var _a, _b;
-    return [
-        'is-inFocus',
-        {
-            selectors: (_a = {},
-                _a[".".concat(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* IsFocusVisibleClassName */ "a"], " &, :host(.").concat(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* IsFocusVisibleClassName */ "a"], ") &")] = {
-                    position: 'relative',
-                    outline: 'transparent',
-                    selectors: {
-                        '::-moz-focus-inner': {
-                            border: 0,
-                        },
-                        ':after': {
-                            content: '""',
-                            top: -2,
-                            right: -2,
-                            bottom: -2,
-                            left: -2,
-                            pointerEvents: 'none',
-                            border: "1px solid ".concat(focusBorderColor),
-                            position: 'absolute',
-                            selectors: (_b = {},
-                                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                                    borderColor: 'WindowText',
-                                    borderWidth: hasIconOrImage ? 1 : 2,
-                                },
-                                _b),
-                        },
-                    },
-                },
-                _a),
-        },
-    ];
-}
-function getImageWrapperStyle(isSelectedImageWrapper, className, checked) {
-    return [
-        className,
-        {
-            paddingBottom: 2,
-            transitionProperty: 'opacity',
-            transitionDuration: choiceFieldTransitionDuration,
-            transitionTimingFunction: 'ease',
-            selectors: {
-                '.ms-Image': {
-                    display: 'inline-block',
-                    borderStyle: 'none',
-                },
-            },
-        },
-        (checked ? !isSelectedImageWrapper : isSelectedImageWrapper) && [
-            'is-hidden',
-            {
-                position: 'absolute',
-                left: 0,
-                top: 0,
-                width: '100%',
-                height: '100%',
-                overflow: 'hidden',
-                opacity: 0,
-            },
-        ],
-    ];
-}
-var getStyles = function (props) {
-    var _a, _b, _c, _d, _e;
-    var theme = props.theme, hasIcon = props.hasIcon, hasImage = props.hasImage, checked = props.checked, disabled = props.disabled, imageIsLarge = props.imageIsLarge, focused = props.focused, imageSize = props.imageSize;
-    var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
-    // Tokens
-    // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.smallInputBorder
-    var circleBorderColor = palette.neutralPrimary;
-    var circleHoveredBorderColor = semanticColors.inputBorderHovered;
-    var circleCheckedBorderColor = semanticColors.inputBackgroundChecked;
-    // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.inputBackgroundCheckedHovered
-    var circleCheckedHoveredBorderColor = palette.themeDark;
-    var circleDisabledBorderColor = semanticColors.disabledBodySubtext;
-    var circleBackgroundColor = semanticColors.bodyBackground;
-    var dotUncheckedHoveredColor = palette.neutralSecondary;
-    var dotCheckedColor = semanticColors.inputBackgroundChecked;
-    // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.inputBackgroundCheckedHovered
-    var dotCheckedHoveredColor = palette.themeDark;
-    var dotDisabledColor = semanticColors.disabledBodySubtext;
-    // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.bodyTextChecked
-    var labelHoverFocusColor = palette.neutralDark;
-    var focusBorderColor = semanticColors.focusBorder;
-    var iconOrImageChoiceBorderUncheckedHoveredColor = semanticColors.inputBorderHovered;
-    // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.inputBackgroundCheckedHovered
-    var iconOrImageChoiceBorderCheckedColor = semanticColors.inputBackgroundChecked;
-    var iconOrImageChoiceBorderCheckedHoveredColor = palette.themeDark;
-    var iconOrImageChoiceBackgroundColor = palette.neutralLighter;
-    var fieldHoverOrFocusProperties = {
-        selectors: {
-            '.ms-ChoiceFieldLabel': {
-                color: labelHoverFocusColor,
-            },
-            ':before': {
-                borderColor: checked ? circleCheckedHoveredBorderColor : circleHoveredBorderColor,
-            },
-            ':after': [
-                !hasIcon &&
-                    !hasImage &&
-                    !checked && {
-                    content: '""',
-                    transitionProperty: 'background-color',
-                    left: 5,
-                    top: 5,
-                    width: 10,
-                    height: 10,
-                    backgroundColor: dotUncheckedHoveredColor,
-                },
-                checked && {
-                    borderColor: dotCheckedHoveredColor,
-                    background: dotCheckedHoveredColor,
-                },
-            ],
-        },
-    };
-    var enabledFieldWithImageHoverOrFocusProperties = {
-        borderColor: checked ? iconOrImageChoiceBorderCheckedHoveredColor : iconOrImageChoiceBorderUncheckedHoveredColor,
-        selectors: {
-            ':before': {
-                opacity: 1,
-                borderColor: checked ? circleCheckedHoveredBorderColor : circleHoveredBorderColor,
-            },
-        },
-    };
-    var circleAreaProperties = [
-        {
-            content: '""',
-            display: 'inline-block',
-            backgroundColor: circleBackgroundColor,
-            borderWidth: 1,
-            borderStyle: 'solid',
-            borderColor: circleBorderColor,
-            width: choiceFieldSize,
-            height: choiceFieldSize,
-            fontWeight: 'normal',
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            boxSizing: 'border-box',
-            transitionProperty: 'border-color',
-            transitionDuration: choiceFieldTransitionDuration,
-            transitionTimingFunction: choiceFieldTransitionTiming,
-            borderRadius: '50%',
-        },
-        disabled && {
-            borderColor: circleDisabledBorderColor,
-            selectors: (_a = {},
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'GrayText', background: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                _a),
-        },
-        checked && {
-            borderColor: disabled ? circleDisabledBorderColor : circleCheckedBorderColor,
-            selectors: (_b = {},
-                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                    borderColor: 'Highlight',
-                    background: 'Window',
-                    forcedColorAdjust: 'none',
-                },
-                _b),
-        },
-        (hasIcon || hasImage) && {
-            top: radioButtonSpacing,
-            right: radioButtonSpacing,
-            left: 'auto',
-            opacity: checked ? 1 : 0,
-        },
-    ];
-    var dotAreaProperties = [
-        {
-            content: '""',
-            width: 0,
-            height: 0,
-            borderRadius: '50%',
-            position: 'absolute',
-            left: choiceFieldSize / 2,
-            right: 0,
-            transitionProperty: 'border-width',
-            transitionDuration: choiceFieldTransitionDuration,
-            transitionTimingFunction: choiceFieldTransitionTiming,
-            boxSizing: 'border-box',
-        },
-        checked && {
-            borderWidth: 5,
-            borderStyle: 'solid',
-            borderColor: disabled ? dotDisabledColor : dotCheckedColor,
-            background: dotCheckedColor,
-            left: 5,
-            top: 5,
-            width: 10,
-            height: 10,
-            selectors: (_c = {},
-                _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                    borderColor: 'Highlight',
-                    forcedColorAdjust: 'none',
-                },
-                _c),
-        },
-        checked &&
-            (hasIcon || hasImage) && {
-            top: radioButtonSpacing + radioButtonInnerSize,
-            right: radioButtonSpacing + radioButtonInnerSize,
-            left: 'auto', // To reset the value of 'left' to its default value, so that 'right' works
-        },
-    ];
-    return {
-        root: [
-            classNames.root,
-            theme.fonts.medium,
-            {
-                display: 'flex',
-                alignItems: 'center',
-                boxSizing: 'border-box',
-                color: semanticColors.bodyText,
-                minHeight: 26,
-                border: 'none',
-                position: 'relative',
-                marginTop: 8,
-                selectors: {
-                    '.ms-ChoiceFieldLabel': {
-                        display: 'inline-block',
-                    },
-                },
-            },
-            !hasIcon &&
-                !hasImage && {
-                selectors: {
-                    '.ms-ChoiceFieldLabel': {
-                        paddingLeft: '26px',
-                    },
-                },
-            },
-            hasImage && 'ms-ChoiceField--image',
-            hasIcon && 'ms-ChoiceField--icon',
-            (hasIcon || hasImage) && {
-                display: 'inline-flex',
-                fontSize: 0,
-                margin: '0 4px 4px 0',
-                paddingLeft: 0,
-                backgroundColor: iconOrImageChoiceBackgroundColor,
-                height: '100%',
-            },
-        ],
-        choiceFieldWrapper: [
-            classNames.choiceFieldWrapper,
-            focused && getChoiceGroupFocusStyle(focusBorderColor, hasIcon || hasImage),
-        ],
-        // The hidden input
-        input: [
-            classNames.input,
-            {
-                position: 'absolute',
-                opacity: 0,
-                top: 0,
-                right: 0,
-                width: '100%',
-                height: '100%',
-                margin: 0,
-            },
-            disabled && 'is-disabled',
-        ],
-        field: [
-            classNames.field,
-            checked && classNames.checked,
-            {
-                display: 'inline-block',
-                cursor: 'pointer',
-                marginTop: 0,
-                position: 'relative',
-                verticalAlign: 'top',
-                userSelect: 'none',
-                minHeight: 20,
-                selectors: {
-                    ':hover': !disabled && fieldHoverOrFocusProperties,
-                    ':focus': !disabled && fieldHoverOrFocusProperties,
-                    // The circle
-                    ':before': circleAreaProperties,
-                    // The dot
-                    ':after': dotAreaProperties,
-                },
-            },
-            hasIcon && 'ms-ChoiceField--icon',
-            hasImage && 'ms-ChoiceField-field--image',
-            (hasIcon || hasImage) && {
-                boxSizing: 'content-box',
-                cursor: 'pointer',
-                paddingTop: 22,
-                margin: 0,
-                textAlign: 'center',
-                transitionProperty: 'all',
-                transitionDuration: choiceFieldTransitionDuration,
-                transitionTimingFunction: 'ease',
-                border: '1px solid transparent',
-                justifyContent: 'center',
-                alignItems: 'center',
-                display: 'flex',
-                flexDirection: 'column',
-            },
-            checked && {
-                borderColor: iconOrImageChoiceBorderCheckedColor,
-            },
-            (hasIcon || hasImage) &&
-                !disabled && {
-                selectors: {
-                    ':hover': enabledFieldWithImageHoverOrFocusProperties,
-                    ':focus': enabledFieldWithImageHoverOrFocusProperties,
-                },
-            },
-            disabled && {
-                cursor: 'default',
-                selectors: {
-                    '.ms-ChoiceFieldLabel': {
-                        color: semanticColors.disabledBodyText,
-                        selectors: (_d = {},
-                            _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                            _d),
-                    },
-                },
-            },
-            checked &&
-                disabled && {
-                borderColor: iconOrImageChoiceBackgroundColor,
-            },
-        ],
-        innerField: [
-            classNames.innerField,
-            hasImage && {
-                // using non-null assertion because we have a default in `ChoiceGroupOptionBase` class.
-                height: imageSize.height,
-                width: imageSize.width,
-            },
-            (hasIcon || hasImage) && {
-                position: 'relative',
-                display: 'inline-block',
-                paddingLeft: 30,
-                paddingRight: 30,
-            },
-            (hasIcon || hasImage) &&
-                imageIsLarge && {
-                paddingLeft: 24,
-                paddingRight: 24,
-            },
-            (hasIcon || hasImage) &&
-                disabled && {
-                opacity: 0.25,
-                selectors: (_e = {},
-                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                        color: 'GrayText',
-                        opacity: 1,
-                    },
-                    _e),
-            },
-        ],
-        imageWrapper: getImageWrapperStyle(false, classNames.imageWrapper, checked),
-        selectedImageWrapper: getImageWrapperStyle(true, classNames.imageWrapper, checked),
-        iconWrapper: [
-            classNames.iconWrapper,
-            {
-                fontSize: iconSize,
-                lineHeight: iconSize,
-                height: iconSize,
-            },
-        ],
-        labelWrapper: [
-            classNames.labelWrapper,
-            fonts.medium,
-            (hasIcon || hasImage) && {
-                display: 'block',
-                position: 'relative',
-                margin: '4px 8px 2px 8px',
-                height: labelWrapperHeight,
-                lineHeight: labelWrapperLineHeight,
-                // using non-null assertion because we have a default in `ChoiceGroupOptionBase` class.
-                maxWidth: imageSize.width * 2,
-                overflow: 'hidden',
-                whiteSpace: 'pre-wrap',
-            },
-        ],
-    };
-};
-//# sourceMappingURL=ChoiceGroupOption.styles.js.map
 
 /***/ }),
 
@@ -12499,7 +7782,7 @@ var getStyles = function (props) {
     var _a;
     var theme = props.theme;
     var fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -12647,7 +7930,7 @@ function useSelectedItemsState(_a) {
                 .filter(function (index) { return index !== -1; });
         };
         var getSelectedIndex = function (searchKey) {
-            return Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* findIndex */ "d"])(options, function (option) {
+            return Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* findIndex */ "c"])(options, function (option) {
                 // eslint-disable-next-line eqeqeq
                 if (searchKey != null) {
                     return option.key === searchKey;
@@ -13511,7 +8794,7 @@ var getStyles = function (props) {
     var linkInteractedColor = semanticColors.linkHovered;
     var linkDisabledColor = semanticColors.disabledText;
     var focusBorderColor = semanticColors.focusBorder;
-    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -13531,12 +8814,12 @@ var getStyles = function (props) {
                         boxShadow: "0 0 0 1px ".concat(focusBorderColor, " inset"),
                         outline: "1px auto ".concat(focusBorderColor),
                         selectors: (_b = {},
-                            _b[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                            _b[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                                 outline: '1px solid WindowText',
                             },
                             _b),
                     },
-                    _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         // For IE high contrast mode
                         borderBottom: 'none',
                     },
@@ -13556,7 +8839,7 @@ var getStyles = function (props) {
                 userSelect: 'text',
                 borderBottom: '1px solid transparent',
                 selectors: (_c = {},
-                    _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         color: 'LinkText',
                         forcedColorAdjust: 'none',
                     },
@@ -13564,7 +8847,7 @@ var getStyles = function (props) {
             },
             !isButton && {
                 selectors: (_d = {},
-                    _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         // This is mainly for MessageBar, which sets MsHighContrastAdjust: none by default
                         MsHighContrastAdjust: 'auto',
                         forcedColorAdjust: 'auto',
@@ -13583,7 +8866,7 @@ var getStyles = function (props) {
                                 pointerEvents: 'none',
                             }
                         },
-                        _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                        _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                             // We need to specify the color in High Contrast because of the case of Links rendering as buttons.
                             color: 'GrayText',
                         },
@@ -13596,7 +8879,7 @@ var getStyles = function (props) {
                         color: linkInteractedColor,
                         textDecoration: 'underline',
                         selectors: (_f = {},
-                            _f[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                            _f[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                                 color: 'LinkText',
                             },
                             _f),
@@ -13604,7 +8887,7 @@ var getStyles = function (props) {
                     '&:focus': {
                         color: linkColor,
                         selectors: (_g = {},
-                            _g[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                            _g[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                                 color: 'LinkText',
                             },
                             _g),
@@ -13683,7 +8966,7 @@ var getDetailsColumnStyles = function (props) {
     var _a;
     var theme = props.theme, headerClassName = props.headerClassName, iconClassName = props.iconClassName, isActionable = props.isActionable, isEmpty = props.isEmpty, isIconVisible = props.isIconVisible, isPadded = props.isPadded, isIconOnly = props.isIconOnly, _b = props.cellStyleProps, cellStyleProps = _b === void 0 ? _DetailsRow_styles__WEBPACK_IMPORTED_MODULE_2__[/* DEFAULT_CELL_STYLE_PROPS */ "a"] : _b, transitionDurationDrag = props.transitionDurationDrag, transitionDurationDrop = props.transitionDurationDrop;
     var semanticColors = theme.semanticColors, palette = theme.palette, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var colors = {
         iconForegroundColor: semanticColors.bodySubtext,
         headerForegroundColor: semanticColors.bodyText,
@@ -13773,7 +9056,7 @@ var getDetailsColumnStyles = function (props) {
         ],
         cellTitle: [
             classNames.cellTitle,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme),
             Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'stretch', boxSizing: 'border-box', overflow: 'hidden', padding: "0 ".concat(cellStyleProps.cellRightPadding, "px 0 ").concat(cellStyleProps.cellLeftPadding, "px") }, (isIconOnly
                 ? {
                     alignContent: 'flex-end',
@@ -13788,7 +9071,7 @@ var getDetailsColumnStyles = function (props) {
                 flex: '0 1 auto',
                 overflow: 'hidden',
                 textOverflow: 'ellipsis',
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold,
                 fontSize: fonts.medium.fontSize,
             },
             isIconOnly && {
@@ -13807,7 +9090,7 @@ var getDetailsColumnStyles = function (props) {
             bottom: 0,
             right: 0,
         },
-        accessibleLabel: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "D"],
+        accessibleLabel: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "C"],
         borderWhileDragging: borderWhileDragging,
         noBorderWhileDragging: [borderAfterDragOrDrop, { transition: "outline ".concat(transitionDurationDrag, "ms ease") }],
         borderAfterDropping: borderWhileDragging,
@@ -13850,312 +9133,6 @@ var getShimmeredDetailsListStyles = function (props) {
     };
 };
 //# sourceMappingURL=ShimmeredDetailsList.styles.js.map
-
-/***/ }),
-
-/***/ "uxow":
-/*!********************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/CalendarDayGrid/CalendarDayGrid.base.js ***!
-  \********************************************************************************************************************************************************/
-/*! exports provided: CalendarDayGridBase */
-/*! exports used: CalendarDayGridBase */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CalendarDayGridBase; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/utilities */ "Eh56");
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @fluentui/utilities */ "Ge+E");
-/* harmony import */ var _FocusZone__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../FocusZone */ "YJ2P");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "xTA1");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "MS0h");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "7TYG");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "tbDN");
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "1wzI");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @fluentui/react-hooks */ "kWOt");
-/* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
-/* harmony import */ var _CalendarMonthHeaderRow__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./CalendarMonthHeaderRow */ "RFJQ");
-/* harmony import */ var _CalendarGridRow__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./CalendarGridRow */ "UCtQ");
-
-
-
-
-
-
-
-
-var getClassNames = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNamesFunction */ "a"])();
-function useDayRefs() {
-    var daysRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"]({});
-    var getSetRefCallback = function (dayKey) { return function (element) {
-        if (element === null) {
-            delete daysRef.current[dayKey];
-        }
-        else {
-            daysRef.current[dayKey] = element;
-        }
-    }; };
-    return [daysRef, getSetRefCallback];
-}
-function useWeeks(props, onSelectDate, getSetRefCallback) {
-    /**
-     * Initial parsing of the given props to generate IDayInfo two dimensional array, which contains a representation
-     * of every day in the grid. Convenient for helping with conversions between day refs and Date objects in callbacks.
-     */
-    var weeks = react__WEBPACK_IMPORTED_MODULE_1__["useMemo"](function () {
-        var _a;
-        var weeksGrid = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_5__[/* getDayGrid */ "a"])(props);
-        var firstVisibleDay = weeksGrid[1][0].originalDate;
-        var lastVisibleDay = weeksGrid[weeksGrid.length - 1][6].originalDate;
-        var markedDays = ((_a = props.getMarkedDays) === null || _a === void 0 ? void 0 : _a.call(props, firstVisibleDay, lastVisibleDay)) || [];
-        /**
-         * Weeks is a 2D array. Weeks[0] contains the last week of the prior range,
-         * Weeks[weeks.length - 1] contains first week of next range. These are for transition states.
-         *
-         * Weeks[1... weeks.length - 2] contains the actual visible data
-         */
-        var returnValue = [];
-        for (var weekIndex = 0; weekIndex < weeksGrid.length; weekIndex++) {
-            var week = [];
-            var _loop_1 = function (dayIndex) {
-                var day = weeksGrid[weekIndex][dayIndex];
-                var dayInfo = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ onSelected: function () { return onSelectDate(day.originalDate); }, setRef: getSetRefCallback(day.key) }, day), { isMarked: day.isMarked || (markedDays === null || markedDays === void 0 ? void 0 : markedDays.some(function (markedDay) { return Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* compareDates */ "f"])(day.originalDate, markedDay); })) });
-                week.push(dayInfo);
-            };
-            for (var dayIndex = 0; dayIndex < _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* DAYS_IN_WEEK */ "a"]; dayIndex++) {
-                _loop_1(dayIndex);
-            }
-            returnValue.push(week);
-        }
-        return returnValue;
-        // TODO: this is missing deps on getSetRefCallback and onSelectDate (and depending on the entire
-        // props object may not be a good idea due to likely frequent mutation). It would be easy to
-        // fix getSetRefCallback to not mutate every render, but onSelectDate is passed down from
-        // Calendar and trying to fix it requires a huge cascade of changes.
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [props]);
-    return weeks;
-}
-/**
- * Hook to determine whether to animate the CalendarDayGrid forwards or backwards
- * @returns true if the grid should animate backwards; false otherwise
- */
-function useAnimateBackwards(weeks) {
-    var previousNavigatedDate = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_10__[/* usePrevious */ "a"])(weeks[0][0].originalDate);
-    if (!previousNavigatedDate || previousNavigatedDate.getTime() === weeks[0][0].originalDate.getTime()) {
-        return undefined;
-    }
-    else if (previousNavigatedDate <= weeks[0][0].originalDate) {
-        return false;
-    }
-    else {
-        return true;
-    }
-}
-function useWeekCornerStyles(props) {
-    /**
-     *
-     * Section for setting the rounded corner styles on individual day cells. Individual day cells need different
-     * corners to be rounded depending on which date range type and where the cell is located in the current grid.
-     * If we just round all of the corners, there isn't a good overlap and we get gaps between contiguous day boxes
-     * in Edge browser.
-     *
-     */
-    var getWeekCornerStyles = function (classNames, initialWeeks) {
-        var weekCornersStyled = {};
-        /* need to handle setting all of the corners on arbitrarily shaped blobs
-              __
-           __|A |
-          |B |C |__
-          |D |E |F |
-    
-          in this case, A needs top left rounded, top right rounded
-          B needs top left rounded
-          C doesn't need any rounding
-          D needs bottom left rounded
-          E doesn't need any rounding
-          F needs top right rounding
-        */
-        // cut off the animation transition weeks
-        var weeks = initialWeeks.slice(1, initialWeeks.length - 1);
-        // if there's an item above, lose both top corners. Item below, lose both bottom corners, etc.
-        weeks.forEach(function (week, weekIndex) {
-            week.forEach(function (day, dayIndex) {
-                var above = weeks[weekIndex - 1] &&
-                    weeks[weekIndex - 1][dayIndex] &&
-                    isInSameHoverRange(weeks[weekIndex - 1][dayIndex].originalDate, day.originalDate, weeks[weekIndex - 1][dayIndex].isSelected, day.isSelected);
-                var below = weeks[weekIndex + 1] &&
-                    weeks[weekIndex + 1][dayIndex] &&
-                    isInSameHoverRange(weeks[weekIndex + 1][dayIndex].originalDate, day.originalDate, weeks[weekIndex + 1][dayIndex].isSelected, day.isSelected);
-                var left = weeks[weekIndex][dayIndex - 1] &&
-                    isInSameHoverRange(weeks[weekIndex][dayIndex - 1].originalDate, day.originalDate, weeks[weekIndex][dayIndex - 1].isSelected, day.isSelected);
-                var right = weeks[weekIndex][dayIndex + 1] &&
-                    isInSameHoverRange(weeks[weekIndex][dayIndex + 1].originalDate, day.originalDate, weeks[weekIndex][dayIndex + 1].isSelected, day.isSelected);
-                var style = [];
-                style.push(calculateRoundedStyles(classNames, above, below, left, right));
-                style.push(calculateBorderStyles(classNames, above, below, left, right));
-                weekCornersStyled[weekIndex + '_' + dayIndex] = style.join(' ');
-            });
-        });
-        return weekCornersStyled;
-    };
-    var calculateRoundedStyles = function (classNames, above, below, left, right) {
-        var style = [];
-        var roundedTopLeft = !above && !left;
-        var roundedTopRight = !above && !right;
-        var roundedBottomLeft = !below && !left;
-        var roundedBottomRight = !below && !right;
-        if (roundedTopLeft) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.topRightCornerDate : classNames.topLeftCornerDate);
-        }
-        if (roundedTopRight) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.topLeftCornerDate : classNames.topRightCornerDate);
-        }
-        if (roundedBottomLeft) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.bottomRightCornerDate : classNames.bottomLeftCornerDate);
-        }
-        if (roundedBottomRight) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.bottomLeftCornerDate : classNames.bottomRightCornerDate);
-        }
-        return style.join(' ');
-    };
-    var calculateBorderStyles = function (classNames, above, below, left, right) {
-        var style = [];
-        if (!above) {
-            style.push(classNames.datesAbove);
-        }
-        if (!below) {
-            style.push(classNames.datesBelow);
-        }
-        if (!left) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.datesRight : classNames.datesLeft);
-        }
-        if (!right) {
-            style.push(Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])() ? classNames.datesLeft : classNames.datesRight);
-        }
-        return style.join(' ');
-    };
-    var isInSameHoverRange = function (date1, date2, date1Selected, date2Selected) {
-        var dateRangeType = props.dateRangeType, firstDayOfWeek = props.firstDayOfWeek, workWeekDays = props.workWeekDays;
-        // The hover state looks weird with non-contiguous days in work week view. In work week, show week hover state
-        var dateRangeHoverType = dateRangeType === _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* DateRangeType */ "b"].WorkWeek ? _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* DateRangeType */ "b"].Week : dateRangeType;
-        // we do not pass daysToSelectInDayView because we handle setting those styles dyanamically in onMouseOver
-        var dateRange = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getDateRangeArray */ "h"])(date1, dateRangeHoverType, firstDayOfWeek, workWeekDays);
-        if (date1Selected !== date2Selected) {
-            // if one is selected and the other is not, they can't be in the same range
-            return false;
-        }
-        else if (date1Selected && date2Selected) {
-            // if they're both selected at the same time they must be in the same range
-            return true;
-        }
-        // otherwise, both must be unselected, so check the dateRange
-        return dateRange.filter(function (date) { return date.getTime() === date2.getTime(); }).length > 0;
-    };
-    return [getWeekCornerStyles, calculateRoundedStyles];
-}
-var CalendarDayGridBase = function (props) {
-    var navigatedDayRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
-    var activeDescendantId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_11__[/* useId */ "a"])();
-    var onSelectDate = function (selectedDate) {
-        var _a, _b;
-        var firstDayOfWeek = props.firstDayOfWeek, minDate = props.minDate, maxDate = props.maxDate, workWeekDays = props.workWeekDays, daysToSelectInDayView = props.daysToSelectInDayView, restrictedDates = props.restrictedDates;
-        var restrictedDatesOptions = { minDate: minDate, maxDate: maxDate, restrictedDates: restrictedDates };
-        var dateRange = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getDateRangeArray */ "h"])(selectedDate, dateRangeType, firstDayOfWeek, workWeekDays, daysToSelectInDayView);
-        dateRange = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_8__[/* getBoundedDateRange */ "a"])(dateRange, minDate, maxDate);
-        dateRange = dateRange.filter(function (d) {
-            return !Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_9__[/* isRestrictedDate */ "a"])(d, restrictedDatesOptions);
-        });
-        (_a = props.onSelectDate) === null || _a === void 0 ? void 0 : _a.call(props, selectedDate, dateRange);
-        (_b = props.onNavigateDate) === null || _b === void 0 ? void 0 : _b.call(props, selectedDate, true);
-    };
-    var _a = useDayRefs(), daysRef = _a[0], getSetRefCallback = _a[1];
-    var weeks = useWeeks(props, onSelectDate, getSetRefCallback);
-    var animateBackwards = useAnimateBackwards(weeks);
-    var _b = useWeekCornerStyles(props), getWeekCornerStyles = _b[0], calculateRoundedStyles = _b[1];
-    react__WEBPACK_IMPORTED_MODULE_1__["useImperativeHandle"](props.componentRef, function () { return ({
-        focus: function () {
-            var _a, _b;
-            (_b = (_a = navigatedDayRef.current) === null || _a === void 0 ? void 0 : _a.focus) === null || _b === void 0 ? void 0 : _b.call(_a);
-        },
-    }); }, []);
-    /**
-     *
-     * Section for setting hover/pressed styles. Because we want arbitrary blobs of days to be selectable, to support
-     * highlighting every day in the month for month view, css :hover style isn't enough, so we need mouse callbacks
-     * to set classnames on all relevant child refs to apply the styling
-     *
-     */
-    var getDayInfosInRangeOfDay = function (dayToCompare) {
-        // The hover state looks weird with non-contiguous days in work week view. In work week, show week hover state
-        var dateRangeHoverType = getDateRangeTypeToUse(props.dateRangeType, props.workWeekDays);
-        // gets all the dates for the given date range type that are in the same date range as the given day
-        var dateRange = Object(_fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_6__[/* getDateRangeArray */ "h"])(dayToCompare.originalDate, dateRangeHoverType, props.firstDayOfWeek, props.workWeekDays, props.daysToSelectInDayView).map(function (date) { return date.getTime(); });
-        // gets all the day refs for the given dates
-        var dayInfosInRange = weeks.reduce(function (accumulatedValue, currentWeek) {
-            return accumulatedValue.concat(currentWeek.filter(function (weekDay) { return dateRange.indexOf(weekDay.originalDate.getTime()) !== -1; }));
-        }, []);
-        return dayInfosInRange;
-    };
-    var getRefsFromDayInfos = function (dayInfosInRange) {
-        var dayRefs = [];
-        dayRefs = dayInfosInRange.map(function (dayInfo) { return daysRef.current[dayInfo.key]; });
-        return dayRefs;
-    };
-    var styles = props.styles, theme = props.theme, className = props.className, dateRangeType = props.dateRangeType, showWeekNumbers = props.showWeekNumbers, labelledBy = props.labelledBy, lightenDaysOutsideNavigatedMonth = props.lightenDaysOutsideNavigatedMonth, animationDirection = props.animationDirection;
-    var classNames = getClassNames(styles, {
-        theme: theme,
-        className: className,
-        dateRangeType: dateRangeType,
-        showWeekNumbers: showWeekNumbers,
-        lightenDaysOutsideNavigatedMonth: lightenDaysOutsideNavigatedMonth === undefined ? true : lightenDaysOutsideNavigatedMonth,
-        animationDirection: animationDirection,
-        animateBackwards: animateBackwards,
-    });
-    // When the month is highlighted get the corner dates so that styles can be added to them
-    var weekCorners = getWeekCornerStyles(classNames, weeks);
-    var partialWeekProps = {
-        weeks: weeks,
-        navigatedDayRef: navigatedDayRef,
-        calculateRoundedStyles: calculateRoundedStyles,
-        activeDescendantId: activeDescendantId,
-        classNames: classNames,
-        weekCorners: weekCorners,
-        getDayInfosInRangeOfDay: getDayInfosInRangeOfDay,
-        getRefsFromDayInfos: getRefsFromDayInfos,
-    };
-    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_FocusZone__WEBPACK_IMPORTED_MODULE_4__[/* FocusZone */ "a"], { className: classNames.wrapper, preventDefaultWhenHandled: true },
-        react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("table", { className: classNames.table, "aria-multiselectable": "false", "aria-labelledby": labelledBy, "aria-activedescendant": activeDescendantId, role: "grid" },
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("tbody", null,
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarMonthHeaderRow__WEBPACK_IMPORTED_MODULE_12__[/* CalendarMonthHeaderRow */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, { classNames: classNames, weeks: weeks })),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarGridRow__WEBPACK_IMPORTED_MODULE_13__[/* CalendarGridRow */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, partialWeekProps, { week: weeks[0], weekIndex: -1, rowClassName: classNames.firstTransitionWeek, ariaRole: "presentation", ariaHidden: true })),
-                weeks.slice(1, weeks.length - 1).map(function (week, weekIndex) { return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarGridRow__WEBPACK_IMPORTED_MODULE_13__[/* CalendarGridRow */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, partialWeekProps, { key: weekIndex, week: week, weekIndex: weekIndex, rowClassName: classNames.weekRow }))); }),
-                react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_CalendarGridRow__WEBPACK_IMPORTED_MODULE_13__[/* CalendarGridRow */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, props, partialWeekProps, { week: weeks[weeks.length - 1], weekIndex: -2, rowClassName: classNames.lastTransitionWeek, ariaRole: "presentation", ariaHidden: true }))))));
-};
-CalendarDayGridBase.displayName = 'CalendarDayGridBase';
-/**
- * When given work week, if the days are non-contiguous, the hover states look really weird. So for non-contiguous
- * work weeks, we'll just show week view instead.
- */
-function getDateRangeTypeToUse(dateRangeType, workWeekDays) {
-    if (workWeekDays && dateRangeType === _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* DateRangeType */ "b"].WorkWeek) {
-        var sortedWWDays = workWeekDays.slice().sort();
-        var isContiguous = true;
-        for (var i = 1; i < sortedWWDays.length; i++) {
-            if (sortedWWDays[i] !== sortedWWDays[i - 1] + 1) {
-                isContiguous = false;
-                break;
-            }
-        }
-        if (!isContiguous || workWeekDays.length === 0) {
-            return _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_7__[/* DateRangeType */ "b"].Week;
-        }
-    }
-    return dateRangeType;
-}
-//# sourceMappingURL=CalendarDayGrid.base.js.map
 
 /***/ }),
 
@@ -14212,7 +9189,7 @@ var getStyles = function (props) {
     var _f = props.height, height = _f === void 0 ? props.checkBoxHeight || '18px' : _f, checked = props.checked, className = props.className, theme = props.theme;
     var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
     var isRTL = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* getRTL */ "a"])(theme);
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(CheckGlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(CheckGlobalClassNames, theme);
     var sharedCircleCheck = {
         fontSize: height,
         position: 'absolute',
@@ -14265,7 +9242,7 @@ var getStyles = function (props) {
                             background: palette.themePrimary,
                             opacity: 1,
                             selectors: (_b = {},
-                                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                     background: 'Window',
                                 },
                                 _b),
@@ -14281,7 +9258,7 @@ var getStyles = function (props) {
             {
                 color: palette.neutralSecondary,
                 selectors: (_c = {},
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'WindowText',
                     },
                     _c),
@@ -14296,7 +9273,7 @@ var getStyles = function (props) {
             {
                 opacity: 0,
                 color: palette.neutralSecondary,
-                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium,
+                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium,
                 left: isRTL ? '-0.5px' : '.5px',
                 top: '-1px',
                 selectors: (_d = {
@@ -14304,7 +9281,7 @@ var getStyles = function (props) {
                             opacity: 1,
                         }
                     },
-                    _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _d),
             },
             checked && {
@@ -14312,7 +9289,7 @@ var getStyles = function (props) {
                 color: palette.white,
                 fontWeight: 900,
                 selectors: (_e = {},
-                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         border: 'none',
                         color: 'WindowText',
                     },
@@ -14540,213 +9517,6 @@ var GroupFooterBase = function (props) {
 
 /***/ }),
 
-/***/ "wiWh":
-/*!*******************************************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Button/CommandBarButton/CommandBarButton.styles.js ***!
-  \*******************************************************************************************************************************************************************/
-/*! exports provided: getStyles */
-/*! exports used: getStyles */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getStyles; });
-/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "D57K");
-/* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../Styling */ "ogYq");
-/* harmony import */ var _Utilities__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../Utilities */ "02QY");
-/* harmony import */ var _BaseButton_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../BaseButton.styles */ "d4Kq");
-/* harmony import */ var _SplitButton_SplitButton_styles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../SplitButton/SplitButton.styles */ "9gkV");
-/* harmony import */ var _BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../BaseButton.classNames */ "M1CV");
-
-
-
-
-
-
-var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function (theme, customStyles, focusInset, focusColor) {
-    var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
-    var baseButtonStyles = Object(_BaseButton_styles__WEBPACK_IMPORTED_MODULE_3__[/* getStyles */ "a"])(theme);
-    var baseSplitButtonStyles = Object(_SplitButton_SplitButton_styles__WEBPACK_IMPORTED_MODULE_4__[/* getStyles */ "a"])(theme);
-    var p = theme.palette, semanticColors = theme.semanticColors;
-    var commandButtonHighContrastFocus = {
-        left: 4,
-        top: 4,
-        bottom: 4,
-        right: 4,
-        border: 'none',
-    };
-    var commandButtonStyles = {
-        root: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, {
-                inset: 2,
-                highContrastStyle: commandButtonHighContrastFocus,
-                borderColor: 'transparent',
-            }),
-            theme.fonts.medium,
-            (_a = {
-                    minWidth: '40px',
-                    backgroundColor: p.white,
-                    color: p.neutralPrimary,
-                    padding: '0 4px',
-                    border: 'none',
-                    borderRadius: 0
-                },
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                    border: 'none',
-                },
-                _a),
-        ],
-        rootHovered: (_b = {
-                backgroundColor: p.neutralLighter,
-                color: p.neutralDark
-            },
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                color: 'Highlight',
-            },
-            _b[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                color: p.themeDarkAlt,
-            },
-            _b[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonMenuIcon)] = {
-                color: p.neutralPrimary,
-            },
-            _b),
-        rootPressed: (_c = {
-                backgroundColor: p.neutralLight,
-                color: p.neutralDark
-            },
-            _c[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                color: p.themeDark,
-            },
-            _c[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonMenuIcon)] = {
-                color: p.neutralPrimary,
-            },
-            _c),
-        rootChecked: (_d = {
-                backgroundColor: p.neutralLight,
-                color: p.neutralDark
-            },
-            _d[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                color: p.themeDark,
-            },
-            _d[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonMenuIcon)] = {
-                color: p.neutralPrimary,
-            },
-            _d),
-        rootCheckedHovered: (_e = {
-                backgroundColor: p.neutralQuaternaryAlt
-            },
-            _e[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                color: p.themeDark,
-            },
-            _e[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonMenuIcon)] = {
-                color: p.neutralPrimary,
-            },
-            _e),
-        rootExpanded: (_f = {
-                backgroundColor: p.neutralLight,
-                color: p.neutralDark
-            },
-            _f[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                color: p.themeDark,
-            },
-            _f[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonMenuIcon)] = {
-                color: p.neutralPrimary,
-            },
-            _f),
-        rootExpandedHovered: {
-            backgroundColor: p.neutralQuaternaryAlt,
-        },
-        rootDisabled: (_g = {
-                backgroundColor: p.white
-            },
-            _g[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = (_h = {
-                    color: semanticColors.disabledBodySubtext
-                },
-                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-                _h),
-            _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-            _g),
-        // Split button styles
-        splitButtonContainer: (_j = {
-                height: '100%'
-            },
-            _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                border: 'none',
-            },
-            _j),
-        splitButtonDividerDisabled: (_k = {},
-            _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                backgroundColor: 'Window',
-            },
-            _k),
-        splitButtonDivider: {
-            backgroundColor: p.neutralTertiaryAlt,
-        },
-        splitButtonMenuButton: {
-            backgroundColor: p.white,
-            border: 'none',
-            borderTopRightRadius: '0',
-            borderBottomRightRadius: '0',
-            color: p.neutralSecondary,
-            ':hover': (_l = {
-                    backgroundColor: p.neutralLighter,
-                    color: p.neutralDark
-                },
-                _l[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
-                    color: 'Highlight',
-                },
-                _l[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                    color: p.neutralPrimary,
-                },
-                _l),
-            ':active': (_m = {
-                    backgroundColor: p.neutralLight
-                },
-                _m[".".concat(_BaseButton_classNames__WEBPACK_IMPORTED_MODULE_5__[/* ButtonGlobalClassNames */ "a"].msButtonIcon)] = {
-                    color: p.neutralPrimary,
-                },
-                _m),
-        },
-        splitButtonMenuButtonDisabled: (_o = {
-                backgroundColor: p.white
-            },
-            _o[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText', border: 'none', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
-            _o),
-        splitButtonMenuButtonChecked: {
-            backgroundColor: p.neutralLight,
-            color: p.neutralDark,
-            ':hover': {
-                backgroundColor: p.neutralQuaternaryAlt,
-            },
-        },
-        splitButtonMenuButtonExpanded: {
-            backgroundColor: p.neutralLight,
-            color: p.black,
-            ':hover': {
-                backgroundColor: p.neutralQuaternaryAlt,
-            },
-        },
-        splitButtonMenuIcon: {
-            color: p.neutralPrimary,
-        },
-        splitButtonMenuIconDisabled: {
-            color: p.neutralTertiary,
-        },
-        label: {
-            fontWeight: 'normal', // theme.fontWeights.semibold,
-        },
-        icon: {
-            color: p.themePrimary,
-        },
-        menuIcon: {
-            color: p.neutralSecondary,
-        },
-    };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* concatStyleSets */ "s"])(baseButtonStyles, baseSplitButtonStyles, commandButtonStyles, customStyles);
-});
-//# sourceMappingURL=CommandBarButton.styles.js.map
-
-/***/ }),
-
 /***/ "wsOs":
 /*!*************************************************************************************************************************************************!*\
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/GroupedList/GroupedList.types.js ***!
@@ -14766,34 +9536,6 @@ var CollapseAllVisibility;
     CollapseAllVisibility[CollapseAllVisibility["visible"] = 1] = "visible";
 })(CollapseAllVisibility || (CollapseAllVisibility = {}));
 //# sourceMappingURL=GroupedList.types.js.map
-
-/***/ }),
-
-/***/ "x6Lq":
-/*!*******************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/Calendar.types.js ***!
-  \*******************************************************************************************************************************************/
-/*! exports provided: AnimationDirection */
-/*! exports used: AnimationDirection */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AnimationDirection; });
-/**
- * {@docCategory Calendar}
- */
-var AnimationDirection;
-(function (AnimationDirection) {
-    /**
-     * Grid will transition out and in horizontally
-     */
-    AnimationDirection[AnimationDirection["Horizontal"] = 0] = "Horizontal";
-    /**
-     * Grid will transition out and in vertically
-     */
-    AnimationDirection[AnimationDirection["Vertical"] = 1] = "Vertical";
-})(AnimationDirection || (AnimationDirection = {}));
-//# sourceMappingURL=Calendar.types.js.map
 
 /***/ }),
 
@@ -14834,57 +9576,6 @@ var GroupShowAllBase = function (props) {
     return null;
 };
 //# sourceMappingURL=GroupShowAll.base.js.map
-
-/***/ }),
-
-/***/ "y50k":
-/*!*************************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Calendar/defaults.js ***!
-  \*************************************************************************************************************************************/
-/*! exports provided: defaultCalendarStrings, defaultDayPickerStrings, defaultCalendarNavigationIcons */
-/*! exports used: defaultCalendarNavigationIcons, defaultCalendarStrings */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return defaultCalendarStrings; });
-/* unused harmony export defaultDayPickerStrings */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return defaultCalendarNavigationIcons; });
-/* harmony import */ var _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/date-time-utilities */ "Ht0i");
-
-var defaultCalendarStrings = _fluentui_date_time_utilities__WEBPACK_IMPORTED_MODULE_0__[/* DEFAULT_CALENDAR_STRINGS */ "a"];
-/**
- * @deprecated Use `defaultCalendarStrings`
- */
-var defaultDayPickerStrings = defaultCalendarStrings;
-var defaultCalendarNavigationIcons = {
-    leftNavigation: 'Up',
-    rightNavigation: 'Down',
-    closeIcon: 'CalculatorMultiply',
-};
-//# sourceMappingURL=defaults.js.map
-
-/***/ }),
-
-/***/ "z7Wb":
-/*!*********************************************************************************************************************************!*\
-  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/components/Toggle/Toggle.js ***!
-  \*********************************************************************************************************************************/
-/*! exports provided: Toggle */
-/*! exports used: Toggle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Toggle; });
-/* harmony import */ var _fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/utilities */ "MBBx");
-/* harmony import */ var _Toggle_base__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Toggle.base */ "lo2o");
-/* harmony import */ var _Toggle_styles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Toggle.styles */ "/pM6");
-
-
-
-var Toggle = Object(_fluentui_utilities__WEBPACK_IMPORTED_MODULE_0__[/* styled */ "a"])(_Toggle_base__WEBPACK_IMPORTED_MODULE_1__[/* ToggleBase */ "a"], _Toggle_styles__WEBPACK_IMPORTED_MODULE_2__[/* getStyles */ "a"], undefined, {
-    scope: 'Toggle',
-});
-//# sourceMappingURL=Toggle.js.map
 
 /***/ })
 

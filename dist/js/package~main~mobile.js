@@ -5,15 +5,17 @@
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-shared/src/index.ts ***!
   \************************************************************************************************************/
 /*! exports provided: AppHeader, CollapsingArea, CommonCard, CommonCardShimmer, CommonIconSize, CommonIcon, CommonModal, useModalStyles, useContentStyles, useShareSubmissionCardConsentStyles, ModalContent, CommonPanel, CommonSlideDots, ConfirmationDialog, ContentCopyRequestModal, ContentCopyResponseModal, EmptyState, MobileSheet, PillPivot, SpinnerSize, Spinner, ellipsisStyles, TaskModule, useTaskModuleStyles, TaskModuleV2, useTaskModuleV2Styles, useTaskModuleContentCustomizedStyles, useTaskModuleCategorizedTemplateStoreStyles */
-/*! exports used: CommonIcon, EmptyState, Spinner */
+/*! exports used: AppHeader, CommonIcon, EmptyState, Spinner, ellipsisStyles */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _AppHeader__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppHeader */ "F880");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _AppHeader__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
 /* harmony import */ var _CollapsingArea__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./CollapsingArea */ "Z70t");
 /* harmony import */ var _CommonCard__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./CommonCard */ "O8+z");
 /* harmony import */ var _CommonIcon__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CommonIcon */ "Lwxb");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _CommonIcon__WEBPACK_IMPORTED_MODULE_3__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _CommonIcon__WEBPACK_IMPORTED_MODULE_3__["a"]; });
 
 /* harmony import */ var _CommonModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./CommonModal */ "8odi");
 /* harmony import */ var _CommonPanel__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./CommonPanel */ "gUb0");
@@ -22,14 +24,16 @@
 /* harmony import */ var _ContentCopyRequestModal__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./ContentCopyRequestModal */ "C7FI");
 /* harmony import */ var _ContentCopyResponseModal__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./ContentCopyResponseModal */ "Ws0a");
 /* harmony import */ var _EmptyState__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./EmptyState */ "dgNf");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _EmptyState__WEBPACK_IMPORTED_MODULE_10__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _EmptyState__WEBPACK_IMPORTED_MODULE_10__["a"]; });
 
 /* harmony import */ var _MobileSheet__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./MobileSheet */ "dnQF");
 /* harmony import */ var _PillPivot__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./PillPivot */ "TQ8g");
 /* harmony import */ var _Spinner__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Spinner */ "PVww");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _Spinner__WEBPACK_IMPORTED_MODULE_13__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _Spinner__WEBPACK_IMPORTED_MODULE_13__["a"]; });
 
 /* harmony import */ var _styles_ellipsisStyles__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./styles/ellipsisStyles */ "btUH");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _styles_ellipsisStyles__WEBPACK_IMPORTED_MODULE_14__["a"]; });
+
 /* harmony import */ var _TaskModule__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./TaskModule */ "Oi44");
 /* harmony import */ var _TaskModuleV2__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./TaskModuleV2 */ "IG8A");
 
@@ -165,11 +169,10 @@ function useDebounced(func, deps, wait, options) {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/miscs.ts ***!
   \*********************************************************************************************************/
 /*! exports provided: isDefined, extractContinuousRange */
-/*! exports used: isDefined */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isDefined; });
+/* unused harmony export isDefined */
 /* unused harmony export extractContinuousRange */
 /**
  * Check if the value is defined or not with type narrowing.
@@ -257,7 +260,7 @@ const CommonSlideDots = ({ amount, activeIndex, isClickable = false, slideDotsSt
     const styles = Object(_CommonSlideDots_styles__WEBPACK_IMPORTED_MODULE_2__[/* userSlideDotsStyles */ "a"])();
     return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: styles.stepper }, Array(amount)
         .fill(0)
-        .map((_item, index) => (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.selectOption, slideDotsStyles === null || slideDotsStyles === void 0 ? void 0 : slideDotsStyles.selectOption, isClickable && 'is-clickable', index === activeIndex ? 'is-active' : ''), key: index, onClick: isClickable ? () => onClick === null || onClick === void 0 ? void 0 : onClick(index) : undefined, "data-testid": 'option' })))));
+        .map((_item, index) => (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("i", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.selectOption, slideDotsStyles === null || slideDotsStyles === void 0 ? void 0 : slideDotsStyles.selectOption, isClickable && 'is-clickable', index === activeIndex ? 'is-active' : ''), key: index, onClick: isClickable ? () => onClick === null || onClick === void 0 ? void 0 : onClick(index) : undefined, "data-testid": 'option' })))));
 };
 
 
@@ -383,68 +386,34 @@ const CommonPanel = ({ isOpen, onRenderNavigationContent, onDismiss, contentRef,
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/index.ts ***!
   \*********************************************************************************************************/
 /*! exports provided: copyToClipboard, copyImageToClipboard, copyLinkToClipboard, dataTransferIncludesFiles, extractFilesFromDataTransfer, encodeDataUrl, decodeDataUrl, normalizeDate, toZonedISOString, parseDate, parseLocalDateStrictly, parseLocalDate, formatLocalDate, parseLocalDateRange, eraseTime, compareDatesWithoutTime, selectFile, digestBlob, encodeHexString, createFileByBlob, getReadableSizeString, normalizeFileName, splitFileName, joinFileName, uuid, measureImage, parseJson, parseJsonAsStringSet, normalizeStringSet, getMimeByDataUrl, getExtensionByMime, isImageMime, isDefined, extractContinuousRange, parseFloatStrictly, parseIntStrictly, silently, delay, Semaphore, signalAsPromise, allSignalsAsSignal, raceSignalsAsSignal, isAbsoluteUrl, normalizeUrl, openUrl */
-/*! exports used: Semaphore, copyImageToClipboard, createFileByBlob, dataTransferIncludesFiles, decodeDataUrl, delay, encodeDataUrl, extractFilesFromDataTransfer, getExtensionByMime, getMimeByDataUrl, isAbsoluteUrl, isDefined, isImageMime, joinFileName, measureImage, normalizeFileName, normalizeUrl, parseFloatStrictly, selectFile, silently, splitFileName, uuid */
+/*! exports used: Semaphore, delay, isAbsoluteUrl, silently, uuid */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _clipboards__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./clipboards */ "RwJE");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _clipboards__WEBPACK_IMPORTED_MODULE_0__["a"]; });
-
 /* harmony import */ var _data_transfers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./data-transfers */ "XhlK");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _data_transfers__WEBPACK_IMPORTED_MODULE_1__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "h", function() { return _data_transfers__WEBPACK_IMPORTED_MODULE_1__["b"]; });
-
 /* harmony import */ var _data_urls__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./data-urls */ "iMwy");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _data_urls__WEBPACK_IMPORTED_MODULE_2__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _data_urls__WEBPACK_IMPORTED_MODULE_2__["b"]; });
-
 /* harmony import */ var _dates__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./dates */ "42K9");
 /* harmony import */ var _files__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./files */ "h3zH");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _files__WEBPACK_IMPORTED_MODULE_4__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "n", function() { return _files__WEBPACK_IMPORTED_MODULE_4__["b"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "p", function() { return _files__WEBPACK_IMPORTED_MODULE_4__["c"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "s", function() { return _files__WEBPACK_IMPORTED_MODULE_4__["d"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "u", function() { return _files__WEBPACK_IMPORTED_MODULE_4__["e"]; });
-
 /* harmony import */ var _ids__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./ids */ "zmRz");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "v", function() { return _ids__WEBPACK_IMPORTED_MODULE_5__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _ids__WEBPACK_IMPORTED_MODULE_5__["a"]; });
 
 /* harmony import */ var _images__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./images */ "rLoY");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "o", function() { return _images__WEBPACK_IMPORTED_MODULE_6__["a"]; });
-
 /* harmony import */ var _jsons__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./jsons */ "8/+v");
 /* harmony import */ var _mimes__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./mimes */ "sSa5");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "i", function() { return _mimes__WEBPACK_IMPORTED_MODULE_8__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "j", function() { return _mimes__WEBPACK_IMPORTED_MODULE_8__["b"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "m", function() { return _mimes__WEBPACK_IMPORTED_MODULE_8__["c"]; });
-
 /* harmony import */ var _miscs__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./miscs */ "/mfX");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "l", function() { return _miscs__WEBPACK_IMPORTED_MODULE_9__["a"]; });
-
 /* harmony import */ var _numbers__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./numbers */ "y8+Q");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "r", function() { return _numbers__WEBPACK_IMPORTED_MODULE_10__["a"]; });
-
 /* harmony import */ var _promises__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./promises */ "Zb4v");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _promises__WEBPACK_IMPORTED_MODULE_11__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _promises__WEBPACK_IMPORTED_MODULE_11__["a"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "t", function() { return _promises__WEBPACK_IMPORTED_MODULE_11__["b"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _promises__WEBPACK_IMPORTED_MODULE_11__["b"]; });
 
 /* harmony import */ var _semaphores__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./semaphores */ "ZqO1");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _semaphores__WEBPACK_IMPORTED_MODULE_12__["a"]; });
 
 /* harmony import */ var _signals__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./signals */ "/R1q");
 /* harmony import */ var _urls__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./urls */ "Y/b3");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "k", function() { return _urls__WEBPACK_IMPORTED_MODULE_14__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "q", function() { return _urls__WEBPACK_IMPORTED_MODULE_14__["b"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _urls__WEBPACK_IMPORTED_MODULE_14__["a"]; });
 
 
 
@@ -723,7 +692,7 @@ const ConfirmationDialog = ({ title, subText, isOpen, content, dismiss, actions,
     const contentStyles = Object(_ConfirmationDialog_styles__WEBPACK_IMPORTED_MODULE_7__[/* useContentStyles */ "a"])();
     const buttons = actions &&
         actions.map((buttonProps, index) => {
-            return buttonProps.primary ? (react__WEBPACK_IMPORTED_MODULE_6__["createElement"](_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* PrimaryButton */ "a"], Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(contentStyles.button, contentStyles.primaryButton) }, buttonProps, { key: index }))) : (react__WEBPACK_IMPORTED_MODULE_6__["createElement"](_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* DefaultButton */ "a"], Object.assign({ className: contentStyles.button }, buttonProps, { key: index })));
+            return buttonProps.primary ? (react__WEBPACK_IMPORTED_MODULE_6__["createElement"](_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* PrimaryButton */ "a"], Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(contentStyles.button, contentStyles.primaryButton) }, buttonProps, { key: index }))) : (react__WEBPACK_IMPORTED_MODULE_6__["createElement"](_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* DefaultButton */ "a"], Object.assign({ className: contentStyles.button }, buttonProps, { key: index })));
         });
     const dialogProps = {
         hidden: !isOpen,
@@ -776,15 +745,16 @@ const ConfirmationDialog = ({ title, subText, isOpen, content, dismiss, actions,
 
 const useAppHeaderStyles = Object(_styles_makeStyles__WEBPACK_IMPORTED_MODULE_1__[/* makeStyles */ "a"])(theme => ({
     root: {
-        backgroundColor: theme.palette.neutralLight,
+        backgroundColor: theme.palette.white,
         padding: '0 1.25rem',
         height: '3.75rem',
     },
     text: [
         theme.fonts.large,
         {
-            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].bold,
-            marginRight: '5px',
+            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].bold,
+            margin: '15px 10px 15px 10px',
+            color: theme.palette.black,
         },
     ],
 }));
@@ -797,13 +767,11 @@ const useAppHeaderStyles = Object(_styles_makeStyles__WEBPACK_IMPORTED_MODULE_1_
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-people/src/PeopleList/index.ts ***!
   \***********************************************************************************************************************/
 /*! exports provided: PeopleList */
-/*! exports used: PeopleList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _PeopleList__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./PeopleList */ "JIAz");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _PeopleList__WEBPACK_IMPORTED_MODULE_0__["a"]; });
-
+/* unused harmony reexport * */
 
 
 
@@ -840,7 +808,7 @@ const CommonCardShimmer = ({ isMobile, isLowHeight, expanded, }) => {
     const iconSize = expanded ? LARGE_ICON_SIZE : SMALL_ICON_SIZE;
     const gapWidth = expanded ? LARGE_GAP_WIDTH : SMALL_GAP_WIDTH;
     const textHeight = expanded ? LARGE_TEXT_HEIGHT : SMALL_TEXT_HEIGHT;
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Stack */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "G"])(cardStyles.root, expanded && cardStyles.expandedRoot, isMobile && cardStyles.mobileRoot, isMobile && isLowHeight && cardStyles.mobileRootWithoutReminder), verticalAlign: 'space-between' },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Stack */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "F"])(cardStyles.root, expanded && cardStyles.expandedRoot, isMobile && cardStyles.mobileRoot, isMobile && isLowHeight && cardStyles.mobileRootWithoutReminder), verticalAlign: 'space-between' },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* Shimmer */ "a"], { width: singleLine ? undefined : iconSize, shimmerElements: [
                 { type: _fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* ShimmerElementType */ "a"].line, height: iconSize, width: iconSize },
                 { type: _fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* ShimmerElementType */ "a"].gap, width: gapWidth },
@@ -1069,14 +1037,14 @@ const styles = {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-fluentui-icons/src/Icons.tsx ***!
   \*********************************************************************************************************************/
 /*! exports provided: iconStyle, customIconStyle, icons, initFluentuiIcons, IconName */
-/*! exports used: IconName, initFluentuiIcons */
+/*! exports used: IconName, icons, initFluentuiIcons */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export iconStyle */
 /* unused harmony export customIconStyle */
-/* unused harmony export icons */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return initFluentuiIcons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return icons; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return initFluentuiIcons; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return IconName; });
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
@@ -1089,20 +1057,20 @@ const styles = {
 
 
 
-const iconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({
+const iconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])({
     display: 'block',
     width: '100%',
     height: '100%',
     lineHeight: '100%',
     fill: 'currentColor',
 });
-const customIconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({
+const customIconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])({
     display: 'block',
     width: '100%',
     height: '100%',
     lineHeight: '100%',
 });
-const dropdownIconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({
+const dropdownIconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])({
 // fontSize: '24px',
 // width: '24px',
 // height: '24px',
@@ -1110,8 +1078,8 @@ const dropdownIconStyle = /* #__PURE__ */ Object(_fluentui_react__WEBPACK_IMPORT
 const icons = /* #__PURE__ */ {
     ContactCard: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_2__[/* ContactCardRegular */ "b"], { className: iconStyle }),
     Mail: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_3__[/* MailRegular */ "c"], { className: iconStyle }),
-    Chat: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* ChatRegular */ "d"], { className: iconStyle }),
-    Call: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* CallRegular */ "c"], { className: iconStyle }),
+    Chat: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* ChatRegular */ "e"], { className: iconStyle }),
+    Call: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* CallRegular */ "d"], { className: iconStyle }),
     Location: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_3__[/* LocationRegular */ "b"], { className: iconStyle }),
     Desk: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_2__[/* DeskRegular */ "c"], { className: iconStyle }),
     Search: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_5__[/* SearchRegular */ "j"], { className: iconStyle }),
@@ -1119,13 +1087,14 @@ const icons = /* #__PURE__ */ {
     // ChevronRight: <ChevronRightRegular className={iconStyle} />,
     // ChevronLeft: <ChevronLeftRegular className={iconStyle} />,
     Home: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_3__[/* HomeRegular */ "a"], { className: iconStyle }),
-    Calendar: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* CalendarLtrRegular */ "b"], { className: iconStyle }),
+    Calendar: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* CalendarLtrRegular */ "c"], { className: iconStyle }),
     ChevronDown: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_2__[/* ChevronDownFilled */ "a"], { className: dropdownIconStyle }),
     Tag: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_6__[/* TagRegular */ "a"], { className: iconStyle }),
     // Up: <ArrowUpRegular className={iconStyle} />,
     Down: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* ArrowDownRegular */ "a"], { className: iconStyle }),
     Organization: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_5__[/* OrganizationRegular */ "a"], { className: iconStyle }),
     Video: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_6__[/* VideoRegular */ "b"], { className: iconStyle }),
+    Refresh: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_4__[/* ArrowSyncRegular */ "b"], { className: iconStyle }),
     // Presence:
     PresenceAvailable: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_5__[/* PresenceAvailableFilled */ "b"], { className: iconStyle }),
     PresenceAway: react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react_icons__WEBPACK_IMPORTED_MODULE_5__[/* PresenceAwayFilled */ "c"], { className: iconStyle }),
@@ -1294,7 +1263,7 @@ const icons = /* #__PURE__ */ {
     // FireEmoji: <FireEmoji {...emojiProps} />,
 };
 function initFluentuiIcons() {
-    Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* registerIcons */ "J"])({ icons });
+    Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* registerIcons */ "I"])({ icons });
 }
 const IconName = /* #__PURE__ */ Object.fromEntries(Object.keys(icons).map((k) => [k, k]));
 
@@ -1897,12 +1866,12 @@ const CollapsingArea = ({ title, collapse, collapseIcon, expandIcon, children, t
     const collapsingAreaStyles = Object(_CollapsingArea_styles__WEBPACK_IMPORTED_MODULE_5__[/* useCollapsingAreaStyles */ "b"])();
     const ariaControlsId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_2__[/* useId */ "a"])('collapsible-region-');
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: collapsedState ? _CollapsingArea_styles__WEBPACK_IMPORTED_MODULE_5__[/* CollapsedClassName */ "a"] : 'is-expanded' },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(collapsingAreaStyles.title, titleClassName) },
-            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(collapsingAreaStyles.button, styles === null || styles === void 0 ? void 0 : styles.button), onClick: toggle, "aria-expanded": !collapsedState, "aria-controls": ariaControlsId },
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(collapsingAreaStyles.icon, styles === null || styles === void 0 ? void 0 : styles.icon), iconName: collapsedState ? collapseIcon : expandIcon }),
-                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(collapsingAreaStyles.text, styles === null || styles === void 0 ? void 0 : styles.text) }, title)),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(collapsingAreaStyles.title, titleClassName) },
+            react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(collapsingAreaStyles.button, styles === null || styles === void 0 ? void 0 : styles.button), onClick: toggle, "aria-expanded": !collapsedState, "aria-controls": ariaControlsId },
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(collapsingAreaStyles.icon, styles === null || styles === void 0 ? void 0 : styles.icon), iconName: collapsedState ? collapseIcon : expandIcon }),
+                react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(collapsingAreaStyles.text, styles === null || styles === void 0 ? void 0 : styles.text) }, title)),
             farItems),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { id: ariaControlsId, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(collapsingAreaStyles.collapsibleRegion, styles === null || styles === void 0 ? void 0 : styles.collapsibleRegion) }, children)));
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { id: ariaControlsId, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(collapsingAreaStyles.collapsibleRegion, styles === null || styles === void 0 ? void 0 : styles.collapsibleRegion) }, children)));
 };
 
 
@@ -2099,10 +2068,10 @@ const CommonCard = (props) => {
     const cardStyles = Object(_CommonCard_styles__WEBPACK_IMPORTED_MODULE_3__[/* useCommonCardStyles */ "a"])();
     const expanded = expandable && !isMobile && !reminder;
     return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { role: role },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { id: id, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(cardStyles.root, expanded && cardStyles.expandedRoot, isMobile && cardStyles.mobileRoot, isMobile && !reminder && cardStyles.mobileRootWithoutReminder), onClick: onCardClick },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", { id: id, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(cardStyles.root, expanded && cardStyles.expandedRoot, isMobile && cardStyles.mobileRoot, isMobile && !reminder && cardStyles.mobileRootWithoutReminder), onClick: onCardClick },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CommonIcon__WEBPACK_IMPORTED_MODULE_2__[/* CommonIcon */ "a"], { icon: iconName, size: expanded ? _CommonIcon__WEBPACK_IMPORTED_MODULE_2__[/* CommonIconSize */ "b"].Size64 : _CommonIcon__WEBPACK_IMPORTED_MODULE_2__[/* CommonIconSize */ "b"].Size32, iconBackgroundColor: accentColor, title: title, description: description, rightItem: farItem, styles: {
                     root: expanded && cardStyles.expandedIconRoot,
-                    description: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])([
+                    description: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])([
                         highlightDescription && cardStyles.hightlightedDescription,
                         expanded && cardStyles.expandedDescription,
                     ]),
@@ -2118,11 +2087,10 @@ const CommonCard = (props) => {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-hooks/src/blob.ts ***!
   \*********************************************************************************************************/
 /*! exports provided: useBlobObjectUrl */
-/*! exports used: useBlobObjectUrl */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useBlobObjectUrl; });
+/* unused harmony export useBlobObjectUrl */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -2190,7 +2158,7 @@ const PeopleCoin = (_a) => {
         const baseProps = Object.assign({ text: selection.name, title: preventNameAsTitle ? undefined : selection.name }, props);
         if (!icon)
             return baseProps;
-        const iconProps = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_4__[/* isAbsoluteUrl */ "k"])(icon)
+        const iconProps = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_4__[/* isAbsoluteUrl */ "c"])(icon)
             ? {
                 imageProps: { src: icon, imageFit: _fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* ImageFit */ "b"].cover },
                 style: props.coinSize
@@ -2261,7 +2229,7 @@ const PeopleView = (_a) => {
         : { type: _types__WEBPACK_IMPORTED_MODULE_4__[/* PeopleSelectionType */ "a"].Unspecific, id: 'aggregated', name: names, icon: 'People' }, [names, selections]);
     const labelId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_1__[/* useId */ "a"])('label');
     const styles = Object(_PeopleView_styles__WEBPACK_IMPORTED_MODULE_5__[/* usePeopleViewStyles */ "a"])();
-    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.root, className) }, props),
+    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.root, className) }, props),
         react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PeopleCoin__WEBPACK_IMPORTED_MODULE_3__[/* PeopleCoin */ "a"], { selection: aggregatedSelection, onRetrieveIcon: onRetrieveIcon, coinSize: 32 }),
         react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.textContainer },
             react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.names, title: names, "aria-labelledby": labelId }, compactNames !== null && compactNames !== void 0 ? compactNames : names),
@@ -2276,11 +2244,13 @@ const PeopleView = (_a) => {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-shared/src/AppHeader/index.ts ***!
   \**********************************************************************************************************************/
 /*! exports provided: AppHeader */
+/*! exports used: AppHeader */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _AppHeader_component__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./AppHeader.component */ "p/h3");
-/* unused harmony reexport * */
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _AppHeader_component__WEBPACK_IMPORTED_MODULE_0__["a"]; });
+
 
 
 
@@ -2326,7 +2296,7 @@ const CommonModal = (_a) => {
     const styles = Object(_CommonModal_styles__WEBPACK_IMPORTED_MODULE_4__[/* useModalStyles */ "b"])();
     const titleId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__[/* useId */ "a"])('ModalTitle');
     const subTitleId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__[/* useId */ "a"])('ModalSubTitle');
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { titleAriaId: titleId, subtitleAriaId: subTitleId, styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "F"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, layerProps: { eventBubblingEnabled: true }, focusTrapZoneProps: { isClickableOutsideFocusTrap: true }, onDismiss: props.onDismiss },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { titleAriaId: titleId, subtitleAriaId: subTitleId, styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "E"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, layerProps: { eventBubblingEnabled: true }, focusTrapZoneProps: { isClickableOutsideFocusTrap: true }, onDismiss: props.onDismiss },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ModalContent__WEBPACK_IMPORTED_MODULE_5__[/* ModalContent */ "a"], Object.assign({ titleId: titleId, subTitleId: subTitleId }, props))));
 };
 
@@ -2800,7 +2770,7 @@ const startTask = Object(_utils__WEBPACK_IMPORTED_MODULE_8__[/* guardByTeamsInit
 function EmptyState({ title, message, image = _turtle_svg__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"], onAction, actionText, children, className, height, color = '#000', btnColor = '#242424', background = '#F5F5F5', btnBackground = '#FFF', role, titleFontSize = 18, }) {
     const titleId = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => `dialogTitle${Math.random()}`.replace('.', '-'), []);
     const descId = Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => `dialogDesc${Math.random()}`.replace('.', '-'), []);
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(_EmptyState_styles__WEBPACK_IMPORTED_MODULE_3__[/* styles */ "a"].root, { height, background, color }, className) },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(_EmptyState_styles__WEBPACK_IMPORTED_MODULE_3__[/* styles */ "a"].root, { height, background, color }, className) },
         image && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { "aria-hidden": true }, typeof image === 'string' ? react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", { alt: '', "aria-hidden": true, src: image }) : image)),
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { role: role, "aria-atomic": true, "aria-labelledby": title && titleId, "aria-describedby": message && descId, style: _EmptyState_styles__WEBPACK_IMPORTED_MODULE_3__[/* styles */ "a"].info },
             title && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", { id: titleId, style: { fontSize: typeof titleFontSize === 'number' ? Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__[/* rem */ "b"])(titleFontSize) : titleFontSize } }, title)),
@@ -2835,11 +2805,10 @@ function EmptyState({ title, message, image = _turtle_svg__WEBPACK_IMPORTED_MODU
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-people/src/PeopleList/PeopleList.tsx ***!
   \*****************************************************************************************************************************/
 /*! exports provided: PeopleList */
-/*! exports used: PeopleList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PeopleList; });
+/* unused harmony export PeopleList */
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
 /* harmony import */ var _fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react-hooks */ "EO0U");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "ERkP");
@@ -2867,10 +2836,10 @@ const PeopleList = (_a) => {
     const labelId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_1__[/* useId */ "a"])('label');
     const styles = Object(_PeopleList_styles__WEBPACK_IMPORTED_MODULE_4__[/* usePeopleListStyles */ "a"])();
     return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({}, props),
-        label && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { id: labelId, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.label, labelClassName) }, label)),
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.list, listClassName), role: 'list', "aria-labelledby": labelId }, selections.map(selection => {
+        label && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { id: labelId, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.label, labelClassName) }, label)),
+        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.list, listClassName), role: 'list', "aria-labelledby": labelId }, selections.map(selection => {
             var _a;
-            return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { key: selection.id, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.item, itemClassName), role: 'listitem', onClick: () => onItemClick === null || onItemClick === void 0 ? void 0 : onItemClick(selection) },
+            return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { key: selection.id, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.item, itemClassName), role: 'listitem', onClick: () => onItemClick === null || onItemClick === void 0 ? void 0 : onItemClick(selection) },
                 react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PeopleCoin__WEBPACK_IMPORTED_MODULE_3__[/* PeopleCoin */ "a"], { selection: selection, onRetrieveIcon: onRetrieveIcon, coinSize: 24 }),
                 react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.text },
                     react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null, (_a = formatName === null || formatName === void 0 ? void 0 : formatName(selection)) !== null && _a !== void 0 ? _a : selection.name),
@@ -3009,26 +2978,26 @@ var CommonIconSize;
 })(CommonIconSize || (CommonIconSize = {}));
 const CommonIcon = ({ icon, iconColor = 'white', iconBackgroundColor, size = CommonIconSize.Size32, styles = {}, title, titleId, titleAs, description, descriptionId, onIconClick, editIconAriaLabel, className, titleTrailingItem, rightItem, }) => {
     const defaultStyles = Object(_CommonIcon_styles__WEBPACK_IMPORTED_MODULE_5__[/* useCommonIconStyles */ "a"])();
-    const ref = Object(_addressbook_utilities_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useKeyboardInvoke */ "b"])();
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.root, styles.root, className) },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(size, defaultStyles.content, styles.content) },
-            icon && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { role: onIconClick ? 'button' : 'presentation', tabIndex: onIconClick ? 0 : undefined, onClick: onIconClick, ref: ref, "aria-label": onIconClick && editIconAriaLabel, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.iconContainer, iconBackgroundColor && {
+    const ref = Object(_addressbook_utilities_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useKeyboardInvoke */ "a"])();
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.root, styles.root, className) },
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(size, defaultStyles.content, styles.content) },
+            icon && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { role: onIconClick ? 'button' : 'presentation', tabIndex: onIconClick ? 0 : undefined, onClick: onIconClick, ref: ref, "aria-label": onIconClick && editIconAriaLabel, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.iconContainer, iconBackgroundColor && {
                     backgroundColor: iconBackgroundColor,
                 }, styles.iconContainer) },
-                typeof icon === 'string' ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.icon, {
+                typeof icon === 'string' ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.icon, {
                         color: iconColor,
                         fill: iconColor,
                     }), iconName: icon })) : (icon),
-                onIconClick && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.editIcon, styles.editIcon), iconName: 'Edit' })))),
-            (title || description) && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.textContainer, styles.textarea) },
+                onIconClick && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Icon */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.editIcon, styles.editIcon), iconName: 'Edit' })))),
+            (title || description) && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.textContainer, styles.textarea) },
                 title && (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: defaultStyles.titleContainer },
                     react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* Text */ "a"], { id: titleId, title: title, role: 'presentation', 
                         // prevent screen reader from reading the title twice (group) in MacOS
                         // about presentation role: https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_presentation_role
-                        className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.title, styles.title), as: titleAs }, title),
+                        className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.title, styles.title), as: titleAs }, title),
                     titleTrailingItem)),
                 description &&
-                    (typeof description === 'string' ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* Text */ "a"], { id: descriptionId, title: description, role: 'presentation', className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(defaultStyles.description, styles.description) }, description)) : (description))))),
+                    (typeof description === 'string' ? (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* Text */ "a"], { id: descriptionId, title: description, role: 'presentation', className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(defaultStyles.description, styles.description) }, description)) : (description))))),
         rightItem));
 };
 
@@ -3556,7 +3525,7 @@ class GraphDriveItemResource {
                 // Delete the upload session if the upload fails, so that the upload session is not left open.
                 // The signal is not passed intentionally to ensure the delete request is sent.
                 // Ignore the error if the delete request fails.
-                yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* silently */ "t"])(this.operation.request(uploadUrl, { method: 'DELETE' }));
+                yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* silently */ "d"])(this.operation.request(uploadUrl, { method: 'DELETE' }));
                 throw error;
             }
         });
@@ -4148,15 +4117,15 @@ const PeoplePile = (_a) => {
     }, [maxVisible, selections]);
     const onlyNameText = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => showOnlyName && !overflowCount && selections.length === 1 && selections[0].name, [overflowCount, selections, showOnlyName]);
     const styles = Object(_PeoplePile_styles__WEBPACK_IMPORTED_MODULE_4__[/* usePeoplePileStyles */ "a"])();
-    const overflow = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => overflowCount > 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.overflow, compact && styles.compactOverflow, {
+    const overflow = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => overflowCount > 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.overflow, compact && styles.compactOverflow, {
             fontSize: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_1__[/* rem */ "b"])(Math.min(coinSize * 0.5, 10)),
         }), title: overflowTitle }, overflowCount)), [overflowCount, overflowTitle, styles, compact, coinSize]);
-    const onlyName = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => onlyNameText && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.onlyName, {
+    const onlyName = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => onlyNameText && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.onlyName, {
             fontSize: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_1__[/* rem */ "b"])(Math.min(coinSize * 0.75, 14)),
             margin: `0 ${Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_1__[/* rem */ "b"])(2 + coinSize * 0.25)}`,
         }), title: props.title ? undefined : onlyNameText }, onlyNameText)), [coinSize, onlyNameText, props.title, styles.onlyName]);
-    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.root, className) }, props),
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.coins, compact && styles.compactCoins), role: 'list' }, visibleSelections.map(selection => (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PeopleCoin__WEBPACK_IMPORTED_MODULE_3__[/* PeopleCoin */ "a"], { key: selection.id, role: 'listitem', selection: selection, onRetrieveIcon: onRetrieveIcon, coinSize: coinSize, preventNameAsTitle: Boolean(props.title) })))),
+    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.root, className) }, props),
+        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.coins, compact && styles.compactCoins), role: 'list' }, visibleSelections.map(selection => (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_PeopleCoin__WEBPACK_IMPORTED_MODULE_3__[/* PeopleCoin */ "a"], { key: selection.id, role: 'listitem', selection: selection, onRetrieveIcon: onRetrieveIcon, coinSize: coinSize, preventNameAsTitle: Boolean(props.title) })))),
         overflow,
         onlyName));
 };
@@ -4169,12 +4138,11 @@ const PeoplePile = (_a) => {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/clipboards.ts ***!
   \**************************************************************************************************************/
 /*! exports provided: copyToClipboard, copyImageToClipboard, copyLinkToClipboard */
-/*! exports used: copyImageToClipboard */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export copyToClipboard */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return copyImageToClipboard; });
+/* unused harmony export copyImageToClipboard */
 /* unused harmony export copyLinkToClipboard */
 /* harmony import */ var _data_urls__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./data-urls */ "iMwy");
 /* harmony import */ var _mimes__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./mimes */ "sSa5");
@@ -4234,9 +4202,9 @@ function copyToClipboard(data) {
  */
 function copyImageToClipboard({ blob, name }) {
     return __awaiter(this, void 0, void 0, function* () {
-        if (!Object(_mimes__WEBPACK_IMPORTED_MODULE_1__[/* isImageMime */ "c"])(blob.type))
+        if (!Object(_mimes__WEBPACK_IMPORTED_MODULE_1__[/* isImageMime */ "a"])(blob.type))
             return;
-        const dataUrl = yield Object(_data_urls__WEBPACK_IMPORTED_MODULE_0__[/* encodeDataUrl */ "b"])(blob);
+        const dataUrl = yield Object(_data_urls__WEBPACK_IMPORTED_MODULE_0__[/* encodeDataUrl */ "a"])(blob);
         const image = document.createElement('img');
         image.src = dataUrl;
         if (name)
@@ -4298,9 +4266,9 @@ const PillPivot = ({ items, defaultSelectedKey, isMobile, onSelected, className,
         }
     }, [onSelected]);
     return (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Pivot */ "a"], { onLinkClick: onLinkClick, defaultSelectedKey: defaultSelectedKey, headersOnly: true, styles: {
-            root: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.root, isMobile && 'is-mobile', className),
+            root: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.root, isMobile && 'is-mobile', className),
             link: isMobile ? buttonStyles.mobile : buttonStyles.root,
-            linkIsSelected: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(isMobile ? buttonStyles.mobile : buttonStyles.root, 'is-active'),
+            linkIsSelected: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(isMobile ? buttonStyles.mobile : buttonStyles.root, 'is-active'),
             linkContent: buttonStyles.content,
         } }, items.map(item => (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* PivotItem */ "a"], { key: item.key, itemKey: item.key, ariaLabel: item.text, headerText: item.text })))));
 };
@@ -4540,7 +4508,7 @@ const usePillButtonStyles = Object(_addressbook_components_fluentui_teams_theme_
         height: '25px',
         cursor: 'pointer',
         borderRadius: '30px',
-        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular,
+        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular,
         fontSize: _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__[/* FontSizes */ "a"].size12,
         border: `1px solid ${Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_3__[/* isContrastTheme */ "f"])(theme.name) ? theme.palette.themeDark : theme.palette.neutralLight}`,
         background: theme.palette.white,
@@ -4553,7 +4521,7 @@ const usePillButtonStyles = Object(_addressbook_components_fluentui_teams_theme_
             background: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_3__[/* isContrastTheme */ "f"])(theme.name) ? theme.palette.themePrimary : theme.palette.themeLighter,
             borderColor: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_3__[/* isContrastTheme */ "f"])(theme.name) ? theme.palette.themeDark : theme.palette.themeLight,
             color: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_3__[/* isContrastTheme */ "f"])(theme.name) ? theme.palette.black : theme.palette.themePrimary,
-            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
         },
     },
     mobile: {
@@ -4565,7 +4533,7 @@ const usePillButtonStyles = Object(_addressbook_components_fluentui_teams_theme_
         height: '32px',
         cursor: 'pointer',
         borderRadius: '20px',
-        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular,
+        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular,
         fontSize: _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__[/* FontSizes */ "a"].size16,
         background: theme.palette.neutralLighter,
         color: theme.palette.neutralDark,
@@ -4576,7 +4544,7 @@ const usePillButtonStyles = Object(_addressbook_components_fluentui_teams_theme_
         '&.is-active, &.is-selected:hover': {
             background: theme.palette.themePrimary,
             color: theme.palette.white,
-            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
         },
     },
     content: {
@@ -4830,12 +4798,11 @@ class GraphGroupResource {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/data-transfers.ts ***!
   \******************************************************************************************************************/
 /*! exports provided: dataTransferIncludesFiles, extractFilesFromDataTransfer */
-/*! exports used: dataTransferIncludesFiles, extractFilesFromDataTransfer */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return dataTransferIncludesFiles; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return extractFilesFromDataTransfer; });
+/* unused harmony export dataTransferIncludesFiles */
+/* unused harmony export extractFilesFromDataTransfer */
 /**
  * Checks if a data transfer contains files.
  *
@@ -4864,12 +4831,12 @@ function extractFilesFromDataTransfer(data) {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/urls.ts ***!
   \********************************************************************************************************/
 /*! exports provided: isAbsoluteUrl, normalizeUrl, openUrl */
-/*! exports used: isAbsoluteUrl, normalizeUrl */
+/*! exports used: isAbsoluteUrl */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isAbsoluteUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return normalizeUrl; });
+/* unused harmony export normalizeUrl */
 /* unused harmony export openUrl */
 /**
  * Check if a URL is an absolute URL.
@@ -4957,7 +4924,7 @@ function openUrl(url) {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-fluentui-icons/src/index.ts ***!
   \********************************************************************************************************************/
 /*! exports provided: iconStyle, customIconStyle, icons, initFluentuiIcons, IconName */
-/*! exports used: IconName, initFluentuiIcons */
+/*! exports used: IconName, icons, initFluentuiIcons */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -4965,6 +4932,8 @@ function openUrl(url) {
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _Icons__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _Icons__WEBPACK_IMPORTED_MODULE_0__["b"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _Icons__WEBPACK_IMPORTED_MODULE_0__["c"]; });
 
 
 
@@ -5090,11 +5059,10 @@ var FontSizes;
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-hooks/src/renderings.ts ***!
   \***************************************************************************************************************/
 /*! exports provided: useRenderings */
-/*! exports used: useRenderings */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useRenderings; });
+/* unused harmony export useRenderings */
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -5290,7 +5258,7 @@ const usePeopleListStyles = Object(_addressbook_components_fluentui_teams_theme_
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-people/src/index.ts ***!
   \************************************************************************************************************/
 /*! exports provided: PeopleCoin, PeopleList, PeoplePile, PeopleSelect, PeopleView, PeopleSelectionType */
-/*! exports used: PeopleCoin, PeopleList, PeopleSelectionType */
+/*! exports used: PeopleCoin, PeopleSelectionType */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5298,13 +5266,11 @@ const usePeopleListStyles = Object(_addressbook_components_fluentui_teams_theme_
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _PeopleCoin__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
 /* harmony import */ var _PeopleList__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PeopleList */ "547/");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _PeopleList__WEBPACK_IMPORTED_MODULE_1__["a"]; });
-
 /* harmony import */ var _PeoplePile__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./PeoplePile */ "fkN4");
 /* harmony import */ var _PeopleSelect__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./PeopleSelect */ "wzJJ");
 /* harmony import */ var _PeopleView__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./PeopleView */ "nK6a");
 /* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types */ "DaYX");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _types__WEBPACK_IMPORTED_MODULE_5__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _types__WEBPACK_IMPORTED_MODULE_5__["a"]; });
 
 
 
@@ -5441,7 +5407,7 @@ function encodeSharingUrl(url) {
  * @param line max row number
  * @returns classname
  */
-const ellipsisStyles = (line) => Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({
+const ellipsisStyles = (line) => Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])({
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     wordBreak: 'break-word',
@@ -5696,7 +5662,7 @@ const useCommonIconStyles = Object(_styles_makeStyles__WEBPACK_IMPORTED_MODULE_4
     title: [
         Object(_styles_ellipsisStyles__WEBPACK_IMPORTED_MODULE_3__[/* ellipsisStyles */ "a"])(1),
         {
-            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+            fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
             color: Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__[/* isContrastTheme */ "f"])(theme.name) ? 'inherit' : theme.palette.black,
             margin: 0,
         },
@@ -5802,7 +5768,7 @@ const useSpinnerStyles = Object(_addressbook_components_fluentui_teams_theme__WE
     animated: {
         display: 'block',
         willChange: 'transform',
-        animation: `${Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* keyframes */ "E"])({
+        animation: `${Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* keyframes */ "D"])({
             from: { transform: 'translateY(0)' },
             to: { transform: 'translateY(-100%)' },
         })} 2s steps(60) infinite`,
@@ -5817,18 +5783,17 @@ const useSpinnerStyles = Object(_addressbook_components_fluentui_teams_theme__WE
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/files.ts ***!
   \*********************************************************************************************************/
 /*! exports provided: selectFile, digestBlob, encodeHexString, createFileByBlob, getReadableSizeString, normalizeFileName, splitFileName, joinFileName */
-/*! exports used: createFileByBlob, joinFileName, normalizeFileName, selectFile, splitFileName */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return selectFile; });
+/* unused harmony export selectFile */
 /* unused harmony export digestBlob */
 /* unused harmony export encodeHexString */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return createFileByBlob; });
+/* unused harmony export createFileByBlob */
 /* unused harmony export getReadableSizeString */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return normalizeFileName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return splitFileName; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return joinFileName; });
+/* unused harmony export normalizeFileName */
+/* unused harmony export splitFileName */
+/* unused harmony export joinFileName */
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -6042,12 +6007,12 @@ function joinFileName(parts) {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/data-urls.ts ***!
   \*************************************************************************************************************/
 /*! exports provided: encodeDataUrl, decodeDataUrl */
-/*! exports used: decodeDataUrl, encodeDataUrl */
+/*! exports used: encodeDataUrl */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return encodeDataUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return decodeDataUrl; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return encodeDataUrl; });
+/* unused harmony export decodeDataUrl */
 /**
  * Encodes a blob as a data URL.
  *
@@ -6163,23 +6128,19 @@ class MemoryServiceCache {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-hooks/src/index.ts ***!
   \**********************************************************************************************************/
 /*! exports provided: useBlobObjectUrl, useDebounced, useDeepDeps, useDeepMemo, useDeepCallback, useDeepEffect, useDrop, useKeyboardInvoke, useLongPress, useRenderings, useUpdate, useElementsVisibility */
-/*! exports used: useBlobObjectUrl, useKeyboardInvoke, useRenderings */
+/*! exports used: useKeyboardInvoke */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _blob__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./blob */ "EAWf");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _blob__WEBPACK_IMPORTED_MODULE_0__["a"]; });
-
 /* harmony import */ var _debounce__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./debounce */ "/m+X");
 /* harmony import */ var _deep__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./deep */ "Yd5b");
 /* harmony import */ var _drop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./drop */ "9jFz");
 /* harmony import */ var _keyboard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./keyboard */ "R2N7");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _keyboard__WEBPACK_IMPORTED_MODULE_4__["a"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _keyboard__WEBPACK_IMPORTED_MODULE_4__["a"]; });
 
 /* harmony import */ var _long_press__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./long-press */ "eTZ1");
 /* harmony import */ var _renderings__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./renderings */ "ZX02");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _renderings__WEBPACK_IMPORTED_MODULE_6__["a"]; });
-
 /* harmony import */ var _update__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./update */ "S98w");
 /* harmony import */ var _visibility__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./visibility */ "kXVD");
 
@@ -6316,7 +6277,7 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 const ContentCopyResponseModal = (_a) => {
     var { isOpen, modalStyles } = _a, props = __rest(_a, ["isOpen", "modalStyles"]);
     const styles = Object(_ContentCopyResponseModal_styles__WEBPACK_IMPORTED_MODULE_3__[/* useCopyResponseModalStyles */ "b"])();
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "F"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, onDismiss: props.onDismiss },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "E"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, onDismiss: props.onDismiss },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContentCopyResponseModalContent__WEBPACK_IMPORTED_MODULE_4__[/* ContentCopyRequestModalContent */ "a"], Object.assign({}, props))));
 };
 
@@ -6524,7 +6485,7 @@ class OneDSLogger {
             this.instrumentationKey = ariaToken;
             this.initializeAria();
         }
-        this.sessionId = sessionId || Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* uuid */ "v"])();
+        this.sessionId = sessionId || Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* uuid */ "e"])();
         this.setCommonProperty({ Session: this.sessionId });
         this.activeScenarios = {};
         if (!isDevelopment) {
@@ -7016,7 +6977,7 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 const ContentCopyRequestModal = (_a) => {
     var { isOpen, modalStyles } = _a, props = __rest(_a, ["isOpen", "modalStyles"]);
     const styles = Object(_ContentCopyRequestModal_styles__WEBPACK_IMPORTED_MODULE_3__[/* useCopyRequestModalStyles */ "b"])();
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "F"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, onDismiss: props.onDismiss },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Modal */ "a"], { styles: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "E"])(styles, modalStyles), isOpen: isOpen, isBlocking: true, onDismiss: props.onDismiss },
         react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ContentCopyRequestModalContent__WEBPACK_IMPORTED_MODULE_4__[/* ContentCopyRequestModalContent */ "a"], Object.assign({}, props))));
 };
 
@@ -7153,7 +7114,7 @@ function createRetryInterceptor({ test = _utilities__WEBPACK_IMPORTED_MODULE_1__
                 const response = yield proceed(request.clone());
                 if (test(response) && retries++ < maxRetries) {
                     if (backoff)
-                        yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* delay */ "f"])(backoff(retries, response));
+                        yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* delay */ "b"])(backoff(retries, response));
                     continue;
                 }
                 return response;
@@ -7161,7 +7122,7 @@ function createRetryInterceptor({ test = _utilities__WEBPACK_IMPORTED_MODULE_1__
             catch (error) {
                 if (retries++ < maxRetries) {
                     if (backoff)
-                        yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* delay */ "f"])(backoff(retries));
+                        yield Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* delay */ "b"])(backoff(retries));
                     continue;
                 }
                 throw error;
@@ -7219,7 +7180,7 @@ const useCollapsingAreaStyles = Object(_addressbook_components_fluentui_teams_th
     text: {
         color: theme.palette.black,
         fontSize: _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__[/* FontSizes */ "a"].size12,
-        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].bold,
+        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].bold,
         flex: 1,
     },
     collapsibleRegion: {
@@ -7255,7 +7216,7 @@ const useCollapsingAreaStyles = Object(_addressbook_components_fluentui_teams_th
 
 const TaskModuleV2 = props => {
     const styles = Object(_TaskModuleV2_styles__WEBPACK_IMPORTED_MODULE_3__[/* useTaskModuleV2Styles */ "a"])();
-    const contentMergedStyles = Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.content, props.contentClassName);
+    const contentMergedStyles = Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.content, props.contentClassName);
     const initialProps = {
         contentClassName: contentMergedStyles,
         headerClassName: styles.header,
@@ -7359,14 +7320,15 @@ function noop() {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-shared/src/AppHeader/AppHeader.component.tsx ***!
   \*************************************************************************************************************************************/
 /*! exports provided: AppHeader */
+/*! exports used: AppHeader */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export AppHeader */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "tZX7");
-/* harmony import */ var _CommonIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../CommonIcon */ "Lwxb");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppHeader; });
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "tZX7");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _assets_appIcon_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../assets/appIcon.svg */ "lvLM");
 /* harmony import */ var _AppHeader_styles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AppHeader.styles */ "4P7H");
 /*
  *  Copyright © Microsoft Corporation. All rights reserved.
@@ -7375,12 +7337,13 @@ function noop() {
 
 
 
-const AppHeader = ({ items, farItems, icon, accentColor, title }) => {
+const AppHeader = ({ items, farItems, title }) => {
     const headerStyles = Object(_AppHeader_styles__WEBPACK_IMPORTED_MODULE_3__[/* useAppHeaderStyles */ "a"])();
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Stack */ "a"], { as: 'header', horizontal: true, disableShrink: true, horizontalAlign: 'space-between', className: headerStyles.root },
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_CommonIcon__WEBPACK_IMPORTED_MODULE_2__[/* CommonIcon */ "a"], { icon: icon, iconBackgroundColor: accentColor, title: title, titleAs: 'h1', styles: { title: headerStyles.text } }),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Stack */ "a"], { verticalAlign: 'center', grow: true }, items),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Stack */ "a"], { horizontalAlign: 'center', verticalAlign: 'center' }, farItems)));
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Stack */ "a"], { as: 'header', horizontal: true, disableShrink: true, horizontalAlign: 'space-between', className: headerStyles.root },
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("img", { src: _assets_appIcon_svg__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"], style: { width: ' 36px' } }),
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", { className: headerStyles.text }, title),
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Stack */ "a"], { verticalAlign: 'center', grow: true }, items),
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Stack */ "a"], { horizontalAlign: 'center', verticalAlign: 'center' }, farItems)));
 };
 
 
@@ -7651,11 +7614,10 @@ class GraphUserResource {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/images.ts ***!
   \**********************************************************************************************************/
 /*! exports provided: measureImage */
-/*! exports used: measureImage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return measureImage; });
+/* unused harmony export measureImage */
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -7736,13 +7698,13 @@ const useMobileSheetBackdropStyles = Object(_addressbook_components_fluentui_tea
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/mimes.ts ***!
   \*********************************************************************************************************/
 /*! exports provided: getMimeByDataUrl, getExtensionByMime, isImageMime */
-/*! exports used: getExtensionByMime, getMimeByDataUrl, isImageMime */
+/*! exports used: isImageMime */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getMimeByDataUrl; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getExtensionByMime; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return isImageMime; });
+/* unused harmony export getMimeByDataUrl */
+/* unused harmony export getExtensionByMime */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return isImageMime; });
 /**
  * Gets the mime type of a data URL.
  *
@@ -8220,8 +8182,8 @@ var SpinnerSize;
 const Spinner = (_a) => {
     var { size = SpinnerSize.Medium, className } = _a, props = __rest(_a, ["size", "className"]);
     const styles = Object(_Spinner_styles__WEBPACK_IMPORTED_MODULE_3__[/* useSpinnerStyles */ "a"])();
-    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.root, className), role: 'progressbar', "aria-busy": true }, props),
-        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.bound, { width: size, height: size }) },
+    return (react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", Object.assign({ className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.root, className), role: 'progressbar', "aria-busy": true }, props),
+        react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.bound, { width: size, height: size }) },
             react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_assets_spinner_svg__WEBPACK_IMPORTED_MODULE_2__[/* ReactComponent */ "a"], { className: styles.animated }))));
 };
 
@@ -8258,15 +8220,15 @@ const ModalContent = ({ headerProps, secondaryBtnProps, subsidiaryBtnProps, prim
     const styles = Object(_CommonModal_styles__WEBPACK_IMPORTED_MODULE_9__[/* useContentStyles */ "a"])();
     const shareSubmissionCardConsentStyles = Object(_CommonModal_styles__WEBPACK_IMPORTED_MODULE_9__[/* useShareSubmissionCardConsentStyles */ "c"])();
     return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { role: 'alert', "aria-busy": !headerProps, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.header, headerClassName) },
+        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { role: 'alert', "aria-busy": !headerProps, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.header, headerClassName) },
             react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_CommonIcon__WEBPACK_IMPORTED_MODULE_7__[/* CommonIcon */ "a"], Object.assign({ titleAs: 'h1', titleId: titleId, descriptionId: subTitleId }, headerProps)),
             titleFarItem,
             onDismiss && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* IconButton */ "a"], { iconProps: { iconName: 'Cancel' }, ariaLabel: closeButtonAriaLabel, title: closeButtonAriaLabel, onClick: onDismiss }))),
         react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_CommonLoadingIndicator__WEBPACK_IMPORTED_MODULE_8__[/* CommonLoadingIndicator */ "a"], { isFetching: isFetching }),
-        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.content, contentClassName), ref: contentRef, "data-is-scrollable": true },
+        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.content, contentClassName), ref: contentRef, "data-is-scrollable": true },
             placeHolderItem && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.placeHolder }, placeHolderItem),
             children),
-        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])(styles.footer, footerClassName) },
+        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])(styles.footer, footerClassName) },
             shareSubmissionCardConsentShow && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Checkbox */ "a"], { label: shareSubmissionCardConsentOptionLabel, checked: shareSubmissionCardConsentOptionChecked, onChange: (_, checked) => onShareSubmissionCardConsentOptionChange === null || onShareSubmissionCardConsentOptionChange === void 0 ? void 0 : onShareSubmissionCardConsentOptionChange(checked), styles: shareSubmissionCardConsentStyles })),
             secondaryBtnProps && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* ActionButton */ "a"], Object.assign({}, secondaryBtnProps)),
             footerItem,
@@ -8567,7 +8529,7 @@ const PeopleSelect = (_a) => {
                         return;
                     (_a = onExpandPeopleSelectionRef.current) === null || _a === void 0 ? void 0 : _a.call(onExpandPeopleSelectionRef, selection);
                     triggerChangeRef.current(newSelections);
-                }, text: (_a = formatName === null || formatName === void 0 ? void 0 : formatName(selection)) !== null && _a !== void 0 ? _a : selection.name, onRenderSecondaryText: moreButtonMenu ? () => moreButtonMenu : undefined }), className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(props.className, selection.unremovable && styles.unremovable, moreButtonMenu && styles.moreButtonMenu) });
+                }, text: (_a = formatName === null || formatName === void 0 ? void 0 : formatName(selection)) !== null && _a !== void 0 ? _a : selection.name, onRenderSecondaryText: moreButtonMenu ? () => moreButtonMenu : undefined }), className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(props.className, selection.unremovable && styles.unremovable, moreButtonMenu && styles.moreButtonMenu) });
         const item = react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* PeoplePickerItem */ "a"], Object.assign({}, newProps));
         return (_b = onRenderItem === null || onRenderItem === void 0 ? void 0 : onRenderItem(selection, item)) !== null && _b !== void 0 ? _b : item;
     }, [
@@ -8584,7 +8546,7 @@ const PeopleSelect = (_a) => {
     const errorMessageId = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_6__[/* useId */ "a"])('errorMessage');
     return (react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement("div", Object.assign({}, props),
         react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* Label */ "a"], { id: labelId, className: styles.label, required: required }, label),
-        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* NormalPeoplePicker */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.picker, pickerClassName), selectedItems: selectedItems, onChange: onChange, onResolveSuggestions: onResolveSuggestionsInternal, 
+        react__WEBPACK_IMPORTED_MODULE_7___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* NormalPeoplePicker */ "a"], { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.picker, pickerClassName), selectedItems: selectedItems, onChange: onChange, onResolveSuggestions: onResolveSuggestionsInternal, 
             // This is intentionally disabled to avoid the suggestions taking the screen reader focus immediately
             // after focus is moved to the input field. It used to cause the screen reader miss the picker label,
             // placeholder, and other important information.
@@ -8610,11 +8572,10 @@ const PeopleSelect = (_a) => {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/utilities-core/src/numbers.ts ***!
   \***********************************************************************************************************/
 /*! exports provided: parseFloatStrictly, parseIntStrictly */
-/*! exports used: parseFloatStrictly */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return parseFloatStrictly; });
+/* unused harmony export parseFloatStrictly */
 /* unused harmony export parseIntStrictly */
 const floatRegex = /^(\+|-)?\d+(\.\d+)?$/;
 /**
@@ -8706,7 +8667,7 @@ function parseIntStrictly(intString) {
  */
 class ScenarioLogger {
     constructor(logger, name, dataBag) {
-        this.id = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* uuid */ "v"])();
+        this.id = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_0__[/* uuid */ "e"])();
         this.name = name;
         this.logger = logger;
         this.isScenarioComplete = false;

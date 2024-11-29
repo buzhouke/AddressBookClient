@@ -365,7 +365,7 @@ exports.unstable_wrap = unstable_wrap;
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/react-dom/index.js ***!
   \****************************************************************************************************/
 /*! no static exports found */
-/*! exports used: createPortal, default, flushSync */
+/*! exports used: createPortal, default */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";

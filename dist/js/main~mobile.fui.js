@@ -61,35 +61,35 @@ var panelMargin = {
 // Following consts are used below in `getPanelBreakpoints()` function to provide
 // necessary fallbacks for different types of Panel in different breakpoints.
 var smallPanelSelectors = (_a = {},
-    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "m"], "px)")] = {
+    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "l"], "px)")] = {
         width: panelWidth.sm,
     },
     _a);
 var mediumPanelSelectors = (_b = {},
-    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinLarge */ "l"], "px)")] = {
+    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinLarge */ "k"], "px)")] = {
         width: panelWidth.md1,
     },
-    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXLarge */ "p"], "px)")] = {
+    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXLarge */ "o"], "px)")] = {
         width: panelWidth.md2,
     },
     _b);
 var largePanelSelectors = (_c = {},
-    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinUhfMobile */ "o"], "px)")] = {
+    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinUhfMobile */ "n"], "px)")] = {
         left: panelMargin.md,
         width: panelWidth.auto,
     },
-    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "q"], "px)")] = {
+    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "p"], "px)")] = {
         left: panelMargin.lg,
     },
     _c);
 var largeFixedPanelSelectors = (_d = {},
-    _d["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "q"], "px)")] = {
+    _d["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "p"], "px)")] = {
         left: panelMargin.auto,
         width: panelWidth.lg,
     },
     _d);
 var extraLargePanelSelectors = (_e = {},
-    _e["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "q"], "px)")] = {
+    _e["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinXXLarge */ "p"], "px)")] = {
         left: panelMargin.xl,
     },
     _e);
@@ -130,7 +130,7 @@ var getStyles = function (props) {
     var _a, _b, _c, _d;
     var className = props.className, focusTrapZoneClassName = props.focusTrapZoneClassName, hasCloseButton = props.hasCloseButton, headerClassName = props.headerClassName, isAnimating = props.isAnimating, isFooterSticky = props.isFooterSticky, isFooterAtBottom = props.isFooterAtBottom, isOnRightSide = props.isOnRightSide, isOpen = props.isOpen, isHiddenOnDismiss = props.isHiddenOnDismiss, hasCustomNavigation = props.hasCustomNavigation, theme = props.theme, _e = props.type, type = _e === void 0 ? _Panel_types__WEBPACK_IMPORTED_MODULE_1__[/* PanelType */ "a"].smallFixedFar : _e;
     var effects = theme.effects, fonts = theme.fonts, semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var isCustomPanel = type === _Panel_types__WEBPACK_IMPORTED_MODULE_1__[/* PanelType */ "a"].custom || type === _Panel_types__WEBPACK_IMPORTED_MODULE_1__[/* PanelType */ "a"].customNear;
     return {
         root: [
@@ -183,7 +183,7 @@ var getStyles = function (props) {
                 left: panelMargin.auto,
                 right: panelMargin.none,
                 width: panelWidth.full,
-                selectors: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])((_a = {}, _a[_Styling__WEBPACK_IMPORTED_MODULE_2__[/* HighContrastSelector */ "g"]] = {
+                selectors: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])((_a = {}, _a[_Styling__WEBPACK_IMPORTED_MODULE_2__[/* HighContrastSelector */ "f"]] = {
                     borderLeft: "3px solid ".concat(semanticColors.variantBorder),
                     borderRight: "3px solid ".concat(semanticColors.variantBorder),
                 }, _a), getPanelBreakpoints(type)),
@@ -216,7 +216,7 @@ var getStyles = function (props) {
                 backgroundColor: semanticColors.bodyBackground,
                 paddingTop: 18,
                 selectors: (_b = {},
-                    _b["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "m"], "px)")] = {
+                    _b["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "l"], "px)")] = {
                         position: 'sticky',
                         top: 0,
                         zIndex: 1,
@@ -293,7 +293,7 @@ var getStyles = function (props) {
             },
             isFooterAtBottom && {
                 selectors: (_c = {},
-                    _c["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "m"], "px)")] = {
+                    _c["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "l"], "px)")] = {
                         flexGrow: 1,
                     },
                     _c),
@@ -307,7 +307,7 @@ var getStyles = function (props) {
                 borderTop: '1px solid transparent',
                 transition: "opacity ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* AnimationVariables */ "c"].durationValue3, " ").concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* AnimationVariables */ "c"].easeFunction2),
                 selectors: (_d = {},
-                    _d["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "m"], "px)")] = {
+                    _d["@media (min-height: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMinMedium */ "l"], "px)")] = {
                         position: 'sticky',
                         bottom: 0,
                     },
@@ -333,7 +333,7 @@ var getStyles = function (props) {
                     {
                         marginRight: 14,
                         color: theme.palette.neutralSecondary,
-                        fontSize: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* IconFontSizes */ "i"].large,
+                        fontSize: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* IconFontSizes */ "h"].large,
                     },
                     hasCustomNavigation && {
                         marginRight: 0,
@@ -421,7 +421,7 @@ var getStyles = function (props) {
     var _a, _b, _c, _d, _e, _f;
     var theme = props.theme, presenceColors = props.presenceColors;
     var semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var size = Object(_PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* sizeBoolean */ "d"])(props.size);
     var presence = Object(_PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* presenceBoolean */ "c"])(props.presence);
     // Presence colors
@@ -440,8 +440,8 @@ var getStyles = function (props) {
     return {
         presence: [
             classNames.presence,
-            Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ position: 'absolute', height: _PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* personaPresenceSize */ "a"].size12, width: _PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* personaPresenceSize */ "a"].size12, borderRadius: '50%', top: 'auto', right: '-2px', bottom: '-2px', border: "2px solid ".concat(presenceColorBackground), textAlign: 'center', boxSizing: 'content-box', backgroundClip: 'border-box' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ position: 'absolute', height: _PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* personaPresenceSize */ "a"].size12, width: _PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* personaPresenceSize */ "a"].size12, borderRadius: '50%', top: 'auto', right: '-2px', bottom: '-2px', border: "2px solid ".concat(presenceColorBackground), textAlign: 'center', boxSizing: 'content-box', backgroundClip: 'border-box' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { selectors: (_a = {},
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         borderColor: 'Window',
                         backgroundColor: 'WindowText',
                     },
@@ -452,7 +452,7 @@ var getStyles = function (props) {
                 left: 0,
                 border: 0,
                 selectors: (_b = {},
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         top: '9px',
                         border: '1px solid WindowText',
                     },
@@ -473,7 +473,7 @@ var getStyles = function (props) {
             presence.isAvailable && {
                 backgroundColor: presenceColorAvailable,
                 selectors: (_c = {},
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = backgroundColor('Highlight'),
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = backgroundColor('Highlight'),
                     _c),
             },
             presence.isAway && backgroundColor(presenceColorAway),
@@ -494,7 +494,7 @@ var getStyles = function (props) {
                                 }
                                 : undefined
                         },
-                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             selectors: {
                                 ':after': {
                                     width: "calc(100% - 4px)",
@@ -525,7 +525,7 @@ var getStyles = function (props) {
                                 boxSizing: 'border-box',
                             }
                         },
-                        _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             backgroundColor: 'WindowText',
                             selectors: {
                                 ':before': {
@@ -558,7 +558,7 @@ var getStyles = function (props) {
                 lineHeight: _PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* personaPresenceSize */ "a"].size12,
                 verticalAlign: 'top',
                 selectors: (_f = {},
-                    _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'Window',
                     },
                     _f),
@@ -641,19 +641,19 @@ var GlobalClassNames = {
 function getStyles(props) {
     var _a, _b, _c;
     var className = props.className, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var textSelectorsStyles = {
         selectors: (_a = {},
             _a[".".concat(_Suggestions_SuggestionsItem_styles__WEBPACK_IMPORTED_MODULE_1__[/* SuggestionsItemGlobalClassNames */ "a"].isSuggested, " &")] = {
                 selectors: (_b = {},
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         color: 'HighlightText',
                     },
                     _b),
             },
             _a[".".concat(classNames.root, ":hover &")] = {
                 selectors: (_c = {},
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         color: 'HighlightText',
                     },
                     _c),
@@ -953,7 +953,7 @@ function usePositions(props, hostElement, calloutElement, targetRef, getBounds, 
     var previousTarget = react__WEBPACK_IMPORTED_MODULE_1__["useRef"]();
     var async = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_15__[/* useAsync */ "a"])();
     var hidden = props.hidden, target = props.target, finalHeight = props.finalHeight, calloutMaxHeight = props.calloutMaxHeight, onPositioned = props.onPositioned, directionalHint = props.directionalHint, hideOverflow = props.hideOverflow, preferScrollResizePositioning = props.preferScrollResizePositioning;
-    var win = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_20__[/* useWindowEx */ "d"])();
+    var win = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_20__[/* useWindowEx */ "c"])();
     var localRef = react__WEBPACK_IMPORTED_MODULE_1__["useRef"]();
     var popupStyles;
     if (localRef.current !== popupRef.current) {
@@ -1337,7 +1337,7 @@ function getStyles(props) {
     }
     var semanticColors = theme.semanticColors, effects = theme.effects, fonts = theme.fonts;
     var inputBorder = semanticColors.inputBorder, inputBorderHovered = semanticColors.inputBorderHovered, inputFocusBorderAlt = semanticColors.inputFocusBorderAlt;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     // placeholder style constants
     var placeholderStyles = [
         fonts.medium,
@@ -1345,7 +1345,7 @@ function getStyles(props) {
             color: semanticColors.inputPlaceholderText,
             opacity: 1,
             selectors: (_a = {},
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                 },
                 _a),
@@ -1354,7 +1354,7 @@ function getStyles(props) {
     var disabledPlaceholderStyles = {
         color: semanticColors.disabledText,
         selectors: (_b = {},
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+            _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _b),
@@ -1388,7 +1388,7 @@ function getStyles(props) {
                     },
                 },
             },
-            isFocused && !disabled && Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getInputFocusStyle */ "z"])(inputFocusBorderAlt, effects.roundedCorner2),
+            isFocused && !disabled && Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getInputFocusStyle */ "y"])(inputFocusBorderAlt, effects.roundedCorner2),
             disabled && {
                 borderColor: disabledOverlayColor,
                 selectors: (_c = {
@@ -1402,7 +1402,7 @@ function getStyles(props) {
                             background: disabledOverlayColor,
                         }
                     },
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         borderColor: 'GrayText',
                         selectors: {
                             ':after': {
@@ -1443,11 +1443,11 @@ function getStyles(props) {
                     },
                 },
             },
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getPlaceholderStyles */ "A"])(placeholderStyles),
-            disabled && Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getPlaceholderStyles */ "A"])(disabledPlaceholderStyles),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getPlaceholderStyles */ "z"])(placeholderStyles),
+            disabled && Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getPlaceholderStyles */ "z"])(disabledPlaceholderStyles),
             inputClassName,
         ],
-        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* hiddenContentStyle */ "D"],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* hiddenContentStyle */ "C"],
     };
 }
 //# sourceMappingURL=BasePicker.styles.js.map
@@ -2582,7 +2582,7 @@ var getStyles = function (props) {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o, _p, _q, _r, _s, _t;
     var className = props.className, theme = props.theme, reversed = props.reversed, checked = props.checked, disabled = props.disabled, isUsingCustomLabelRender = props.isUsingCustomLabelRender, indeterminate = props.indeterminate;
     var semanticColors = theme.semanticColors, effects = theme.effects, palette = theme.palette, fonts = theme.fonts;
-    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var checkmarkFontColor = semanticColors.inputForegroundChecked;
     // TODO: after updating the semanticColors slots mapping this needs to be semanticColors.inputBorder
     var checkmarkFontColorHovered = palette.neutralSecondary;
@@ -2619,7 +2619,7 @@ var getStyles = function (props) {
                 transitionDuration: MS_CHECKBOX_TRANSITION_DURATION,
                 transitionTimingFunction: MS_CHECKBOX_TRANSITION_TIMING
             },
-            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _a[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 borderColor: 'WindowText',
             },
             _a),
@@ -2640,7 +2640,7 @@ var getStyles = function (props) {
                     _b[":hover .".concat(classNames.checkbox)] = (_c = {
                             borderColor: checkboxBorderHoveredColor
                         },
-                        _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             borderColor: 'Highlight',
                         },
                         _c),
@@ -2649,7 +2649,7 @@ var getStyles = function (props) {
                             color: checkmarkFontColorHovered,
                             opacity: '1'
                         },
-                        _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             color: 'Highlight',
                         },
                         _d),
@@ -2664,7 +2664,7 @@ var getStyles = function (props) {
                         background: checkboxBackgroundCheckedHovered,
                         borderColor: checkboxBorderColorCheckedHovered,
                     },
-                    _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = (_f = {},
+                    _e[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = (_f = {},
                         _f[":hover .".concat(classNames.checkbox)] = {
                             background: 'Highlight',
                             borderColor: 'Highlight',
@@ -2687,7 +2687,7 @@ var getStyles = function (props) {
                     _g[":hover .".concat(classNames.checkbox, ", :hover .").concat(classNames.checkbox, ":after")] = (_h = {
                             borderColor: checkboxBorderIndeterminateHoveredColor
                         },
-                        _h[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _h[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             borderColor: 'WindowText',
                         },
                         _h),
@@ -2702,7 +2702,7 @@ var getStyles = function (props) {
                     _j[":hover .".concat(classNames.text, ", :focus .").concat(classNames.text)] = (_k = {
                             color: checkboxHoveredTextColor
                         },
-                        _k[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _k[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             color: disabled ? 'GrayText' : 'WindowText',
                         },
                         _k),
@@ -2720,7 +2720,7 @@ var getStyles = function (props) {
                     outline: '1px solid ' + theme.palette.neutralSecondary,
                     outlineOffset: '2px'
                 },
-                _m[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _m[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     outline: '1px solid WindowText',
                 },
                 _m),
@@ -2771,7 +2771,7 @@ var getStyles = function (props) {
                     overflow: 'hidden',
                     ':after': indeterminate ? indeterminateDotStyles : null
                 },
-                _o[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'WindowText' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _o[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'WindowText' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _o),
             indeterminate && {
                 borderColor: checkboxBorderIndeterminateColor,
@@ -2793,7 +2793,7 @@ var getStyles = function (props) {
                     background: checkboxBackgroundChecked,
                     borderColor: checkboxBorderColorChecked
                 },
-                _p[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _p[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     background: 'Highlight',
                     borderColor: 'Highlight',
                 },
@@ -2801,7 +2801,7 @@ var getStyles = function (props) {
             disabled && (_q = {
                     borderColor: checkboxBorderColorDisabled
                 },
-                _q[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _q[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     borderColor: 'GrayText',
                 },
                 _q),
@@ -2810,7 +2810,7 @@ var getStyles = function (props) {
                     background: checkboxBackgroundDisabledChecked,
                     borderColor: checkboxBorderColorDisabled
                 },
-                _r[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _r[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     background: 'Window',
                 },
                 _r),
@@ -2821,7 +2821,7 @@ var getStyles = function (props) {
                     opacity: checked && !indeterminate ? '1' : '0',
                     color: checkmarkFontColor
                 },
-                _s[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: disabled ? 'GrayText' : 'Window' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _s[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: disabled ? 'GrayText' : 'Window' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _s),
         ],
         text: [
@@ -2831,7 +2831,7 @@ var getStyles = function (props) {
                     fontSize: fonts.medium.fontSize,
                     lineHeight: '20px'
                 },
-                _t[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: disabled ? 'GrayText' : 'WindowText' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _t[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: disabled ? 'GrayText' : 'WindowText' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _t),
             !reversed
                 ? {
@@ -3137,7 +3137,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
     };
     var splitButtonStyles = {
         splitButtonContainer: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { highContrastStyle: buttonHighContrastFocus, inset: 2, pointerEvents: 'none' }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { highContrastStyle: buttonHighContrastFocus, inset: 2, pointerEvents: 'none' }),
             {
                 display: 'inline-flex',
                 '.ms-Button--default': {
@@ -3158,7 +3158,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                             border: 'none',
                         }
                     },
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'WindowText', backgroundColor: 'Window', border: '1px solid WindowText', borderRightWidth: '0' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { ':hover': {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'WindowText', backgroundColor: 'Window', border: '1px solid WindowText', borderRightWidth: '0' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { ':hover': {
                             backgroundColor: 'Highlight',
                             border: '1px solid Highlight',
                             borderRightWidth: '0',
@@ -3168,29 +3168,29 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                         } }),
                     _a),
                 '.ms-Button--default + .ms-Button': (_b = {},
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         border: '1px solid WindowText',
                         borderLeftWidth: '0',
                         ':hover': {
                             backgroundColor: 'HighlightText',
                             borderColor: 'Highlight',
                             color: 'Highlight',
-                            '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'HighlightText', color: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                            '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'HighlightText', color: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                         },
                     },
                     _b),
                 '.ms-Button--default + .ms-Button[aria-expanded="true"]': (_c = {},
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         backgroundColor: 'HighlightText',
                         borderColor: 'Highlight',
                         color: 'Highlight',
-                        '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'HighlightText', color: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                        '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'HighlightText', color: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     },
                     _c),
                 '.ms-Button--primary + .ms-Button': (_d = {
                         border: 'none'
                     },
-                    _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         border: '1px solid WindowText',
                         borderLeftWidth: '0',
                         ':hover': {
@@ -3198,15 +3198,15 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                             backgroundColor: 'Highlight',
                             borderColor: 'Highlight',
                             color: 'HighlightText',
-                            '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { color: 'HighlightText' }),
+                            '.ms-Button-menuIcon': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { color: 'HighlightText' }),
                         },
                     },
                     _d),
-                '.ms-Button--primary + .ms-Button[aria-expanded="true"]': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'Highlight', borderColor: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { '.ms-Button-menuIcon': {
+                '.ms-Button--primary + .ms-Button[aria-expanded="true"]': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'Highlight', borderColor: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { '.ms-Button-menuIcon': {
                         color: 'HighlightText',
                     } }),
                 '.ms-Button.is-disabled': (_e = {},
-                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'GrayText',
                         borderColor: 'GrayText',
                         backgroundColor: 'Window',
@@ -3219,7 +3219,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                     backgroundColor: semanticColors.buttonBackgroundDisabled,
                     color: semanticColors.buttonTextDisabled
                 },
-                _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                     borderColor: 'GrayText',
                     backgroundColor: 'Window',
@@ -3229,7 +3229,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                     backgroundColor: semanticColors.primaryButtonBackgroundDisabled,
                     color: semanticColors.primaryButtonTextDisabled
                 },
-                _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                     borderColor: 'GrayText',
                     backgroundColor: 'Window',
@@ -3238,12 +3238,12 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
         },
         splitButtonContainerChecked: {
             '.ms-Button--primary': (_h = {},
-                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _h),
         },
         splitButtonContainerCheckedHovered: {
             '.ms-Button--primary': (_j = {},
-                _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _j),
         },
         splitButtonContainerFocused: {
@@ -3271,16 +3271,16 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                 marginRight: 0,
                 marginBottom: 0
             },
-            _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 '.ms-Button-menuIcon': {
                     color: 'WindowText',
                 },
             },
             _k),
-        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles), (_l = {}, _l[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles), (_l = {}, _l[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
             backgroundColor: 'WindowText',
         }, _l)),
-        splitButtonDividerDisabled: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles), (_m = {}, _m[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+        splitButtonDividerDisabled: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles), (_m = {}, _m[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
             backgroundColor: 'GrayText',
         }, _m)),
         splitButtonMenuButtonDisabled: (_o = {
@@ -3290,19 +3290,19 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                     cursor: 'default',
                 },
                 '.ms-Button--primary': (_p = {},
-                    _p[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _p[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'GrayText',
                         borderColor: 'GrayText',
                         backgroundColor: 'Window',
                     },
                     _p),
                 '.ms-Button-menuIcon': (_q = {},
-                    _q[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _q[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'GrayText',
                     },
                     _q)
             },
-            _o[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _o[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
                 border: '1px solid GrayText',
                 backgroundColor: 'Window',
@@ -3319,11 +3319,11 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunctio
                 outline: 'none',
                 border: 'none'
             },
-            _r[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText', borderColor: 'GrayText', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+            _r[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText', borderColor: 'GrayText', backgroundColor: 'Window' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
             _r),
-        splitButtonMenuFocused: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { highContrastStyle: buttonHighContrastFocus, inset: 2 })),
+        splitButtonMenuFocused: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { highContrastStyle: buttonHighContrastFocus, inset: 2 })),
     };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* concatStyleSets */ "s"])(splitButtonStyles, customStyles);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* concatStyleSets */ "r"])(splitButtonStyles, customStyles);
 });
 //# sourceMappingURL=SplitButton.styles.js.map
 
@@ -3523,20 +3523,20 @@ var GlobalClassNames = {
 var getStyles = function (props) {
     var className = props.className, showSecondaryText = props.showSecondaryText, theme = props.theme;
     var semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var size = Object(_PersonaConsts__WEBPACK_IMPORTED_MODULE_1__[/* sizeBoolean */ "d"])(props.size);
     var presence = Object(_PersonaConsts__WEBPACK_IMPORTED_MODULE_1__[/* presenceBoolean */ "c"])(props.presence);
     var showSecondaryTextDefaultHeight = '16px';
     var sharedTextStyles = {
         color: semanticColors.bodySubtext,
-        fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular,
+        fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular,
         fontSize: fonts.small.fontSize,
     };
     return {
         root: [
             classNames.root,
             theme.fonts.medium,
-            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* normalize */ "H"],
             {
                 color: semanticColors.bodyText,
                 position: 'relative',
@@ -3673,10 +3673,10 @@ var getStyles = function (props) {
         ],
         primaryText: [
             classNames.primaryText,
-            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "H"],
+            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "G"],
             {
                 color: semanticColors.bodyText,
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular,
                 fontSize: fonts.medium.fontSize,
                 selectors: {
                     ':hover': {
@@ -3710,7 +3710,7 @@ var getStyles = function (props) {
         ],
         secondaryText: [
             classNames.secondaryText,
-            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "H"],
+            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "G"],
             sharedTextStyles,
             (size.isSize8 || size.isSize10 || size.isSize16 || size.isSize24 || size.isSize28 || size.isSize32) && {
                 display: 'none',
@@ -3735,7 +3735,7 @@ var getStyles = function (props) {
         ],
         tertiaryText: [
             classNames.tertiaryText,
-            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "H"],
+            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "G"],
             sharedTextStyles,
             {
                 display: 'none',
@@ -3747,7 +3747,7 @@ var getStyles = function (props) {
         ],
         optionalText: [
             classNames.optionalText,
-            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "H"],
+            _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "G"],
             sharedTextStyles,
             {
                 display: 'none',
@@ -3757,7 +3757,7 @@ var getStyles = function (props) {
                 display: 'block',
             },
         ],
-        textContent: [classNames.textContent, _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "H"]],
+        textContent: [classNames.textContent, _Styling__WEBPACK_IMPORTED_MODULE_0__[/* noWrap */ "G"]],
     };
 };
 //# sourceMappingURL=Persona.styles.js.map
@@ -3969,7 +3969,7 @@ Image.displayName = 'Image';
 
 var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunction */ "b"])(function (className, isDragging) {
     return {
-        root: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(className, isDragging && {
+        root: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(className, isDragging && {
             touchAction: 'none',
             selectors: {
                 '& *': {
@@ -4142,7 +4142,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var className = props.className, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var fonts = theme.fonts, semanticColors = theme.semanticColors, effects = theme.effects;
     return {
         root: [
@@ -4176,7 +4176,7 @@ var getStyles = function (props) {
             classNames.header,
             fonts.small,
             {
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
                 color: semanticColors.menuHeader,
                 background: 'none',
                 backgroundColor: 'transparent',
@@ -4239,7 +4239,7 @@ var getStyles = function (props) {
     var _a;
     var className = props.className, containerClassName = props.containerClassName, scrollableContentClassName = props.scrollableContentClassName, isOpen = props.isOpen, isVisible = props.isVisible, hasBeenOpened = props.hasBeenOpened, modalRectangleTop = props.modalRectangleTop, theme = props.theme, topOffsetFixed = props.topOffsetFixed, isModeless = props.isModeless, layerClassName = props.layerClassName, isDefaultDragHandle = props.isDefaultDragHandle, windowInnerHeight = props.windowInnerHeight;
     var palette = theme.palette, effects = theme.effects, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(globalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(globalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -4286,7 +4286,7 @@ var getStyles = function (props) {
                 minHeight: '176px',
                 minWidth: '288px',
                 overflowY: 'auto',
-                zIndex: isModeless ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "r"].Layer : undefined,
+                zIndex: isModeless ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "q"].Layer : undefined,
             },
             isModeless && {
                 pointerEvents: 'auto',
@@ -4779,7 +4779,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var className = props.className, width = props.width, height = props.height, maximizeFrame = props.maximizeFrame, isLoaded = props.isLoaded, shouldFadeIn = props.shouldFadeIn, shouldStartVisible = props.shouldStartVisible, isLandscape = props.isLandscape, isCenter = props.isCenter, isContain = props.isContain, isCover = props.isCover, isCenterContain = props.isCenterContain, isCenterCover = props.isCenterCover, isNone = props.isNone, isError = props.isError, isNotImageFit = props.isNotImageFit, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var ImageFitStyles = {
         position: 'absolute',
         left: '50% /* @noflip */',
@@ -4919,7 +4919,7 @@ var getStyles = function (props) {
 var getStyles = function (props) {
     return {
         root: props.className,
-        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* hiddenContentStyle */ "D"],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* hiddenContentStyle */ "C"],
     };
 };
 //# sourceMappingURL=Announced.styles.js.map
@@ -4943,7 +4943,7 @@ var GlobalClassNames = {
 };
 function getStyles(props) {
     var flexWrap = props.flexWrap, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -5218,7 +5218,7 @@ function getStyles(props) {
     // eslint-disable-next-line deprecation/deprecation
     var height = props.height, borderStyle = props.borderStyle, theme = props.theme;
     var semanticColors = theme.semanticColors;
-    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var borderStyles = borderStyle || {};
     return {
         root: [
@@ -5233,7 +5233,7 @@ function getStyles(props) {
                 borderBottomStyle: 'solid',
                 borderColor: semanticColors.bodyBackground,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         borderColor: 'Window',
                     },
                     _a),
@@ -5246,7 +5246,7 @@ function getStyles(props) {
                 display: 'block',
                 fill: semanticColors.bodyBackground,
                 selectors: (_b = {},
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         fill: 'Window',
                     },
                     _b),
@@ -5444,7 +5444,7 @@ function standardStyles(theme) {
                 backgroundColor: buttonBackgroundHovered,
                 color: buttonTextHovered
             },
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 borderColor: 'Highlight',
                 color: 'Highlight',
             },
@@ -5469,7 +5469,7 @@ function standardStyles(theme) {
                 color: buttonTextDisabled,
                 backgroundColor: buttonBackgroundDisabled
             },
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
                 borderColor: 'GrayText',
                 backgroundColor: 'Window',
@@ -5477,7 +5477,7 @@ function standardStyles(theme) {
             _b),
         // Split button styles
         splitButtonContainer: (_c = {},
-            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 border: 'none',
             },
             _c),
@@ -5487,7 +5487,7 @@ function standardStyles(theme) {
             ':hover': (_d = {
                     backgroundColor: p.neutralLight
                 },
-                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'Highlight',
                 },
                 _d),
@@ -5498,7 +5498,7 @@ function standardStyles(theme) {
                 backgroundColor: s.buttonBackgroundDisabled,
             },
         },
-        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles()), (_e = { backgroundColor: p.neutralTertiaryAlt }, _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles()), (_e = { backgroundColor: p.neutralTertiaryAlt }, _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
             backgroundColor: 'WindowText',
         }, _e)),
         splitButtonDividerDisabled: {
@@ -5533,7 +5533,7 @@ function primaryStyles(theme) {
                 border: "1px solid ".concat(s.primaryButtonBackground),
                 color: s.primaryButtonText
             },
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText', borderColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText', borderColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
             _a[".".concat(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* IsFocusVisibleClassName */ "a"], " &:focus, :host(.").concat(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* IsFocusVisibleClassName */ "a"], ") &:focus")] = {
                 ':after': {
                     border: "none",
@@ -5546,7 +5546,7 @@ function primaryStyles(theme) {
                 border: "1px solid ".concat(s.primaryButtonBackgroundHovered),
                 color: s.primaryButtonTextHovered
             },
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'Window',
                 backgroundColor: 'Highlight',
                 borderColor: 'Highlight',
@@ -5557,7 +5557,7 @@ function primaryStyles(theme) {
                 border: "1px solid ".concat(s.primaryButtonBackgroundPressed),
                 color: s.primaryButtonTextPressed
             },
-            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText', borderColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'Window', backgroundColor: 'WindowText', borderColor: 'WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
             _c),
         rootExpanded: {
             backgroundColor: s.primaryButtonBackgroundPressed,
@@ -5575,7 +5575,7 @@ function primaryStyles(theme) {
                 color: s.primaryButtonTextDisabled,
                 backgroundColor: s.primaryButtonBackgroundDisabled
             },
-            _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
                 borderColor: 'GrayText',
                 backgroundColor: 'Window',
@@ -5583,24 +5583,24 @@ function primaryStyles(theme) {
             _d),
         // Split button styles
         splitButtonContainer: (_e = {},
-            _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 border: 'none',
             },
             _e),
-        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles()), (_f = { backgroundColor: p.white }, _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+        splitButtonDivider: Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, splitButtonDividerBaseStyles()), (_f = { backgroundColor: p.white }, _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
             backgroundColor: 'Window',
         }, _f)),
         splitButtonMenuButton: (_g = {
                 backgroundColor: s.primaryButtonBackground,
                 color: s.primaryButtonText
             },
-            _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 backgroundColor: 'Canvas',
             },
             _g[':hover'] = (_h = {
                     backgroundColor: s.primaryButtonBackgroundHovered
                 },
-                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'Highlight',
                 },
                 _h),
@@ -5629,7 +5629,7 @@ function primaryStyles(theme) {
         splitButtonMenuIconDisabled: (_j = {
                 color: p.neutralTertiary
             },
-            _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _j),
@@ -5692,7 +5692,7 @@ var getStyles = function (props) {
     var className = props.className, containerClassName = props.containerClassName, // eslint-disable-line deprecation/deprecation
     _b = props.dialogDefaultMinWidth, // eslint-disable-line deprecation/deprecation
     dialogDefaultMinWidth = _b === void 0 ? '288px' : _b, _c = props.dialogDefaultMaxWidth, dialogDefaultMaxWidth = _c === void 0 ? '340px' : _c, hidden = props.hidden, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [classNames.root, theme.fonts.medium, className],
         main: [
@@ -5700,7 +5700,7 @@ var getStyles = function (props) {
                 width: dialogDefaultMinWidth,
                 outline: '3px solid transparent',
                 selectors: (_a = {},
-                    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinMedium */ "m"], "px)")] = {
+                    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinMedium */ "l"], "px)")] = {
                         width: 'auto',
                         maxWidth: dialogDefaultMaxWidth,
                         minWidth: dialogDefaultMinWidth,
@@ -5742,7 +5742,7 @@ var getStyles = function (props) {
 
 
 var getIconContent = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoizeFunction */ "b"])(function (iconName) {
-    var _a = Object(_Styling__WEBPACK_IMPORTED_MODULE_6__[/* getIcon */ "y"])(iconName) || {
+    var _a = Object(_Styling__WEBPACK_IMPORTED_MODULE_6__[/* getIcon */ "x"])(iconName) || {
         subset: {},
         code: undefined,
     }, code = _a.code, subset = _a.subset;
@@ -5933,9 +5933,9 @@ var ButtonGlobalClassNames = {
 };
 var getBaseButtonClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunction */ "b"])(function (theme, styles, className, variantClassName, iconClassName, menuIconClassName, disabled, hasMenu, checked, expanded, isSplit) {
     var _a, _b;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(ButtonGlobalClassNames, theme || {});
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(ButtonGlobalClassNames, theme || {});
     var isExpanded = expanded && !isSplit;
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyleSets */ "F"])(styles.__shadowConfig__, {
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyleSets */ "E"])(styles.__shadowConfig__, {
         root: [
             classNames.msButton,
             styles.root,
@@ -6033,7 +6033,7 @@ var getStyles = function (props) {
     var theme = props.theme, className = props.className, disabled = props.disabled, required = props.required;
     var semanticColors = theme.semanticColors;
     // Tokens
-    var labelFontWeight = _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold;
+    var labelFontWeight = _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold;
     var labelColor = semanticColors.bodyText;
     var labelDisabledColor = semanticColors.disabledBodyText;
     var labelRequiredStarColor = semanticColors.errorText;
@@ -6055,7 +6055,7 @@ var getStyles = function (props) {
             disabled && {
                 color: labelDisabledColor,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ color: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _a),
             },
             required && {
@@ -6249,7 +6249,7 @@ var getStyles = function (props) {
     var _a, _b, _c;
     var className = props.className, theme = props.theme, isLargeHeader = props.isLargeHeader, isClose = props.isClose, hidden = props.hidden, isMultiline = props.isMultiline, draggableHeaderClassName = props.draggableHeaderClassName;
     var palette = theme.palette, fonts = theme.fonts, effects = theme.effects, semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         content: [
             isLargeHeader && [
@@ -6273,7 +6273,7 @@ var getStyles = function (props) {
                 color: semanticColors.bodySubtext,
                 lineHeight: '1.5',
                 wordWrap: 'break-word',
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].regular,
             },
         ],
         header: [
@@ -6297,7 +6297,7 @@ var getStyles = function (props) {
                 selectors: {
                     '.ms-Icon.ms-Icon--Cancel': {
                         color: semanticColors.buttonText,
-                        fontSize: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* IconFontSizes */ "i"].medium,
+                        fontSize: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* IconFontSizes */ "h"].medium,
                     },
                 },
             },
@@ -6307,7 +6307,7 @@ var getStyles = function (props) {
             {
                 padding: '0 24px 24px',
                 selectors: (_a = {},
-                    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "n"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "k"], "px)")] = {
+                    _a["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "m"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "j"], "px)")] = {
                         padding: '0 16px 16px',
                     },
                     _a),
@@ -6330,7 +6330,7 @@ var getStyles = function (props) {
                 padding: '16px 46px 20px 24px',
                 lineHeight: 'normal',
                 selectors: (_b = {},
-                    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "n"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "k"], "px)")] = {
+                    _b["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "m"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "j"], "px)")] = {
                         padding: '16px 46px 16px 16px',
                     },
                     _b),
@@ -6361,7 +6361,7 @@ var getStyles = function (props) {
                             borderRadius: effects.roundedCorner2,
                         }
                     },
-                    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "n"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "k"], "px)")] = {
+                    _c["@media (min-width: ".concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMinSmall */ "m"], "px) and (max-width: ").concat(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* ScreenWidthMaxSmall */ "j"], "px)")] = {
                         padding: '15px 8px 0 0',
                     },
                     _c),
@@ -6750,13 +6750,13 @@ var SplitButtonGlobalClassNames = {
 };
 var getSplitButtonClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunction */ "b"])(function (styles, disabled, expanded, checked, primaryDisabled) {
     return {
-        root: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.splitButtonMenuButton, expanded && [styles.splitButtonMenuButtonExpanded], disabled && [styles.splitButtonMenuButtonDisabled], checked && !disabled && [styles.splitButtonMenuButtonChecked], primaryDisabled &&
+        root: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.splitButtonMenuButton, expanded && [styles.splitButtonMenuButtonExpanded], disabled && [styles.splitButtonMenuButtonDisabled], checked && !disabled && [styles.splitButtonMenuButtonChecked], primaryDisabled &&
             !disabled && [
             {
                 ':focus': styles.splitButtonMenuFocused,
             },
         ]),
-        splitButtonContainer: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.splitButtonContainer, !disabled &&
+        splitButtonContainer: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.splitButtonContainer, !disabled &&
             checked && [
             styles.splitButtonContainerChecked,
             {
@@ -6769,9 +6769,9 @@ var getSplitButtonClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/*
                 ':focus': styles.splitButtonContainerFocused,
             },
         ], disabled && styles.splitButtonContainerDisabled),
-        icon: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.splitButtonMenuIcon, disabled && styles.splitButtonMenuIconDisabled, !disabled && primaryDisabled && styles.splitButtonMenuIcon),
-        flexContainer: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.splitButtonFlexContainer),
-        divider: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(SplitButtonGlobalClassNames.msSplitButtonDivider, styles.splitButtonDivider, (primaryDisabled || disabled) && styles.splitButtonDividerDisabled),
+        icon: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.splitButtonMenuIcon, disabled && styles.splitButtonMenuIconDisabled, !disabled && primaryDisabled && styles.splitButtonMenuIcon),
+        flexContainer: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.splitButtonFlexContainer),
+        divider: Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(SplitButtonGlobalClassNames.msSplitButtonDivider, styles.splitButtonDivider, (primaryDisabled || disabled) && styles.splitButtonDividerDisabled),
     };
 });
 //# sourceMappingURL=SplitButton.classNames.js.map
@@ -7052,7 +7052,7 @@ var _getMenuItemStylesFunction = Object(_Utilities__WEBPACK_IMPORTED_MODULE_7__[
         styles[_i] = arguments[_i];
     }
     return function (styleProps) {
-        return _Styling__WEBPACK_IMPORTED_MODULE_26__[/* concatStyleSetsWithProps */ "t"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([styleProps, _ContextualMenu_classNames__WEBPACK_IMPORTED_MODULE_27__[/* getItemStyles */ "a"]], styles, false));
+        return _Styling__WEBPACK_IMPORTED_MODULE_26__[/* concatStyleSetsWithProps */ "s"].apply(void 0, Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __spreadArray */ "f"])([styleProps, _ContextualMenu_classNames__WEBPACK_IMPORTED_MODULE_27__[/* getItemStyles */ "a"]], styles, false));
     };
 });
 //#region Custom hooks
@@ -8208,7 +8208,7 @@ var TooltipHostBase = /** @class */ (function (_super) {
         return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ className: this._classNames.root, ref: this._tooltipHost }, { onFocusCapture: this._onTooltipFocus }, { onBlurCapture: this._onTooltipBlur }, { onMouseEnter: this._onTooltipMouseEnter, onMouseLeave: this._onTooltipMouseLeave, onKeyDown: this._onTooltipKeyDown, role: "none", "aria-describedby": ariaDescribedBy }),
             children,
             showTooltip && react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_Tooltip__WEBPACK_IMPORTED_MODULE_13__[/* Tooltip */ "a"], Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, tooltipRenderProps)),
-            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { hidden: true, id: tooltipId, style: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "D"] }, tooltipContent)));
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { hidden: true, id: tooltipId, style: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "C"] }, tooltipContent)));
     };
     TooltipHostBase.prototype.componentDidMount = function () {
         this._async = new _Utilities__WEBPACK_IMPORTED_MODULE_11__[/* Async */ "a"](this);
@@ -8657,7 +8657,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var className = props.className, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -8715,7 +8715,7 @@ function getStyles(props) {
     // eslint-disable-next-line deprecation/deprecation
     var height = props.height, borderStyle = props.borderStyle, theme = props.theme;
     var semanticColors = theme.semanticColors;
-    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var borderStyles = borderStyle || {};
     return {
         root: [
@@ -8729,7 +8729,7 @@ function getStyles(props) {
                 borderBottomStyle: 'solid',
                 borderColor: semanticColors.bodyBackground,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         backgroundColor: 'Window',
                         borderColor: 'Window',
                     },
@@ -8767,7 +8767,7 @@ function getStyles(props) {
     // eslint-disable-next-line deprecation/deprecation
     var height = props.height, borderStyle = props.borderStyle, theme = props.theme;
     var semanticColors = theme.semanticColors;
-    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var globalClassNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var borderStyles = borderStyle || {};
     var sharedCornerStyles = {
         position: 'absolute',
@@ -8786,7 +8786,7 @@ function getStyles(props) {
                 borderColor: semanticColors.bodyBackground,
                 borderWidth: 0,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         borderColor: 'Window',
                         selectors: {
                             '> *': {
@@ -8865,7 +8865,7 @@ function getStyles(props) {
     var _a;
     var className = props.className, suggestionsClassName = props.suggestionsClassName, theme = props.theme, forceResolveButtonSelected = props.forceResolveButtonSelected, searchForMoreButtonSelected = props.searchForMoreButtonSelected;
     var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var actionButtonStyles = {
         backgroundColor: 'transparent',
         border: 0,
@@ -8898,7 +8898,7 @@ function getStyles(props) {
     var actionButtonSelectedStyles = {
         backgroundColor: palette.themeLight,
         selectors: (_a = {},
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'Highlight', borderColor: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'Highlight', borderColor: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
             _a[':after'] = {
                 pointerEvents: 'none',
                 content: '""',
@@ -8958,7 +8958,7 @@ function getStyles(props) {
                 lineHeight: 30,
             },
         ],
-        suggestionsAvailable: [classNames.suggestionsAvailable, _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "D"]],
+        suggestionsAvailable: [classNames.suggestionsAvailable, _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "C"]],
         subComponentStyles: {
             spinner: {
                 root: [
@@ -9122,10 +9122,10 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
             minHeight: DEFAULT_BUTTON_MIN_HEIGHT,
         },
         label: {
-            fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].semibold,
+            fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].semibold,
         },
     };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "s"])(baseButtonStyles, defaultButtonStyles, primary ? Object(_ButtonThemes__WEBPACK_IMPORTED_MODULE_4__[/* primaryStyles */ "a"])(theme) : Object(_ButtonThemes__WEBPACK_IMPORTED_MODULE_4__[/* standardStyles */ "b"])(theme), splitButtonStyles, customStyles);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "r"])(baseButtonStyles, defaultButtonStyles, primary ? Object(_ButtonThemes__WEBPACK_IMPORTED_MODULE_4__[/* primaryStyles */ "a"])(theme) : Object(_ButtonThemes__WEBPACK_IMPORTED_MODULE_4__[/* standardStyles */ "b"])(theme), splitButtonStyles, customStyles);
 });
 //# sourceMappingURL=DefaultButton.styles.js.map
 
@@ -9224,7 +9224,7 @@ var GlobalClassNames = {
 };
 var BACKGROUND_OFF_SCREEN_POSITION = '100%';
 var shimmerAnimation = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function () {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "E"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "D"])({
         '0%': {
             transform: "translateX(-".concat(BACKGROUND_OFF_SCREEN_POSITION, ")"),
         },
@@ -9234,7 +9234,7 @@ var shimmerAnimation = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoize
     });
 });
 var shimmerAnimationRTL = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function () {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "E"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "D"])({
         '100%': {
             transform: "translateX(-".concat(BACKGROUND_OFF_SCREEN_POSITION, ")"),
         },
@@ -9247,7 +9247,7 @@ function getStyles(props) {
     var _a;
     var isDataLoaded = props.isDataLoaded, className = props.className, theme = props.theme, transitionAnimationInterval = props.transitionAnimationInterval, shimmerColor = props.shimmerColor, shimmerWaveColor = props.shimmerWaveColor, improveCSSPerformance = props.improveCSSPerformance;
     var semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var isRTL = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])(theme);
     return {
         root: [
@@ -9268,7 +9268,7 @@ function getStyles(props) {
                 backgroundColor: shimmerColor || semanticColors.disabledBackground,
                 transition: "opacity ".concat(transitionAnimationInterval, "ms"),
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: "WindowText\n                        linear-gradient(\n                          to right,\n                          transparent 0%,\n                          Window 50%,\n                          transparent 100%)\n                        0 0 / 90% 100%\n                        no-repeat" }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: "WindowText\n                        linear-gradient(\n                          to right,\n                          transparent 0%,\n                          Window 50%,\n                          transparent 100%)\n                        0 0 / 90% 100%\n                        no-repeat" }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _a),
             },
             isDataLoaded && {
@@ -9331,7 +9331,7 @@ function getStyles(props) {
                 position: 'static',
             },
         ],
-        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "D"],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "C"],
     };
 }
 //# sourceMappingURL=Shimmer.styles.js.map
@@ -9894,12 +9894,12 @@ var KeytipData = function (props) {
 
 
 var CONTEXTUAL_SPLIT_MENU_MINWIDTH = '28px';
-var MediumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getScreenSelector */ "B"])(0, _Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMaxMedium */ "j"]);
+var MediumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getScreenSelector */ "A"])(0, _Styling__WEBPACK_IMPORTED_MODULE_2__[/* ScreenWidthMaxMedium */ "i"]);
 var getSplitButtonVerticalDividerClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoizeFunction */ "b"])(
 /* eslint-disable deprecation/deprecation */
 function (theme) {
     var _a;
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "F"])(Object(_Divider_VerticalDivider_classNames__WEBPACK_IMPORTED_MODULE_0__[/* getDividerClassNames */ "a"])(theme), {
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "E"])(Object(_Divider_VerticalDivider_classNames__WEBPACK_IMPORTED_MODULE_0__[/* getDividerClassNames */ "a"])(theme), {
         /* eslint-enable deprecation/deprecation */
         wrapper: {
             position: 'absolute',
@@ -9945,8 +9945,8 @@ var GlobalClassNames = {
 var getItemClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoizeFunction */ "b"])(function (theme, disabled, expanded, checked, isAnchorLink, knownIcon, itemClassName, dividerClassName, iconClassName, subMenuClassName, primaryDisabled, className) {
     var _a, _b, _c, _d;
     var styles = Object(_ContextualMenu_cnstyles__WEBPACK_IMPORTED_MODULE_1__[/* getMenuItemStyles */ "b"])(theme);
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "F"])({
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyleSets */ "E"])({
         item: [classNames.item, styles.item, itemClassName],
         divider: [classNames.divider, styles.divider, dividerClassName],
         root: [
@@ -10066,7 +10066,7 @@ var getItemClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoiz
         screenReaderText: [
             classNames.screenReaderText,
             styles.screenReaderText,
-            _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "D"],
+            _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "C"],
             { visibility: 'hidden' },
         ],
     });
@@ -10227,7 +10227,7 @@ var getLinkStyles = function (props, classNames, isLinkInOverflowMenu) {
                         color: 'transparent',
                         content: 'attr(data-content)',
                         display: 'block',
-                        fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].bold,
+                        fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].bold,
                         height: 1,
                         overflow: 'hidden',
                         visibility: 'hidden',
@@ -10265,7 +10265,7 @@ var getLinkStyles = function (props, classNames, isLinkInOverflowMenu) {
                         _b["&.".concat(classNames.linkIsSelected)] = {
                             backgroundColor: semanticColors.primaryButtonBackground,
                             color: semanticColors.primaryButtonText,
-                            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].regular,
+                            fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].regular,
                             selectors: (_c = {
                                     ':before': {
                                         backgroundColor: 'transparent',
@@ -10287,7 +10287,7 @@ var getLinkStyles = function (props, classNames, isLinkInOverflowMenu) {
                                         color: semanticColors.primaryButtonText,
                                     }
                                 },
-                                _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold, color: 'HighlightText', background: 'Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                                _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold, color: 'HighlightText', background: 'Highlight' }, Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                                 _c),
                         },
                         // eslint-disable-next-line @fluentui/max-len
@@ -10304,14 +10304,14 @@ var getStyles = function (props) {
     var _a, _b, _c, _d;
     var className = props.className, linkSize = props.linkSize, linkFormat = props.linkFormat, theme = props.theme;
     var semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(globalClassNames, theme);
+    var classNames = Object(_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(globalClassNames, theme);
     var rootIsLarge = linkSize === 'large';
     var rootIsTabs = linkFormat === 'tabs';
     return {
         root: [
             classNames.root,
             fonts.medium,
-            _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
+            _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "H"],
             {
                 position: 'relative',
                 color: semanticColors.link,
@@ -10364,12 +10364,12 @@ var getStyles = function (props) {
             classNames.link,
             classNames.linkIsSelected,
             {
-                fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
+                fontWeight: _fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold,
                 selectors: (_c = {
                         ':before': {
                             backgroundColor: semanticColors.inputBackgroundChecked,
                             selectors: (_d = {},
-                                _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                                _d[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                     backgroundColor: 'Highlight',
                                 },
                                 _d),
@@ -10379,7 +10379,7 @@ var getStyles = function (props) {
                             right: 0,
                         }
                     },
-                    _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _c[_fluentui_style_utilities__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'Highlight',
                     },
                     _c),
@@ -10425,12 +10425,12 @@ var getStyles = function (props) {
   !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/node_modules/@fluentui/react/lib/utilities/dom.js ***!
   \**********************************************************************************************************************/
 /*! exports provided: useDocumentEx, useWindowEx, getDocumentEx, getWindowEx */
-/*! exports used: getDocumentEx, getWindowEx, useDocumentEx, useWindowEx */
+/*! exports used: getDocumentEx, getWindowEx, useWindowEx */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return useDocumentEx; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return useWindowEx; });
+/* unused harmony export useDocumentEx */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return useWindowEx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getDocumentEx; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getWindowEx; });
 /* harmony import */ var _fluentui_react_window_provider__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react-window-provider */ "7R02");
@@ -10738,7 +10738,7 @@ function useApplyThemeToBody(applyThemeToBody, _a, rootElement) {
 var getDividerClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunction */ "b"])(
 // eslint-disable-next-line deprecation/deprecation
 function (theme) {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyleSets */ "F"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyleSets */ "E"])({
         wrapper: {
             display: 'inline-flex',
             height: '100%',
@@ -10850,7 +10850,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunctio
     };
     return {
         root: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: 1, highContrastStyle: buttonHighContrastFocus, borderColor: 'transparent' }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: 1, highContrastStyle: buttonHighContrastFocus, borderColor: 'transparent' }),
             theme.fonts.medium,
             {
                 border: '1px solid ' + border,
@@ -10871,7 +10871,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunctio
             },
         ],
         rootDisabled: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: 1, highContrastStyle: buttonHighContrastFocus, borderColor: 'transparent' }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: 1, highContrastStyle: buttonHighContrastFocus, borderColor: 'transparent' }),
             {
                 backgroundColor: disabledBackground,
                 borderColor: disabledBackground,
@@ -10884,14 +10884,14 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunctio
         iconDisabled: (_a = {
                 color: disabledText
             },
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _a),
         menuIconDisabled: (_b = {
                 color: disabledText
             },
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _b),
@@ -10916,7 +10916,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_0__[/* memoizeFunctio
             lineHeight: '100%',
             display: 'block',
         },
-        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "D"],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* hiddenContentStyle */ "C"],
     };
 });
 //# sourceMappingURL=BaseButton.styles.js.map
@@ -11045,7 +11045,7 @@ var getStyles = function (props) {
     var _a;
     var className = props.className, theme = props.theme, isNone = props.isNone, isDark = props.isDark;
     var palette = theme.palette;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -11058,7 +11058,7 @@ var getStyles = function (props) {
                 left: 0,
                 position: 'absolute',
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         border: '1px solid WindowText',
                         opacity: 0,
                     },
@@ -13105,7 +13105,7 @@ function getStyles(props) {
     var _a, _b, _c, _d, _e, _f, _g, _h;
     var className = props.className, theme = props.theme, selected = props.selected, invalid = props.invalid, disabled = props.disabled;
     var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var personaRootStyles = {
         color: 'inherit',
     };
@@ -13120,7 +13120,7 @@ function getStyles(props) {
                         color: 'inherit',
                     }
                 },
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'HighlightText',
                 },
                 _a),
@@ -13148,7 +13148,7 @@ function getStyles(props) {
         },
         disabled && {
             selectors: (_c = {},
-                _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                 },
                 _c),
@@ -13164,7 +13164,7 @@ function getStyles(props) {
                         color: 'inherit',
                     }
                 },
-                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'HighlightText',
                 },
                 _d),
@@ -13178,7 +13178,7 @@ function getStyles(props) {
     return {
         root: [
             classNames.root,
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: -2 }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: -2 }),
             {
                 borderRadius: PICKER_PERSONA_RADIUS,
                 display: 'inline-flex',
@@ -13195,7 +13195,7 @@ function getStyles(props) {
                             background: !selected && !disabled ? palette.neutralLight : '',
                         }
                     },
-                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = [{ border: '1px solid WindowText' }, disabled && { borderColor: 'GrayText' }],
+                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = [{ border: '1px solid WindowText' }, disabled && { borderColor: 'GrayText' }],
                     _e),
             },
             selected &&
@@ -13208,7 +13208,7 @@ function getStyles(props) {
                                 color: palette.white,
                             }
                         },
-                        _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'HighLight', background: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                        _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'HighLight', background: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                         _f),
                 },
             ],
@@ -13253,7 +13253,7 @@ function getStyles(props) {
                 },
             },
             selected && [
-                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, {
+                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, {
                     inset: 2,
                     borderColor: 'transparent',
                     highContrastStyle: { inset: 2, left: 1, top: 1, bottom: 1, right: 1, outlineColor: 'ButtonText' },
@@ -13274,7 +13274,7 @@ function getStyles(props) {
                                 color: palette.white,
                             }
                         },
-                        _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             color: 'HighlightText',
                         },
                         _g),
@@ -13362,7 +13362,7 @@ var GlobalClassNames = {
 var getStyles = function (props) {
     var _a;
     var theme = props.theme, className = props.className, overflowYHidden = props.overflowYHidden, calloutWidth = props.calloutWidth, beakWidth = props.beakWidth, backgroundColor = props.backgroundColor, calloutMaxWidth = props.calloutMaxWidth, calloutMinWidth = props.calloutMinWidth, doNotLayer = props.doNotLayer;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var semanticColors = theme.semanticColors, effects = theme.effects;
     return {
         container: [
@@ -13377,19 +13377,19 @@ var getStyles = function (props) {
             {
                 position: 'absolute',
                 display: 'flex',
-                zIndex: doNotLayer ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "r"].Layer : undefined,
+                zIndex: doNotLayer ? _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "q"].Layer : undefined,
                 boxSizing: 'border-box',
                 borderRadius: effects.roundedCorner2,
                 boxShadow: effects.elevation16,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                         borderWidth: 1,
                         borderStyle: 'solid',
                         borderColor: 'WindowText',
                     },
                     _a),
             },
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* focusClear */ "u"])(),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* focusClear */ "t"])(),
             className,
             !!calloutWidth && { width: calloutWidth },
             !!calloutMaxWidth && { maxWidth: calloutMaxWidth },
@@ -13514,7 +13514,7 @@ function getStyles(props) {
     var _a, _b, _c, _d, _e, _f;
     var className = props.className, theme = props.theme, suggested = props.suggested;
     var palette = theme.palette, semanticColors = theme.semanticColors;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(SuggestionsItemGlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(SuggestionsItemGlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -13570,10 +13570,10 @@ function getStyles(props) {
                 // Require for IE11 to truncate the component.
                 overflow: 'hidden',
                 selectors: (_c = {},
-                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'WindowText',
                         selectors: {
-                            ':hover': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                            ':hover': Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                         },
                     },
                     _c[':hover'] = {
@@ -13590,7 +13590,7 @@ function getStyles(props) {
                                 background: semanticColors.menuDivider,
                             }
                         },
-                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ background: 'Highlight', color: 'HighlightText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                         _d),
                 },
             ],
@@ -13609,7 +13609,7 @@ function getStyles(props) {
                             color: palette.neutralDark,
                         }
                     },
-                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         color: 'WindowText',
                     },
                     _e),
@@ -13751,14 +13751,14 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
                 backgroundColor: 'transparent',
                 border: '1px solid transparent'
             },
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                 borderColor: 'Window',
             },
             _a),
         rootHovered: (_b = {
                 color: theme.palette.themePrimary
             },
-            _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+            _b[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                 color: 'Highlight',
             },
             _b),
@@ -13779,7 +13779,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
                 backgroundColor: 'transparent',
                 borderColor: 'transparent'
             },
-            _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+            _c[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _c),
@@ -13805,7 +13805,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
             flexGrow: 0,
         },
     };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "s"])(baseButtonStyles, actionButtonStyles, customStyles);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "r"])(baseButtonStyles, actionButtonStyles, customStyles);
 });
 //# sourceMappingURL=ActionButton.styles.js.map
 
@@ -15292,7 +15292,7 @@ function getLabelStyles(props) {
                 underlined &&
                     focused && {
                     selectors: (_a = {},
-                        _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             height: 31, // -1px to prevent jumpiness in HC with the increased border-width to 2px
                         },
                         _a),
@@ -15305,7 +15305,7 @@ function getStyles(props) {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m;
     var theme = props.theme, className = props.className, disabled = props.disabled, focused = props.focused, required = props.required, multiline = props.multiline, hasLabel = props.hasLabel, borderless = props.borderless, underlined = props.underlined, hasIcon = props.hasIcon, resizable = props.resizable, hasErrorMessage = props.hasErrorMessage, inputClassName = props.inputClassName, autoAdjustHeight = props.autoAdjustHeight, hasRevealButton = props.hasRevealButton;
     var semanticColors = theme.semanticColors, effects = theme.effects, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(globalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(globalClassNames, theme);
     var fieldPrefixSuffix = {
         // Suffix/Prefix are not editable so the disabled slot perfectly fits.
         background: semanticColors.disabledBackground,
@@ -15317,7 +15317,7 @@ function getStyles(props) {
         whiteSpace: 'nowrap',
         flexShrink: 0,
         selectors: (_a = {},
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 background: 'Window',
                 color: disabled ? 'GrayText' : 'WindowText',
             },
@@ -15329,7 +15329,7 @@ function getStyles(props) {
             color: semanticColors.inputPlaceholderText,
             opacity: 1,
             selectors: (_b = {},
-                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     color: 'GrayText',
                 },
                 _b),
@@ -15338,7 +15338,7 @@ function getStyles(props) {
     var disabledPlaceholderStyles = {
         color: semanticColors.disabledText,
         selectors: (_c = {},
-            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+            _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                 color: 'GrayText',
             },
             _c),
@@ -15353,7 +15353,7 @@ function getStyles(props) {
             multiline && classNames.multiline,
             borderless && classNames.borderless,
             underlined && classNames.underlined,
-            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "H"],
             {
                 position: 'relative',
             },
@@ -15370,7 +15370,7 @@ function getStyles(props) {
                 disabled && {
                     borderBottomColor: semanticColors.disabledBackground,
                     selectors: (_d = {},
-                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                        _d[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                         _d),
                 },
                 !disabled && {
@@ -15378,7 +15378,7 @@ function getStyles(props) {
                         ':hover': {
                             borderBottomColor: !hasErrorMessage ? semanticColors.inputBorderHovered : semanticColors.errorText,
                             selectors: (_e = {},
-                                _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderBottomColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                                _e[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderBottomColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                                 _e),
                         },
                     },
@@ -15387,13 +15387,13 @@ function getStyles(props) {
                     {
                         position: 'relative',
                     },
-                    Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getInputFocusStyle */ "z"])(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, 0, 'borderBottom'),
+                    Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getInputFocusStyle */ "y"])(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, 0, 'borderBottom'),
                 ],
             ],
         ],
         fieldGroup: [
             classNames.fieldGroup,
-            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "H"],
             {
                 border: "1px solid ".concat(semanticColors.inputBorder),
                 borderRadius: effects.roundedCorner2,
@@ -15416,18 +15416,18 @@ function getStyles(props) {
                     ':hover': {
                         borderColor: semanticColors.inputBorderHovered,
                         selectors: (_f = {},
-                            _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                            _f[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                             _f),
                     },
                 },
             },
             focused &&
                 !underlined &&
-                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getInputFocusStyle */ "z"])(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, effects.roundedCorner2),
+                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getInputFocusStyle */ "y"])(!hasErrorMessage ? semanticColors.inputFocusBorderAlt : semanticColors.errorText, effects.roundedCorner2),
             disabled && {
                 borderColor: semanticColors.disabledBackground,
                 selectors: (_g = {},
-                    _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _g[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderColor: 'GrayText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _g),
                 cursor: 'default',
             },
@@ -15472,7 +15472,7 @@ function getStyles(props) {
                             right: -10,
                         }
                     },
-                    _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _h[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         selectors: {
                             ':before': {
                                 color: 'WindowText',
@@ -15486,7 +15486,7 @@ function getStyles(props) {
         field: [
             fonts.medium,
             classNames.field,
-            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "I"],
+            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* normalize */ "H"],
             {
                 borderRadius: 0,
                 border: 'none',
@@ -15504,13 +15504,13 @@ function getStyles(props) {
                             display: 'none',
                         }
                     },
-                    _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _j[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         background: 'Window',
                         color: disabled ? 'GrayText' : 'WindowText',
                     },
                     _j),
             },
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getPlaceholderStyles */ "A"])(placeholderStyles),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getPlaceholderStyles */ "z"])(placeholderStyles),
             multiline &&
                 !resizable && [
                 classNames.unresizable,
@@ -15545,7 +15545,7 @@ function getStyles(props) {
                     color: semanticColors.disabledText,
                     borderColor: semanticColors.disabledBackground,
                 },
-                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getPlaceholderStyles */ "A"])(disabledPlaceholderStyles),
+                Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getPlaceholderStyles */ "z"])(disabledPlaceholderStyles),
             ],
             underlined && {
                 textAlign: 'left',
@@ -15553,7 +15553,7 @@ function getStyles(props) {
             focused &&
                 !borderless && {
                 selectors: (_k = {},
-                    _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _k[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         paddingLeft: 11,
                         paddingRight: 11,
                     },
@@ -15563,7 +15563,7 @@ function getStyles(props) {
                 multiline &&
                 !borderless && {
                 selectors: (_l = {},
-                    _l[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _l[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         paddingTop: 4, // take into consideration the 2px increased border-width (not when borderless).
                     },
                     _l),
@@ -15581,7 +15581,7 @@ function getStyles(props) {
                 bottom: 6,
                 right: 8,
                 top: 'auto',
-                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium,
+                fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium,
                 lineHeight: 18,
             },
             disabled && {
@@ -15613,7 +15613,7 @@ function getStyles(props) {
             classNames.revealButton,
             'ms-Button',
             'ms-Button--icon',
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme, { inset: 1 }),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme, { inset: 1 }),
             {
                 height: 30,
                 width: 32,
@@ -15627,7 +15627,7 @@ function getStyles(props) {
                         color: semanticColors.primaryButtonBackgroundHovered,
                         backgroundColor: semanticColors.buttonBackgroundHovered,
                         selectors: (_m = {},
-                            _m[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                            _m[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                                 borderColor: 'Highlight',
                                 color: 'Highlight',
                             },
@@ -15651,7 +15651,7 @@ function getStyles(props) {
             bottom: 6,
             right: 8,
             top: 'auto',
-            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium,
+            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium,
             lineHeight: 18,
         },
         subComponentStyles: {
@@ -17408,7 +17408,7 @@ var FocusTrapZone = react__WEBPACK_IMPORTED_MODULE_1__["forwardRef"](function (p
     var lastBumper = react__WEBPACK_IMPORTED_MODULE_1__["useRef"](null);
     var mergedRootRef = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_11__[/* useMergedRefs */ "a"])(root, ref);
     var doc = Object(_WindowProvider__WEBPACK_IMPORTED_MODULE_17__[/* useDocument */ "b"])();
-    var win = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_18__[/* useWindowEx */ "d"])();
+    var win = Object(_utilities_dom__WEBPACK_IMPORTED_MODULE_18__[/* useWindowEx */ "c"])();
     var inShadow = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* useHasMergeStylesShadowRootContext */ "a"])();
     var isFirstRender = (_a = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_12__[/* usePrevious */ "a"])(false)) !== null && _a !== void 0 ? _a : true;
     var props = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* getPropsWithDefaults */ "a"])(DEFAULT_PROPS, propsWithoutDefaults);
@@ -18421,7 +18421,7 @@ var GlobalClassNames = {
 var styles = function (props, theme, tokens) {
     var _a, _b, _c, _d, _e, _f, _g, _h, _j, _k, _l, _m, _o;
     var className = props.className, disableShrink = props.disableShrink, enableScopedSelectors = props.enableScopedSelectors, grow = props.grow, horizontal = props.horizontal, horizontalAlign = props.horizontalAlign, reversed = props.reversed, verticalAlign = props.verticalAlign, verticalFill = props.verticalFill, wrap = props.wrap;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     /* eslint-disable deprecation/deprecation */
     var childrenGap = tokens && tokens.childrenGap ? tokens.childrenGap : props.gap;
     var maxHeight = tokens && tokens.maxHeight ? tokens.maxHeight : props.maxHeight;
@@ -18611,7 +18611,7 @@ var alignMap = {
 };
 var StackItemStyles = function (props, theme, tokens) {
     var grow = props.grow, shrink = props.shrink, disableShrink = props.disableShrink, align = props.align, verticalFill = props.verticalFill, order = props.order, className = props.className, _a = props.basis, basis = _a === void 0 ? 'auto' : _a;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             theme.fonts.medium,
@@ -18822,7 +18822,7 @@ var GlobalClassNames = {
     label: 'ms-Spinner-label',
 };
 var spinAnimation = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoizeFunction */ "b"])(function () {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* keyframes */ "E"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* keyframes */ "D"])({
         '0%': {
             transform: 'rotate(0deg)',
         },
@@ -18835,7 +18835,7 @@ var getStyles = function (props) {
     var _a;
     var theme = props.theme, size = props.size, className = props.className, labelPosition = props.labelPosition;
     var palette = theme.palette;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -18872,7 +18872,7 @@ var getStyles = function (props) {
                 animationIterationCount: 'infinite',
                 animationTimingFunction: 'cubic-bezier(.53,.21,.29,.67)',
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_2__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderTopColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_2__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ borderTopColor: 'Highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_2__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _a),
             },
             size === _Spinner_types__WEBPACK_IMPORTED_MODULE_1__[/* SpinnerSize */ "a"].xSmall && [
@@ -18922,7 +18922,7 @@ var getStyles = function (props) {
                 margin: '0 8px 0 0',
             },
         ],
-        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "D"],
+        screenReaderText: _Styling__WEBPACK_IMPORTED_MODULE_2__[/* hiddenContentStyle */ "C"],
     };
 };
 //# sourceMappingURL=Spinner.styles.js.map
@@ -18990,7 +18990,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
                 color: palette.themeDarkAlt,
                 backgroundColor: palette.neutralLighter
             },
-            _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "g"]] = {
+            _a[_Styling__WEBPACK_IMPORTED_MODULE_0__[/* HighContrastSelector */ "f"]] = {
                 borderColor: 'Highlight',
                 color: 'Highlight',
             },
@@ -19018,7 +19018,7 @@ var getStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_1__[/* memoizeFunctio
             color: palette.neutralTertiaryAlt,
         },
     };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "s"])(baseButtonStyles, iconButtonStyles, splitButtonStyles, customStyles);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* concatStyleSets */ "r"])(baseButtonStyles, iconButtonStyles, splitButtonStyles, customStyles);
 });
 //# sourceMappingURL=IconButton.styles.js.map
 
@@ -19102,7 +19102,7 @@ var observeResize = function (target, onResize) {
 
 
 var CONTEXTUAL_MENU_ITEM_HEIGHT = 36;
-var MediumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getScreenSelector */ "B"])(0, _Styling__WEBPACK_IMPORTED_MODULE_1__[/* ScreenWidthMaxMedium */ "j"]);
+var MediumScreenSelector = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getScreenSelector */ "A"])(0, _Styling__WEBPACK_IMPORTED_MODULE_1__[/* ScreenWidthMaxMedium */ "i"]);
 var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function (theme) {
     var _a, _b, _c, _d, _e;
     var semanticColors = theme.semanticColors, fonts = theme.fonts, palette = theme.palette;
@@ -19126,7 +19126,7 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             position: 'relative',
         },
         root: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme),
             fonts.medium,
             {
                 color: semanticColors.bodyText,
@@ -19146,7 +19146,7 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             cursor: 'default',
             pointerEvents: 'none',
             selectors: (_a = {},
-                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                     // ensure disabled text looks different than enabled
                     color: 'GrayText',
                     opacity: 1,
@@ -19191,13 +19191,13 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             color: semanticColors.bodyTextChecked,
             selectors: (_b = {
                     '.ms-ContextualMenu-submenuIcon': (_c = {},
-                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             // icons inside of anchor tags are not properly inheriting color in high contrast
                             color: 'inherit',
                         },
                         _c)
                 },
-                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({}, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                 _b),
         },
         linkContent: {
@@ -19237,15 +19237,15 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             display: 'inline-block',
             minHeight: '1px',
             maxHeight: CONTEXTUAL_MENU_ITEM_HEIGHT,
-            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium,
-            width: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium,
+            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium,
+            width: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium,
             margin: '0 4px',
             verticalAlign: 'middle',
             flexShrink: '0',
             selectors: (_d = {},
                 _d[MediumScreenSelector] = {
-                    fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].large,
-                    width: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].large,
+                    fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].large,
+                    width: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].large,
                 },
                 _d),
         },
@@ -19266,7 +19266,7 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             display: 'inline-block',
             verticalAlign: 'middle',
             flexShrink: '0',
-            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].small,
+            fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].small,
             selectors: (_e = {
                     ':hover': {
                         color: palette.neutralPrimary,
@@ -19276,12 +19276,12 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
                     }
                 },
                 _e[MediumScreenSelector] = {
-                    fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "i"].medium, // 16px
+                    fontSize: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* IconFontSizes */ "h"].medium, // 16px
                 },
                 _e),
         },
         splitButtonFlexContainer: [
-            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "v"])(theme),
+            Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getFocusStyle */ "u"])(theme),
             {
                 display: 'flex',
                 height: CONTEXTUAL_MENU_ITEM_HEIGHT,
@@ -19291,7 +19291,7 @@ var getMenuItemStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoiz
             },
         ],
     };
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* concatStyleSets */ "s"])(menuItemStyles);
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* concatStyleSets */ "r"])(menuItemStyles);
 });
 //# sourceMappingURL=ContextualMenu.cnstyles.js.map
 
@@ -19495,7 +19495,7 @@ var getStyles = function (props) {
     var className = props.className, theme = props.theme, coinSize = props.coinSize;
     var palette = theme.palette, fonts = theme.fonts;
     var size = Object(_PersonaConsts__WEBPACK_IMPORTED_MODULE_2__[/* sizeBoolean */ "d"])(props.size);
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     // Static colors used when displaying 'unknown persona' coin
     var unknownPersonaBackgroundColor = 'rgb(234, 234, 234)';
     var unknownPersonaFontColor = 'rgb(168, 0, 0)';
@@ -19571,14 +19571,14 @@ var getStyles = function (props) {
                 borderRadius: '50%',
                 color: props.showUnknownPersonaCoin ? unknownPersonaFontColor : palette.white,
                 fontSize: fonts.large.fontSize,
-                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
+                fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold,
                 // copying the logic for the dimensions; defaulted to 46 for size48
                 lineHeight: dimension === 48 ? 46 : dimension,
                 height: dimension,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ border: '1px solid WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()), { color: 'WindowText', boxSizing: 'border-box', backgroundColor: 'Window !important' }),
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])(Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ border: '1px solid WindowText' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()), { color: 'WindowText', boxSizing: 'border-box', backgroundColor: 'Window !important' }),
                     _a.i = {
-                        fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "f"].semibold,
+                        fontWeight: _Styling__WEBPACK_IMPORTED_MODULE_1__[/* FontWeights */ "e"].semibold,
                     },
                     _a),
             },
@@ -20154,7 +20154,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var applyTheme = props.applyTheme, className = props.className, preventBlanketFontInheritance = props.preventBlanketFontInheritance, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -20204,7 +20204,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var className = props.className, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         actions: [
             classNames.actions,
@@ -20580,7 +20580,7 @@ var PeoplePickerItem = Object(_Utilities__WEBPACK_IMPORTED_MODULE_4__[/* styled 
 /* harmony import */ var _Styling__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../Styling */ "ogYq");
 
 /** Class names used in themeable and non-themeable Icon components */
-var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyleSets */ "F"])({
+var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyleSets */ "E"])({
     root: {
         display: 'inline-block',
         textDecoration: 'inherit',
@@ -20664,7 +20664,7 @@ var getClassNames = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* classNames
     cacheSize: 100,
 });
 var getInitialsStyles = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* memoizeFunction */ "b"])(function (className, initialsColor, initialsTextColor, text, primaryText, showUnknownPersonaCoin) {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_8__[/* mergeStyles */ "G"])(className, !showUnknownPersonaCoin && {
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_8__[/* mergeStyles */ "F"])(className, !showUnknownPersonaCoin && {
         backgroundColor: Object(_PersonaInitialsColor__WEBPACK_IMPORTED_MODULE_14__[/* getPersonaInitialsColor */ "a"])({ text: text, initialsColor: initialsColor, primaryText: primaryText }),
         color: initialsTextColor,
     });
@@ -21076,7 +21076,7 @@ var GlobalClassNames = {
 };
 var getStyles = function (props) {
     var className = props.className, isNotHost = props.isNotHost, theme = props.theme;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_0__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     return {
         root: [
             classNames.root,
@@ -21085,7 +21085,7 @@ var getStyles = function (props) {
                 classNames.rootNoHost,
                 {
                     position: 'fixed',
-                    zIndex: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "r"].Layer,
+                    zIndex: _Styling__WEBPACK_IMPORTED_MODULE_0__[/* ZIndexes */ "q"].Layer,
                     top: 0,
                     left: 0,
                     bottom: 0,
@@ -21133,7 +21133,7 @@ var GlobalClassNames = {
     progressBar: 'ms-ProgressIndicator-progressBar',
 };
 var IndeterminateProgress = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function () {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "E"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "D"])({
         '0%': {
             left: '-30%',
         },
@@ -21143,7 +21143,7 @@ var IndeterminateProgress = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* me
     });
 });
 var IndeterminateProgressRTL = Object(_Utilities__WEBPACK_IMPORTED_MODULE_2__[/* memoizeFunction */ "b"])(function () {
-    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "E"])({
+    return Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* keyframes */ "D"])({
         '100%': {
             right: '-30%',
         },
@@ -21157,7 +21157,7 @@ var getStyles = function (props) {
     var isRTL = Object(_Utilities__WEBPACK_IMPORTED_MODULE_3__[/* getRTL */ "a"])(props.theme);
     var className = props.className, indeterminate = props.indeterminate, theme = props.theme, _d = props.barHeight, barHeight = _d === void 0 ? 2 : _d;
     var palette = theme.palette, semanticColors = theme.semanticColors, fonts = theme.fonts;
-    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "w"])(GlobalClassNames, theme);
+    var classNames = Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getGlobalClassNames */ "v"])(GlobalClassNames, theme);
     var marginBetweenText = 8;
     var textHeight = 18;
     var progressTrackColor = palette.neutralLight;
@@ -21165,7 +21165,7 @@ var getStyles = function (props) {
         root: [classNames.root, fonts.medium, className],
         itemName: [
             classNames.itemName,
-            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* noWrap */ "H"],
+            _Styling__WEBPACK_IMPORTED_MODULE_1__[/* noWrap */ "G"],
             {
                 color: semanticColors.bodyText,
                 paddingTop: marginBetweenText / 2,
@@ -21197,7 +21197,7 @@ var getStyles = function (props) {
                 height: barHeight,
                 backgroundColor: progressTrackColor,
                 selectors: (_a = {},
-                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                    _a[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                         borderBottom: '1px solid WindowText',
                     },
                     _a),
@@ -21211,7 +21211,7 @@ var getStyles = function (props) {
                 transition: 'width .3s ease',
                 width: 0,
                 selectors: (_b = {},
-                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "x"])()),
+                    _b[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = Object(tslib__WEBPACK_IMPORTED_MODULE_0__[/* __assign */ "a"])({ backgroundColor: 'highlight' }, Object(_Styling__WEBPACK_IMPORTED_MODULE_1__[/* getHighContrastNoAdjustStyle */ "w"])()),
                     _b),
             },
             indeterminate
@@ -21222,7 +21222,7 @@ var getStyles = function (props) {
                         "".concat(palette.themePrimary, " 50%, ").concat(progressTrackColor, " 100%)"),
                     animation: "".concat(isRTL ? IndeterminateProgressRTL() : IndeterminateProgress(), " 3s infinite"),
                     selectors: (_c = {},
-                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "g"]] = {
+                        _c[_Styling__WEBPACK_IMPORTED_MODULE_1__[/* HighContrastSelector */ "f"]] = {
                             background: "highlight",
                         },
                         _c),

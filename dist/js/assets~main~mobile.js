@@ -161,6 +161,43 @@ function SvgSpinner(props) {
 /* unused harmony default export */ var _unused_webpack_default_export = (__webpack_require__.p + "dist/spinner.89054b.svg");
 
 
+/***/ }),
+
+/***/ "lvLM":
+/*!**********************************************************************************************************************!*\
+  !*** C:/Users/wangweiwei/source/repos/address-book/Source/Clients/packages/components-shared/src/assets/appIcon.svg ***!
+  \**********************************************************************************************************************/
+/*! exports provided: default, ReactComponent */
+/*! exports used: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export ReactComponent */
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _rect, _path;
+function _extends() { _extends = Object.assign ? Object.assign.bind() : function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
+
+function SvgAppIcon(props) {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("svg", _extends({
+    width: 192,
+    height: 192,
+    viewBox: "0 0 192 192",
+    fill: "none",
+    xmlns: "http://www.w3.org/2000/svg"
+  }, props), _rect || (_rect = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("rect", {
+    width: 192,
+    height: 192,
+    rx: 24,
+    fill: "#5B5FC7"
+  })), _path || (_path = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__["createElement"]("path", {
+    d: "M60 60c0-6.627 5.373-12 12-12h48c6.627 0 12 5.373 12 12v66a6 6 0 01-6 6H66a6 6 0 006 6h57a3 3 0 110 6H72c-6.627 0-12-5.373-12-12V60zm38.721 7.736a3 3 0 00-5.441 0l-4.932 10.62-11.624 1.409a3 3 0 00-1.681 5.175l8.575 7.972-2.252 11.49a3 3 0 004.403 3.199L96 101.908l10.232 5.693a3.002 3.002 0 004.403-3.199l-2.252-11.49 8.575-7.972a2.998 2.998 0 00-1.681-5.175l-11.624-1.41-4.932-10.619zm-5.634 14.66L96 76.124l2.914 6.274a3 3 0 002.36 1.714l6.868.833-5.067 4.71a2.999 2.999 0 00-.901 2.774l1.33 6.789-6.045-3.364a3 3 0 00-2.917 0l-6.045 3.364 1.33-6.789a3 3 0 00-.901-2.774l-5.067-4.71 6.868-.833a3 3 0 002.36-1.714z",
+    fill: "#fff"
+  })));
+}
+/* harmony default export */ __webpack_exports__["a"] = ("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTkyIiBoZWlnaHQ9IjE5MiIgdmlld0JveD0iMCAwIDE5MiAxOTIiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIxOTIiIGhlaWdodD0iMTkyIiByeD0iMjQiIGZpbGw9IiM1QjVGQzciLz4KPHBhdGggZD0iTTYwIDYwQzYwIDUzLjM3MjYgNjUuMzcyNiA0OCA3MiA0OEgxMjBDMTI2LjYyNyA0OCAxMzIgNTMuMzcyNiAxMzIgNjBWMTI2QzEzMiAxMjkuMzE0IDEyOS4zMTQgMTMyIDEyNiAxMzJINjZDNjYgMTM1LjMxNCA2OC42ODYzIDEzOCA3MiAxMzhIMTI5QzEzMC42NTcgMTM4IDEzMiAxMzkuMzQzIDEzMiAxNDFDMTMyIDE0Mi42NTcgMTMwLjY1NyAxNDQgMTI5IDE0NEg3MkM2NS4zNzI2IDE0NCA2MCAxMzguNjI3IDYwIDEzMlY2MFpNOTguNzIxNCA2Ny43MzY0Qzk4LjIyOTYgNjYuNjc3NCA5Ny4xNjgxIDY2IDk2LjAwMDUgNjZDOTQuODMyOSA2NiA5My43NzE0IDY2LjY3NzQgOTMuMjc5NiA2Ny43MzY0TDg4LjM0NzkgNzguMzU1OEw3Ni43MjQzIDc5Ljc2NDVDNzUuNTY1MiA3OS45MDUgNzQuNTkyOSA4MC43MDUzIDc0LjIzMjEgODEuODE1N0M3My44NzEzIDgyLjkyNjEgNzQuMTg3NSA4NC4xNDUgNzUuMDQyNyA4NC45NEw4My42MTgzIDkyLjkxMTlMODEuMzY2MiAxMDQuNDAyQzgxLjE0MTcgMTA1LjU0OCA4MS42MDIzIDEwNi43MiA4Mi41NDY5IDEwNy40MDZDODMuNDkxNSAxMDguMDkyIDg0Ljc0ODQgMTA4LjE2OCA4NS43Njg4IDEwNy42MDFMOTYuMDAwNSAxMDEuOTA4TDEwNi4yMzIgMTA3LjYwMUMxMDcuMjUzIDEwOC4xNjggMTA4LjUxIDEwOC4wOTIgMTA5LjQ1NCAxMDcuNDA2QzExMC4zOTkgMTA2LjcyIDExMC44NTkgMTA1LjU0OCAxMTAuNjM1IDEwNC40MDJMMTA4LjM4MyA5Mi45MTE5TDExNi45NTggODQuOTRDMTE3LjgxNCA4NC4xNDUgMTE4LjEzIDgyLjkyNjEgMTE3Ljc2OSA4MS44MTU3QzExNy40MDggODAuNzA1MyAxMTYuNDM2IDc5LjkwNSAxMTUuMjc3IDc5Ljc2NDVMMTAzLjY1MyA3OC4zNTU4TDk4LjcyMTQgNjcuNzM2NFpNOTMuMDg2NyA4Mi4zOTY4TDk2LjAwMDUgNzYuMTIyNUw5OC45MTQzIDgyLjM5NjhDOTkuMzUxNCA4My4zMzggMTAwLjI0NCA4My45ODY1IDEwMS4yNzQgODQuMTExNEwxMDguMTQyIDg0Ljk0MzdMMTAzLjA3NSA4OS42NTM4QzEwMi4zMTUgOTAuMzYwNCAxMDEuOTc0IDkxLjQwOTYgMTAyLjE3NCA5Mi40MjgxTDEwMy41MDQgOTkuMjE2OEw5Ny40NTkgOTUuODUzNUM5Ni41NTIxIDk1LjM0ODkgOTUuNDQ4OSA5NS4zNDg5IDk0LjU0MiA5NS44NTM1TDg4LjQ5NjcgOTkuMjE2OEw4OS44MjczIDkyLjQyODFDOTAuMDI2OSA5MS40MDk2IDg5LjY4NiA5MC4zNjA0IDg4LjkyNTkgODkuNjUzOEw4My44NTkxIDg0Ljk0MzdMOTAuNzI2NyA4NC4xMTE0QzkxLjc1NyA4My45ODY1IDkyLjY0OTYgODMuMzM4IDkzLjA4NjcgODIuMzk2OFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+
+
 /***/ })
 
 }]);

@@ -115,7 +115,7 @@ function initHost(scenario, isMobile) {
         // );
         if (!subEntityId && !parameterVersion && context.page.subPageId) {
             // for old version, we need to dispatch deeplink from context
-            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "d"])(context.page.subPageId, isMobile);
+            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "b"])(context.page.subPageId, isMobile);
         }
     });
 }
@@ -150,7 +150,7 @@ function ensureAppClientType(isMobile, hostClientType) {
         // Mobile Client get desktop page
         _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_3__[/* LogCategory */ "a"].AppBoot, `${hostClientType} mismatches Desktop entry, UA: ${navigator.userAgent}`);
         _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].failScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
-        window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_5__[/* MOBILE_ENTRYPAGE */ "w"];
+        window.location.pathname = _Constants__WEBPACK_IMPORTED_MODULE_5__[/* MOBILE_ENTRYPAGE */ "i"];
     }
 }
 function getEntryPoint(context) {
@@ -170,7 +170,7 @@ function restoreLastHistoryPage() {
         const userId = _env__WEBPACK_IMPORTED_MODULE_6__[/* initQuery */ "k"].get(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].UserId);
         // Avoid restoring the history from a deeplink entry.
         if (!subEntityId && userId) {
-            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* restoreLastHistory */ "f"])(userId);
+            Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* restoreLastHistory */ "d"])(userId);
         }
     });
 }
@@ -182,7 +182,7 @@ function registerBeforeUnloadEvent() {
             _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].flushLogs(readyToUnload);
             // Avoid storing the history from a deeplink entry.
             if (!subEntityId && userId) {
-                Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* saveLastHistory */ "g"])(userId);
+                Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* saveLastHistory */ "e"])(userId);
             }
             return true;
         });
@@ -199,7 +199,7 @@ function initLogger() {
             Source: 'Client',
             'Bot.Id': _env__WEBPACK_IMPORTED_MODULE_6__[/* WORKREPORT_BOT_ID */ "j"],
             'App.Id': _env__WEBPACK_IMPORTED_MODULE_6__[/* WORKREPORT_APP_AAD_ID */ "h"],
-            'App.Name': 'Updates',
+            'App.Name': 'AddressBook',
             'AppInfo.ClientType': hostClientType,
             'AppInfo.Locale': locale,
             'AppInfo.Version': _package_json__WEBPACK_IMPORTED_MODULE_2__[/* version */ "a"],
@@ -219,7 +219,7 @@ function initDeepLink(isMobile) {
         const url = new URL(window.location.href);
         url.searchParams.delete(_env__WEBPACK_IMPORTED_MODULE_6__[/* URIParam */ "g"].SubEntityId);
         window.history.replaceState(null, '', url.toString());
-        Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "d"])(subEntityId, isMobile);
+        Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* dispatchDeepLink */ "b"])(subEntityId, isMobile);
     }
 }
 function init(isMobile) {
@@ -228,7 +228,7 @@ function init(isMobile) {
         try {
             restoreLastHistoryPage();
             // detect Guest user
-            const detectGuestPromise = Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* detectGuest */ "c"])();
+            const detectGuestPromise = Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* detectGuest */ "a"])();
             // init from url params
             const initloggerPromise = initLogger();
             scenario = _logger__WEBPACK_IMPORTED_MODULE_3__[/* logger */ "f"].createScenario(_logger__WEBPACK_IMPORTED_MODULE_3__[/* ScenarioName */ "c"].AppBoot);
@@ -259,7 +259,7 @@ function init(isMobile) {
 function getThreadType(context) {
     var _a, _b, _c, _d;
     if ((_a = context.chat) === null || _a === void 0 ? void 0 : _a.id) {
-        if (Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* isNewChat */ "e"])(context.chat.id, (_b = context.team) === null || _b === void 0 ? void 0 : _b.groupId, (_c = context.channel) === null || _c === void 0 ? void 0 : _c.id))
+        if (Object(_utilities__WEBPACK_IMPORTED_MODULE_4__[/* isNewChat */ "c"])(context.chat.id, (_b = context.team) === null || _b === void 0 ? void 0 : _b.groupId, (_c = context.channel) === null || _c === void 0 ? void 0 : _c.id))
             return _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* ThreadType */ "h"].NewChat;
         if (context.chat.id === '48:notes')
             return _addressbook_components_logger__WEBPACK_IMPORTED_MODULE_0__[/* ThreadType */ "h"].SelfChat;
@@ -295,7 +295,6 @@ module.exports = JSON.parse("{\"en\":\"en-US\",\"en-ai\":\"en-GB\",\"en-bm\":\"e
   !*** ./src/utilities/models/people.ts ***!
   \****************************************/
 /*! exports provided: mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections */
-/*! exports used: countGroupsOfPeopleSelections, countUsersOfPeopleSelections */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -307,8 +306,8 @@ module.exports = JSON.parse("{\"en\":\"en-US\",\"en-ai\":\"en-GB\",\"en-bm\":\"e
 /* unused harmony export uniqueAndSortPeopleSelections */
 /* unused harmony export uniqueAndSortUsersToSinglePeopleSelections */
 /* unused harmony export countUsersOfPeopleSelection */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return countUsersOfPeopleSelections; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return countGroupsOfPeopleSelections; });
+/* unused harmony export countUsersOfPeopleSelections */
+/* unused harmony export countGroupsOfPeopleSelections */
 /* harmony import */ var _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-people */ "apXe");
 /* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lodash-es */ "NkTa");
 /* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../service */ "YCKj");
@@ -333,7 +332,7 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 function mapUserToSinglePeopleSelection(user) {
     var _a;
     return {
-        type: _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].User,
+        type: _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].User,
         id: user.Id,
         name: (_a = user.DisplayName) !== null && _a !== void 0 ? _a : '',
         mail: user.Mail,
@@ -445,9 +444,9 @@ function mapPeopleSelectionToDirectoryObjects(selection, { expandGroup } = {}) {
     var _a, _b, _c, _d, _e, _f;
     return __awaiter(this, void 0, void 0, function* () {
         switch (selection.type) {
-            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].User:
+            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].User:
                 return [Object.assign({ Type: _service__WEBPACK_IMPORTED_MODULE_2__[/* DirectoryObjectType */ "a"].User }, mapPeopleSelectionToDirectoryObjectWithoutType(selection))];
-            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].Group:
+            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].Group:
                 if (!expandGroup) {
                     return [
                         Object.assign({ Type: _service__WEBPACK_IMPORTED_MODULE_2__[/* DirectoryObjectType */ "a"].Group }, mapPeopleSelectionToDirectoryObjectWithoutType(selection)),
@@ -455,8 +454,8 @@ function mapPeopleSelectionToDirectoryObjects(selection, { expandGroup } = {}) {
                 }
                 const members = (_c = (_a = (yield selection.items)) !== null && _a !== void 0 ? _a : (yield ((_b = selection.resolveItems) === null || _b === void 0 ? void 0 : _b.call(selection)))) !== null && _c !== void 0 ? _c : [];
                 return members.map(item => (Object.assign({ Type: _service__WEBPACK_IMPORTED_MODULE_2__[/* DirectoryObjectType */ "a"].User }, mapPeopleSelectionToDirectoryObjectWithoutType(item))));
-            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].Tag:
-            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].Unspecific:
+            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].Tag:
+            case _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].Unspecific:
                 const items = (_f = (_d = (yield selection.items)) !== null && _d !== void 0 ? _d : (yield ((_e = selection.resolveItems) === null || _e === void 0 ? void 0 : _e.call(selection)))) !== null && _f !== void 0 ? _f : [];
                 return items.map(item => (Object.assign({ Type: _service__WEBPACK_IMPORTED_MODULE_2__[/* DirectoryObjectType */ "a"].User }, mapPeopleSelectionToDirectoryObjectWithoutType(item))));
         }
@@ -513,7 +512,7 @@ function uniqueAndSortUsersToSinglePeopleSelections(users) {
  */
 function countUsersOfPeopleSelection(selection) {
     var _a;
-    return selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].User
+    return selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].User
         ? 1
         : Array.isArray(selection.items)
             ? selection.items.length
@@ -535,7 +534,7 @@ function countUsersOfPeopleSelections(selections) {
  * @returns The number of groups.
  */
 function countGroupsOfPeopleSelections(selections) {
-    return selections.reduce((count, selection) => count + (selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "c"].Group ? 1 : 0), 0);
+    return selections.reduce((count, selection) => count + (selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleSelectionType */ "b"].Group ? 1 : 0), 0);
 }
 
 
@@ -630,7 +629,7 @@ const ariaToken = "9a40f5a4d1754c7db42aef1d8bed8003-ba2a02df-1fa3-4c6e-8b5a-dcd6
 /**
  * nonce for dynamic style
  */
-const styleNonce = "0t9f7g07";
+const styleNonce = "0ibgkzdk";
 
 /**
  * BASE URL for this page and auth
@@ -726,114 +725,6 @@ function generateURL(path, param, searchParam) {
     const urlWithParams = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_0__[/* generatePath */ "e"])(path, param);
     return searchParam ? `${urlWithParams}?${new URLSearchParams(searchParam).toString()}` : urlWithParams;
 }
-
-
-/***/ }),
-
-/***/ "EMeK":
-/*!****************************************!*\
-  !*** ./src/utilities/DateTimeUtils.ts ***!
-  \****************************************/
-/*! exports provided: friendlyDateFormatter, friendlyRelativeTimeFormatter, relativeMinuteTimeFormatter, weekDayFormatter, dayFormatter, dateTimeRangeFormatter */
-/*! exports used: dateTimeRangeFormatter, dayFormatter, friendlyDateFormatter, friendlyRelativeTimeFormatter, relativeMinuteTimeFormatter, weekDayFormatter */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return friendlyDateFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return friendlyRelativeTimeFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return relativeMinuteTimeFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return weekDayFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dayFormatter; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return dateTimeRangeFormatter; });
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../localization */ "HVbO");
-
-/**
- * friendly datetime format function for i18n
- *
- * @param value datetime
- * @param lng language
- * @returns formatted datetime string
- */
-const friendlyDateFormatter = (value, lng) => {
-    const referenceTimestamp = new Date(value).setHours(0, 0, 0, 0);
-    const currentTimestamp = new Date().setHours(0, 0, 0, 0);
-    const diffTime = referenceTimestamp - currentTimestamp;
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-    const day = Math.abs(diffDays) <= 1
-        ? new Intl.RelativeTimeFormat(lng, { numeric: 'auto' }).format(diffDays, 'day')
-        : undefined;
-    // @see https://stackoverflow.com/questions/1026069/how-do-i-make-the-first-letter-of-a-string-uppercase-in-javascript
-    return day
-        ? day.replace(/^\p{CWU}/u, char => char.toLocaleUpperCase())
-        : new Intl.DateTimeFormat(lng, {
-            dateStyle: 'medium',
-        }).format(value);
-};
-/**
- * friendly relative time format function for i18n
- *
- * @param value datetime
- * @param lng language
- * @returns formatted datetime string
- */
-const friendlyRelativeTimeFormatter = (value, lng) => {
-    const dateDiff = new Date().getTime() - value.getTime();
-    if (dateDiff > 0 && dateDiff < 60 * 1000) {
-        return _localization__WEBPACK_IMPORTED_MODULE_0__[/* i18n */ "b"].t(_localization__WEBPACK_IMPORTED_MODULE_0__[/* Strings */ "a"].justNow, { lng });
-    }
-    return _localization__WEBPACK_IMPORTED_MODULE_0__[/* i18n */ "b"].t(_localization__WEBPACK_IMPORTED_MODULE_0__[/* Strings */ "a"].friendlyDateAndTime, { lng, date: value });
-};
-/**
- * relative time format function for i18n
- *
- * @param value datetime string
- * @param lng language
- * @returns formatted datetime string
- */
-const relativeMinuteTimeFormatter = (value, lng) => {
-    const currentDate = new Date();
-    const referenceDate = new Date(value);
-    const timeDifference = referenceDate.getTime() - currentDate.getTime();
-    const timeDifferenceInMinutes = Math.round(timeDifference / (60 * 1000));
-    const dateTimeDiff = new Intl.RelativeTimeFormat(lng, { numeric: 'auto' }).format(timeDifferenceInMinutes, 'minute');
-    return dateTimeDiff;
-};
-/**
- * weekDay function for i18n
- *
- * @param value datetime string
- * @param lng language
- * @param options options
- * @returns formatted datetime string
- */
-const weekDayFormatter = (value, lng, options) => {
-    const format = new Intl.DateTimeFormat(lng, { weekday: (options === null || options === void 0 ? void 0 : options.format) || 'long' }).format;
-    const listFormatter = new Intl.ListFormat(lng, { style: 'long', type: 'conjunction' });
-    return listFormatter.format(value.map(day => format(new Date(1970, 0, day - 3))));
-};
-/**
- * day of month function for i18n
- *
- * @param value datetime string
- * @param lng language
- * @returns formatted datetime string
- */
-const dayFormatter = (value, lng) => {
-    const format = new Intl.DateTimeFormat(lng, { day: 'numeric' }).format;
-    const listFormatter = new Intl.ListFormat(lng, { style: 'long', type: 'conjunction' });
-    return listFormatter.format(value.map(day => format(new Date(0, 0, day))));
-};
-/**
- * date time range function for i18n
- *
- * @param value start date and end date
- * @param lng language
- * @returns formatted datetime range string
- */
-const dateTimeRangeFormatter = (value, lng) => {
-    const format = new Intl.DateTimeFormat(lng, { dateStyle: 'medium' });
-    return format.formatRange(...value);
-};
 
 
 /***/ }),
@@ -1076,15 +967,11 @@ function isFirstPage() {
   !*** ./src/utilities/models/index.ts ***!
   \***************************************/
 /*! exports provided: mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections */
-/*! exports used: countGroupsOfPeopleSelections, countUsersOfPeopleSelections */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony import */ var _people__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./people */ "7vqZ");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _people__WEBPACK_IMPORTED_MODULE_0__["a"]; });
-
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _people__WEBPACK_IMPORTED_MODULE_0__["b"]; });
-
+/* unused harmony reexport * */
 
 
 
@@ -1121,34 +1008,29 @@ const reminderVar = Object(react_reactive_var__WEBPACK_IMPORTED_MODULE_0__[/* ma
 /*!********************************!*\
   !*** ./src/utilities/index.ts ***!
   \********************************/
-/*! exports provided: friendlyDateFormatter, friendlyRelativeTimeFormatter, relativeMinuteTimeFormatter, weekDayFormatter, dayFormatter, dateTimeRangeFormatter, DeepLinkType, DeepLinkSourceType, dispatchDeepLink, generateDeepLink, generateDeepLinkToAppHomePage, LocalStorageFlag, hasLocalStorageFlag, addLocalStorageFlag, removeLocalStorageFlag, clearLocalStorageFlags, useLocalStorageFlag, saveLastHistory, restoreLastHistory, isFirstPage, mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections, UserRole, detectGuest, tryParseAfdRefFromHeaders, handleSystemNotificationHeader, InputTaskType, submitInputTask, isNewChat */
-/*! exports used: countGroupsOfPeopleSelections, countUsersOfPeopleSelections, detectGuest, dispatchDeepLink, isNewChat, restoreLastHistory, saveLastHistory */
+/*! exports provided: DeepLinkType, DeepLinkSourceType, dispatchDeepLink, generateDeepLink, generateDeepLinkToAppHomePage, LocalStorageFlag, hasLocalStorageFlag, addLocalStorageFlag, removeLocalStorageFlag, clearLocalStorageFlags, useLocalStorageFlag, saveLastHistory, restoreLastHistory, isFirstPage, mapUserToSinglePeopleSelection, mapPeopleSelectionToDirectoryObjectWithoutType, mapPeopleSelectionToDirectoryObjects, mapPeopleSelectionsToDirectoryObjects, comparePeopleSelections, uniqueAndSortPeopleSelections, uniqueAndSortUsersToSinglePeopleSelections, countUsersOfPeopleSelection, countUsersOfPeopleSelections, countGroupsOfPeopleSelections, UserRole, detectGuest, tryParseAfdRefFromHeaders, handleSystemNotificationHeader, InputTaskType, submitInputTask, isNewChat */
+/*! exports used: detectGuest, dispatchDeepLink, isNewChat, restoreLastHistory, saveLastHistory */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _DateTimeUtils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./DateTimeUtils */ "EMeK");
-/* harmony import */ var _deep_link__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./deep-link */ "t45A");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _deep_link__WEBPACK_IMPORTED_MODULE_1__["a"]; });
+/* harmony import */ var _deep_link__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./deep-link */ "t45A");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _deep_link__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
-/* harmony import */ var _flags__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./flags */ "vWYN");
-/* harmony import */ var _history__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./history */ "EgX+");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "f", function() { return _history__WEBPACK_IMPORTED_MODULE_3__["a"]; });
+/* harmony import */ var _flags__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./flags */ "vWYN");
+/* harmony import */ var _history__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./history */ "EgX+");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "d", function() { return _history__WEBPACK_IMPORTED_MODULE_2__["a"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "g", function() { return _history__WEBPACK_IMPORTED_MODULE_3__["b"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _history__WEBPACK_IMPORTED_MODULE_2__["b"]; });
 
-/* harmony import */ var _isFirstPage__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./isFirstPage */ "Nxb2");
-/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./models */ "Oc5c");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _models__WEBPACK_IMPORTED_MODULE_5__["a"]; });
+/* harmony import */ var _isFirstPage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./isFirstPage */ "Nxb2");
+/* harmony import */ var _models__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./models */ "Oc5c");
+/* harmony import */ var _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./UserRoleCheckUtils */ "bH3m");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_5__["a"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _models__WEBPACK_IMPORTED_MODULE_5__["b"]; });
+/* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./Utils */ "TktC");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _Utils__WEBPACK_IMPORTED_MODULE_6__["a"]; });
 
-/* harmony import */ var _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./UserRoleCheckUtils */ "bH3m");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _UserRoleCheckUtils__WEBPACK_IMPORTED_MODULE_6__["a"]; });
-
-/* harmony import */ var _Utils__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Utils */ "TktC");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "e", function() { return _Utils__WEBPACK_IMPORTED_MODULE_7__["a"]; });
-
-
+// export * from './DateTimeUtils';
 
 
 
@@ -1315,9 +1197,7 @@ function isInChannel(groupId, channelId) {
 /* harmony import */ var _common_env__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../common/env */ "8MrD");
 /* harmony import */ var _locales_supportedLngs__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../locales/supportedLngs */ "xZ10");
 /* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../logger */ "pIRP");
-/* harmony import */ var _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../utilities/DateTimeUtils */ "EMeK");
-/* harmony import */ var _fallbackLng__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./fallbackLng */ "Zq66");
-
+/* harmony import */ var _fallbackLng__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./fallbackLng */ "Zq66");
 
 
 
@@ -1349,7 +1229,7 @@ i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].use(react_i18next__WEBPA
     debug: _common_env__WEBPACK_IMPORTED_MODULE_5__[/* isDev */ "l"],
     ns: 'strings',
     // localStorage key is the same with the'i18next-browser-languagedetector';
-    lng: _common_env__WEBPACK_IMPORTED_MODULE_5__[/* initQuery */ "k"].get(_common_env__WEBPACK_IMPORTED_MODULE_5__[/* URIParam */ "g"].Locale) || localStorage.getItem('i18nextLng') || _fallbackLng__WEBPACK_IMPORTED_MODULE_9__[/* defaultLng */ "a"],
+    lng: _common_env__WEBPACK_IMPORTED_MODULE_5__[/* initQuery */ "k"].get(_common_env__WEBPACK_IMPORTED_MODULE_5__[/* URIParam */ "g"].Locale) || localStorage.getItem('i18nextLng') || _fallbackLng__WEBPACK_IMPORTED_MODULE_8__[/* defaultLng */ "a"],
     // lng: 'en', // language to use, more information here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
     // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
     // if you're using a language detector, do not define the lng option
@@ -1357,16 +1237,15 @@ i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].use(react_i18next__WEBPA
         escapeValue: false, // react already safes from xss
     },
     supportedLngs: _locales_supportedLngs__WEBPACK_IMPORTED_MODULE_6__[/* supportedLngs */ "a"],
-    fallbackLng: _fallbackLng__WEBPACK_IMPORTED_MODULE_9__[/* fallbackLng */ "b"],
+    fallbackLng: _fallbackLng__WEBPACK_IMPORTED_MODULE_8__[/* fallbackLng */ "b"],
     load: 'currentOnly',
 }, () => {
-    var _a, _b, _c, _d, _e, _f;
-    (_a = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _a === void 0 ? void 0 : _a.add('friendlydate', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* friendlyDateFormatter */ "c"]);
-    (_b = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _b === void 0 ? void 0 : _b.add('friendlyrelativetime', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* friendlyRelativeTimeFormatter */ "d"]);
-    (_c = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _c === void 0 ? void 0 : _c.add('relativeminutetime', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* relativeMinuteTimeFormatter */ "e"]);
-    (_d = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _d === void 0 ? void 0 : _d.add('weekday', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* weekDayFormatter */ "f"]);
-    (_e = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _e === void 0 ? void 0 : _e.add('dayofmonth', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* dayFormatter */ "b"]);
-    (_f = i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].services.formatter) === null || _f === void 0 ? void 0 : _f.add('datetimerange', _utilities_DateTimeUtils__WEBPACK_IMPORTED_MODULE_8__[/* dateTimeRangeFormatter */ "a"]);
+    // i18n.services.formatter?.add('friendlydate', friendlyDateFormatter);
+    // i18n.services.formatter?.add('friendlyrelativetime', friendlyRelativeTimeFormatter);
+    // i18n.services.formatter?.add('relativeminutetime', relativeMinuteTimeFormatter);
+    // i18n.services.formatter?.add('weekday', weekDayFormatter);
+    // i18n.services.formatter?.add('dayofmonth', dayFormatter);
+    // i18n.services.formatter?.add('datetimerange', dateTimeRangeFormatter);
 });
 // update html attribute on languageChanged
 i18next__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"].on('languageChanged', (lng) => {
@@ -1648,14 +1527,18 @@ function createAuthorizationInterceptorForGraph() {
 /* harmony import */ var _addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-icons */ "Y918");
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
 /* harmony import */ var _fluentui_react_file_type_icons__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/react-file-type-icons */ "Y8RE");
+/* harmony import */ var _Constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Constants */ "fPKC");
+
 
 
 
 function initIcons() {
-    Object(_addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__[/* initFluentuiIcons */ "b"])();
+    Object(_addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__[/* initFluentuiIcons */ "c"])();
     Object(_fluentui_react_file_type_icons__WEBPACK_IMPORTED_MODULE_2__[/* initializeFileTypeIcons */ "a"])();
-    Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* registerIcons */ "J"])({
-        icons: {},
+    Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* registerIcons */ "I"])({
+        icons: {
+            [_Constants__WEBPACK_IMPORTED_MODULE_3__[/* APP_ICON_NAME */ "a"]]: _addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__[/* icons */ "b"].Calendar,
+        },
     });
 }
 const PRESENCE_ICONS_BACKGROUND_COLOR = {
@@ -1707,28 +1590,28 @@ const PRESENCE_ICONS = {
   !*** ./src/common/Constants.ts ***!
   \*********************************/
 /*! exports provided: MAX_DEFINITIONS, MAX_DEFINITION_TITLE_LENGTH, MAX_DEFINITION_DESCRIPTION_LENGTH, MAX_DEFINITION_QUESTIONS, MAX_DEFINITION_QUESTION_TITLE_LENGTH, MAX_DEFINITION_QUESTION_SUBTITLE_LENGTH, INITIAL_DEFINITION_QUESTION_CHOICES, MIN_DEFINITION_QUESTION_CHOICES, MAX_DEFINITION_QUESTION_CHOICES, MAX_DEFINITION_QUESTION_CHOICE_LENGTH, MAX_DEFINITION_GROUP_SUBMITTERS, MAX_DEFINITION_USER_SUBMITTERS, MAX_DEFINITION_USER_OWNERS, MAX_DEFINITION_USER_COLLABORATORS, MAX_REPORT_TITLE_LENGTH, MAX_REPORT_ANSWER_CONTENT_LENGTH, MAX_REPORT_ANSWER_CONTENT_LENGTH_WITH_BUFFER, MAX_REPORT_USER_RECEIVERS, MAX_REPORT_COMMENTS, MAX_REPORT_ATTACHMENTS, PEOPLE_SUGGESTIONS_RESOLVE_DELAY_TIME_MS, SERVER_STORAGE_DEBOUNCE_WAIT_TIME_MS, SERVER_STORAGE_DEBOUNCE_MAX_WAIT_TIME_MS, LOCAL_STORAGE_DEBOUNCE_WAIT_TIME_MS, LOCAL_STORAGE_DEBOUNCE_MAX_WAIT_TIME_MS, MAX_LINK_TARGET_TITLE_CHARACTER_LIMIT, REPORT_SLOT_PAGINATION_LIMIT, REPORT_SLOT_CACHE_TIME, MAX_TASKMODULE_OCCURRENCE_COUNT, APP_ICON_NAME, APP_ICON_COLOR, DEFAULT_TEMPLATE_ICON_NAME, EMOJI_BACKGROUND_COLOR, HEADER_CLIENT_REQUEST_ID, HEADER_ROUTE_KEY, HEADER_RESPONSE_CORRELATION_ID, DESKTOP_ENTRY, MOBILE_ENTRYPAGE, ATTACHMENTS_FOLDER_NAME, GRAPH_BASE_URL, IOS_CAMERA_PHOTO_NAME, SHAREPOINT_PICKER_APP, SHAREPOINT_PICKER_SCENARIO, SHAREPOINT_IFRAME_PATH, SHAREPOINT_TEMPAUTH_KEY, SHAREPOINT_DOMAIN_REGEX, LOADING_TIMEOUT_IN_SECONDS, ECS_BASIC_URL, OCPS_BASIC_URL, LINK_COPIED_INFO_SHOWING_DURATION_MILLISECONDS_IN_MOBILE, DOT_SEPARATOR, QUICK_UPDATE_TEMPLATE_ID, MAX_REPORTS_CAN_EXPORT_LIMIT, MAX_REPORTDEFINITIONS_FILTER_LIMIT, MAX_SUBMITTERS_FILTER_LIMIT, ReceiverRole, WriterRole, BATCHED_QUERIES_TIME_WINDOW_MS, GetHelpLink, NewFeatureKeys */
-/*! exports used: ATTACHMENTS_FOLDER_NAME, DESKTOP_ENTRY, ECS_BASIC_URL, GRAPH_BASE_URL, HEADER_CLIENT_REQUEST_ID, HEADER_RESPONSE_CORRELATION_ID, HEADER_ROUTE_KEY, INITIAL_DEFINITION_QUESTION_CHOICES, LOADING_TIMEOUT_IN_SECONDS, MAX_DEFINITION_GROUP_SUBMITTERS, MAX_DEFINITION_QUESTIONS, MAX_DEFINITION_QUESTION_CHOICES, MAX_DEFINITION_QUESTION_CHOICE_LENGTH, MAX_DEFINITION_QUESTION_SUBTITLE_LENGTH, MAX_DEFINITION_QUESTION_TITLE_LENGTH, MAX_DEFINITION_USER_COLLABORATORS, MAX_DEFINITION_USER_OWNERS, MAX_DEFINITION_USER_SUBMITTERS, MAX_REPORT_ANSWER_CONTENT_LENGTH, MAX_REPORT_ANSWER_CONTENT_LENGTH_WITH_BUFFER, MAX_REPORT_USER_RECEIVERS, MIN_DEFINITION_QUESTION_CHOICES, MOBILE_ENTRYPAGE, SHAREPOINT_DOMAIN_REGEX, SHAREPOINT_TEMPAUTH_KEY */
+/*! exports used: APP_ICON_NAME, DESKTOP_ENTRY, ECS_BASIC_URL, GRAPH_BASE_URL, HEADER_CLIENT_REQUEST_ID, HEADER_RESPONSE_CORRELATION_ID, HEADER_ROUTE_KEY, LOADING_TIMEOUT_IN_SECONDS, MOBILE_ENTRYPAGE, SHAREPOINT_DOMAIN_REGEX, SHAREPOINT_TEMPAUTH_KEY */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export MAX_DEFINITIONS */
 /* unused harmony export MAX_DEFINITION_TITLE_LENGTH */
 /* unused harmony export MAX_DEFINITION_DESCRIPTION_LENGTH */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return MAX_DEFINITION_QUESTIONS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return MAX_DEFINITION_QUESTION_TITLE_LENGTH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return MAX_DEFINITION_QUESTION_SUBTITLE_LENGTH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return INITIAL_DEFINITION_QUESTION_CHOICES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return MIN_DEFINITION_QUESTION_CHOICES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return MAX_DEFINITION_QUESTION_CHOICES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return MAX_DEFINITION_QUESTION_CHOICE_LENGTH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return MAX_DEFINITION_GROUP_SUBMITTERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return MAX_DEFINITION_USER_SUBMITTERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return MAX_DEFINITION_USER_OWNERS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return MAX_DEFINITION_USER_COLLABORATORS; });
+/* unused harmony export MAX_DEFINITION_QUESTIONS */
+/* unused harmony export MAX_DEFINITION_QUESTION_TITLE_LENGTH */
+/* unused harmony export MAX_DEFINITION_QUESTION_SUBTITLE_LENGTH */
+/* unused harmony export INITIAL_DEFINITION_QUESTION_CHOICES */
+/* unused harmony export MIN_DEFINITION_QUESTION_CHOICES */
+/* unused harmony export MAX_DEFINITION_QUESTION_CHOICES */
+/* unused harmony export MAX_DEFINITION_QUESTION_CHOICE_LENGTH */
+/* unused harmony export MAX_DEFINITION_GROUP_SUBMITTERS */
+/* unused harmony export MAX_DEFINITION_USER_SUBMITTERS */
+/* unused harmony export MAX_DEFINITION_USER_OWNERS */
+/* unused harmony export MAX_DEFINITION_USER_COLLABORATORS */
 /* unused harmony export MAX_REPORT_TITLE_LENGTH */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return MAX_REPORT_ANSWER_CONTENT_LENGTH; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return MAX_REPORT_ANSWER_CONTENT_LENGTH_WITH_BUFFER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return MAX_REPORT_USER_RECEIVERS; });
+/* unused harmony export MAX_REPORT_ANSWER_CONTENT_LENGTH */
+/* unused harmony export MAX_REPORT_ANSWER_CONTENT_LENGTH_WITH_BUFFER */
+/* unused harmony export MAX_REPORT_USER_RECEIVERS */
 /* unused harmony export MAX_REPORT_COMMENTS */
 /* unused harmony export MAX_REPORT_ATTACHMENTS */
 /* unused harmony export PEOPLE_SUGGESTIONS_RESOLVE_DELAY_TIME_MS */
@@ -1740,7 +1623,7 @@ const PRESENCE_ICONS = {
 /* unused harmony export REPORT_SLOT_PAGINATION_LIMIT */
 /* unused harmony export REPORT_SLOT_CACHE_TIME */
 /* unused harmony export MAX_TASKMODULE_OCCURRENCE_COUNT */
-/* unused harmony export APP_ICON_NAME */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return APP_ICON_NAME; });
 /* unused harmony export APP_ICON_COLOR */
 /* unused harmony export DEFAULT_TEMPLATE_ICON_NAME */
 /* unused harmony export EMOJI_BACKGROUND_COLOR */
@@ -1748,16 +1631,16 @@ const PRESENCE_ICONS = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return HEADER_ROUTE_KEY; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return HEADER_RESPONSE_CORRELATION_ID; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return DESKTOP_ENTRY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return MOBILE_ENTRYPAGE; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ATTACHMENTS_FOLDER_NAME; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return MOBILE_ENTRYPAGE; });
+/* unused harmony export ATTACHMENTS_FOLDER_NAME */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return GRAPH_BASE_URL; });
 /* unused harmony export IOS_CAMERA_PHOTO_NAME */
 /* unused harmony export SHAREPOINT_PICKER_APP */
 /* unused harmony export SHAREPOINT_PICKER_SCENARIO */
 /* unused harmony export SHAREPOINT_IFRAME_PATH */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return SHAREPOINT_TEMPAUTH_KEY; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return SHAREPOINT_DOMAIN_REGEX; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return LOADING_TIMEOUT_IN_SECONDS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return SHAREPOINT_TEMPAUTH_KEY; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return SHAREPOINT_DOMAIN_REGEX; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return LOADING_TIMEOUT_IN_SECONDS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return ECS_BASIC_URL; });
 /* unused harmony export OCPS_BASIC_URL */
 /* unused harmony export LINK_COPIED_INFO_SHOWING_DURATION_MILLISECONDS_IN_MOBILE */
@@ -2260,7 +2143,7 @@ function generateDeepLinkToAppHomePage() {
 // eslint-disable-next-line @typescript-eslint/ban-types
 const ErrorBoundaryContent = ({ children }) => {
     const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__[/* useTranslation */ "a"])(undefined, { useSuspense: false });
-    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "b"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorTitle, { defaultValue: '' }), message: `Session Id: ${_logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === null || _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === void 0 ? void 0 : _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].sessionId}`, height: '100vh', actionText: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorAction, { defaultValue: 'Refresh' }), onAction: () => _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].flushLogs(() => {
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "c"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorTitle, { defaultValue: '' }), message: `Session Id: ${_logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === null || _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"] === void 0 ? void 0 : _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].sessionId}`, height: '100vh', actionText: t(_localization__WEBPACK_IMPORTED_MODULE_3__[/* Strings */ "a"].errorAction, { defaultValue: 'Refresh' }), onAction: () => _logger__WEBPACK_IMPORTED_MODULE_4__[/* logger */ "f"].flushLogs(() => {
             // remove page state back to home page
             const location = window.location;
             // taskModule Pages
@@ -2471,7 +2354,7 @@ const backoff = (attempts, response) => {
  * @see https://learn.microsoft.com/graph/best-practices-concept#reliability-and-support
  */
 function createHeadersInterceptorWithIds() {
-    return Object(_addressbook_services_core__WEBPACK_IMPORTED_MODULE_0__[/* createHeadersInterceptor */ "h"])({ [CLIENT_REQUEST_ID]: _addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* uuid */ "v"] });
+    return Object(_addressbook_services_core__WEBPACK_IMPORTED_MODULE_0__[/* createHeadersInterceptor */ "h"])({ [CLIENT_REQUEST_ID]: _addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* uuid */ "e"] });
 }
 /**
  * Creates a service interceptor that logs requests and responses to logger.
@@ -2558,15 +2441,15 @@ function maskUrl(url, options = {}) {
         masked.pathname = masked.pathname.replace(/(?<=thumbnails\/)\S+?(?=\/|$)/g, '[thumbnail]');
     }
     if (options.sharepoint) {
-        const match = masked.hostname.match(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_DOMAIN_REGEX */ "x"]);
+        const match = masked.hostname.match(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_DOMAIN_REGEX */ "j"]);
         if (match) {
             masked.hostname = match[0];
             masked.pathname = '';
             masked.search = '';
         }
     }
-    if (options.token && masked.searchParams.has(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_TEMPAUTH_KEY */ "y"])) {
-        masked.searchParams.set(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_TEMPAUTH_KEY */ "y"], '<token>');
+    if (options.token && masked.searchParams.has(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_TEMPAUTH_KEY */ "k"])) {
+        masked.searchParams.set(_common_Constants__WEBPACK_IMPORTED_MODULE_2__[/* SHAREPOINT_TEMPAUTH_KEY */ "k"], '<token>');
     }
     return masked.toString();
 }

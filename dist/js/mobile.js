@@ -42,5 +42,5 @@ react_dom__WEBPACK_IMPORTED_MODULE_4___default.a.render(react__WEBPACK_IMPORTED_
 
 /***/ })
 
-},[["PLhd","runtime~mobile","main~mobile.microsoft","main~mobile.fui","assets~main~mobile","package~main~mobile","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm._fluentui~utilities","featureRelatedFiles~main~mobile","npm.react-query","npm.lodash-es","npm._internationalized~date","npm.axios","npm.i18next","vendors~main~mobile","main~mobile"]]]);
+},[["PLhd","runtime~mobile","main~mobile.microsoft","main~mobile.fui","assets~main~mobile","package~main~mobile","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm._fluentui~utilities","npm.react-query","npm.lodash-es","npm._internationalized~date","npm.axios","npm.i18next","featureRelatedFiles~main~mobile","vendors~main~mobile","main~mobile"]]]);
 //# sourceMappingURL=mobile.js.map

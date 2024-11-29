@@ -4,7 +4,7 @@
 /*!*****************************************************!*\
   !*** ./src/views/common/CommonDetailsList/index.ts ***!
   \*****************************************************/
-/*! exports provided: CommonDetailsList, onRenderReportDefinitionColumn, onRenderDateTimeColumn, onRenderSubmitTimeColumn */
+/*! exports provided: CommonDetailsList, onRenderReportDefinitionColumn */
 /*! exports used: CommonDetailsList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -16,6 +16,30 @@
  *  Copyright © Microsoft Corporation. All rights reserved.
  */
 
+
+
+/***/ }),
+
+/***/ "/s0O":
+/*!**********************************************************************************!*\
+  !*** ./src/views/components/AddressBookAppHeader/AddressBookAppHeader.styles.ts ***!
+  \**********************************************************************************/
+/*! exports provided: useAppHeaderStyles */
+/*! exports used: useAppHeaderStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useAppHeaderStyles; });
+/* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "n4Dn");
+
+const useAppHeaderStyles = Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__[/* makeStyles */ "a"])(() => ({
+    navContainer: {
+        display: 'flex',
+        flexDirection: 'row',
+        gap: '4px',
+        alignItems: 'center',
+    },
+}));
 
 
 /***/ }),
@@ -88,6 +112,38 @@ function useNewChatEffect() {
 
 
 
+
+
+/***/ }),
+
+/***/ "1n01":
+/*!**************************************************************!*\
+  !*** ./src/views/components/RefreshButton/RefreshButton.tsx ***!
+  \**************************************************************/
+/*! exports provided: RefreshButton */
+/*! exports used: RefreshButton */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return RefreshButton; });
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "BFcr");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../service */ "YCKj");
+
+
+
+const RefreshButton = () => {
+    const onClick = () => {
+        // Clear the cache and refetch the data
+        _service__WEBPACK_IMPORTED_MODULE_2__[/* queryClient */ "e"].clear(); // Clear the cache from memory
+        Object(_service__WEBPACK_IMPORTED_MODULE_2__[/* clearQueryClientPersistor */ "c"])(); // Clear the cache from local storage
+        window.location.reload();
+        return;
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* ActionButton */ "a"], { iconProps: { iconName: 'Refresh' }, onClick: onClick })));
+};
 
 
 /***/ }),
@@ -205,26 +261,6 @@ const useSearchResultStyles = Object(_addressbook_components_fluentui_teams_them
         width: '16px',
     },
 }));
-
-
-/***/ }),
-
-/***/ "5aZt":
-/*!************************************************************************!*\
-  !*** ./src/views/common/CommonDetailsList/CommonDetailsList.styles.ts ***!
-  \************************************************************************/
-/*! exports provided: detailsListTextClassName */
-/*! exports used: detailsListTextClassName */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return detailsListTextClassName; });
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
-/*
- *  Copyright © Microsoft Corporation. All rights reserved.
- */
-
-const detailsListTextClassName = (isBold) => Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({ fontWeight: isBold ? _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].bold : isBold === false ? _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].regular : 'inherit' });
 
 
 /***/ }),
@@ -522,7 +558,7 @@ const flagDependency = {
 /*!***********************************!*\
   !*** ./src/views/common/index.ts ***!
   \***********************************/
-/*! exports provided: CommonCardList, CommonDetailsList, onRenderReportDefinitionColumn, onRenderDateTimeColumn, onRenderSubmitTimeColumn, LoadingIndicatorWrapper */
+/*! exports provided: CommonCardList, CommonDetailsList, onRenderReportDefinitionColumn, LoadingIndicatorWrapper */
 /*! exports used: CommonDetailsList, LoadingIndicatorWrapper */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -581,12 +617,12 @@ const LoadingPage = ({ message, className }) => {
     const id = Object(_fluentui_react_hooks__WEBPACK_IMPORTED_MODULE_3__[/* useId */ "a"])('LoadingLabel');
     react__WEBPACK_IMPORTED_MODULE_5___default.a.useEffect(() => {
         const loadingTimeout = setTimeout(() => {
-            _logger__WEBPACK_IMPORTED_MODULE_9__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_9__[/* LogCategory */ "a"].LoadingTimeout, `${_common_Constants__WEBPACK_IMPORTED_MODULE_7__[/* LOADING_TIMEOUT_IN_SECONDS */ "i"]} seconds loading timeout happens in page: ${window.location.href}`);
-        }, _common_Constants__WEBPACK_IMPORTED_MODULE_7__[/* LOADING_TIMEOUT_IN_SECONDS */ "i"] * 1000);
+            _logger__WEBPACK_IMPORTED_MODULE_9__[/* logger */ "f"].logTraceError(_logger__WEBPACK_IMPORTED_MODULE_9__[/* LogCategory */ "a"].LoadingTimeout, `${_common_Constants__WEBPACK_IMPORTED_MODULE_7__[/* LOADING_TIMEOUT_IN_SECONDS */ "h"]} seconds loading timeout happens in page: ${window.location.href}`);
+        }, _common_Constants__WEBPACK_IMPORTED_MODULE_7__[/* LOADING_TIMEOUT_IN_SECONDS */ "h"] * 1000);
         return () => clearTimeout(loadingTimeout);
     }, []);
-    return (react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Stack */ "a"], { verticalFill: true, verticalAlign: 'center', horizontalAlign: 'center', className: `${Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "G"])(styles.root, className)} loading-page`, role: 'alert', "aria-atomic": true },
-        react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_4__[/* Spinner */ "c"], { "aria-label": ready ? t(_localization__WEBPACK_IMPORTED_MODULE_8__[/* Strings */ "a"].loadingAriaLabel) : 'Loading', "aria-describedby": message && id }),
+    return (react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Stack */ "a"], { verticalFill: true, verticalAlign: 'center', horizontalAlign: 'center', className: `${Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* mergeStyles */ "F"])(styles.root, className)} loading-page`, role: 'alert', "aria-atomic": true },
+        react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_4__[/* Spinner */ "d"], { "aria-label": ready ? t(_localization__WEBPACK_IMPORTED_MODULE_8__[/* Strings */ "a"].loadingAriaLabel) : 'Loading', "aria-describedby": message && id }),
         message && (react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Text */ "a"], { id: id, className: styles.message }, message))));
 };
 
@@ -695,7 +731,7 @@ const PeopleCard = ({ people, onDismiss, target }) => {
                     react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.peopleWithPresenceInfo },
                         react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleCoin */ "a"], { selection: { id: people.id, name: people.name, type: 0 }, onRetrieveIcon: _hooks__WEBPACK_IMPORTED_MODULE_7__[/* retrievePeopleSelectionIcon */ "c"], coinSize: 64 }),
                         presence && (react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.presenceInfo },
-                            react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* FontIcon */ "a"], { "aria-label": 'Mail', iconName: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].name, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(peopleCardStyles.icon, {
+                            react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* FontIcon */ "a"], { "aria-label": 'Mail', iconName: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].name, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(peopleCardStyles.icon, {
                                     color: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].color,
                                 }) })))),
                     react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.info },
@@ -747,7 +783,7 @@ const PeopleCard = ({ people, onDismiss, target }) => {
                 react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.divider })),
             react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.main },
                 presence && (react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", { className: peopleCardStyles.presence },
-                    react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* FontIcon */ "a"], { "aria-label": 'Mail', iconName: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].name, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "G"])(peopleCardStyles.icon, {
+                    react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* FontIcon */ "a"], { "aria-label": 'Mail', iconName: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].name, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* mergeStyles */ "F"])(peopleCardStyles.icon, {
                             color: _common_icons__WEBPACK_IMPORTED_MODULE_6__[/* PRESENCE_ICONS */ "a"][presence].color,
                         }) }),
                     react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", { className: peopleCardStyles.subHeaderText }, presence))),
@@ -807,6 +843,62 @@ const usePageTitle = (path) => {
 
 /***/ }),
 
+/***/ "8tIN":
+/*!**********************************************************************!*\
+  !*** ./src/views/components/SearchPeopleField/SearchPeopleField.tsx ***!
+  \**********************************************************************/
+/*! exports provided: SearchPeopleField */
+/*! exports used: SearchPeopleField */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchPeopleField; });
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "XgkO");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-i18next */ "Tr4L");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "H8PI");
+/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../localization */ "HVbO");
+/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
+/* harmony import */ var _SearchPeopleField_styles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./SearchPeopleField.styles */ "FzV7");
+
+
+
+
+
+
+
+const SearchPeopleField = ({ searchText }) => {
+    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__[/* useTranslation */ "a"])();
+    const [inputValue, setInputValue] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(searchText || '');
+    const onChange = Object(react__WEBPACK_IMPORTED_MODULE_1__["useCallback"])((_, value) => {
+        setInputValue(value || '');
+    }, []);
+    const styles = Object(_SearchPeopleField_styles__WEBPACK_IMPORTED_MODULE_6__[/* useSearchFieldStyles */ "a"])();
+    const navigate = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[/* useNavigate */ "i"])();
+    const iconProps = {
+        iconName: 'Search',
+        className: styles.textFieldIcon1,
+        styles: {
+            root: {
+                fontSize: '20px',
+            },
+        },
+    };
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_1___default.a.Fragment, null,
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("form", { noValidate: true, autoComplete: 'off' },
+            react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* TextField */ "a"], { className: styles.inputField, placeholder: t(_localization__WEBPACK_IMPORTED_MODULE_4__[/* Strings */ "a"].searchPlaceholder), iconProps: iconProps, value: inputValue, onChange: onChange, onKeyDown: event => {
+                    if (event.key === 'Enter') {
+                        navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_5__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_5__[/* Paths */ "a"].SearchResults, undefined, {
+                            searchText: inputValue,
+                        }));
+                    }
+                } }))));
+};
+
+
+/***/ }),
+
 /***/ "9NDm":
 /*!**************************************!*\
   !*** ./src/routes/desktopRoutes.tsx ***!
@@ -845,22 +937,16 @@ const desktopRoutes = [
 /*!*****************************!*\
   !*** ./src/hooks/people.ts ***!
   \*****************************/
-/*! exports provided: useCurrentUserSelection, useAnyoneSelection */
+/*! exports provided: useCurrentUserSelection */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* unused harmony export useCurrentUserSelection */
-/* unused harmony export useAnyoneSelection */
-/* harmony import */ var _addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-icons */ "Y918");
-/* harmony import */ var _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-metaos-host */ "0acT");
-/* harmony import */ var _addressbook_components_people__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @addressbook/components-people */ "apXe");
-/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! jwt-decode */ "k2tF");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var react_query__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react-query */ "jtiS");
-/* harmony import */ var _common_env__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../common/env */ "8MrD");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../localization */ "HVbO");
+/* harmony import */ var _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-metaos-host */ "0acT");
+/* harmony import */ var _addressbook_components_people__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-people */ "apXe");
+/* harmony import */ var jwt_decode__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! jwt-decode */ "k2tF");
+/* harmony import */ var react_query__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-query */ "jtiS");
+/* harmony import */ var _common_env__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../common/env */ "8MrD");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -875,10 +961,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-
-
-
 const ANYONE_SELECTION_ID = 'anyone';
 /**
  * A hook that returns the current user selection.
@@ -886,7 +968,7 @@ const ANYONE_SELECTION_ID = 'anyone';
  * @returns The current user selection.
  */
 function useCurrentUserSelection() {
-    const { data } = Object(react_query__WEBPACK_IMPORTED_MODULE_6__["useQuery"])({
+    const { data } = Object(react_query__WEBPACK_IMPORTED_MODULE_3__["useQuery"])({
         queryKey: getCurrentUserSelection.name,
         queryFn: getCurrentUserSelection,
         staleTime: Infinity,
@@ -896,12 +978,12 @@ function useCurrentUserSelection() {
 function getCurrentUserSelection() {
     var _a;
     return __awaiter(this, void 0, void 0, function* () {
-        const teamsContext = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* getTeamsContext */ "h"])();
+        const teamsContext = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* getTeamsContext */ "h"])();
         const user = teamsContext.user;
         if (!user)
             throw new Error('User not found in Teams context.');
         const selection = {
-            type: _addressbook_components_people__WEBPACK_IMPORTED_MODULE_2__[/* PeopleSelectionType */ "c"].User,
+            type: _addressbook_components_people__WEBPACK_IMPORTED_MODULE_1__[/* PeopleSelectionType */ "b"].User,
             id: user.id,
             name: (_a = user.displayName) !== null && _a !== void 0 ? _a : '',
             mail: user.userPrincipalName,
@@ -909,8 +991,8 @@ function getCurrentUserSelection() {
         // Patch name if absent in Teams context.
         // We need remove the fallback after the issue has been fixed by the Teams. Relevant issue discussion: https://github.com/OfficeDev/microsoft-teams-library-js/issues/2330
         if (!selection.name) {
-            const token = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_1__[/* getAuthToken */ "g"])(_common_env__WEBPACK_IMPORTED_MODULE_7__[/* ADDRESSBOOK_APP_RESOURCE_URL */ "a"]);
-            const jwt = Object(jwt_decode__WEBPACK_IMPORTED_MODULE_3__[/* default */ "a"])(token);
+            const token = yield Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__[/* getAuthToken */ "g"])(_common_env__WEBPACK_IMPORTED_MODULE_4__[/* ADDRESSBOOK_APP_RESOURCE_URL */ "a"]);
+            const jwt = Object(jwt_decode__WEBPACK_IMPORTED_MODULE_2__[/* default */ "a"])(token);
             if (jwt && jwt.name)
                 selection.name = jwt.name;
         }
@@ -958,20 +1040,6 @@ function getCurrentUserSelection() {
 //         };
 //     }, [refetch, t]);
 // }
-/**
- * A hook that returns the anyone selection, which is only used to render "anyone submitter" option.
- *
- * @returns The anyone selection.
- */
-function useAnyoneSelection() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_5__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_4___default.a.useMemo(() => ({
-        type: _addressbook_components_people__WEBPACK_IMPORTED_MODULE_2__[/* PeopleSelectionType */ "c"].Unspecific,
-        id: ANYONE_SELECTION_ID,
-        name: t(_localization__WEBPACK_IMPORTED_MODULE_8__[/* Strings */ "a"].templateWizardSubmitterOptionAnyone),
-        icon: _addressbook_components_fluentui_icons__WEBPACK_IMPORTED_MODULE_0__[/* IconName */ "a"].Call,
-    }), [t]);
-}
 
 
 /***/ }),
@@ -1109,6 +1177,44 @@ function useReactQuery(func, params, options) {
 
 /***/ }),
 
+/***/ "FzV7":
+/*!****************************************************************************!*\
+  !*** ./src/views/components/SearchPeopleField/SearchPeopleField.styles.ts ***!
+  \****************************************************************************/
+/*! exports provided: useSearchFieldStyles */
+/*! exports used: useSearchFieldStyles */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useSearchFieldStyles; });
+/* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "n4Dn");
+
+const useSearchFieldStyles = Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__[/* makeStyles */ "a"])(theme => ({
+    inputField: {
+        flex: 1,
+        '.ms-Label': {
+            padding: '0 0 4px',
+            whiteSpace: 'nowrap',
+        },
+        '.ms-TextField-field': {
+            paddingLeft: '36px',
+            // backgroundColor: theme.palette.white,
+            backgroundColor: theme.palette.neutralLight,
+            paddingRight: '36px',
+        },
+    },
+    textFieldIcon1: {
+        position: 'absolute',
+        left: '6px',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        pointerEvents: 'none',
+    },
+}));
+
+
+/***/ }),
+
 /***/ "HUOG":
 /*!*****************************!*\
   !*** ./src/ecs/EcsFlags.ts ***!
@@ -1152,7 +1258,7 @@ const initialState = {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return themeProviderClassName; });
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
 
-const themeProviderClassName = Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "G"])({ width: '100%', height: '100%' });
+const themeProviderClassName = Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* mergeStyles */ "F"])({ width: '100%', height: '100%' });
 
 
 /***/ }),
@@ -1268,7 +1374,7 @@ const ErrorStatus = ({ img, title, message, actionText, onAction, className, err
         })
             .join('\n');
     }
-    return (react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_3__[/* EmptyState */ "b"], { image: image, role: 'alert', title: title !== null && title !== void 0 ? title : t(_localization__WEBPACK_IMPORTED_MODULE_12__[/* Strings */ "a"].errorTitle, { context: code }), message: message, actionText: action, height: '100%', background: 'transparent', color: theme.palette.black, className: `${className} empty-state` },
+    return (react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_3__[/* EmptyState */ "c"], { image: image, role: 'alert', title: title !== null && title !== void 0 ? title : t(_localization__WEBPACK_IMPORTED_MODULE_12__[/* Strings */ "a"].errorTitle, { context: code }), message: message, actionText: action, height: '100%', background: 'transparent', color: theme.palette.black, className: `${className} empty-state` },
         react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement("div", { style: { display: 'flex', justifyContent: 'center', gap: '20px' } },
             action && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* DefaultButton */ "a"], { text: action, onClick: onAction }),
             returnToHomepageAction && onReturnToHome && (react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* PrimaryButton */ "a"], { text: t(_localization__WEBPACK_IMPORTED_MODULE_12__[/* Strings */ "a"].returnToHomePage), onClick: onReturnToHome }))),
@@ -1307,180 +1413,6 @@ const DesktopDefaultPage = () => {
     }, [href]);
     return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__[/* Navigate */ "a"], { to: _routes_Paths__WEBPACK_IMPORTED_MODULE_3__[/* Paths */ "a"].DepartmentTeam, replace: true });
 };
-
-
-/***/ }),
-
-/***/ "JVrW":
-/*!**********************************************!*\
-  !*** ./src/hooks/components/form-facades.ts ***!
-  \**********************************************/
-/*! exports provided: useFormFacadeProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export useFormFacadeProps */
-/* harmony import */ var _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-forms */ "I474");
-/* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! dompurify */ "Pgl2");
-/* harmony import */ var dompurify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(dompurify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var _common_Constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../common/Constants */ "fPKC");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../localization */ "HVbO");
-/* harmony import */ var _date_pickers__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./date-pickers */ "yfM9");
-/* harmony import */ var _rich_text_fields__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./rich-text-fields */ "U+kU");
-var __rest = (undefined && undefined.__rest) || function (s, e) {
-    var t = {};
-    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
-        t[p] = s[p];
-    if (s != null && typeof Object.getOwnPropertySymbols === "function")
-        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-            if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i]))
-                t[p[i]] = s[p[i]];
-        }
-    return t;
-};
-
-
-
-
-
-
-
-
-/**
- * A hook to obtain the properties for FormFacade.
- *
- * @returns The properties for FormFacade.
- */
-function useFormFacadeProps({ compact } = {}) {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_3__[/* useTranslation */ "a"])();
-    const richTextFieldProps = Object(_rich_text_fields__WEBPACK_IMPORTED_MODULE_7__[/* useRichTextFieldProps */ "a"])();
-    const datePickerProps = Object(_date_pickers__WEBPACK_IMPORTED_MODULE_6__[/* useDatePickerProps */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => {
-        const defaultPlaceholder = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formDefaultPlaceholder);
-        const defaultDropdownPlaceholder = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formDefaultDropdownPlaceholder);
-        const otherText = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formOtherText);
-        const descriptors = [
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* TextDescriptor */ "o"]({
-                defaultPlaceholder,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* RichTextDescriptor */ "m"](Object.assign(Object.assign({}, richTextFieldProps), { defaultPlaceholder,
-                compact })),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* CheckboxChoiceDescriptor */ "a"]({
-                otherPlaceholder: otherText,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* RadioChoiceDescriptor */ "k"]({
-                otherPlaceholder: otherText,
-                choiceAriaLabel: (title, choice) => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formChoiceAriaLabel, { title, choice }),
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* DropdownChoiceDescriptor */ "d"]({
-                defaultPlaceholder: defaultDropdownPlaceholder,
-                otherPlaceholder: defaultPlaceholder,
-                otherText,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* DateTimeDescriptor */ "c"](Object.assign(Object.assign({}, datePickerProps), { allowTextInput: !compact, defaultPlaceholder })),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FallbackViewingDescriptor */ "e"]({
-                formatDate: datePickerProps.formatDate,
-                formatList: list => list.join('\n'),
-            }),
-        ];
-        const maxLength = type => type === _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "f"].RichText
-            ? _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_REPORT_ANSWER_CONTENT_LENGTH_WITH_BUFFER */ "t"]
-            : _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_REPORT_ANSWER_CONTENT_LENGTH */ "s"];
-        const lengthErrorMessage = (maxLength, type) => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formLengthErrorMessage, { maxLength, context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* FormQuestionType */ "f"][type] });
-        const requiredErrorMessage = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formRequiredErrorMessage);
-        const errorMessageWhenNaN = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formNumberErrorMessage);
-        const errorMessageByRestriction = (_a) => {
-            var { type } = _a, values = __rest(_a, ["type"]);
-            return t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formNumberErrorMessage, Object.assign({ context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* TextNumberRestrictionType */ "p"][type] }, values));
-        };
-        const filesErrorMessage = t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formRichTextFilesErrorMessage);
-        const validators = [
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* LengthValidator */ "g"]({
-                maxLength,
-                errorMessageByMaxLength: lengthErrorMessage,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* RequiredValidator */ "l"]({
-                errorMessage: requiredErrorMessage,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* NumberValidator */ "h"]({
-                errorMessageWhenNaN,
-                errorMessageByRestriction,
-            }),
-            new _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* RichTextValidator */ "n"]({
-                requiredErrorMessage,
-                filesErrorMessage,
-            }),
-        ];
-        const sanitizer = newSanitizer();
-        const strings = getFormStrings(t);
-        const constants = getFormConstants();
-        return {
-            feature: {
-                descriptors,
-                validators,
-                sanitizer,
-                constants,
-                strings,
-            },
-        };
-    }, [compact, datePickerProps, richTextFieldProps, t]);
-}
-/**
- * After adopting TipTap, we no longer need to use DOMPurify to sanitize the HTML content in rich text fields.
- * But we still need to use it to sanitize the rich text title and subtitle for questions.
- *
- * @returns A sanitizer function.
- */
-function newSanitizer() {
-    const purify = dompurify__WEBPACK_IMPORTED_MODULE_1___default()();
-    purify.setConfig({
-        USE_PROFILES: { html: true },
-        FORBID_TAGS: ['style'],
-        WHOLE_DOCUMENT: true,
-        RETURN_TRUSTED_TYPE: true,
-    });
-    purify.addHook('afterSanitizeAttributes', node => {
-        if (node instanceof HTMLAnchorElement) {
-            node.target = '_blank';
-            node.rel = 'noopener noreferrer';
-        }
-    });
-    return purify.sanitize;
-}
-function getFormStrings(t) {
-    return {
-        questionHint: (question, active) => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionHint, { context: active ? 'Active' : 'Inactive', title: question.title }),
-        questionAction: action => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionAction, { context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* QuestionAction */ "i"][action] }),
-        questionMockedFieldDefaultPlaceholder: type => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionMockedFieldDefaultPlaceholder, { context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* QuestionDisplayType */ "j"][type] }),
-        questionDisplayTypeOption: type => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionDisplayTypeOption, { context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* QuestionDisplayType */ "j"][type] }),
-        questionNewTitle: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionNewTitle),
-        questionTitle: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionTitle),
-        questionSubtitle: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionSubtitle),
-        questionRequired: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionRequired),
-        questionRestriction: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionRestriction),
-        questionShuffle: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formQuestionShuffle),
-        choiceAction: action => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formChoiceAction, { context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* ChoiceAction */ "b"][action] }),
-        choiceNew: index => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formChoiceNew, { number: index + 1 }),
-        choiceOther: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formChoiceOther),
-        choicePlaceholder: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formChoicePlaceholder),
-        restrictionOption: type => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formRestrictionOption, { context: _addressbook_components_forms__WEBPACK_IMPORTED_MODULE_0__[/* TextNumberRestrictionType */ "p"][type] }),
-        restrictionValuePlaceholder: key => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].formRestrictionValuePlaceholder, { context: key }),
-    };
-}
-function getFormConstants() {
-    return {
-        maxEntries: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_DEFINITION_QUESTIONS */ "k"],
-        maxTitleLength: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_DEFINITION_QUESTION_TITLE_LENGTH */ "o"],
-        maxSubtitleLength: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_DEFINITION_QUESTION_SUBTITLE_LENGTH */ "n"],
-        initialChoices: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* INITIAL_DEFINITION_QUESTION_CHOICES */ "h"],
-        minChoices: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MIN_DEFINITION_QUESTION_CHOICES */ "v"],
-        maxChoices: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_DEFINITION_QUESTION_CHOICES */ "l"],
-        maxChoiceLength: _common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* MAX_DEFINITION_QUESTION_CHOICE_LENGTH */ "m"],
-    };
-}
 
 
 /***/ }),
@@ -1646,15 +1578,13 @@ function OpenOrgExplorerApp() {
 /*!******************************************************************!*\
   !*** ./src/views/common/CommonDetailsList/CommonDetailsList.tsx ***!
   \******************************************************************/
-/*! exports provided: CommonDetailsList, onRenderReportDefinitionColumn, onRenderDateTimeColumn, onRenderSubmitTimeColumn */
+/*! exports provided: CommonDetailsList, onRenderReportDefinitionColumn */
 /*! exports used: CommonDetailsList */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CommonDetailsList; });
 /* unused harmony export onRenderReportDefinitionColumn */
-/* unused harmony export onRenderDateTimeColumn */
-/* unused harmony export onRenderSubmitTimeColumn */
 /* harmony import */ var _addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-shared */ "+INc");
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "eZeq");
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/react */ "ogYq");
@@ -1666,13 +1596,9 @@ function OpenOrgExplorerApp() {
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "ERkP");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_infinite_scroll_hook__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-infinite-scroll-hook */ "MeCZ");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../localization */ "HVbO");
-/* harmony import */ var _CommonDetailsList_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./CommonDetailsList.styles */ "5aZt");
 /*
  *  Copyright © Microsoft Corporation. All rights reserved.
  */
-
-
 
 
 
@@ -1686,19 +1612,15 @@ const CommonDetailsList = ({ items, columns, className, rowClass, queryStatus, a
         onLoadMore: (_a = queryStatus === null || queryStatus === void 0 ? void 0 : queryStatus.loadMore) !== null && _a !== void 0 ? _a : (() => { }),
         disabled: !queryStatus,
     });
-    const onRenderRowDefault = react__WEBPACK_IMPORTED_MODULE_8___default.a.useCallback((props) => props ? (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* DetailsRow */ "a"], Object.assign({}, props, { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "G"])(rowClass && rowClass(props)), "data-selection-invoke": true, role: 'row', "data-testid": 'DetailsRow', "aria-rowindex": props.itemIndex }))) : (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null)), [rowClass]);
+    const onRenderRowDefault = react__WEBPACK_IMPORTED_MODULE_8___default.a.useCallback((props) => props ? (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* DetailsRow */ "a"], Object.assign({}, props, { className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "F"])(rowClass && rowClass(props)), "data-selection-invoke": true, role: 'row', "data-testid": 'DetailsRow', "aria-rowindex": props.itemIndex }))) : (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null)), [rowClass]);
     const onRenderDetailsHeader = react__WEBPACK_IMPORTED_MODULE_8___default.a.useCallback((props) => props ? (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_8___default.a.Fragment, null,
         react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* DetailsHeader */ "a"], Object.assign({}, props)),
         announcedMessage && react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* Announced */ "a"], { message: announcedMessage }))) : null, [announcedMessage]);
     return (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_5__[/* ShimmeredDetailsList */ "a"], { selectionMode: _fluentui_react__WEBPACK_IMPORTED_MODULE_6__[/* SelectionMode */ "c"].none, constrainMode: _fluentui_react__WEBPACK_IMPORTED_MODULE_7__[/* ConstrainMode */ "d"].unconstrained, layoutMode: _fluentui_react__WEBPACK_IMPORTED_MODULE_7__[/* DetailsListLayoutMode */ "e"].justified, enableShimmer: !items, columns: columns, items: ((queryStatus === null || queryStatus === void 0 ? void 0 : queryStatus.isLoading) || (queryStatus === null || queryStatus === void 0 ? void 0 : queryStatus.canLoadMore)) && items ? [...items, null] : items || [], isHeaderVisible: isHeaderVisible, onRenderRow: onRenderRow !== null && onRenderRow !== void 0 ? onRenderRow : onRenderRowDefault, onItemInvoked: onItemClick && (item => onItemClick(item)), onRenderDetailsFooter: () => react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("div", { ref: sentryRef }), className: className, ariaLabelForGrid: ariaLabel, shimmerLines: shimmerLines, role: 'table', groups: groups, groupProps: groupProps, onRenderDetailsHeader: onRenderDetailsHeader }));
 };
 const onRenderReportDefinitionColumn = (title, iconBackgroundColor, icon, description) => {
-    return (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* CommonIcon */ "a"], { title: title, iconBackgroundColor: iconBackgroundColor, icon: icon, styles: { title: { fontWeight: 'inherit' } }, description: description }));
+    return (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* CommonIcon */ "b"], { title: title, iconBackgroundColor: iconBackgroundColor, icon: icon, styles: { title: { fontWeight: 'inherit' } }, description: description }));
 };
-const onRenderDateTimeColumn = (dateTime, t, isBold) => {
-    return (react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement("span", { className: Object(_CommonDetailsList_styles__WEBPACK_IMPORTED_MODULE_11__[/* detailsListTextClassName */ "a"])(isBold) }, t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].listDatetime, { date: new Date(dateTime) })));
-};
-const onRenderSubmitTimeColumn = (dateTime, t) => t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].listSubmitTime, { date: new Date(dateTime) });
 
 
 /***/ }),
@@ -1727,27 +1649,23 @@ const onRenderSubmitTimeColumn = (dateTime, t) => t(_localization__WEBPACK_IMPOR
 /*!***************************************!*\
   !*** ./src/hooks/components/index.ts ***!
   \***************************************/
-/*! exports provided: useCollapsibleTextFieldProps, useDatePickerProps, useFormFacadeProps, useValidateSubmitters, useValidateReceivers, useValidateComanagers, usePeopleViewProps, retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph, useRichTextFieldProps */
+/*! exports provided: retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph */
 /*! exports used: retrievePeopleManagerByGraph, retrievePeoplePresenceByGraph, retrievePeopleSelectionIcon */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var _collapsible_text_fields__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./collapsible-text-fields */ "rBIV");
-/* harmony import */ var _date_pickers__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./date-pickers */ "yfM9");
-/* harmony import */ var _form_facades__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./form-facades */ "JVrW");
-/* harmony import */ var _people__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./people */ "pFId");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _people__WEBPACK_IMPORTED_MODULE_3__["a"]; });
+/* harmony import */ var _people__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./people */ "pFId");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _people__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _people__WEBPACK_IMPORTED_MODULE_3__["b"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "b", function() { return _people__WEBPACK_IMPORTED_MODULE_0__["b"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _people__WEBPACK_IMPORTED_MODULE_3__["c"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "c", function() { return _people__WEBPACK_IMPORTED_MODULE_0__["c"]; });
 
-/* harmony import */ var _rich_text_fields__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./rich-text-fields */ "U+kU");
+// export * from './collapsible-text-fields';
+// export * from './date-pickers';
+// export * from './form-facades';
 
-
-
-
-
+// export * from './rich-text-fields';
 
 
 /***/ }),
@@ -1762,19 +1680,21 @@ const onRenderSubmitTimeColumn = (dateTime, t) => t(_localization__WEBPACK_IMPOR
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return SearchResults; });
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "XgkO");
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "Favm");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "Favm");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-i18next */ "Tr4L");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "H8PI");
 /* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../hooks */ "eZYV");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../logger */ "pIRP");
-/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../service */ "YCKj");
-/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../components */ "0UAP");
-/* harmony import */ var _components_PeopleList__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components/PeopleList */ "S0dn");
-/* harmony import */ var _SearchResult_styles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./SearchResult.styles */ "3O72");
+/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../localization */ "HVbO");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../logger */ "pIRP");
+/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../service */ "YCKj");
+/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components */ "0UAP");
+/* harmony import */ var _components_AddressBookAppHeader_AddressBookAppHeader__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/AddressBookAppHeader/AddressBookAppHeader */ "ca4Q");
+/* harmony import */ var _components_PeopleList__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/PeopleList */ "S0dn");
+/* harmony import */ var _SearchResult_styles__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./SearchResult.styles */ "3O72");
 var __rest = (undefined && undefined.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -1797,8 +1717,11 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 
 
 
+
+
+
 const SearchResults = () => {
-    const styles = Object(_SearchResult_styles__WEBPACK_IMPORTED_MODULE_11__[/* useSearchResultStyles */ "a"])();
+    const styles = Object(_SearchResult_styles__WEBPACK_IMPORTED_MODULE_13__[/* useSearchResultStyles */ "a"])();
     const iconProps = {
         iconName: 'Search',
         className: styles.textFieldIcon1,
@@ -1808,37 +1731,25 @@ const SearchResults = () => {
             },
         },
     };
+    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__[/* useTranslation */ "a"])();
     const { params } = Object(_hooks__WEBPACK_IMPORTED_MODULE_4__[/* usePageParams */ "e"])();
     const { searchText } = params;
-    const [inputValue, setInputValue] = Object(react__WEBPACK_IMPORTED_MODULE_2__["useState"])(searchText);
-    const onChange = react__WEBPACK_IMPORTED_MODULE_2___default.a.useCallback((event, newValue) => {
-        if (!newValue || newValue.length <= 5) {
-            setInputValue(newValue || '');
-        }
+    const [inputValue, setInputValue] = Object(react__WEBPACK_IMPORTED_MODULE_1__["useState"])(searchText);
+    const onChange = react__WEBPACK_IMPORTED_MODULE_1___default.a.useCallback((_, value) => {
+        setInputValue(value || '');
     }, []);
     const navigate = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_3__[/* useNavigate */ "i"])();
-    const _a = Object(_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useReactPageQuery */ "f"])(_service__WEBPACK_IMPORTED_MODULE_7__[/* SERVICE_CLIENT */ "b"].fetchSearchUser, { top: 10, userDisplayName: searchText }, { enabled: searchText !== '' }), { data: searchMembers, error: membersError, isLoading: membersLoading } = _a, membersQueryStatus = __rest(_a, ["data", "error", "isLoading"]);
-    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.root },
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.topSearchSection },
-            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("form", { noValidate: true, autoComplete: 'off' },
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* TextField */ "a"], { className: styles.inputField, placeholder: '\u901A\u8FC7\u59D3\u540D\u67E5\u627E', iconProps: iconProps, value: inputValue, onChange: onChange, onKeyDown: event => {
-                        if (event.key === 'Enter') {
-                            console.log('test: enter');
-                            navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_6__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_6__[/* Paths */ "a"].SearchResults, undefined, {
-                                searchText: inputValue,
-                            }));
-                        }
-                    } }))),
-        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.main },
-            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.top },
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", { className: styles.topText },
-                    searchText,
-                    "\u7684\u641C\u7D22\u7ED3\u679C"),
-                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* DefaultButton */ "a"], { onClick: () => navigate(_routes_Paths__WEBPACK_IMPORTED_MODULE_6__[/* Paths */ "a"].DepartmentTeam), text: '\u9000\u51FA\u641C\u7D22' })),
-            searchMembers && searchMembers.length > 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_PeopleList__WEBPACK_IMPORTED_MODULE_10__[/* PeopleList */ "a"], { items: searchMembers.map(data => Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_8__[/* mapUserViewToPeople */ "d"])(data)), queryStatus: membersQueryStatus, moduleName: _logger__WEBPACK_IMPORTED_MODULE_5__[/* ModuleName */ "b"].SearchResult })),
-            (searchMembers === null || searchMembers === void 0 ? void 0 : searchMembers.length) === 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_9__[/* EmptyStatus */ "a"], { title: '\u6CA1\u6709\u8054\u7CFB\u4EBA', message: '\u6CA1\u6709\u53EF\u663E\u793A\u7684\u8054\u7CFB\u4EBA\uFF0C\u8BF7\u9009\u62E9\u5176\u4ED6\u90E8\u95E8\u67E5\u770B', img: 'NoMessage' })),
-            membersLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_9__[/* LoadingPage */ "c"], null),
-            membersError && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_9__[/* ErrorStatus */ "b"], { error: membersError }))));
+    const _a = Object(_hooks__WEBPACK_IMPORTED_MODULE_4__[/* useReactPageQuery */ "f"])(_service__WEBPACK_IMPORTED_MODULE_8__[/* SERVICE_CLIENT */ "b"].fetchSearchUser, { top: 10, userDisplayName: searchText }, { enabled: searchText !== '' }), { data: searchMembers, error: membersError, isLoading: membersLoading } = _a, membersQueryStatus = __rest(_a, ["data", "error", "isLoading"]);
+    return (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: styles.root },
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_AddressBookAppHeader_AddressBookAppHeader__WEBPACK_IMPORTED_MODULE_11__[/* AddressBookAppHeader */ "a"], { moduleName: _logger__WEBPACK_IMPORTED_MODULE_6__[/* ModuleName */ "b"].SearchResult, searchText: searchText }),
+        react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: styles.main },
+            react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", { className: styles.top },
+                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", { className: styles.topText }, t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].searchResultLabel, { searchResult: searchText })),
+                react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* DefaultButton */ "a"], { onClick: () => navigate(_routes_Paths__WEBPACK_IMPORTED_MODULE_7__[/* Paths */ "a"].DepartmentTeam), text: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].exitSearchLabel) })),
+            searchMembers && searchMembers.length > 0 && (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components_PeopleList__WEBPACK_IMPORTED_MODULE_12__[/* PeopleList */ "a"], { items: searchMembers.map(data => Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_9__[/* mapUserViewToPeople */ "d"])(data)), queryStatus: membersQueryStatus, moduleName: _logger__WEBPACK_IMPORTED_MODULE_6__[/* ModuleName */ "b"].SearchResult })),
+            (searchMembers === null || searchMembers === void 0 ? void 0 : searchMembers.length) === 0 && (react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* EmptyStatus */ "a"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].errorTitleForNotContract), message: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].errorMessageForNotContract), img: 'NoMessage' })),
+            membersLoading && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* LoadingPage */ "c"], null),
+            membersError && react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* ErrorStatus */ "b"], { error: membersError }))));
 };
 
 
@@ -2043,129 +1954,6 @@ const CommonCardList = (props) => {
 
 /***/ }),
 
-/***/ "U+kU":
-/*!**************************************************!*\
-  !*** ./src/hooks/components/rich-text-fields.ts ***!
-  \**************************************************/
-/*! exports provided: useRichTextFieldProps */
-/*! exports used: useRichTextFieldProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useRichTextFieldProps; });
-/* harmony import */ var _addressbook_components_rich_text_tiptap__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-rich-text-tiptap */ "UuZ7");
-/* harmony import */ var _addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/utilities-core */ "1hmm");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var _common_Constants__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../common/Constants */ "fPKC");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../localization */ "HVbO");
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../service */ "YCKj");
-var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
-    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
-    return new (P || (P = Promise))(function (resolve, reject) {
-        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
-        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
-        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
-        step((generator = generator.apply(thisArg, _arguments || [])).next());
-    });
-};
-
-
-
-
-
-
-
-/**
- * A hook to obtain the properties for RichTextField.
- *
- * @property disableFileStorageService Whether to disable the file storage service.
- * @returns The properties for RichTextField.
- */
-function useRichTextFieldProps({ disableFileStorageService, } = {}) {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_3__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => {
-        const strings = getRichTextFieldStrings(t);
-        const fileStorageService = !disableFileStorageService
-            ? createRichTextFileStorageServiceByGraph(_service__WEBPACK_IMPORTED_MODULE_6__[/* graphServiceClient */ "d"])
-            : undefined;
-        return {
-            strings,
-            fileStorageService,
-            callbacks: {
-                normalizeUrl: _addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* normalizeUrl */ "q"],
-                onRibbonButtonClicked: () => {
-                    return null;
-                },
-            },
-        };
-    }, [disableFileStorageService, t]);
-}
-function getRichTextFieldStrings(t) {
-    return {
-        button: button => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldButton, { context: _addressbook_components_rich_text_tiptap__WEBPACK_IMPORTED_MODULE_0__[/* RichTextFieldButton */ "d"][button] }),
-        fontSize: size => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldFontSize, { context: _addressbook_components_rich_text_tiptap__WEBPACK_IMPORTED_MODULE_0__[/* RichTextFieldFontSize */ "e"][size] }),
-        backgroundColor: color => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldBackgroundColor, { context: _addressbook_components_rich_text_tiptap__WEBPACK_IMPORTED_MODULE_0__[/* RichTextFieldBackgroundColor */ "c"][color] }),
-        textColor: color => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldTextColor, { context: _addressbook_components_rich_text_tiptap__WEBPACK_IMPORTED_MODULE_0__[/* RichTextFieldTextColor */ "f"][color] }),
-        insertLinkTitle: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldInsertLinkTitle),
-        insertLinkUrl: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldInsertLinkUrl),
-        insertLinkDisplayAs: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldInsertLinkDisplayAs),
-        insertTableTitle: size => t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldInsertTableTitle, size ? { size } : { context: 'default' }),
-        messageContentUnavailable: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldMessageContentUnavailable),
-        defaultImageFileStem: t(_localization__WEBPACK_IMPORTED_MODULE_5__[/* Strings */ "a"].richTextFieldDefaultImageFileStem),
-    };
-}
-/**
- * Creates a rich text file storage service by Graph service client.
- *
- * @param client The Graph service client.
- * @property disableThumbnail Whether to disable the thumbnail.
- * @returns The rich text file storage service.
- */
-function createRichTextFileStorageServiceByGraph(client, { disableThumbnail } = {}) {
-    const service = {
-        upload(file) {
-            return __awaiter(this, void 0, void 0, function* () {
-                const drive = client.me.drive;
-                const folderId = (yield drive.root(_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* ATTACHMENTS_FOLDER_NAME */ "a"]).getId()) ||
-                    (yield drive.root().createFolder(_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* ATTACHMENTS_FOLDER_NAME */ "a"]));
-                const randomizedFile = randomizeName(file);
-                const itemId = yield drive
-                    .items(folderId, randomizedFile.name)
-                    .upload(randomizedFile, { conflictBehavior: 'rename' });
-                return yield drive.items(itemId).share();
-            });
-        },
-        download(url) {
-            return __awaiter(this, void 0, void 0, function* () {
-                if (!_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* SHAREPOINT_DOMAIN_REGEX */ "x"].test(url))
-                    throw new Error('Invalid URL');
-                return yield client.shares(url).driveItem.download({ prefer: 'redeemSharingLink' });
-            });
-        },
-        thumbnail(url) {
-            return __awaiter(this, void 0, void 0, function* () {
-                if (!_common_Constants__WEBPACK_IMPORTED_MODULE_4__[/* SHAREPOINT_DOMAIN_REGEX */ "x"].test(url))
-                    throw new Error('Invalid URL');
-                return yield client.shares(url).driveItem.thumbnails(0, 'medium').download({ prefer: 'redeemSharingLink' });
-            });
-        },
-    };
-    if (disableThumbnail)
-        delete service.thumbnail;
-    return service;
-}
-function randomizeName(file) {
-    const parts = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* splitFileName */ "u"])(file.name);
-    const randomizedParts = { stem: `${parts.stem}.${Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* uuid */ "v"])()}`, extension: parts.extension };
-    const randomizedName = Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* joinFileName */ "n"])(randomizedParts);
-    return Object(_addressbook_utilities_core__WEBPACK_IMPORTED_MODULE_1__[/* createFileByBlob */ "c"])(file, randomizedName);
-}
-
-
-/***/ }),
-
 /***/ "U5IE":
 /*!****************************************************************!*\
   !*** ./src/views/components/EmptyStatus/EmptyStatus.styles.ts ***!
@@ -2339,11 +2127,10 @@ var MemberType;
   !*** ./src/hooks/useLanguage.ts ***!
   \**********************************/
 /*! exports provided: useLanguage */
-/*! exports used: useLanguage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useLanguage; });
+/* unused harmony export useLanguage */
 /* harmony import */ var _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-metaos-host */ "0acT");
 /* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "Tr4L");
 
@@ -2376,6 +2163,50 @@ function useLanguage() {
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "a", function() { return _theme_provider__WEBPACK_IMPORTED_MODULE_0__["a"]; });
 
 
+
+
+/***/ }),
+
+/***/ "ca4Q":
+/*!****************************************************************************!*\
+  !*** ./src/views/components/AddressBookAppHeader/AddressBookAppHeader.tsx ***!
+  \****************************************************************************/
+/*! exports provided: AddressBookAppHeader */
+/*! exports used: AddressBookAppHeader */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AddressBookAppHeader; });
+/* harmony import */ var _addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-shared */ "+INc");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-i18next */ "Tr4L");
+/* harmony import */ var _common_env__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../common/env */ "8MrD");
+/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../localization */ "HVbO");
+/* harmony import */ var _RefreshButton_RefreshButton__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../RefreshButton/RefreshButton */ "1n01");
+/* harmony import */ var _SearchPeopleField_SearchPeopleField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../SearchPeopleField/SearchPeopleField */ "8tIN");
+/* harmony import */ var _AddressBookAppHeader_styles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./AddressBookAppHeader.styles */ "/s0O");
+/*
+ *  Copyright © Microsoft Corporation. All rights reserved.
+ */
+
+
+
+
+
+
+
+
+const AddressBookAppHeader = ({ items, farItems, title, moduleName, searchText, }) => {
+    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_2__[/* useTranslation */ "a"])();
+    const styles = Object(_AddressBookAppHeader_styles__WEBPACK_IMPORTED_MODULE_7__[/* useAppHeaderStyles */ "a"])();
+    const finalFarItems = react__WEBPACK_IMPORTED_MODULE_1__["useMemo"](() => {
+        return !farItems ? (react__WEBPACK_IMPORTED_MODULE_1__["createElement"]("div", { className: styles.navContainer },
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_SearchPeopleField_SearchPeopleField__WEBPACK_IMPORTED_MODULE_6__[/* SearchPeopleField */ "a"], { searchText: searchText }),
+            react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_RefreshButton_RefreshButton__WEBPACK_IMPORTED_MODULE_5__[/* RefreshButton */ "a"], null))) : (farItems);
+    }, [farItems, searchText, styles.navContainer]);
+    return (react__WEBPACK_IMPORTED_MODULE_1__["createElement"](_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* AppHeader */ "a"], { title: title === undefined ? t(_localization__WEBPACK_IMPORTED_MODULE_4__[/* Strings */ "a"].appName, { context: _common_env__WEBPACK_IMPORTED_MODULE_3__[/* ENVIRONMENT */ "e"] }) : title, items: items, farItems: finalFarItems, moduleName: moduleName }));
+};
 
 
 /***/ }),
@@ -2415,7 +2246,7 @@ const LoadingIndicatorWrapperComponent = ({ isMobile }) => {
 /*!****************************!*\
   !*** ./src/hooks/index.ts ***!
   \****************************/
-/*! exports provided: useDataFlag, useFlagStatus, ListComponentStatus, useListComponentStatusChange, useNewChatEffect, useTabContentAction, useCollapsibleTextFieldProps, useDatePickerProps, useFormFacadeProps, useValidateSubmitters, useValidateReceivers, useValidateComanagers, usePeopleViewProps, retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph, useRichTextFieldProps, usePageTitle, useTopLevelPath, useCurrentUserSelection, useAnyoneSelection, useFluentUIThemeWithRTL, useLanguage, usePageParams, useReactPageQuery, useReactQuery */
+/*! exports provided: useDataFlag, useFlagStatus, ListComponentStatus, useListComponentStatusChange, useNewChatEffect, useTabContentAction, retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph, usePageTitle, useTopLevelPath, useCurrentUserSelection, useFluentUIThemeWithRTL, useLanguage, usePageParams, useReactPageQuery, useReactQuery */
 /*! exports used: retrievePeopleManagerByGraph, retrievePeoplePresenceByGraph, retrievePeopleSelectionIcon, useFluentUIThemeWithRTL, usePageParams, useReactPageQuery, useReactQuery */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2501,7 +2332,7 @@ const EmptyStatus = ({ img, title, message, actionText, onAction, className, isS
                     : img === 'NoMessage'
                         ? _assets_emptyStatus_no_message_svg__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"]
                         : '', [img]);
-    return (react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "b"], { role: role, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "G"])(styles.root, isSmall && 'is-small', className), image: imgFile, title: title !== null && title !== void 0 ? title : '', message: message, height: '100%', background: 'transparent', color: theme.palette.black },
+    return (react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_0__[/* EmptyState */ "c"], { role: role, className: Object(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* mergeStyles */ "F"])(styles.root, isSmall && 'is-small', className), image: imgFile, title: title !== null && title !== void 0 ? title : '', message: message, height: '100%', background: 'transparent', color: theme.palette.black },
         actionText && react__WEBPACK_IMPORTED_MODULE_4___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_3__[/* PrimaryButton */ "a"], { text: actionText, onClick: onAction }),
         children));
 };
@@ -2527,15 +2358,19 @@ const EmptyStatus = ({ img, title, message, actionText, onAction, className, isS
 /* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @fluentui/react */ "v4N6");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "ERkP");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "H8PI");
-/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../hooks */ "eZYV");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../logger */ "pIRP");
-/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
-/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
-/* harmony import */ var _utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../utilities/quickAppUtils */ "K5h+");
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../common */ "7BQt");
-/* harmony import */ var _PeopleCard__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../PeopleCard */ "L4Fw");
-/* harmony import */ var _PeopleList_styles__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./PeopleList.styles */ "wGbJ");
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-i18next */ "Tr4L");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router-dom */ "H8PI");
+/* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../hooks */ "eZYV");
+/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../localization */ "HVbO");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../../logger */ "pIRP");
+/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
+/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
+/* harmony import */ var _utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../../utilities/quickAppUtils */ "K5h+");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../common */ "7BQt");
+/* harmony import */ var _PeopleCard__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../PeopleCard */ "L4Fw");
+/* harmony import */ var _PeopleList_styles__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./PeopleList.styles */ "wGbJ");
+
+
 
 
 
@@ -2549,92 +2384,94 @@ const EmptyStatus = ({ img, title, message, actionText, onAction, className, isS
 
 
 const PeopleList = ({ items, queryStatus }) => {
-    const styles = Object(_PeopleList_styles__WEBPACK_IMPORTED_MODULE_15__[/* usePeopleListStyles */ "a"])();
+    const styles = Object(_PeopleList_styles__WEBPACK_IMPORTED_MODULE_17__[/* usePeopleListStyles */ "a"])();
     // People Card:
     const [calloutTarget, setCalloutTarget] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(undefined);
     const [peopleShow, setPeopleShow] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])(undefined);
     const [openCardId, setOpenCardId] = Object(react__WEBPACK_IMPORTED_MODULE_6__["useState"])('');
-    const navigate = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_7__[/* useNavigate */ "i"])();
+    const navigate = Object(react_router_dom__WEBPACK_IMPORTED_MODULE_8__[/* useNavigate */ "i"])();
+    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
     // const tooltipId = useId('tooltip');
     const columns = [
         {
             key: 'name',
-            name: '姓名',
+            name: t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].peopleListColumnForName),
             fieldName: 'name',
-            minWidth: 200,
-            maxWidth: 300,
-            isResizable: true,
+            // minWidth: 200,
+            // maxWidth: 300,
+            minWidth: 264,
+            maxWidth: 264,
+            isResizable: false,
             iconName: 'ContactCard',
             iconClassName: styles.iconCell,
             className: styles.cellTitle,
             onRender: (item) => {
-                return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null,
-                    react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.nameField },
-                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.nameShow, 
-                            // When Click the user name, show the PeopleCard
-                            onClick: event => {
-                                setOpenCardId(item.id);
-                                const targetElement = event.target;
-                                setPeopleShow(item);
-                                setCalloutTarget(targetElement);
-                                // logger.logUserBiView(
-                                //     PanelLaunchMethod.AppNav,
-                                //     PanelRegion.Main,
-                                //     PanelType.SubmitUpdateV2Page,
-                                //     {}
-                                // );
-                                _logger__WEBPACK_IMPORTED_MODULE_9__[/* logger */ "f"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_9__[/* ScenarioName */ "c"].PeopleCard, _logger__WEBPACK_IMPORTED_MODULE_9__[/* ScenarioType */ "d"].OpenPeopleCard, 'moduleName', {});
-                            } },
-                            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleCoin */ "a"], { selection: { id: item.id, name: item.name, type: 0 }, onRetrieveIcon: _hooks__WEBPACK_IMPORTED_MODULE_8__[/* retrievePeopleSelectionIcon */ "c"], coinSize: 24 }),
-                            item.name),
-                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.hoverShowButtonContainer },
-                            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* ActionButton */ "a"], { iconProps: {
-                                    iconName: 'Chat',
-                                    styles: {
-                                        root: {
-                                            fontSize: '20px',
-                                        },
+                return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.nameField },
+                    react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.nameShow, 
+                        // When Click the user name, show the PeopleCard
+                        onClick: event => {
+                            setOpenCardId(item.id);
+                            const targetElement = event.target;
+                            setPeopleShow(item);
+                            setCalloutTarget(targetElement);
+                            _logger__WEBPACK_IMPORTED_MODULE_11__[/* logger */ "f"].logUserBiAction(_logger__WEBPACK_IMPORTED_MODULE_11__[/* ScenarioName */ "c"].PeopleCard, _logger__WEBPACK_IMPORTED_MODULE_11__[/* ScenarioType */ "d"].OpenPeopleCard, 'moduleName', {});
+                        } },
+                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_addressbook_components_people__WEBPACK_IMPORTED_MODULE_0__[/* PeopleCoin */ "a"], { selection: { id: item.id, name: item.name, type: 0 }, onRetrieveIcon: _hooks__WEBPACK_IMPORTED_MODULE_9__[/* retrievePeopleSelectionIcon */ "c"], coinSize: 24 }),
+                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.nameSpan, title: item.name }, item.name)),
+                    react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.hoverShowButtonContainer },
+                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* ActionButton */ "a"], { iconProps: {
+                                iconName: 'Chat',
+                                styles: {
+                                    root: {
+                                        fontSize: '20px',
                                     },
-                                }, title: 'Chat', ariaLabel: 'Chat', className: styles.hoverShowButton, onClick: () => Object(_utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_12__[/* OpenChatById */ "b"])(item.id) }),
-                            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* ActionButton */ "a"], { iconProps: {
-                                    iconName: 'Call',
-                                    styles: {
-                                        root: {
-                                            fontSize: '20px',
-                                            padding: 0,
-                                        },
+                                },
+                            }, title: 'Chat', ariaLabel: 'Chat', className: styles.hoverShowButton, onClick: () => Object(_utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_14__[/* OpenChatById */ "b"])(item.id) }),
+                        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* ActionButton */ "a"], { iconProps: {
+                                iconName: 'Call',
+                                styles: {
+                                    root: {
+                                        fontSize: '20px',
+                                        padding: 0,
                                     },
-                                }, title: 'Emoji', ariaLabel: 'Emoji', className: styles.hoverShowButton, onClick: () => Object(_utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_12__[/* OpenCallById */ "a"])(item.id) })))));
+                                },
+                            }, title: 'Emoji', ariaLabel: 'Emoji', className: styles.hoverShowButton, onClick: () => Object(_utilities_quickAppUtils__WEBPACK_IMPORTED_MODULE_14__[/* OpenCallById */ "a"])(item.id) }))));
             },
         },
         {
             key: 'mail',
-            name: '邮件地址',
+            name: t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].peopleListColumnForEmail),
             fieldName: 'mail',
             minWidth: 200,
             maxWidth: 300,
-            isResizable: true,
+            isResizable: false,
             iconName: 'Mail',
             iconClassName: styles.iconCell,
+            onRender: (item) => {
+                return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { title: item.mail, className: styles.span }, item.mail));
+            },
         },
         {
             key: 'phone',
-            name: '电话号码',
+            name: t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].peopleListColumnForPhone),
             fieldName: 'phone',
             minWidth: 100,
             width: 120,
             maxWidth: 150,
-            isResizable: true,
+            isResizable: false,
             iconName: 'Call',
             iconClassName: styles.iconCell,
+            onRender: (item) => {
+                return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { title: item.phone, className: styles.span }, item.phone));
+            },
         },
         {
             key: 'depart',
-            name: '部门',
+            name: t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].peopleListColumnForDepart),
             fieldName: 'depart',
             minWidth: 200,
             maxWidth: 300,
-            isResizable: true,
+            isResizable: false,
             iconName: 'Location',
             iconClassName: styles.iconCell,
             onRender: (item) => {
@@ -2646,16 +2483,16 @@ const PeopleList = ({ items, queryStatus }) => {
                         // id={tooltipId}
                         directionalHint: _fluentui_react__WEBPACK_IMPORTED_MODULE_4__[/* DirectionalHint */ "a"].leftCenter },
                         react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", null, Object.entries(item.departmentPaths).map(([departmentFullId, departmentFullName], index) => (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null,
-                            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_5__[/* Link */ "a"], { key: departmentFullId, onClick: () => navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_10__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_10__[/* Paths */ "a"].DepartmentTeam, undefined, {
+                            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_5__[/* Link */ "a"], { key: departmentFullId, onClick: () => navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_12__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_12__[/* Paths */ "a"].DepartmentTeam, undefined, {
                                     departmentFullName,
                                     departmentFullId,
-                                })) }, Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_11__[/* getDepartmentNameFromFullName */ "b"])(departmentFullName)),
+                                })) }, Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_13__[/* getDepartmentNameFromFullName */ "b"])(departmentFullName)),
                             index < Object.entries(item.departmentPaths).length - 1 && react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", null, "; "))))))));
             },
         },
         {
             key: 'role',
-            name: '职位',
+            name: t(_localization__WEBPACK_IMPORTED_MODULE_10__[/* Strings */ "a"].peopleListColumnForJob),
             fieldName: 'role',
             minWidth: 100,
             width: 120,
@@ -2663,11 +2500,14 @@ const PeopleList = ({ items, queryStatus }) => {
             isResizable: true,
             iconName: 'Desk',
             iconClassName: styles.iconCell,
+            onRender: (item) => {
+                return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { title: item.role, className: styles.span }, item.role));
+            },
         },
     ];
     return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null,
-        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_common__WEBPACK_IMPORTED_MODULE_13__[/* CommonDetailsList */ "a"], { className: styles.list, columns: columns, items: items, queryStatus: queryStatus, ariaLabel: '\u5168\u516C\u53F8', shimmerLines: 10 }),
-        peopleShow !== undefined && peopleShow.id === openCardId && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_PeopleCard__WEBPACK_IMPORTED_MODULE_14__[/* PeopleCard */ "a"], { people: peopleShow, onDismiss: () => setOpenCardId(''), target: calloutTarget }))));
+        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_common__WEBPACK_IMPORTED_MODULE_15__[/* CommonDetailsList */ "a"], { className: styles.list, columns: columns, items: items, queryStatus: queryStatus, shimmerLines: 10 }),
+        peopleShow !== undefined && peopleShow.id === openCardId && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_PeopleCard__WEBPACK_IMPORTED_MODULE_16__[/* PeopleCard */ "a"], { people: peopleShow, onDismiss: () => setOpenCardId(''), target: calloutTarget }))));
 };
 
 
@@ -2760,7 +2600,7 @@ const App = () => {
 const useHomePageStyles = Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__[/* makeStyles */ "a"])(theme => ({
     root: {
         height: '100%',
-        overflow: 'hidden',
+        overflowY: 'hidden',
         display: 'flex',
         flexDirection: 'column',
         backgroundColor: theme.palette.neutralLighterAlt,
@@ -2768,27 +2608,16 @@ const useHomePageStyles = Object(_addressbook_components_fluentui_teams_theme__W
     topSearchSection: {
         display: 'flex',
         justifyContent: 'flex-end',
-        padding: '30px',
-    },
-    inputField: {
-        flex: 1,
-        '.ms-Label': {
-            padding: '0 0 4px',
-            whiteSpace: 'nowrap',
-        },
-        '.ms-TextField-field': {
-            paddingLeft: '36px',
-            backgroundColor: theme.palette.white,
-            paddingRight: '36px',
-        },
+        padding: '5px 30px 5px 0',
     },
     peopleSection: Object.assign({ display: 'flex', alignItems: 'stretch', backgroundColor: theme.palette.white, height: '100%' }, (Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_1__[/* isContrastTheme */ "f"])(theme.name) && {
         borderTop: `1px solid ${theme.palette.black}`,
         borderBottom: `1px solid ${theme.palette.black}`,
     })),
     peopleList: {
-        height: '70%',
+        height: '80%',
         overflowY: 'auto',
+        overflowX: 'hidden',
     },
     left: {
         flex: 1,
@@ -2805,21 +2634,12 @@ const useHomePageStyles = Object(_addressbook_components_fluentui_teams_theme__W
         // overflowY: 'auto',
     },
     dropdown: {
-        width: '200px',
+        width: '400px',
         marginBottom: '20px',
         '.ms-Dropdown-caretDown': {
             fontSize: '16px',
             color: theme.palette.neutralPrimary,
         },
-    },
-    textFieldIcon1: {
-        position: 'absolute',
-        left: '6px',
-        top: '50%',
-        transform: 'translateY(-50%)',
-        pointerEvents: 'none',
-        // height: '20px',
-        // width: '20px',
     },
 }));
 const useNavStyles = (props) => ({
@@ -3005,37 +2825,25 @@ function loadEcsConfig(params) {
 /*!*****************************************!*\
   !*** ./src/hooks/components/people.tsx ***!
   \*****************************************/
-/*! exports provided: useValidateSubmitters, useValidateReceivers, useValidateComanagers, usePeopleViewProps, retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph */
+/*! exports provided: retrievePeopleSelectionIcon, retrievePeoplePresenceByGraph, retrievePeopleManagerByGraph */
 /*! exports used: retrievePeopleManagerByGraph, retrievePeoplePresenceByGraph, retrievePeopleSelectionIcon */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export useValidateSubmitters */
-/* unused harmony export useValidateReceivers */
-/* unused harmony export useValidateComanagers */
-/* unused harmony export usePeopleViewProps */
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return retrievePeopleSelectionIcon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return retrievePeoplePresenceByGraph; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return retrievePeopleManagerByGraph; });
 /* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "n4Dn");
 /* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "tPyQ");
 /* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "ZOo+");
-/* harmony import */ var _addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @addressbook/components-metaos-host */ "0acT");
-/* harmony import */ var _addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @addressbook/components-people */ "apXe");
-/* harmony import */ var _addressbook_components_shared__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @addressbook/components-shared */ "+INc");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var _assets_avatars_beth_davies_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../assets/avatars/beth-davies.png */ "NGG8");
-/* harmony import */ var _assets_avatars_daisy_phillips_png__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../assets/avatars/daisy-phillips.png */ "uel9");
-/* harmony import */ var _assets_avatars_eric_nason_png__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../assets/avatars/eric-nason.png */ "DDLe");
-/* harmony import */ var _assets_avatars_joshua_vanburen_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../assets/avatars/joshua-vanburen.png */ "v0/M");
-/* harmony import */ var _assets_avatars_mona_kane_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../assets/avatars/mona-kane.png */ "Mt8f");
-/* harmony import */ var _common_Constants__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../common/Constants */ "fPKC");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../../localization */ "HVbO");
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../../service */ "YCKj");
-/* harmony import */ var _utilities__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../../utilities */ "Ss4h");
-/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../../utilities/peopleUtils */ "Reqn");
+/* harmony import */ var _addressbook_components_people__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @addressbook/components-people */ "apXe");
+/* harmony import */ var _assets_avatars_beth_davies_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../assets/avatars/beth-davies.png */ "NGG8");
+/* harmony import */ var _assets_avatars_daisy_phillips_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../assets/avatars/daisy-phillips.png */ "uel9");
+/* harmony import */ var _assets_avatars_eric_nason_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../assets/avatars/eric-nason.png */ "DDLe");
+/* harmony import */ var _assets_avatars_joshua_vanburen_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../assets/avatars/joshua-vanburen.png */ "v0/M");
+/* harmony import */ var _assets_avatars_mona_kane_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../assets/avatars/mona-kane.png */ "Mt8f");
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../service */ "YCKj");
+/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../utilities/peopleUtils */ "Reqn");
 var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _arguments, P, generator) {
     function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -3054,84 +2862,6 @@ var __awaiter = (undefined && undefined.__awaiter) || function (thisArg, _argume
 
 
 
-
-
-
-
-
-
-
-/**
- * A hook to obtain the properties for PeopleSelect.
- *
- * @property sourceOptions The options for the people select source.
- * @returns The properties for PeopleSelect.
- */
-// export function usePeopleSelectProps({
-//     sourceOptions = {},
-// }: UsePeopleSelectPropsOptions = {}): UsePeopleSelectPropsResult {
-//     const { t } = useTranslation();
-//     const placeholder = usePeopleSelectPlaceholder(sourceOptions);
-//     const { querySuggestions, errorMessage } = useQuerySuggestions(sourceOptions);
-//     const stableProps = React.useMemo<
-//         Omit<UsePeopleSelectPropsResult, 'suggestionsErrorMessage' | 'onResolveSuggestions'>
-//     >(
-//         () => ({
-//             strings: {
-//                 inputPlaceholder: placeholder,
-//                 requiredErrorMessage: t(Strings.errorMessageRequired),
-//                 removeButtonAriaLabel: t(Strings.buttonTextRemove),
-//                 suggestionsHeaderText: t(Strings.peoplePickerSuggestionHeaderText),
-//                 noResultsFoundText: t(Strings.peoplePickerNoResultText),
-//                 suggestionsAvailableAlertText: t(Strings.peoplePickerSuggestionAriaLabel),
-//             },
-//             onRenderItem: (selection, item) => {
-//                 if (selection.type !== PeopleSelectionType.User && selection.expandable) {
-//                     return (
-//                         <HoverCard
-//                             type={HoverCardType.plain}
-//                             plainCardProps={{
-//                                 onRenderPlainCard: () => <ManyPeopleSelectionCard selection={selection} />,
-//                             }}>
-//                             {item}
-//                         </HoverCard>
-//                     );
-//                 }
-//                 return item;
-//             },
-//             onRetrieveIcon: retrievePeopleSelectionIcon,
-//             describeSuggestion: selection => {
-//                 switch (selection.type) {
-//                     case PeopleSelectionType.User:
-//                         return selection.mail;
-//                     case PeopleSelectionType.Tag:
-//                         return t(Strings.teamTagMembersDescription, { totalNumber: selection.count });
-//                 }
-//             },
-//             resolveDelay: PEOPLE_SUGGESTIONS_RESOLVE_DELAY_TIME_MS,
-//         }),
-//         [placeholder, t]
-//     );
-//     return { onResolveSuggestions: querySuggestions, suggestionsErrorMessage: errorMessage, ...stableProps };
-// }
-function usePeopleSelectPlaceholder({ groupsInTenant, tagsInGroup, }) {
-    var _a, _b;
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    const teamsContext = Object(_addressbook_components_metaos_host__WEBPACK_IMPORTED_MODULE_3__[/* useTeamsContext */ "o"])();
-    const chatId = (_a = teamsContext === null || teamsContext === void 0 ? void 0 : teamsContext.chat) === null || _a === void 0 ? void 0 : _a.id;
-    const groupId = (_b = teamsContext === null || teamsContext === void 0 ? void 0 : teamsContext.team) === null || _b === void 0 ? void 0 : _b.groupId;
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.useMemo(() => {
-        // These two types are always available, which are for users' names and emails.
-        const typeKeys = ['name', 'email'];
-        // See useQuerySuggestions for the conditions of group and tag types.
-        if (groupsInTenant && !(groupId || chatId))
-            typeKeys.push('group');
-        if (tagsInGroup && groupId)
-            typeKeys.push('tag');
-        const types = typeKeys.map(type => t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].peoplePickerPlaceholderType, { context: type }));
-        return t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].peoplePickerPlaceholderWithTypes, { types });
-    }, [chatId, groupId, groupsInTenant, t, tagsInGroup]);
-}
 // function useQuerySuggestions({
 //     groupsInTenant,
 //     tagsInGroup,
@@ -3204,18 +2934,38 @@ function usePeopleSelectPlaceholder({ groupsInTenant, tagsInGroup, }) {
 //     );
 //     return { querySuggestions, errorMessage };
 // }
-const ManyPeopleSelectionCard = ({ selection }) => {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    const styles = useManyPeopleSelectionCardCardStyles();
-    return (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.root },
-        react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.primary },
-            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__[/* PeopleCoin */ "a"], { selection: selection, coinSize: 72, onRetrieveIcon: retrievePeopleSelectionIcon }),
-            react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.overview },
-                react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.name }, selection.name),
-                selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__[/* PeopleSelectionType */ "c"].Tag && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.badge }, t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].teamTagCardSign))),
-                Array.isArray(selection.items) && (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", { className: styles.description }, t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].membersCountDescription, { count: selection.items.length }))))),
-        Array.isArray(selection.items) ? (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__[/* PeopleList */ "b"], { className: styles.secondary, label: t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].membersListDescription, { count: selection.items.length }), selections: selection.items, onRetrieveIcon: retrievePeopleSelectionIcon })) : (react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_5__[/* Spinner */ "c"], { className: styles.secondary, "aria-label": t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].loadingAriaLabel) }))));
-};
+// const ManyPeopleSelectionCard: React.FC<{ selection: ManyPeopleSelection }> = ({ selection }) => {
+//     const { t } = useTranslation();
+//     const styles = useManyPeopleSelectionCardCardStyles();
+//     return (
+//         <div className={styles.root}>
+//             <div className={styles.primary}>
+//                 <PeopleCoin selection={selection} coinSize={72} onRetrieveIcon={retrievePeopleSelectionIcon} />
+//                 <div className={styles.overview}>
+//                     <div className={styles.name}>{selection.name}</div>
+//                     {selection.type === PeopleSelectionType.Tag && (
+//                         <div className={styles.badge}>{t(Strings.teamTagCardSign)}</div>
+//                     )}
+//                     {Array.isArray(selection.items) && (
+//                         <div className={styles.description}>
+//                             {t(Strings.membersCountDescription, { count: selection.items.length })}
+//                         </div>
+//                     )}
+//                 </div>
+//             </div>
+//             {Array.isArray(selection.items) ? (
+//                 <PeopleList
+//                     className={styles.secondary}
+//                     label={t(Strings.membersListDescription, { count: selection.items.length })}
+//                     selections={selection.items}
+//                     onRetrieveIcon={retrievePeopleSelectionIcon}
+//                 />
+//             ) : (
+//                 <Spinner className={styles.secondary} aria-label={t(Strings.loadingAriaLabel)} />
+//             )}
+//         </div>
+//     );
+// };
 const useManyPeopleSelectionCardCardStyles = Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__[/* makeStyles */ "a"])(theme => ({
     root: {
         width: '320px',
@@ -3280,51 +3030,26 @@ var PeoplePickerErrorContext;
      */
     PeoplePickerErrorContext["overComanagers"] = "overComanagers";
 })(PeoplePickerErrorContext || (PeoplePickerErrorContext = {}));
-function useValidateSubmitters() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.useCallback(selections => {
-        const overUser = Object(_utilities__WEBPACK_IMPORTED_MODULE_16__[/* countUsersOfPeopleSelections */ "b"])(selections) > _common_Constants__WEBPACK_IMPORTED_MODULE_13__[/* MAX_DEFINITION_USER_SUBMITTERS */ "r"];
-        const overGroup = Object(_utilities__WEBPACK_IMPORTED_MODULE_16__[/* countGroupsOfPeopleSelections */ "a"])(selections) > _common_Constants__WEBPACK_IMPORTED_MODULE_13__[/* MAX_DEFINITION_GROUP_SUBMITTERS */ "j"];
-        if (!overUser && !overGroup)
-            return;
-        return t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].errorMessagePeoplePicker, {
-            context: overUser && overGroup
-                ? PeoplePickerErrorContext.overWriters
-                : overUser
-                    ? PeoplePickerErrorContext.overUser
-                    : PeoplePickerErrorContext.overGroup,
-        });
-    }, [t]);
-}
-function useValidateReceivers() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.useCallback(selections => Object(_utilities__WEBPACK_IMPORTED_MODULE_16__[/* countUsersOfPeopleSelections */ "b"])(selections) > _common_Constants__WEBPACK_IMPORTED_MODULE_13__[/* MAX_REPORT_USER_RECEIVERS */ "u"]
-        ? t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].errorMessagePeoplePicker, { context: PeoplePickerErrorContext.overReceivers })
-        : undefined, [t]);
-}
-function useValidateComanagers() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.useCallback(selections => Object(_utilities__WEBPACK_IMPORTED_MODULE_16__[/* countUsersOfPeopleSelections */ "b"])(selections) > _common_Constants__WEBPACK_IMPORTED_MODULE_13__[/* MAX_DEFINITION_USER_OWNERS */ "q"] + _common_Constants__WEBPACK_IMPORTED_MODULE_13__[/* MAX_DEFINITION_USER_COLLABORATORS */ "p"]
-        ? t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].errorMessagePeoplePicker, { context: PeoplePickerErrorContext.overComanagers })
-        : undefined, [t]);
-}
-function usePeopleViewProps({ maxCompactParts = 3 } = {}) {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_7__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_6___default.a.useMemo(() => ({
-        formatNames: names => {
-            const compactNames = [...names];
-            if (compactNames.length > maxCompactParts) {
-                const exposed = maxCompactParts - 1;
-                const remaining = compactNames.length - exposed;
-                compactNames.splice(exposed, remaining, t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].userDisplayNamesOther, { count: remaining }));
-            }
-            return {
-                normal: t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].userDisplayNamesList, { val: names }),
-                compact: t(_localization__WEBPACK_IMPORTED_MODULE_14__[/* Strings */ "a"].userDisplayNamesList, { val: compactNames }),
-            };
-        },
-    }), [maxCompactParts, t]);
-}
+// export function usePeopleViewProps({ maxCompactParts = 3 }: UsePeopleViewPropsOptions = {}): UsePeopleViewPropsResult {
+//     const { t } = useTranslation();
+//     return React.useMemo(
+//         () => ({
+//             formatNames: names => {
+//                 const compactNames = [...names];
+//                 if (compactNames.length > maxCompactParts) {
+//                     const exposed = maxCompactParts - 1;
+//                     const remaining = compactNames.length - exposed;
+//                     compactNames.splice(exposed, remaining, t(Strings.userDisplayNamesOther, { count: remaining }));
+//                 }
+//                 return {
+//                     normal: t(Strings.userDisplayNamesList, { val: names }),
+//                     compact: t(Strings.userDisplayNamesList, { val: compactNames }),
+//                 };
+//             },
+//         }),
+//         [maxCompactParts, t]
+//     );
+// }
 /**
  * Retrieves the icon of a people selection. If the icon is not available, it returns undefined.
  * Mocked icons and icons from Graph API are supported.
@@ -3342,10 +3067,10 @@ function retrievePeopleSelectionIcon(selection, signal) {
 }
 function retrievePeopleSelectionIconByGraph(selection, signal) {
     return __awaiter(this, void 0, void 0, function* () {
-        const resource = selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__[/* PeopleSelectionType */ "c"].User
-            ? _service__WEBPACK_IMPORTED_MODULE_15__[/* graphServiceClient */ "d"].users(selection.id)
-            : selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_4__[/* PeopleSelectionType */ "c"].Group
-                ? _service__WEBPACK_IMPORTED_MODULE_15__[/* graphServiceClient */ "d"].groups(selection.id)
+        const resource = selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_3__[/* PeopleSelectionType */ "b"].User
+            ? _service__WEBPACK_IMPORTED_MODULE_9__[/* graphServiceClient */ "d"].users(selection.id)
+            : selection.type === _addressbook_components_people__WEBPACK_IMPORTED_MODULE_3__[/* PeopleSelectionType */ "b"].Group
+                ? _service__WEBPACK_IMPORTED_MODULE_9__[/* graphServiceClient */ "d"].groups(selection.id)
                 : undefined;
         if (!resource)
             return;
@@ -3359,13 +3084,13 @@ function retrievePeopleSelectionIconByGraph(selection, signal) {
 }
 function retrievePeoplePresenceByGraph(id) {
     return __awaiter(this, void 0, void 0, function* () {
-        return yield _service__WEBPACK_IMPORTED_MODULE_15__[/* graphServiceClient */ "d"].users(id).getPresence();
+        return yield _service__WEBPACK_IMPORTED_MODULE_9__[/* graphServiceClient */ "d"].users(id).getPresence();
     });
 }
 function retrievePeopleManagerByGraph(id) {
     return __awaiter(this, void 0, void 0, function* () {
-        const user = yield _service__WEBPACK_IMPORTED_MODULE_15__[/* graphServiceClient */ "d"].users(id).getManager();
-        return Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_17__[/* mapUserToPeople */ "c"])(user);
+        const user = yield _service__WEBPACK_IMPORTED_MODULE_9__[/* graphServiceClient */ "d"].users(id).getManager();
+        return Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_10__[/* mapUserToPeople */ "c"])(user);
     });
 }
 function retrieveMockedPeopleSelectionIcon(selection, signal) {
@@ -3391,12 +3116,12 @@ function retrieveMockedPeopleSelectionIcon(selection, signal) {
  */
 const mockedPeopleSelectionIconUrls = new Map([
     ['', undefined],
-    ['4f197574-c487-4ab8-ac2e-c3584026d646', _assets_avatars_beth_davies_png__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"]],
-    ['da3647a2-cdeb-4b72-a31d-f4a184d8e727', _assets_avatars_joshua_vanburen_png__WEBPACK_IMPORTED_MODULE_11__[/* default */ "a"]],
+    ['4f197574-c487-4ab8-ac2e-c3584026d646', _assets_avatars_beth_davies_png__WEBPACK_IMPORTED_MODULE_4__[/* default */ "a"]],
+    ['da3647a2-cdeb-4b72-a31d-f4a184d8e727', _assets_avatars_joshua_vanburen_png__WEBPACK_IMPORTED_MODULE_7__[/* default */ "a"]],
     ['8af34f36-a407-4b16-9b7e-14dcea93fb09', undefined],
-    ['1a9ecbd6-05c1-42f1-ac1e-1534500be7d1', _assets_avatars_daisy_phillips_png__WEBPACK_IMPORTED_MODULE_9__[/* default */ "a"]],
-    ['ea126a6e-8e86-4401-8d5a-c168a8ee1e36', _assets_avatars_eric_nason_png__WEBPACK_IMPORTED_MODULE_10__[/* default */ "a"]],
-    ['da3c2255-d519-4ee2-a586-932f8b6d88af', _assets_avatars_mona_kane_png__WEBPACK_IMPORTED_MODULE_12__[/* default */ "a"]],
+    ['1a9ecbd6-05c1-42f1-ac1e-1534500be7d1', _assets_avatars_daisy_phillips_png__WEBPACK_IMPORTED_MODULE_5__[/* default */ "a"]],
+    ['ea126a6e-8e86-4401-8d5a-c168a8ee1e36', _assets_avatars_eric_nason_png__WEBPACK_IMPORTED_MODULE_6__[/* default */ "a"]],
+    ['da3c2255-d519-4ee2-a586-932f8b6d88af', _assets_avatars_mona_kane_png__WEBPACK_IMPORTED_MODULE_8__[/* default */ "a"]],
 ]);
 
 
@@ -3406,7 +3131,7 @@ const mockedPeopleSelectionIconUrls = new Map([
 /*!****************************!*\
   !*** ./src/views/index.ts ***!
   \****************************/
-/*! exports provided: CommonCardList, CommonDetailsList, onRenderReportDefinitionColumn, onRenderDateTimeColumn, onRenderSubmitTimeColumn, LoadingIndicatorWrapper, EmptyStatus, SpecialErrorType, ErrorStatus, LoadingPage, PeopleCard, DesktopDefaultPage, MobileDefaultPage, ErrorBoundary, HomePage, SearchResults */
+/*! exports provided: CommonCardList, CommonDetailsList, onRenderReportDefinitionColumn, LoadingIndicatorWrapper, EmptyStatus, SpecialErrorType, ErrorStatus, LoadingPage, PeopleCard, DesktopDefaultPage, MobileDefaultPage, ErrorBoundary, HomePage, SearchResults */
 /*! exports used: DesktopDefaultPage, HomePage, SearchResults */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3423,40 +3148,6 @@ const mockedPeopleSelectionIconUrls = new Map([
 
 
 
-
-
-/***/ }),
-
-/***/ "rBIV":
-/*!*********************************************************!*\
-  !*** ./src/hooks/components/collapsible-text-fields.ts ***!
-  \*********************************************************/
-/*! exports provided: useCollapsibleTextFieldProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export useCollapsibleTextFieldProps */
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../localization */ "HVbO");
-
-
-
-/**
- * A hook to obtains the properties for CollapsibleTextField.
- *
- * @returns The properties for CollapsibleTextField.
- */
-function useCollapsibleTextFieldProps() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__[/* useTranslation */ "a"])();
-    return react__WEBPACK_IMPORTED_MODULE_0___default.a.useMemo(() => ({
-        strings: {
-            editButton: (label, value) => t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].buttonTextEditWithLabel, { label, value }),
-            doneButton: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].buttonTextDone),
-        },
-    }), [t]);
-}
 
 
 /***/ }),
@@ -3527,6 +3218,8 @@ function useCollapsibleTextFieldProps() {
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return usePeopleListStyles; });
 /* harmony import */ var _addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @addressbook/components-fluentui-teams-theme */ "n4Dn");
+/* harmony import */ var _addressbook_components_shared__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @addressbook/components-shared */ "+INc");
+
 
 const usePeopleListStyles = Object(_addressbook_components_fluentui_teams_theme__WEBPACK_IMPORTED_MODULE_0__[/* makeStyles */ "a"])(theme => ({
     iconCell: {
@@ -3568,14 +3261,12 @@ const usePeopleListStyles = Object(_addressbook_components_fluentui_teams_theme_
         '*:hover > &, *:focus-within > &': {
             display: 'flex',
             position: 'relative',
-            // width: '100%',
             alignSelf: 'flex-end',
-            // justifyContent: 'space-around',
-            // bottom: '2px',
             left: '20px',
-            // right: '2px',
         },
     },
+    nameSpan: [Object(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_1__[/* ellipsisStyles */ "e"])(1), { maxWidth: '160px' }],
+    span: Object(_addressbook_components_shared__WEBPACK_IMPORTED_MODULE_1__[/* ellipsisStyles */ "e"])(1),
     list: {
         'ms-DetailsRow': {
             cursor: 'default',
@@ -3614,78 +3305,12 @@ const useLoadingStyles = Object(_addressbook_components_fluentui_teams_theme__WE
     },
     message: {
         fontSize: '1.2em',
-        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "f"].bold,
+        fontWeight: _fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* FontWeights */ "e"].bold,
         color: theme.palette.black,
         whiteSpace: 'pre-line',
         textAlign: 'center',
     },
 }));
-
-
-/***/ }),
-
-/***/ "yfM9":
-/*!**********************************************!*\
-  !*** ./src/hooks/components/date-pickers.ts ***!
-  \**********************************************/
-/*! exports provided: useDatePickerProps */
-/*! exports used: useDatePickerProps */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return useDatePickerProps; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-i18next */ "Tr4L");
-/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../localization */ "HVbO");
-/* harmony import */ var _useLanguage__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../useLanguage */ "Y0Nq");
-
-
-
-
-/**
- * A hook to obtain the properties for DatePicker.
- *
- * @returns The properties for DatePicker.
- */
-function useDatePickerProps() {
-    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_1__[/* useTranslation */ "a"])();
-    const language = Object(_useLanguage__WEBPACK_IMPORTED_MODULE_3__[/* useLanguage */ "a"])();
-    return Object(react__WEBPACK_IMPORTED_MODULE_0__["useMemo"])(() => {
-        const dateFormat = new Intl.DateTimeFormat(language, { dateStyle: 'medium' });
-        const monthsFormat = new Intl.DateTimeFormat(language, { month: 'long' });
-        const shortMonthsFormat = new Intl.DateTimeFormat(language, { month: 'short' });
-        const daysFormat = new Intl.DateTimeFormat(language, { weekday: 'long' });
-        const shortDaysFormat = new Intl.DateTimeFormat(language, { weekday: 'narrow' });
-        const months = Array.from({ length: 12 }, (_, i) => monthsFormat.format(new Date(0, i)));
-        const shortMonths = Array.from({ length: 12 }, (_, i) => shortMonthsFormat.format(new Date(0, i)));
-        const days = Array.from({ length: 7 }, (_, i) => daysFormat.format(new Date(0, 0, i)));
-        const shortDays = Array.from({ length: 7 }, (_, i) => shortDaysFormat.format(new Date(0, 0, i)));
-        return {
-            formatDate: date => dateFormat.format(date),
-            strings: {
-                months,
-                shortMonths,
-                days,
-                shortDays,
-                goToToday: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerGoToToday),
-                prevMonthAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerPrevMonthAriaLabel),
-                nextMonthAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerNextMonthAriaLabel),
-                prevYearAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerPrevYearAriaLabel),
-                nextYearAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerNextYearAriaLabel),
-                prevYearRangeAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerPrevYearRangeAriaLabel),
-                nextYearRangeAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerNextYearRangeAriaLabel),
-                monthPickerHeaderAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerMonthPickerHeaderAriaLabel),
-                yearPickerHeaderAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerYearPickerHeaderAriaLabel),
-                closeButtonAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerCloseButtonAriaLabel),
-                weekNumberFormatString: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerWeekNumberFormatString),
-                selectedDateFormatString: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerSelectedDateFormatString),
-                todayDateFormatString: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerTodayDateFormatString),
-                dayMarkedAriaLabel: t(_localization__WEBPACK_IMPORTED_MODULE_2__[/* Strings */ "a"].datePickerDayMarkedAriaLabel),
-            },
-        };
-    }, [t, language]);
-}
 
 
 /***/ }),
@@ -3809,21 +3434,23 @@ function useFlagStatus(flag, autoCleanup) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HomePage; });
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "XgkO");
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "2Ah+");
-/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @fluentui/react */ "AH+P");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "ERkP");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @fluentui/react */ "2Ah+");
+/* harmony import */ var _fluentui_react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @fluentui/react */ "AH+P");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "ERkP");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var react_i18next__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-i18next */ "Tr4L");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "H8PI");
 /* harmony import */ var _hooks__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../hooks */ "eZYV");
-/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../logger */ "pIRP");
-/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
-/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../service */ "YCKj");
-/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
-/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../components */ "0UAP");
-/* harmony import */ var _components_PeopleList__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components/PeopleList */ "S0dn");
-/* harmony import */ var _HomePage_styles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./HomePage.styles */ "lmCI");
-/* harmony import */ var _HomePageQuery__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./HomePageQuery */ "WWNV");
+/* harmony import */ var _localization__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../localization */ "HVbO");
+/* harmony import */ var _logger__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../../logger */ "pIRP");
+/* harmony import */ var _routes_Paths__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../../routes/Paths */ "9hZ6");
+/* harmony import */ var _service__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../../../service */ "YCKj");
+/* harmony import */ var _utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../../utilities/peopleUtils */ "Reqn");
+/* harmony import */ var _components__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../../components */ "0UAP");
+/* harmony import */ var _components_AddressBookAppHeader_AddressBookAppHeader__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../../components/AddressBookAppHeader/AddressBookAppHeader */ "ca4Q");
+/* harmony import */ var _components_PeopleList__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../../components/PeopleList */ "S0dn");
+/* harmony import */ var _HomePage_styles__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./HomePage.styles */ "lmCI");
+/* harmony import */ var _HomePageQuery__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./HomePageQuery */ "WWNV");
 var __rest = (undefined && undefined.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -3847,17 +3474,12 @@ var __rest = (undefined && undefined.__rest) || function (s, e) {
 
 
 
+
+
+
 const HomePage = () => {
-    const styles = Object(_HomePage_styles__WEBPACK_IMPORTED_MODULE_12__[/* useHomePageStyles */ "a"])();
-    const iconProps = {
-        iconName: 'Search',
-        className: styles.textFieldIcon1,
-        styles: {
-            root: {
-                fontSize: '20px',
-            },
-        },
-    };
+    const styles = Object(_HomePage_styles__WEBPACK_IMPORTED_MODULE_14__[/* useHomePageStyles */ "a"])();
+    const { t } = Object(react_i18next__WEBPACK_IMPORTED_MODULE_3__[/* useTranslation */ "a"])();
     const { params } = Object(_hooks__WEBPACK_IMPORTED_MODULE_5__[/* usePageParams */ "e"])();
     // const { departmentFullId, departmentName } = params; v1
     const { departmentFullName, departmentFullId } = params; // v2
@@ -3962,56 +3584,42 @@ const HomePage = () => {
     //     { enabled: !!definitionId, cacheTime: REPORT_SLOT_CACHE_TIME }
     // );
     const options = [
-        { key: _HomePageQuery__WEBPACK_IMPORTED_MODULE_13__[/* MemberType */ "a"].AllMember, text: '显示当前及下级部门成员' },
-        { key: _HomePageQuery__WEBPACK_IMPORTED_MODULE_13__[/* MemberType */ "a"].DirectMember, text: '仅显示当前部门人员' },
+        { key: _HomePageQuery__WEBPACK_IMPORTED_MODULE_15__[/* MemberType */ "a"].AllMember, text: t(_localization__WEBPACK_IMPORTED_MODULE_6__[/* Strings */ "a"].dropDownForDepartDefault) },
+        { key: _HomePageQuery__WEBPACK_IMPORTED_MODULE_15__[/* MemberType */ "a"].DirectMember, text: t(_localization__WEBPACK_IMPORTED_MODULE_6__[/* Strings */ "a"].dropDownForDepartOption1) },
     ];
-    const [inputValue, setInputValue] = Object(react__WEBPACK_IMPORTED_MODULE_3__["useState"])('');
     // const [filteredItems, setFilteredItems] = useState<IPeople[]>();
     // useEffect(() => {
     //     setFilteredItems(departmentMembers);
     // }, [departmentMembers]);
-    const [selectedMemberType, setSelectedMemberType] = react__WEBPACK_IMPORTED_MODULE_3___default.a.useState(_HomePageQuery__WEBPACK_IMPORTED_MODULE_13__[/* MemberType */ "a"].AllMember);
+    const [selectedMemberType, setSelectedMemberType] = react__WEBPACK_IMPORTED_MODULE_2___default.a.useState(_HomePageQuery__WEBPACK_IMPORTED_MODULE_15__[/* MemberType */ "a"].AllMember);
     const onOptionChange = (event, option) => {
         if (option !== undefined) {
             setSelectedMemberType(option.key);
         }
     };
-    const onChange = react__WEBPACK_IMPORTED_MODULE_3___default.a.useCallback((event, newValue) => {
-        if (!newValue || newValue.length <= 5) {
-            setInputValue(newValue || '');
-        }
-    }, []);
-    const { data: navData, isLoading: loadingNav, error: navDataError, } = Object(_hooks__WEBPACK_IMPORTED_MODULE_5__[/* useReactQuery */ "g"])(_service__WEBPACK_IMPORTED_MODULE_8__[/* SERVICE_CLIENT */ "b"].fetchDepartmentNav, {}, {
+    const { data: navData, isLoading: loadingNav, error: navDataError, } = Object(_hooks__WEBPACK_IMPORTED_MODULE_5__[/* useReactQuery */ "g"])(_service__WEBPACK_IMPORTED_MODULE_9__[/* SERVICE_CLIENT */ "b"].fetchDepartmentNav, {}, {
         staleTime: 1 * 30 * 60 * 1000,
         cacheTime: 1 * 30 * 60 * 1000, // 30 minutes
     });
-    const currentDepartmentId = departmentFullId ? Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_9__[/* getDepartmentIdFromFullId */ "a"])(departmentFullId) : navData === null || navData === void 0 ? void 0 : navData.id;
-    const _a = Object(_HomePageQuery__WEBPACK_IMPORTED_MODULE_13__[/* useMemberListByDepartment */ "c"])(selectedMemberType, currentDepartmentId === (navData === null || navData === void 0 ? void 0 : navData.id), currentDepartmentId, 20), { data: members, error: membersError, isLoading: membersLoading } = _a, membersQueryStatus = __rest(_a, ["data", "error", "isLoading"]);
-    const navLinkGroups = react__WEBPACK_IMPORTED_MODULE_3___default.a.useMemo(() => {
-        return navData ? [{ links: [Object(_HomePageQuery__WEBPACK_IMPORTED_MODULE_13__[/* mapDepartmentToNavLink */ "b"])(navData, '', '', departmentFullName)] }] : [];
+    const currentDepartmentId = departmentFullId ? Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_10__[/* getDepartmentIdFromFullId */ "a"])(departmentFullId) : navData === null || navData === void 0 ? void 0 : navData.id;
+    const _a = Object(_HomePageQuery__WEBPACK_IMPORTED_MODULE_15__[/* useMemberListByDepartment */ "c"])(selectedMemberType, currentDepartmentId === (navData === null || navData === void 0 ? void 0 : navData.id), currentDepartmentId, 20), { data: members, error: membersError, isLoading: membersLoading } = _a, membersQueryStatus = __rest(_a, ["data", "error", "isLoading"]);
+    const navLinkGroups = react__WEBPACK_IMPORTED_MODULE_2___default.a.useMemo(() => {
+        return navData ? [{ links: [Object(_HomePageQuery__WEBPACK_IMPORTED_MODULE_15__[/* mapDepartmentToNavLink */ "b"])(navData, '', '', departmentFullName)] }] : [];
     }, [navData, departmentFullName]);
-    Object(react__WEBPACK_IMPORTED_MODULE_3__["useEffect"])(() => {
+    Object(react__WEBPACK_IMPORTED_MODULE_2__["useEffect"])(() => {
         if ((!departmentFullId || departmentFullId === '') && (navData === null || navData === void 0 ? void 0 : navData.id) && (navData === null || navData === void 0 ? void 0 : navData.name)) {
-            navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_7__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_7__[/* Paths */ "a"].DepartmentTeam, undefined, {
+            navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_8__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_8__[/* Paths */ "a"].DepartmentTeam, undefined, {
                 departmentFullName: navData.name,
                 departmentFullId: navData.id,
             }));
         }
     }, [departmentFullId, members, navData === null || navData === void 0 ? void 0 : navData.id, navData === null || navData === void 0 ? void 0 : navData.name, navigate]);
-    return (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.root },
-        react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.topSearchSection },
-            react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("form", { noValidate: true, autoComplete: 'off' },
-                react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* TextField */ "a"], { className: styles.inputField, placeholder: '\u901A\u8FC7\u59D3\u540D\u67E5\u627E', iconProps: iconProps, value: inputValue, onChange: onChange, onKeyDown: event => {
-                        if (event.key === 'Enter') {
-                            navigate(Object(_routes_Paths__WEBPACK_IMPORTED_MODULE_7__[/* generateURL */ "b"])(_routes_Paths__WEBPACK_IMPORTED_MODULE_7__[/* Paths */ "a"].SearchResults, undefined, {
-                                searchText: inputValue,
-                            }));
-                        }
-                    } }))),
-        react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.peopleSection },
-            react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.left },
-                loadingNav && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* LoadingPage */ "c"], null),
-                navData && (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Nav */ "a"], { ariaLabel: '', styles: _HomePage_styles__WEBPACK_IMPORTED_MODULE_12__[/* useNavStyles */ "b"], groups: navLinkGroups, selectedKey: departmentFullId, 
+    return (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.root },
+        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_AddressBookAppHeader_AddressBookAppHeader__WEBPACK_IMPORTED_MODULE_12__[/* AddressBookAppHeader */ "a"], { moduleName: _logger__WEBPACK_IMPORTED_MODULE_7__[/* ModuleName */ "b"].HomePage }),
+        react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.peopleSection },
+            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.left },
+                loadingNav && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_11__[/* LoadingPage */ "c"], null),
+                navData && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_0__[/* Nav */ "a"], { ariaLabel: '', styles: _HomePage_styles__WEBPACK_IMPORTED_MODULE_14__[/* useNavStyles */ "b"], groups: navLinkGroups, selectedKey: departmentFullId, 
                     // onLinkExpandClick={}
                     onLinkClick: (ev, item) => {
                         ev === null || ev === void 0 ? void 0 : ev.preventDefault(); // 阻止默认的 URL 跳转行为
@@ -4019,23 +3627,23 @@ const HomePage = () => {
                             navigate(item.url); // 使用 React Router 的路由跳转
                         }
                     } })),
-                navDataError && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null,
+                navDataError && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null,
                     " ", navDataError === null || navDataError === void 0 ? void 0 :
                     navDataError.message,
                     " ")),
-            react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.main },
-                react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("h2", null, departmentFullName !== null && departmentFullName !== void 0 ? departmentFullName : navData === null || navData === void 0 ? void 0 : navData.name),
-                react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", null,
-                    react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_2__[/* Dropdown */ "a"], { className: styles.dropdown, placeholder: 'Select an option', options: options, selectedKey: selectedMemberType, onChange: onOptionChange })),
-                react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement("div", { className: styles.peopleList },
-                    members && members.length > 0 && (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components_PeopleList__WEBPACK_IMPORTED_MODULE_11__[/* PeopleList */ "a"], { items: members.map(data => Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_9__[/* mapUserViewToPeople */ "d"])(data)), queryStatus: membersQueryStatus, moduleName: _logger__WEBPACK_IMPORTED_MODULE_6__[/* ModuleName */ "b"].HomePage })),
-                    (members === null || members === void 0 ? void 0 : members.length) === 0 && (react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* EmptyStatus */ "a"], { title: '\u6CA1\u6709\u8054\u7CFB\u4EBA', message: '\u6CA1\u6709\u53EF\u663E\u793A\u7684\u8054\u7CFB\u4EBA\uFF0C\u8BF7\u9009\u62E9\u5176\u4ED6\u90E8\u95E8\u67E5\u770B', img: 'NoMessage' })),
-                    membersLoading && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* LoadingPage */ "c"], null),
-                    membersError && react__WEBPACK_IMPORTED_MODULE_3___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_10__[/* ErrorStatus */ "b"], { error: membersError }))))));
+            react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.main },
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("h2", null, departmentFullName !== null && departmentFullName !== void 0 ? departmentFullName : navData === null || navData === void 0 ? void 0 : navData.name),
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", null,
+                    react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_fluentui_react__WEBPACK_IMPORTED_MODULE_1__[/* Dropdown */ "a"], { className: styles.dropdown, placeholder: 'Select an option', options: options, selectedKey: selectedMemberType, onChange: onOptionChange })),
+                react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement("div", { className: styles.peopleList },
+                    members && members.length > 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components_PeopleList__WEBPACK_IMPORTED_MODULE_13__[/* PeopleList */ "a"], { items: members.map(data => Object(_utilities_peopleUtils__WEBPACK_IMPORTED_MODULE_10__[/* mapUserViewToPeople */ "d"])(data)), queryStatus: membersQueryStatus, moduleName: _logger__WEBPACK_IMPORTED_MODULE_7__[/* ModuleName */ "b"].HomePage })),
+                    (members === null || members === void 0 ? void 0 : members.length) === 0 && (react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_11__[/* EmptyStatus */ "a"], { title: t(_localization__WEBPACK_IMPORTED_MODULE_6__[/* Strings */ "a"].errorTitleForNotContract), message: t(_localization__WEBPACK_IMPORTED_MODULE_6__[/* Strings */ "a"].errorMessageForNotContract), img: 'NoMessage' })),
+                    membersLoading && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_11__[/* LoadingPage */ "c"], null),
+                    membersError && react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement(_components__WEBPACK_IMPORTED_MODULE_11__[/* ErrorStatus */ "b"], { error: membersError }))))));
 };
 
 
 /***/ })
 
-},[["JwtI","runtime~main","main~mobile.microsoft","main~mobile.fui","assets~main~mobile","main.fui","assets~main","package~main~mobile","package~main","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm._fluentui~utilities","featureRelatedFiles~main~mobile","npm.react-query","npm.lodash-es","npm._internationalized~date","npm.axios","npm.i18next","npm._tiptap~core","npm.prosemirror-model","npm.prosemirror-view","vendors~main~mobile","vendors~main","main~mobile"]]]);
+},[["JwtI","runtime~main","main~mobile.microsoft","main~mobile.fui","assets~main~mobile","main.fui","assets~main","package~main~mobile","package~main","npm._fluentui~react-icons","npm.react-dom","npm.framer-motion","npm._fluentui~utilities","npm.react-query","npm.lodash-es","npm._internationalized~date","npm.axios","npm.i18next","featureRelatedFiles~main~mobile","vendors~main~mobile","vendors~main","main~mobile"]]]);
 //# sourceMappingURL=main.js.map
